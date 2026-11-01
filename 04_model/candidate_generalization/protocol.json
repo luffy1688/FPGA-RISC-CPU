@@ -1,0 +1,48 @@
+{
+  "candidate": "generalization-v1",
+  "author": "Codex",
+  "freeze_utc": "2026-10-02 before first candidate training/prediction",
+  "architecture": {
+    "dim": 64,
+    "layers": 2,
+    "heads": 4,
+    "max_utf8_bytes": 64
+  },
+  "fresh_test_examples": 135,
+  "fresh_test_template_families": 70,
+  "test_selection": "fixed final epoch only; fresh test not consulted during optimization/checkpoint selection",
+  "training_plan": {
+    "seed": 29,
+    "epochs": 100,
+    "initialization": "04_model/train/current.pt",
+    "learning_rate": 0.0007,
+    "batch_size": 64,
+    "device": "existing CUDA interpreter, no installation"
+  },
+  "scope": "synthetic assistant-authored evaluation; not real user generalization; reviewed independent_commands already observed is development only",
+  "exact_overlap_with_existing_text": 0,
+  "train_examples": 3000,
+  "train_per_class": 500,
+  "numeric_digit_mask_fraction": 0.35,
+  "numeric_augmentation": "random ASCII values 0..999; intent label independent of legal argument range; explicit decoder still validates values",
+  "new_reject_families": [
+    "negative/stop/cancel",
+    "unsupported device/task",
+    "multi-tool requests"
+  ],
+  "test_train_template_id_overlap": 0,
+  "test_train_exact_text_overlap": 0,
+  "adopted": true,
+  "stage": "stage3_generalization",
+  "adoption_utc": "2026-10-02T13:17:48.526327+00:00",
+  "initialization_checkpoint": "04_model/candidate_generalization/initialization.pt",
+  "fresh_test_evaluation_count": 1,
+  "fresh_test_now_observed": true,
+  "formal_export": "04_model/export/current_int4.npz",
+  "formal_checkpoint": "04_model/train/current.pt",
+  "formal_c_constants": "03_sw/model/byte_model_data.h",
+  "comparison_report": "07_runs/eval/current_generalization_report.json",
+  "default_counter_demo": "读取计数器",
+  "low_margin_regression": "我想查看计数器",
+  "performance_evidence": "pending root RTL/firmware refresh; PDS pending license"
+}

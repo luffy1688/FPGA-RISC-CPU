@@ -1,0 +1,37 @@
+{
+  "chain": "Needle candidate generation -> manual review -> FPGA small model candidate append",
+  "source_commit": "6bd836d521a2991510bf303cd0d87e025e8ce9dc",
+  "source_path": "09_refs/needle/needle/agent/tools.py",
+  "runtime_probe": {
+    "package_available": false,
+    "weights_present": false,
+    "official_model_inference": false,
+    "reason": "server has vendored Needle source but no installed runtime/weights"
+  },
+  "schema_builder_executed": true,
+  "production_model_changed": false,
+  "production_firmware_changed": false,
+  "raw_candidates": 50,
+  "accepted_candidates": 48,
+  "rejected_candidates": 2,
+  "accepted_by_intent": {
+    "read_temp": 4,
+    "read_counter": 4,
+    "run_coremark": 4,
+    "set_led": 16,
+    "set_pwm": 16,
+    "reject": 4
+  },
+  "rejection_reasons": {
+    "PWM percent outside 0..100": 1,
+    "FPGA demo accepts one deterministic action per request": 1
+  },
+  "append_file": "04_model/candidate_generalization/export/needle_candidate_append.jsonl",
+  "adoption": "optional; retraining/export/RTL evidence is a separate decision",
+  "limits": [
+    "Candidate text is synthetic and manually authored, not a user corpus.",
+    "No official Needle model/weights inference was executed on this server.",
+    "The append file is not merged into train.jsonl and is not flashed to the board.",
+    "Any adopted model must rerun Python/C bit-exact, UART, cycle, and board evidence."
+  ]
+}

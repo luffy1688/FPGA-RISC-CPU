@@ -1,0 +1,80 @@
+{"text": "could you read board temperature", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "report temperature now", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "能否读取温度", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "请告诉我温度", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "i need pwm set to 0", "intent": "set_pwm", "arg": 0, "template_id": "set_pwm:0"}
+{"text": "i need pwm set to 1", "intent": "set_pwm", "arg": 1, "template_id": "set_pwm:0"}
+{"text": "i need pwm set to 7", "intent": "set_pwm", "arg": 7, "template_id": "set_pwm:0"}
+{"text": "i need pwm set to 32", "intent": "set_pwm", "arg": 32, "template_id": "set_pwm:0"}
+{"text": "i need pwm set to 63", "intent": "set_pwm", "arg": 63, "template_id": "set_pwm:0"}
+{"text": "i need pwm set to 80", "intent": "set_pwm", "arg": 80, "template_id": "set_pwm:0"}
+{"text": "i need pwm set to 99", "intent": "set_pwm", "arg": 99, "template_id": "set_pwm:0"}
+{"text": "i need pwm set to 100", "intent": "set_pwm", "arg": 100, "template_id": "set_pwm:0"}
+{"text": "pwm should be 0 percent", "intent": "set_pwm", "arg": 0, "template_id": "set_pwm:1"}
+{"text": "pwm should be 1 percent", "intent": "set_pwm", "arg": 1, "template_id": "set_pwm:1"}
+{"text": "pwm should be 7 percent", "intent": "set_pwm", "arg": 7, "template_id": "set_pwm:1"}
+{"text": "pwm should be 32 percent", "intent": "set_pwm", "arg": 32, "template_id": "set_pwm:1"}
+{"text": "pwm should be 63 percent", "intent": "set_pwm", "arg": 63, "template_id": "set_pwm:1"}
+{"text": "pwm should be 80 percent", "intent": "set_pwm", "arg": 80, "template_id": "set_pwm:1"}
+{"text": "pwm should be 99 percent", "intent": "set_pwm", "arg": 99, "template_id": "set_pwm:1"}
+{"text": "pwm should be 100 percent", "intent": "set_pwm", "arg": 100, "template_id": "set_pwm:1"}
+{"text": "PWM请设到0", "intent": "set_pwm", "arg": 0, "template_id": "set_pwm:2"}
+{"text": "PWM请设到1", "intent": "set_pwm", "arg": 1, "template_id": "set_pwm:2"}
+{"text": "PWM请设到7", "intent": "set_pwm", "arg": 7, "template_id": "set_pwm:2"}
+{"text": "PWM请设到32", "intent": "set_pwm", "arg": 32, "template_id": "set_pwm:2"}
+{"text": "PWM请设到63", "intent": "set_pwm", "arg": 63, "template_id": "set_pwm:2"}
+{"text": "PWM请设到80", "intent": "set_pwm", "arg": 80, "template_id": "set_pwm:2"}
+{"text": "PWM请设到99", "intent": "set_pwm", "arg": 99, "template_id": "set_pwm:2"}
+{"text": "PWM请设到100", "intent": "set_pwm", "arg": 100, "template_id": "set_pwm:2"}
+{"text": "我想调整PWM为0", "intent": "set_pwm", "arg": 0, "template_id": "set_pwm:3"}
+{"text": "我想调整PWM为1", "intent": "set_pwm", "arg": 1, "template_id": "set_pwm:3"}
+{"text": "我想调整PWM为7", "intent": "set_pwm", "arg": 7, "template_id": "set_pwm:3"}
+{"text": "我想调整PWM为32", "intent": "set_pwm", "arg": 32, "template_id": "set_pwm:3"}
+{"text": "我想调整PWM为63", "intent": "set_pwm", "arg": 63, "template_id": "set_pwm:3"}
+{"text": "我想调整PWM为80", "intent": "set_pwm", "arg": 80, "template_id": "set_pwm:3"}
+{"text": "我想调整PWM为99", "intent": "set_pwm", "arg": 99, "template_id": "set_pwm:3"}
+{"text": "我想调整PWM为100", "intent": "set_pwm", "arg": 100, "template_id": "set_pwm:3"}
+{"text": "coremark benchmark now please", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "can you run coremark test", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "帮我执行CoreMark", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "请启动CPU性能测试", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "show processor cycles now", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "can you read cpu counter", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "请读取CPU周期计数", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "我想查看计数器", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "i need led set to 0", "intent": "set_led", "arg": 0, "template_id": "set_led:0"}
+{"text": "i need led set to 1", "intent": "set_led", "arg": 1, "template_id": "set_led:0"}
+{"text": "i need led set to 7", "intent": "set_led", "arg": 7, "template_id": "set_led:0"}
+{"text": "i need led set to 32", "intent": "set_led", "arg": 32, "template_id": "set_led:0"}
+{"text": "i need led set to 63", "intent": "set_led", "arg": 63, "template_id": "set_led:0"}
+{"text": "i need led set to 80", "intent": "set_led", "arg": 80, "template_id": "set_led:0"}
+{"text": "i need led set to 99", "intent": "set_led", "arg": 99, "template_id": "set_led:0"}
+{"text": "i need led set to 100", "intent": "set_led", "arg": 100, "template_id": "set_led:0"}
+{"text": "led should be 0", "intent": "set_led", "arg": 0, "template_id": "set_led:1"}
+{"text": "led should be 1", "intent": "set_led", "arg": 1, "template_id": "set_led:1"}
+{"text": "led should be 7", "intent": "set_led", "arg": 7, "template_id": "set_led:1"}
+{"text": "led should be 32", "intent": "set_led", "arg": 32, "template_id": "set_led:1"}
+{"text": "led should be 63", "intent": "set_led", "arg": 63, "template_id": "set_led:1"}
+{"text": "led should be 80", "intent": "set_led", "arg": 80, "template_id": "set_led:1"}
+{"text": "led should be 99", "intent": "set_led", "arg": 99, "template_id": "set_led:1"}
+{"text": "led should be 100", "intent": "set_led", "arg": 100, "template_id": "set_led:1"}
+{"text": "LED请设到0", "intent": "set_led", "arg": 0, "template_id": "set_led:2"}
+{"text": "LED请设到1", "intent": "set_led", "arg": 1, "template_id": "set_led:2"}
+{"text": "LED请设到7", "intent": "set_led", "arg": 7, "template_id": "set_led:2"}
+{"text": "LED请设到32", "intent": "set_led", "arg": 32, "template_id": "set_led:2"}
+{"text": "LED请设到63", "intent": "set_led", "arg": 63, "template_id": "set_led:2"}
+{"text": "LED请设到80", "intent": "set_led", "arg": 80, "template_id": "set_led:2"}
+{"text": "LED请设到99", "intent": "set_led", "arg": 99, "template_id": "set_led:2"}
+{"text": "LED请设到100", "intent": "set_led", "arg": 100, "template_id": "set_led:2"}
+{"text": "我想设置LED为0", "intent": "set_led", "arg": 0, "template_id": "set_led:3"}
+{"text": "我想设置LED为1", "intent": "set_led", "arg": 1, "template_id": "set_led:3"}
+{"text": "我想设置LED为7", "intent": "set_led", "arg": 7, "template_id": "set_led:3"}
+{"text": "我想设置LED为32", "intent": "set_led", "arg": 32, "template_id": "set_led:3"}
+{"text": "我想设置LED为63", "intent": "set_led", "arg": 63, "template_id": "set_led:3"}
+{"text": "我想设置LED为80", "intent": "set_led", "arg": 80, "template_id": "set_led:3"}
+{"text": "我想设置LED为99", "intent": "set_led", "arg": 99, "template_id": "set_led:3"}
+{"text": "我想设置LED为100", "intent": "set_led", "arg": 100, "template_id": "set_led:3"}
+{"text": "calculate a restaurant bill", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "show me a movie", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "帮我订酒店", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "请发送邮件", "intent": "reject", "arg": null, "template_id": "reject:3"}

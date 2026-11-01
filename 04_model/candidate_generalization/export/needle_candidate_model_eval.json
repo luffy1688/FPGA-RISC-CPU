@@ -1,0 +1,16 @@
+{
+  "examples": 48,
+  "raw_matches": 41,
+  "guard_matches": 40,
+  "raw_accuracy": 0.8541666666666666,
+  "guard_accuracy": 0.8333333333333334,
+  "labels": [
+    "read_temp",
+    "set_pwm",
+    "run_coremark",
+    "read_counter",
+    "set_led",
+    "reject"
+  ],
+  "note": "Existing production weights; candidate rows are not adopted or flashed."
+}

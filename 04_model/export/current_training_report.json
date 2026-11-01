@@ -1,0 +1,131 @@
+{
+  "stage": "tool_contract_replay_oct28",
+  "profile": {
+    "name": "last_block_replay",
+    "seed": 6283,
+    "epochs": 3,
+    "lr": 2e-05,
+    "aug_weight": 0.1,
+    "distillation": 1.0,
+    "trainable": "blocks.1/head"
+  },
+  "training_examples": 3312,
+  "original_dev": {
+    "examples": 80,
+    "raw_correct": 73,
+    "raw_accuracy": 0.9125,
+    "raw_reject_false_accepts": 1,
+    "raw_legitimate_false_rejects": 6,
+    "decoder_reject_accepts": 0,
+    "confusion": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        29,
+        0,
+        0,
+        0,
+        3
+      ],
+      [
+        0,
+        0,
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        3,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        30,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        3
+      ]
+    ]
+  },
+  "augmentation_dev": {
+    "examples": 192,
+    "raw_correct": 118,
+    "raw_accuracy": 0.6145833333333334,
+    "raw_reject_false_accepts": 19,
+    "raw_legitimate_false_rejects": 49,
+    "decoder_reject_accepts": 0,
+    "confusion": [
+      [
+        32,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        7,
+        0,
+        0,
+        0,
+        25
+      ],
+      [
+        0,
+        0,
+        19,
+        0,
+        0,
+        13
+      ],
+      [
+        1,
+        0,
+        0,
+        23,
+        0,
+        8
+      ],
+      [
+        0,
+        5,
+        0,
+        0,
+        24,
+        3
+      ],
+      [
+        9,
+        0,
+        0,
+        4,
+        6,
+        13
+      ]
+    ]
+  },
+  "user_sets_used_for_selection": false,
+  "source_report": "07_runs/development/nlu_candidate/report.json"
+}

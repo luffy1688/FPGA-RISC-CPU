@@ -1,0 +1,7 @@
+{
+  "stage": "tool_contract_replay_oct28",
+  "examples": 80,
+  "logit_exact_matches": 80,
+  "mismatches": [],
+  "meaning": "canonical export/C header numeric alignment only"
+}

@@ -1,0 +1,159 @@
+{
+  "format": "nr-byte-tool-int4-v1",
+  "candidate_only": true,
+  "d_model": 64,
+  "seq_len": 64,
+  "heads": 4,
+  "layers": 2,
+  "activation_scale": 32,
+  "tools": [
+    "read_temp",
+    "set_pwm",
+    "run_coremark",
+    "read_counter",
+    "set_led",
+    "reject"
+  ],
+  "tensors": [
+    {
+      "name": "embedding.weight",
+      "shape": [
+        256,
+        64
+      ],
+      "shift": 2,
+      "packed_bytes": 8192
+    },
+    {
+      "name": "position.weight",
+      "shape": [
+        64,
+        64
+      ],
+      "shift": 3,
+      "packed_bytes": 2048
+    },
+    {
+      "name": "blocks.0.q.weight",
+      "shape": [
+        64,
+        64
+      ],
+      "shift": 3,
+      "packed_bytes": 2048
+    },
+    {
+      "name": "blocks.0.k.weight",
+      "shape": [
+        64,
+        64
+      ],
+      "shift": 3,
+      "packed_bytes": 2048
+    },
+    {
+      "name": "blocks.0.v.weight",
+      "shape": [
+        64,
+        64
+      ],
+      "shift": 4,
+      "packed_bytes": 2048
+    },
+    {
+      "name": "blocks.0.o.weight",
+      "shape": [
+        64,
+        64
+      ],
+      "shift": 4,
+      "packed_bytes": 2048
+    },
+    {
+      "name": "blocks.0.ff1.weight",
+      "shape": [
+        128,
+        64
+      ],
+      "shift": 3,
+      "packed_bytes": 4096
+    },
+    {
+      "name": "blocks.0.ff2.weight",
+      "shape": [
+        64,
+        128
+      ],
+      "shift": 4,
+      "packed_bytes": 4096
+    },
+    {
+      "name": "blocks.1.q.weight",
+      "shape": [
+        64,
+        64
+      ],
+      "shift": 4,
+      "packed_bytes": 2048
+    },
+    {
+      "name": "blocks.1.k.weight",
+      "shape": [
+        64,
+        64
+      ],
+      "shift": 4,
+      "packed_bytes": 2048
+    },
+    {
+      "name": "blocks.1.v.weight",
+      "shape": [
+        64,
+        64
+      ],
+      "shift": 3,
+      "packed_bytes": 2048
+    },
+    {
+      "name": "blocks.1.o.weight",
+      "shape": [
+        64,
+        64
+      ],
+      "shift": 4,
+      "packed_bytes": 2048
+    },
+    {
+      "name": "blocks.1.ff1.weight",
+      "shape": [
+        128,
+        64
+      ],
+      "shift": 4,
+      "packed_bytes": 4096
+    },
+    {
+      "name": "blocks.1.ff2.weight",
+      "shape": [
+        64,
+        128
+      ],
+      "shift": 4,
+      "packed_bytes": 4096
+    },
+    {
+      "name": "head.weight",
+      "shape": [
+        6,
+        64
+      ],
+      "shift": 3,
+      "packed_bytes": 192
+    }
+  ],
+  "packed_weight_bytes": 43200,
+  "bias_bytes": 3608,
+  "total_model_bytes": 47066,
+  "runtime_workspace_bytes": 21696,
+  "xnd_staging_bytes": 1280
+}
