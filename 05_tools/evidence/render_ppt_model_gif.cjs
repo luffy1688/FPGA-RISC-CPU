@@ -71,7 +71,7 @@ const args=['-o','BatchMode=yes','-o','ConnectTimeout=8','-o','StrictHostKeyChec
     w.camera.position.set(13.5+orbit*10,22.0+explode*1.3,23.5-orbit*7);w.controls.target.set(0,.35+explode*.9,0);w.controls.update();w.scene.updateMatrixWorld(true);w.renderer.render(w.scene,w.camera);
     c.fillStyle='#FFFFFF';c.fillRect(0,0,W,H);c.drawImage(w.renderer.domElement,VIEW.x,VIEW.y,VIEW.w,VIEW.h);
     text('澄灯 LumaRV  模块分层与指令闭环',26,37,27,BLUE,true);
-    text('工业检修照明与状态指示 · 中文指令执行路径',27,62,17,MUT);
+    text('控制板试产与返修 · 单项复测与参数读回',27,62,17,MUT);
     const phase=t<7.5?0:t<10?1:2;
     ['01  分层认模块','02  合拢结构','03  指令执行闭环'].forEach((s,i)=>{rr(26+i*204,78,193,35,7,i===phase?BLUE:'#F2F5F8');text(s,39+i*204,101,18,i===phase?'white':MUT,i===phase);});
     if(t>=10){rr(658,78,596,35,7,'#F7F0E5','#E8D6B8');text('请求：'+data.command,674,101,18,INK,true);}

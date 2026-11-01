@@ -58,17 +58,17 @@ slides={n:tree(n)for n in range(1,18)}
 for n,t in slides.items():
  for tx in t.findall('.//a:t',N):
   if tx.text and 'NeedleRV-X' in tx.text:tx.text=tx.text.replace('NeedleRV-X  ·  2026.10.31','澄灯 LumaRV').replace('NeedleRV-X','澄灯 LumaRV')
-text(1,2,'澄灯 LumaRV');text(1,6,'工业检修照明的语境感知控制',28)
+text(1,2,'澄灯 LumaRV');text(1,6,'控制板试产与返修的语境感知调试',25)
 text(1,7,'位置语义头、受约束残差与异构低比特推理',23)
-text(1,8,'理解操作与限制，核对参数后执行并读回',21)
+text(1,8,'逐条复测、局部调参、保持其余输出并核对回读',20)
 for i,s in {10:'25,014',11:'语境与工具训练文本',12:'197,816 B',13:'学习权重',14:'13.40×',15:'完整PWM模型加速'}.items():text(1,i,s)
-clearbody(2);text(2,2,'检修照明与状态指示');text(2,3,'调光、位保持与控制器检查，围绕同一操作场景组织交互。',16)
-image(2,'应用_检修照明.png',60,155,1156,577)
+clearbody(2);text(2,2,'试产与返修中的临时复测');text(2,3,'常规工序保留固定脚本；中文交互辅助单项检查与局部调参。',16)
+image(2,'应用_板卡复测.png',60,155,1156,577)
 # Move the picture above the footer, retaining its aspect ratio.
 pic=slides[2].find('.//p:pic/p:spPr/a:xfrm',N);pic.find('a:off',N).set('y',str(co(151)));pic.find('a:ext',N).set('cy',str(co(510)))
 # Use original figure ratio within the allocated region.
-im=Image.open(ROOT/'图表/应用_检修照明.png');ww=1020;hh=ww*im.height/im.width;pic.find('a:off',N).set('x',str(co(130)));pic.find('a:off',N).set('y',str(co(151)));pic.find('a:ext',N).set('cx',str(co(ww)));pic.find('a:ext',N).set('cy',str(co(hh)))
-sp=clearbody(3);text(3,2,'参考思路与本项目设计');text(3,3,'借鉴低比特工具调用方法，围绕中文控制重新设计语料、分支和执行链路。',16)
+im=Image.open(ROOT/'图表/应用_板卡复测.png');ww=1020;hh=ww*im.height/im.width;pic.find('a:off',N).set('x',str(co(130)));pic.find('a:off',N).set('y',str(co(151)));pic.find('a:ext',N).set('cx',str(co(ww)));pic.find('a:ext',N).set('cy',str(co(hh)))
+sp=clearbody(3);text(3,2,'参考思路与本项目设计');text(3,3,'面向板级调试，围绕操作、解释、否定和能力边界设计语料与计算分支。',16)
 rows=[('模块','参考思路','本项目实现'),('字节编码器','Needle低比特工具调用、短语记忆','双层d64整数编码器与学习型2/3-gram'),('语境判断','全局词特征','首尾位置特征；2048 → 64 → 16语义头'),('工具修正','残差学习','CPU标量70 → 5受约束工具残差'),('计算与数据复用','低比特乘累加','4MAC编码器、8MAC语义侧核、128KiB缓存'),('控制任务','意图与参数分离','25014条任务语料、位保持、能力检查与读回')]
 widths=[180,370,590];x0=60;y0=175;rh=70;idx=400
 for row,vals in enumerate(rows):
@@ -124,8 +124,9 @@ for name in list(parts):
  if name.startswith('ppt/notesSlides/notesSlide')and name.endswith('.xml'):
   rr=parse(parts[name])
   for t in rr.findall('.//a:t',N):
-   if t.text:t.text=t.text.replace('NeedleRV-X','澄灯 LumaRV').replace('30秒2倍速','20秒3倍速').replace('30秒','20秒').replace('2倍速','3倍速').replace('离线语义控制','语境感知控制')
+   if t.text:t.text=t.text.replace('NeedleRV-X','澄灯 LumaRV').replace('30秒2倍速','20秒3倍速').replace('30秒','20秒').replace('2倍速','3倍速').replace('离线语义控制','语境感知控制').replace('工业检修照明','控制板试产与返修调试').replace('检修照明与状态指示','单项复测与局部调参')
   parts[name]=xml(rr)
+parts.pop('ppt/media/lumarv_应用_检修照明.png',None)
 ct=parse(parts['[Content_Types].xml'])
 assert any(x.get('Extension')=='png'for x in ct)
 with ZipFile(DST,'w',ZIP_DEFLATED)as z:

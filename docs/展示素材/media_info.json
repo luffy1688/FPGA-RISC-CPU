@@ -67,7 +67,7 @@
     "gif_frames": 160
   },
   "display_name": "澄灯 LumaRV",
-  "scenario": "工业检修照明与状态指示",
+  "scenario": "控制板试产与返修的中文交互式调试",
   "media_outputs": [
     {
       "video": "三维流程演示_3倍速.mp4",
@@ -83,8 +83,8 @@
       ],
       "gif_frames": 160,
       "gif_duration_ms": 20010,
-      "mp4_bytes": 5324403,
-      "gif_bytes": 14713787
+      "mp4_bytes": 5322959,
+      "gif_bytes": 15096210
     },
     {
       "video": "三维模型_旋转分层.mp4",
@@ -100,8 +100,8 @@
       ],
       "gif_frames": 160,
       "gif_duration_ms": 20010,
-      "mp4_bytes": 1648245,
-      "gif_bytes": 8742003
+      "mp4_bytes": 1650023,
+      "gif_bytes": 10369421
     }
   ],
   "short_animations": [
