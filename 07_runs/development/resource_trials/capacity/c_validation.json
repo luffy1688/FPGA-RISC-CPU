@@ -1,0 +1,366 @@
+{
+  "scope": "Independent C UTF8decoder+signed Unicodefeatures+all16head+oldrepair5+toolcascade5+6classcontextfusion. Originalencoder logits are previously validated frozen cache inputs. All7sets areobserveddevelopment/regression; this is numerical validation,notnewfirstaccuracy.",
+  "production_source_changed": false,
+  "model_weights_changed": false,
+  "candidates": {
+    "h128_f1024_warm": {
+      "passed": true,
+      "hidden": 128,
+      "bins": 1024,
+      "feature_mode": "hash",
+      "results": {
+        "original80": {
+          "cases": 80,
+          "feature_values_exact": 81920,
+          "score_and_fusion_fields_exact": 2880,
+          "max_utf8_bytes": 26
+        },
+        "aug192": {
+          "cases": 192,
+          "feature_values_exact": 196608,
+          "score_and_fusion_fields_exact": 6912,
+          "max_utf8_bytes": 57
+        },
+        "observed288": {
+          "cases": 288,
+          "feature_values_exact": 294912,
+          "score_and_fusion_fields_exact": 10368,
+          "max_utf8_bytes": 57
+        },
+        "old_validation": {
+          "cases": 541,
+          "feature_values_exact": 553984,
+          "score_and_fusion_fields_exact": 19476,
+          "max_utf8_bytes": 63
+        },
+        "validation": {
+          "cases": 2031,
+          "feature_values_exact": 2079744,
+          "score_and_fusion_fields_exact": 73116,
+          "max_utf8_bytes": 64
+        },
+        "observed1138": {
+          "cases": 1138,
+          "feature_values_exact": 1165312,
+          "score_and_fusion_fields_exact": 40968,
+          "max_utf8_bytes": 64
+        },
+        "observed900": {
+          "cases": 900,
+          "feature_values_exact": 921600,
+          "score_and_fusion_fields_exact": 32400,
+          "max_utf8_bytes": 64
+        }
+      },
+      "total_cases": 5170
+    },
+    "h128_f2048_distill": {
+      "passed": true,
+      "hidden": 128,
+      "bins": 2048,
+      "feature_mode": "hash",
+      "results": {
+        "original80": {
+          "cases": 80,
+          "feature_values_exact": 163840,
+          "score_and_fusion_fields_exact": 2880,
+          "max_utf8_bytes": 26
+        },
+        "aug192": {
+          "cases": 192,
+          "feature_values_exact": 393216,
+          "score_and_fusion_fields_exact": 6912,
+          "max_utf8_bytes": 57
+        },
+        "observed288": {
+          "cases": 288,
+          "feature_values_exact": 589824,
+          "score_and_fusion_fields_exact": 10368,
+          "max_utf8_bytes": 57
+        },
+        "old_validation": {
+          "cases": 541,
+          "feature_values_exact": 1107968,
+          "score_and_fusion_fields_exact": 19476,
+          "max_utf8_bytes": 63
+        },
+        "validation": {
+          "cases": 2031,
+          "feature_values_exact": 4159488,
+          "score_and_fusion_fields_exact": 73116,
+          "max_utf8_bytes": 64
+        },
+        "observed1138": {
+          "cases": 1138,
+          "feature_values_exact": 2330624,
+          "score_and_fusion_fields_exact": 40968,
+          "max_utf8_bytes": 64
+        },
+        "observed900": {
+          "cases": 900,
+          "feature_values_exact": 1843200,
+          "score_and_fusion_fields_exact": 32400,
+          "max_utf8_bytes": 64
+        }
+      },
+      "total_cases": 5170
+    },
+    "h256_f1024_warm": {
+      "passed": true,
+      "hidden": 256,
+      "bins": 1024,
+      "feature_mode": "hash",
+      "results": {
+        "original80": {
+          "cases": 80,
+          "feature_values_exact": 81920,
+          "score_and_fusion_fields_exact": 2880,
+          "max_utf8_bytes": 26
+        },
+        "aug192": {
+          "cases": 192,
+          "feature_values_exact": 196608,
+          "score_and_fusion_fields_exact": 6912,
+          "max_utf8_bytes": 57
+        },
+        "observed288": {
+          "cases": 288,
+          "feature_values_exact": 294912,
+          "score_and_fusion_fields_exact": 10368,
+          "max_utf8_bytes": 57
+        },
+        "old_validation": {
+          "cases": 541,
+          "feature_values_exact": 553984,
+          "score_and_fusion_fields_exact": 19476,
+          "max_utf8_bytes": 63
+        },
+        "validation": {
+          "cases": 2031,
+          "feature_values_exact": 2079744,
+          "score_and_fusion_fields_exact": 73116,
+          "max_utf8_bytes": 64
+        },
+        "observed1138": {
+          "cases": 1138,
+          "feature_values_exact": 1165312,
+          "score_and_fusion_fields_exact": 40968,
+          "max_utf8_bytes": 64
+        },
+        "observed900": {
+          "cases": 900,
+          "feature_values_exact": 921600,
+          "score_and_fusion_fields_exact": 32400,
+          "max_utf8_bytes": 64
+        }
+      },
+      "total_cases": 5170
+    },
+    "h64_f2048_distill": {
+      "passed": true,
+      "hidden": 64,
+      "bins": 2048,
+      "feature_mode": "hash",
+      "results": {
+        "original80": {
+          "cases": 80,
+          "feature_values_exact": 163840,
+          "score_and_fusion_fields_exact": 2880,
+          "max_utf8_bytes": 26
+        },
+        "aug192": {
+          "cases": 192,
+          "feature_values_exact": 393216,
+          "score_and_fusion_fields_exact": 6912,
+          "max_utf8_bytes": 57
+        },
+        "observed288": {
+          "cases": 288,
+          "feature_values_exact": 589824,
+          "score_and_fusion_fields_exact": 10368,
+          "max_utf8_bytes": 57
+        },
+        "old_validation": {
+          "cases": 541,
+          "feature_values_exact": 1107968,
+          "score_and_fusion_fields_exact": 19476,
+          "max_utf8_bytes": 63
+        },
+        "validation": {
+          "cases": 2031,
+          "feature_values_exact": 4159488,
+          "score_and_fusion_fields_exact": 73116,
+          "max_utf8_bytes": 64
+        },
+        "observed1138": {
+          "cases": 1138,
+          "feature_values_exact": 2330624,
+          "score_and_fusion_fields_exact": 40968,
+          "max_utf8_bytes": 64
+        },
+        "observed900": {
+          "cases": 900,
+          "feature_values_exact": 1843200,
+          "score_and_fusion_fields_exact": 32400,
+          "max_utf8_bytes": 64
+        }
+      },
+      "total_cases": 5170
+    },
+    "h64_f2048_position": {
+      "passed": true,
+      "hidden": 64,
+      "bins": 2048,
+      "feature_mode": "position",
+      "results": {
+        "original80": {
+          "cases": 80,
+          "feature_values_exact": 163840,
+          "score_and_fusion_fields_exact": 2880,
+          "max_utf8_bytes": 26
+        },
+        "aug192": {
+          "cases": 192,
+          "feature_values_exact": 393216,
+          "score_and_fusion_fields_exact": 6912,
+          "max_utf8_bytes": 57
+        },
+        "observed288": {
+          "cases": 288,
+          "feature_values_exact": 589824,
+          "score_and_fusion_fields_exact": 10368,
+          "max_utf8_bytes": 57
+        },
+        "old_validation": {
+          "cases": 541,
+          "feature_values_exact": 1107968,
+          "score_and_fusion_fields_exact": 19476,
+          "max_utf8_bytes": 63
+        },
+        "validation": {
+          "cases": 2031,
+          "feature_values_exact": 4159488,
+          "score_and_fusion_fields_exact": 73116,
+          "max_utf8_bytes": 64
+        },
+        "observed1138": {
+          "cases": 1138,
+          "feature_values_exact": 2330624,
+          "score_and_fusion_fields_exact": 40968,
+          "max_utf8_bytes": 64
+        },
+        "observed900": {
+          "cases": 900,
+          "feature_values_exact": 1843200,
+          "score_and_fusion_fields_exact": 32400,
+          "max_utf8_bytes": 64
+        }
+      },
+      "total_cases": 5170
+    },
+    "h64_f4096_distill": {
+      "passed": true,
+      "hidden": 64,
+      "bins": 4096,
+      "feature_mode": "hash",
+      "results": {
+        "original80": {
+          "cases": 80,
+          "feature_values_exact": 327680,
+          "score_and_fusion_fields_exact": 2880,
+          "max_utf8_bytes": 26
+        },
+        "aug192": {
+          "cases": 192,
+          "feature_values_exact": 786432,
+          "score_and_fusion_fields_exact": 6912,
+          "max_utf8_bytes": 57
+        },
+        "observed288": {
+          "cases": 288,
+          "feature_values_exact": 1179648,
+          "score_and_fusion_fields_exact": 10368,
+          "max_utf8_bytes": 57
+        },
+        "old_validation": {
+          "cases": 541,
+          "feature_values_exact": 2215936,
+          "score_and_fusion_fields_exact": 19476,
+          "max_utf8_bytes": 63
+        },
+        "validation": {
+          "cases": 2031,
+          "feature_values_exact": 8318976,
+          "score_and_fusion_fields_exact": 73116,
+          "max_utf8_bytes": 64
+        },
+        "observed1138": {
+          "cases": 1138,
+          "feature_values_exact": 4661248,
+          "score_and_fusion_fields_exact": 40968,
+          "max_utf8_bytes": 64
+        },
+        "observed900": {
+          "cases": 900,
+          "feature_values_exact": 3686400,
+          "score_and_fusion_fields_exact": 32400,
+          "max_utf8_bytes": 64
+        }
+      },
+      "total_cases": 5170
+    },
+    "h96_f1024_warm": {
+      "passed": true,
+      "hidden": 96,
+      "bins": 1024,
+      "feature_mode": "hash",
+      "results": {
+        "original80": {
+          "cases": 80,
+          "feature_values_exact": 81920,
+          "score_and_fusion_fields_exact": 2880,
+          "max_utf8_bytes": 26
+        },
+        "aug192": {
+          "cases": 192,
+          "feature_values_exact": 196608,
+          "score_and_fusion_fields_exact": 6912,
+          "max_utf8_bytes": 57
+        },
+        "observed288": {
+          "cases": 288,
+          "feature_values_exact": 294912,
+          "score_and_fusion_fields_exact": 10368,
+          "max_utf8_bytes": 57
+        },
+        "old_validation": {
+          "cases": 541,
+          "feature_values_exact": 553984,
+          "score_and_fusion_fields_exact": 19476,
+          "max_utf8_bytes": 63
+        },
+        "validation": {
+          "cases": 2031,
+          "feature_values_exact": 2079744,
+          "score_and_fusion_fields_exact": 73116,
+          "max_utf8_bytes": 64
+        },
+        "observed1138": {
+          "cases": 1138,
+          "feature_values_exact": 1165312,
+          "score_and_fusion_fields_exact": 40968,
+          "max_utf8_bytes": 64
+        },
+        "observed900": {
+          "cases": 900,
+          "feature_values_exact": 921600,
+          "score_and_fusion_fields_exact": 32400,
+          "max_utf8_bytes": 64
+        }
+      },
+      "total_cases": 5170
+    }
+  },
+  "passed": true,
+  "seconds": 11.265960210002959
+}

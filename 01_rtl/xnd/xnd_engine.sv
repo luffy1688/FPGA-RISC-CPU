@@ -32,10 +32,14 @@ module xnd_engine #(
   localparam logic [7:0] E_COMMAND=1, E_PARAM=2, E_RANGE=3,
                            E_SLOT=4, E_DMA=5, E_TIMEOUT=6;
   // ADS subset: explicit constants replace the unsupported enum type.
-  localparam logic [3:0] IDLE=4'd0, LOAD_REQ=4'd1, LOAD_STORE=4'd2,
+  localparam logic [4:0] IDLE=4'd0, LOAD_REQ=4'd1, LOAD_STORE=4'd2,
     WEIGHT_REQ=4'd3, MAC=4'd4, Y_REQ=4'd5, BIAS_REQ=4'd6,
-    RESIDUAL_REQ=4'd7, POST_SUBMIT=4'd8, POST_WAIT=4'd9;
-  logic [3:0] state;
+    RESIDUAL_REQ=4'd7, POST_SUBMIT=4'd8, POST_WAIT=4'd9,
+    CHECK_PARAM=4'd10, CHECK_PRODUCT=4'd11, CHECK_BASE=4'd12,
+    CHECK_END=4'd13,CHECK_RANGE=4'd14,MAC_DRAIN=5'd15,
+    DOT_PRODUCT=5'd16,DOT_SUM=5'd17,DOT_DONE=5'd18,
+    PARAM_EVAL=5'd19,RANGE_EVAL=5'd20;
+  logic [4:0] state;
   logic [31:0] operand_a, operand_b, a_addr, w_addr, y_addr;
   logic [31:0] cols, rows, stride, control;
   // Experimental postprocessing config: enable[0], mode[2:1], right shift[7:3].
@@ -89,7 +93,29 @@ module xnd_engine #(
   logic signed [15:0] product [0:3];
   logic signed [31:0] vector_sum;
   logic [31:0] mac_lanes;
-  logic [63:0] weight_extent, a_extent, y_extent;
+  logic mac_valid0,mac_valid1,mac_valid2,mac_last0,mac_last1,mac_last2;
+  logic [31:0]mac_lanes0,mac_lanes1,mac_lanes2;
+  logic signed[7:0]activation_q[0:3],weight_q[0:3];
+  logic signed[15:0]product_q[0:3],dot_product_q[0:3];
+  logic signed[16:0]pair0_q,pair1_q,dot_pair0_q,dot_pair1_q;
+  wire signed[17:0]pair_sum=$signed(pair0_q)+$signed(pair1_q);
+  wire signed[31:0]registered_vector_sum={{14{pair_sum[17]}},pair_sum};
+  wire signed[17:0]dot_pair_sum=$signed(dot_pair0_q)+$signed(dot_pair1_q);
+  wire signed[31:0]registered_dot_sum={{14{dot_pair_sum[17]}},dot_pair_sum};
+  wire mac_timeout=mem_valid&&!mem_ready&&wait_cycles>=DMA_TIMEOUT-1;
+  wire mac_dma_error=mem_valid&&mem_ready&&mem_error;
+  wire mac_issue=state==MAC&&!mac_timeout&&!mac_dma_error;
+  // A command owns the configuration while these checked setup stages run.
+  // Partial products avoid a multiplier plus two wide carry chains plus a
+  // range comparator in the command-accept cycle. No DMA is issued here.
+  logic validation_gemv;
+  logic validation_param_bad,validation_range_bad,validation_slot_ok;
+  logic [ROW_INDEX_BITS-1:0] validation_last_row;
+  logic [31:0] validation_a_last,validation_y_last,validation_bias_last;
+  logic [31:0] validation_weight_last;
+  logic [ROW_INDEX_BITS+15:0] validation_product_low,validation_product_high;
+  logic [63:0] validation_row_span,validation_weight_base;
+  logic [63:0] weight_extent, a_extent, y_extent,bias_extent;
   logic [31:0] row_bytes, padded_row_bytes;
   logic busy, addr_known, addr_writable, config_write, cmd_write;
   logic signed [31:0] dot_p0, dot_p1, dot_p2, dot_p3;
@@ -118,7 +144,7 @@ module xnd_engine #(
   task automatic fail_job(input logic [7:0] code);
     begin
       state<=IDLE; done<=1'b1; error<=1'b1; error_code<=code;
-      weight_next_valid<=0;
+      weight_next_valid<=0;mac_valid0<=0;mac_valid1<=0;mac_valid2<=0;
     end
   endtask
 
@@ -145,11 +171,6 @@ module xnd_engine #(
                 last<({32'd0,DDR_BASE}+{32'd0,DDR_BYTES}));
     end
   endfunction
-  assign a_extent={32'd0,a_addr}+{32'd0,((cols+32'd3)&32'hfffffffc)}-1;
-  assign y_extent={32'd0,y_addr}+(post_enable?{32'd0,((rows+32'd3)&32'hfffffffc)}:({32'd0,rows}<<2))-1;
-  wire [63:0] bias_extent={32'd0,bias_addr}+({32'd0,rows}<<2)-1;
-  assign weight_extent={32'd0,w_addr}+
-             ({{(64-ROW_INDEX_BITS){1'b0}},last_valid_row}*{32'd0,stride})+{32'd0,padded_row_bytes}-1;
 
   assign dot_p0=$signed({{24{operand_a[7]}},operand_a[7:0]}) *
                 $signed({{24{operand_b[7]}},operand_b[7:0]});
@@ -255,8 +276,16 @@ module xnd_engine #(
       done<=0; error<=0; error_code<=0;
       cycles<=0; read_bytes<=0; write_bytes<=0; macs<=0;
       col_counter<=0; row_counter<=0; packed_word<=0; lane<=0;
-      accumulator<=0; result<=0; wait_cycles<=0;
+      accumulator<=0;result<=0;wait_cycles<=0;
+      mac_valid0<=0;mac_valid1<=0;mac_valid2<=0;mac_last0<=0;mac_last1<=0;mac_last2<=0;mac_lanes0<=0;mac_lanes1<=0;mac_lanes2<=0;
+      pair0_q<=0;pair1_q<=0;dot_pair0_q<=0;dot_pair1_q<=0;
+      for(i=0;i<4;i=i+1)begin activation_q[i]<=0;weight_q[i]<=0;product_q[i]<=0;dot_product_q[i]<=0;end
       weight_next_valid<=0; weight_next_word<=0; weight_row_addr<=0;
+      validation_gemv<=0;validation_last_row<=0;validation_param_bad<=0;validation_range_bad<=0;validation_slot_ok<=0;
+      validation_a_last<=0;validation_y_last<=0;validation_bias_last<=0;validation_weight_last<=0;
+      validation_product_low<=0;validation_product_high<=0;
+      validation_row_span<=0;validation_weight_base<=0;
+      weight_extent<=0;a_extent<=0;y_extent<=0;bias_extent<=0;
       // Slot RAM is not reset: valid bits prevent use before LOAD.
     end else begin
       if(busy) cycles<=cycles+1;
@@ -264,6 +293,33 @@ module xnd_engine #(
         if(wait_cycles>=DMA_TIMEOUT-1) fail_job(E_TIMEOUT);
         else wait_cycles<=wait_cycles+1;
       end else wait_cycles<=0;
+
+      // One four-lane group can issue every MAC cycle. The adder tree is
+      // pipelined independently of DMA wait states. Only a row's final group
+      // drains before output/postprocessing, so the cost is three clocks/row.
+      // The asynchronous activation bank mux ends at activation_q; it does
+      // not share a timing path with either the DSP products or accumulator.
+      if(mac_timeout||mac_dma_error)begin mac_valid0<=0;mac_valid1<=0;mac_valid2<=0;end
+      else begin
+        mac_valid0<=mac_issue;mac_valid1<=mac_valid0;mac_valid2<=mac_valid1;
+        if(mac_issue)begin
+          for(i=0;i<4;i=i+1)begin activation_q[i]<=current_a[i];weight_q[i]<=current_w[i];end
+          mac_last0<=col_index+4>=cols;mac_lanes0<=mac_lanes;
+        end
+        if(mac_valid0)begin
+          for(i=0;i<4;i=i+1)product_q[i]<=activation_q[i]*weight_q[i];
+          mac_last1<=mac_last0;mac_lanes1<=mac_lanes0;
+        end
+        if(mac_valid1)begin
+          pair0_q<=$signed(product_q[0])+$signed(product_q[1]);
+          pair1_q<=$signed(product_q[2])+$signed(product_q[3]);
+          mac_last2<=mac_last1;mac_lanes2<=mac_lanes1;
+        end
+        if(mac_valid2)begin
+          accumulator<=accumulator+registered_vector_sum;macs<=macs+mac_lanes2;
+          if(mac_last2)state<=post_enable?BIAS_REQ:Y_REQ;
+        end
+      end
 
       if(req_valid && req_write && req_addr==16'h0000 && req_wstrb[0]) begin
         if(req_wdata[1]) done<=0;
@@ -292,23 +348,14 @@ module xnd_engine #(
         weight_next_valid<=0;
         case(req_wdata[7:0])
           8'd1: begin
-            result<=dot_p0+dot_p1+dot_p2+dot_p3; macs<=4; done<=1;
+            state<=DOT_PRODUCT;
           end
           8'd2: begin
             slot_valid[req_wdata[8]]<=0;
-            if(cols==0 || cols>MAX_COLS || a_addr[1:0]!=0) fail_job(E_PARAM);
-            else if(!range_ok(a_addr,a_extent,1'b1)) fail_job(E_RANGE);
-            else state<=LOAD_REQ;
+            validation_gemv<=0;state<=PARAM_EVAL;
           end
           8'd3: begin
-            if(cols==0 || cols>MAX_COLS || rows==0 || rows>MAX_ROWS ||
-               stride<padded_row_bytes || stride[1:0]!=0 ||
-               w_addr[1:0]!=0 || y_addr[1:0]!=0 || (post_enable && (bias_addr[1:0]!=0 || post_cfg[2:1]==3 || post_cfg[31:8]!=0))) fail_job(E_PARAM);
-            else if(!range_ok(w_addr,weight_extent,1'b0) || !range_ok(y_addr,y_extent,1'b1) || (post_enable && !range_ok(bias_addr,bias_extent,1'b0)))
-              fail_job(E_RANGE);
-            else if(!slot_valid[req_wdata[8]] || slot_cols[req_wdata[8]]!=cols)
-              fail_job(E_SLOT);
-            else state<=WEIGHT_REQ;
+            validation_gemv<=1;state<=PARAM_EVAL;
           end
           8'd4: begin slot_valid[req_wdata[8]]<=0; done<=1; end
           default: fail_job(E_COMMAND);
@@ -316,6 +363,67 @@ module xnd_engine #(
       end
 
       case(state)
+        PARAM_EVAL:begin
+          validation_param_bad<=validation_gemv ? (cols==0 || cols>MAX_COLS || rows==0 || rows>MAX_ROWS ||
+               stride<padded_row_bytes || stride[1:0]!=0 ||
+               w_addr[1:0]!=0 || y_addr[1:0]!=0 ||
+               (post_enable && (bias_addr[1:0]!=0 || post_cfg[2:1]==3 || post_cfg[31:8]!=0))) : (cols==0 || cols>MAX_COLS || a_addr[1:0]!=0);
+          state<=CHECK_PARAM;
+        end
+        CHECK_PARAM:begin
+          // Keep the original PARAM -> RANGE -> SLOT error precedence.
+          if(!validation_gemv)begin
+            if(validation_param_bad)fail_job(E_PARAM);
+            else begin
+              validation_a_last<=((cols+32'd3)&32'hfffffffc)-32'd1;
+              state<=CHECK_PRODUCT;
+            end
+          end else begin
+            if(validation_param_bad)fail_job(E_PARAM);
+            else begin
+              validation_last_row<=last_valid_row;
+              validation_weight_last<=padded_row_bytes-32'd1;
+              validation_y_last<=post_enable?((rows+32'd3)&32'hfffffffc)-32'd1:(rows<<2)-32'd1;
+              validation_bias_last<=(rows<<2)-32'd1;
+              state<=CHECK_PRODUCT;
+            end
+          end
+        end
+        CHECK_PRODUCT:begin
+          if(validation_gemv)begin
+            validation_product_low<=validation_last_row*stride[15:0];
+            validation_product_high<=validation_last_row*stride[31:16];
+            y_extent<={32'd0,y_addr}+{32'd0,validation_y_last};
+            bias_extent<={32'd0,bias_addr}+{32'd0,validation_bias_last};
+            state<=CHECK_BASE;
+          end else begin
+            a_extent<={32'd0,a_addr}+{32'd0,validation_a_last};
+            state<=RANGE_EVAL;
+          end
+        end
+        CHECK_BASE:begin
+          validation_row_span<=({{(48-ROW_INDEX_BITS){1'b0}},validation_product_high}<<16)+
+                                {{(48-ROW_INDEX_BITS){1'b0}},validation_product_low};
+          validation_weight_base<={32'd0,w_addr}+{32'd0,validation_weight_last};
+          state<=CHECK_END;
+        end
+        CHECK_END:begin
+          weight_extent<=validation_weight_base+validation_row_span;
+          state<=RANGE_EVAL;
+        end
+        RANGE_EVAL:begin
+          validation_range_bad<=validation_gemv ?
+            (!range_ok(w_addr,weight_extent,1'b0) || !range_ok(y_addr,y_extent,1'b1) ||
+             (post_enable&&!range_ok(bias_addr,bias_extent,1'b0))) : !range_ok(a_addr,a_extent,1'b1);
+          validation_slot_ok<=slot_valid[slot] && slot_cols[slot]==cols;
+          state<=CHECK_RANGE;
+        end
+        CHECK_RANGE:begin
+          if(validation_range_bad)fail_job(E_RANGE);
+          else if(!validation_gemv)state<=LOAD_REQ;
+          else if(!validation_slot_ok)fail_job(E_SLOT);
+          else state<=WEIGHT_REQ;
+        end
         LOAD_REQ: if(mem_ready) begin
           if(mem_error) fail_job(E_DMA);
           else begin packed_word<=mem_rdata; read_bytes<=read_bytes+4; state<=LOAD_STORE; end
@@ -345,8 +453,8 @@ module xnd_engine #(
               weight_next_word<=mem_rdata; weight_next_valid<=1;
               read_bytes<=read_bytes+4;
             end
-            accumulator<=accumulator+vector_sum; macs<=macs+mac_lanes;
-            if(col_index+4>=cols) begin state<=post_enable?BIAS_REQ:Y_REQ;weight_next_valid<=0;end
+
+            if(col_index+4>=cols)begin state<=MAC_DRAIN;weight_next_valid<=0;end
             else begin
               col_counter<=next_col_index[COL_INDEX_BITS-1:0];
               if(control[0] && lane==0) lane<=4;
@@ -360,6 +468,16 @@ module xnd_engine #(
             end
           end
         end
+        MAC_DRAIN:begin end
+        DOT_PRODUCT:begin
+          dot_product_q[0]<=dot_p0[15:0];dot_product_q[1]<=dot_p1[15:0];
+          dot_product_q[2]<=dot_p2[15:0];dot_product_q[3]<=dot_p3[15:0];state<=DOT_SUM;
+        end
+        DOT_SUM:begin
+          dot_pair0_q<=$signed(dot_product_q[0])+$signed(dot_product_q[1]);
+          dot_pair1_q<=$signed(dot_product_q[2])+$signed(dot_product_q[3]);state<=DOT_DONE;
+        end
+        DOT_DONE:begin result<=registered_dot_sum;macs<=4;done<=1;state<=IDLE;end
         BIAS_REQ: if(mem_ready) begin
           if(mem_error)fail_job(E_DMA);
           else begin

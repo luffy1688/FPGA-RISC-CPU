@@ -1,0 +1,10 @@
+{
+  "samples": [],
+  "rx_chunks": [],
+  "initial_rx": [],
+  "source": "native_physical_bootstrap",
+  "failures": [
+    "FileNotFoundError(2, '系统找不到指定的文件。', None, 2)"
+  ],
+  "passed": false
+}

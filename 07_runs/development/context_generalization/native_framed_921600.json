@@ -1,0 +1,4056 @@
+{
+  "schema": "needlervx.native_latency.v1",
+  "started_utc": "2026-10-30T02:49:30.441911+00:00",
+  "clock": {
+    "implementation": "QueryPerformanceCounter()",
+    "monotonic": true,
+    "adjustable": false,
+    "resolution": 1e-07
+  },
+  "port": "COM10",
+  "baud": 921600,
+  "repeat": 10,
+  "protocol": "framed",
+  "method": "Win32 overlapped full-duplex ReadFile event completion dedicated reader, first-byte-return COMMTIMEOUTS",
+  "timing_scope": "host WriteFile entry/completion and ReadFile chunk completion; not wire edges",
+  "p95_note": "empirical nearest-rank P95; n=10 gives max and is statistically unstable",
+  "initial_ready": "explicit coordinated handoff",
+  "rx_chunks": [
+    {
+      "received_ns": 254893642850700,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 254893642946600,
+      "hex": "525f4c494e4b207b22756172745f62617564223a3932313630302c2264697669646572223a34342c226672616d65645f7365656e223a302c226c6173745f726571756573745f736571223a307d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 254893644894900,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 254893644945700,
+      "hex": "525f494f207b226c65645f6d61736b223a33372c2270776d5f706572696f64223a34303530302c2270776d5f68696768223a383130302c2270776d5f656e61626c6564223a312c2270776d5f64757479223a32302c22726573746f72655f737570706f72746564223a317d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 254893647437300,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893647494200,
+      "hex": "5a01213400010000002200000006040008000185022500000025000000888a0000fc000000c18b00002500000025000000000000000000000001000000f260"
+    },
+    {
+      "received_ns": 254893650077900,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893650173800,
+      "hex": "5a01213400020000002300000006040008000185022500000025000000588a0000fc000000918b000025000000250000000000000000000000010000009929"
+    },
+    {
+      "received_ns": 254893652730700,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893652798600,
+      "hex": "5a01213400030000002400000006040008000185022500000025000000588a0000fc000000918b00002500000025000000000000000000000001000000bf18"
+    },
+    {
+      "received_ns": 254893655292200,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893655352800,
+      "hex": "5a01213400040000002500000006040008000185022500000025000000588a0000fc000000918b000025000000250000000000000000000000010000008bb6"
+    },
+    {
+      "received_ns": 254893657871800,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893657937800,
+      "hex": "5a01213400050000002600000006040008000185022500000025000000588a0000fc000000918b000025000000250000000000000000000000010000008c7a"
+    },
+    {
+      "received_ns": 254893660436100,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893660477800,
+      "hex": "5a01213400060000002700000006040008000185022500000025000000588a0000fc000000918b0000250000002500000000000000000000000100000085c3"
+    },
+    {
+      "received_ns": 254893663008900,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893663087300,
+      "hex": "5a01213400070000002800000006040008000185022500000025000000588a0000fc000000918b00002500000025000000000000000000000001000000c018"
+    },
+    {
+      "received_ns": 254893665561000,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893665635700,
+      "hex": "5a01213400080000002900000006040008000185022500000025000000588a0000fc000000918b000025000000250000000000000000000000010000008e98"
+    },
+    {
+      "received_ns": 254893668146700,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893668204600,
+      "hex": "5a01213400090000002a00000006040008000185022500000025000000588a0000fc000000918b000025000000250000000000000000000000010000008954"
+    },
+    {
+      "received_ns": 254893670693900,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893670757300,
+      "hex": "5a012134000a0000002b00000006040008000185022500000025000000588a0000fc000000918b0000250000002500000000000000000000000100000080ed"
+    },
+    {
+      "received_ns": 254893674587300,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893674639500,
+      "hex": "5a012134000b0000002c00000006000004000385020000000095100000a41601000f010000f0170100000000001d0a00000000000000000000010000007ce9"
+    },
+    {
+      "received_ns": 254893678388600,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893678453700,
+      "hex": "5a012134000c0000002d00000006000004000385020000000095100000321501000f0100007e160100000000001d0a00000000000000000000010000006edd"
+    },
+    {
+      "received_ns": 254893682238600,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893682294700,
+      "hex": "5a012134000d0000002e00000006000004000385020000000095100000221501000f0100006e160100000000001d0a0000000000000000000001000000ff95"
+    },
+    {
+      "received_ns": 254893686094100,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893686186800,
+      "hex": "5a012134000e0000002f00000006000004000385020000000095100000221501000f0100006e160100000000001d0a0000000000000000000001000000f62c"
+    },
+    {
+      "received_ns": 254893690007100,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893690082700,
+      "hex": "5a012134000f0000003000000006000004000385020000000095100000221501000f0100006e160100000000001d0a00000000000000000000010000005433"
+    },
+    {
+      "received_ns": 254893693882800,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893693944400,
+      "hex": "5a01213400100000003100000006000004000385020000000095100000221501000f0100006e160100000000001d0a0000000000000000000001000000eeef"
+    },
+    {
+      "received_ns": 254893697701700,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893697756400,
+      "hex": "5a01213400110000003200000006000004000385020000000095100000221501000f0100006e160100000000001d0a0000000000000000000001000000e923"
+    },
+    {
+      "received_ns": 254893701506600,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893701539400,
+      "hex": "5a01213400120000003300000006000004000385020000000095100000221501000f0100006e160100000000001d0a0000000000000000000001000000e09a"
+    },
+    {
+      "received_ns": 254893705294000,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893705343200,
+      "hex": "5a01213400130000003400000006000004000385020000000095100000221501000f0100006e160100000000001d0a0000000000000000000001000000c6ab"
+    },
+    {
+      "received_ns": 254893709079800,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893709152200,
+      "hex": "5a01213400140000003500000006000004000385020000000095100000221501000f0100006e160100000000001d0a0000000000000000000001000000f205"
+    },
+    {
+      "received_ns": 254893713467800,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893713533900,
+      "hex": "5a012134001500000036000000060100100002870214000000140000009051010057010000245301001400000014000000349e0000a41f00000100000007f9"
+    },
+    {
+      "received_ns": 254893717806100,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893717883200,
+      "hex": "5a01213400160000003700000006010010000287021400000014000000a450010057010000385201001400000014000000349e0000a41f0000010000001db7"
+    },
+    {
+      "received_ns": 254893722241800,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893722347400,
+      "hex": "5a01213400170000003800000006010010000287021400000014000000a450010057010000385201001400000014000000349e0000a41f000001000000586c"
+    },
+    {
+      "received_ns": 254893726643600,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893726685300,
+      "hex": "5a01213400180000003900000006010010000287021400000014000000a450010057010000385201001400000014000000349e0000a41f00000100000016ec"
+    },
+    {
+      "received_ns": 254893731014800,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893731045600,
+      "hex": "5a01213400190000003a00000006010010000287021400000014000000a450010057010000385201001400000014000000349e0000a41f0000010000001120"
+    },
+    {
+      "received_ns": 254893735300700,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893735368300,
+      "hex": "5a012134001a0000003b00000006010010000287021400000014000000a450010057010000385201001400000014000000349e0000a41f0000010000001899"
+    },
+    {
+      "received_ns": 254893739600800,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893739644600,
+      "hex": "5a012134001b0000003c00000006010010000287021400000014000000a450010057010000385201001400000014000000349e0000a41f0000010000003ea8"
+    },
+    {
+      "received_ns": 254893744018600,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893744097600,
+      "hex": "5a012134001c0000003d00000006010010000287021400000014000000a450010057010000385201001400000014000000349e0000a41f0000010000000a06"
+    },
+    {
+      "received_ns": 254893748364300,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893748435200,
+      "hex": "5a012134001d0000003e00000006010010000287021400000014000000a450010057010000385201001400000014000000349e0000a41f0000010000000dca"
+    },
+    {
+      "received_ns": 254893752681300,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893752771700,
+      "hex": "5a012134001e0000003f00000006010010000287021400000014000000a450010057010000385201001400000014000000349e0000a41f0000010000000473"
+    },
+    {
+      "received_ns": 254893755324700,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893755366000,
+      "hex": "5a012134001f00000040000000060400080001850225000000250000004d8a0000fc000000868b00002500000025000000000000000000000001000000dd17"
+    },
+    {
+      "received_ns": 254893757865100,
+      "hex": "a5"
+    },
+    {
+      "received_ns": 254893757901400,
+      "hex": "5a012134002000000041000000060100100002870214000000140000004287000057010000d68800001400000014000000349e0000a41f00000100000052be"
+    },
+    {
+      "received_ns": 254893759717900,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 254893759802700,
+      "hex": "525f494f207b226c65645f6d61736b223a33372c2270776d5f706572696f64223a34303530302c2270776d5f68696768223a383130302c2270776d5f656e61626c6564223a312c2270776d5f64757479223a32302c22726573746f72655f737570706f72746564223a317d0a4e525f52454144590a"
+    }
+  ],
+  "initial_rx": [],
+  "samples": [
+    {
+      "text": ":link",
+      "phase": "initial_link",
+      "tx_hex": "3a6c696e6b0a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        0,
+        1
+      ],
+      "events": [
+        {
+          "kind": "NR_LINK",
+          "text": "NR_LINK {\"uart_baud\":921600,\"divider\":44,\"framed_seen\":0,\"last_request_seq\":0}",
+          "data": {
+            "uart_baud": 921600,
+            "divider": 44,
+            "framed_seen": 0,
+            "last_request_seq": 0
+          },
+          "received_ns": 254893642946600,
+          "wire_bytes": 79,
+          "raw_hex": "4e525f4c494e4b207b22756172745f62617564223a3932313630302c2264697669646572223a34342c226672616d65645f7365656e223a302c226c6173745f726571756573745f736571223a307d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 254893642946600,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [],
+      "t0write_ns": 254893641456300,
+      "twrite_ns": 254893641542600,
+      "tfirst_ns": 254893642850700,
+      "link": {
+        "uart_baud": 921600,
+        "divider": 44,
+        "framed_seen": 0,
+        "last_request_seq": 0
+      },
+      "tframe_ns": 254893642946600,
+      "tready_ns": 254893642946600,
+      "twrite_ms": 0.0863,
+      "tfirst_ms": 1.3944,
+      "tframe_ms": 1.4903,
+      "tready_ms": 1.4903,
+      "validated": true
+    },
+    {
+      "text": ":io",
+      "phase": "initial_io",
+      "tx_hex": "3a696f0a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        2,
+        3
+      ],
+      "events": [
+        {
+          "kind": "NR_IO",
+          "text": "NR_IO {\"led_mask\":37,\"pwm_period\":40500,\"pwm_high\":8100,\"pwm_enabled\":1,\"pwm_duty\":20,\"restore_supported\":1}",
+          "data": {
+            "led_mask": 37,
+            "pwm_period": 40500,
+            "pwm_high": 8100,
+            "pwm_enabled": 1,
+            "pwm_duty": 20,
+            "restore_supported": 1
+          },
+          "received_ns": 254893644945700,
+          "wire_bytes": 109,
+          "raw_hex": "4e525f494f207b226c65645f6d61736b223a33372c2270776d5f706572696f64223a34303530302c2270776d5f68696768223a383130302c2270776d5f656e61626c6564223a312c2270776d5f64757479223a32302c22726573746f72655f737570706f72746564223a317d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 254893644945700,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [],
+      "t0write_ns": 254893643121200,
+      "twrite_ns": 254893643201300,
+      "tfirst_ns": 254893644894900,
+      "io": {
+        "led_mask": 37,
+        "pwm_period": 40500,
+        "pwm_high": 8100,
+        "pwm_enabled": 1,
+        "pwm_duty": 20,
+        "restore_supported": 1
+      },
+      "tframe_ns": 254893644945700,
+      "tready_ns": 254893644945700,
+      "twrite_ms": 0.0801,
+      "tfirst_ms": 1.7737,
+      "tframe_ms": 1.8245,
+      "tready_ms": 1.8245,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "measure",
+      "tx_hex": "a55a01100600010000006c6564203337cf66",
+      "protocol": "framed",
+      "request_seq": 1,
+      "rx_chunks": [
+        4,
+        5
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 1,
+          "data": {
+            "decision_cycles": 35464,
+            "tool_cycles": 252,
+            "request_cycles": 35777,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "uart_status": 1,
+            "case": 34,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "receipt_kind": 1,
+            "receipt_match": 1,
+            "receipt_enabled": 0,
+            "model_used": 2,
+            "argument": 37,
+            "value": 37,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 24818,
+          "text": "",
+          "received_ns": 254893647494200,
+          "wire_bytes": 64,
+          "raw_hex": "a55a01213400010000002200000006040008000185022500000025000000888a0000fc000000c18b00002500000025000000000000000000000001000000f260"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893645086900,
+      "twrite_ns": 254893645180500,
+      "tfirst_ns": 254893647437300,
+      "result": {
+        "decision_cycles": 35464,
+        "tool_cycles": 252,
+        "request_cycles": 35777,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "uart_status": 1,
+        "case": 34,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "receipt_kind": 1,
+        "receipt_match": 1,
+        "receipt_enabled": 0,
+        "model_used": 2,
+        "argument": 37,
+        "value": 37,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893647494200,
+      "tready_ns": 254893647494200,
+      "twrite_ms": 0.0936,
+      "tfirst_ms": 2.3504,
+      "tframe_ms": 2.4073,
+      "tready_ms": 2.4073,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "measure",
+      "tx_hex": "a55a01100600020000006c656420333700d7",
+      "protocol": "framed",
+      "request_seq": 2,
+      "rx_chunks": [
+        6,
+        7
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 2,
+          "data": {
+            "decision_cycles": 35416,
+            "tool_cycles": 252,
+            "request_cycles": 35729,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "uart_status": 1,
+            "case": 35,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "receipt_kind": 1,
+            "receipt_match": 1,
+            "receipt_enabled": 0,
+            "model_used": 2,
+            "argument": 37,
+            "value": 37,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 10649,
+          "text": "",
+          "received_ns": 254893650173800,
+          "wire_bytes": 64,
+          "raw_hex": "a55a01213400020000002300000006040008000185022500000025000000588a0000fc000000918b000025000000250000000000000000000000010000009929"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893647717900,
+      "twrite_ns": 254893647814200,
+      "tfirst_ns": 254893650077900,
+      "result": {
+        "decision_cycles": 35416,
+        "tool_cycles": 252,
+        "request_cycles": 35729,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "uart_status": 1,
+        "case": 35,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "receipt_kind": 1,
+        "receipt_match": 1,
+        "receipt_enabled": 0,
+        "model_used": 2,
+        "argument": 37,
+        "value": 37,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893650173800,
+      "tready_ns": 254893650173800,
+      "twrite_ms": 0.0963,
+      "tfirst_ms": 2.36,
+      "tframe_ms": 2.4559,
+      "tready_ms": 2.4559,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "measure",
+      "tx_hex": "a55a01100600030000006c656420333745b8",
+      "protocol": "framed",
+      "request_seq": 3,
+      "rx_chunks": [
+        8,
+        9
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 3,
+          "data": {
+            "decision_cycles": 35416,
+            "tool_cycles": 252,
+            "request_cycles": 35729,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "uart_status": 1,
+            "case": 36,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "receipt_kind": 1,
+            "receipt_match": 1,
+            "receipt_enabled": 0,
+            "model_used": 2,
+            "argument": 37,
+            "value": 37,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 6335,
+          "text": "",
+          "received_ns": 254893652798600,
+          "wire_bytes": 64,
+          "raw_hex": "a55a01213400030000002400000006040008000185022500000025000000588a0000fc000000918b00002500000025000000000000000000000001000000bf18"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893650346100,
+      "twrite_ns": 254893650502900,
+      "tfirst_ns": 254893652730700,
+      "result": {
+        "decision_cycles": 35416,
+        "tool_cycles": 252,
+        "request_cycles": 35729,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "uart_status": 1,
+        "case": 36,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "receipt_kind": 1,
+        "receipt_match": 1,
+        "receipt_enabled": 0,
+        "model_used": 2,
+        "argument": 37,
+        "value": 37,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893652798600,
+      "tready_ns": 254893652798600,
+      "twrite_ms": 0.1568,
+      "tfirst_ms": 2.3846,
+      "tframe_ms": 2.4525,
+      "tready_ms": 2.4525,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "measure",
+      "tx_hex": "a55a01100600040000006c6564203337bfa4",
+      "protocol": "framed",
+      "request_seq": 4,
+      "rx_chunks": [
+        10,
+        11
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 4,
+          "data": {
+            "decision_cycles": 35416,
+            "tool_cycles": 252,
+            "request_cycles": 35729,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "uart_status": 1,
+            "case": 37,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "receipt_kind": 1,
+            "receipt_match": 1,
+            "receipt_enabled": 0,
+            "model_used": 2,
+            "argument": 37,
+            "value": 37,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 46731,
+          "text": "",
+          "received_ns": 254893655352800,
+          "wire_bytes": 64,
+          "raw_hex": "a55a01213400040000002500000006040008000185022500000025000000588a0000fc000000918b000025000000250000000000000000000000010000008bb6"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893652970000,
+      "twrite_ns": 254893653061300,
+      "tfirst_ns": 254893655292200,
+      "result": {
+        "decision_cycles": 35416,
+        "tool_cycles": 252,
+        "request_cycles": 35729,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "uart_status": 1,
+        "case": 37,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "receipt_kind": 1,
+        "receipt_match": 1,
+        "receipt_enabled": 0,
+        "model_used": 2,
+        "argument": 37,
+        "value": 37,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893655352800,
+      "tready_ns": 254893655352800,
+      "twrite_ms": 0.0913,
+      "tfirst_ms": 2.3222,
+      "tframe_ms": 2.3828,
+      "tready_ms": 2.3828,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "measure",
+      "tx_hex": "a55a01100600050000006c6564203337facb",
+      "protocol": "framed",
+      "request_seq": 5,
+      "rx_chunks": [
+        12,
+        13
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 5,
+          "data": {
+            "decision_cycles": 35416,
+            "tool_cycles": 252,
+            "request_cycles": 35729,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "uart_status": 1,
+            "case": 38,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "receipt_kind": 1,
+            "receipt_match": 1,
+            "receipt_enabled": 0,
+            "model_used": 2,
+            "argument": 37,
+            "value": 37,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 31372,
+          "text": "",
+          "received_ns": 254893657937800,
+          "wire_bytes": 64,
+          "raw_hex": "a55a01213400050000002600000006040008000185022500000025000000588a0000fc000000918b000025000000250000000000000000000000010000008c7a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893655518600,
+      "twrite_ns": 254893655615000,
+      "tfirst_ns": 254893657871800,
+      "result": {
+        "decision_cycles": 35416,
+        "tool_cycles": 252,
+        "request_cycles": 35729,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "uart_status": 1,
+        "case": 38,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "receipt_kind": 1,
+        "receipt_match": 1,
+        "receipt_enabled": 0,
+        "model_used": 2,
+        "argument": 37,
+        "value": 37,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893657937800,
+      "tready_ns": 254893657937800,
+      "twrite_ms": 0.0964,
+      "tfirst_ms": 2.3532,
+      "tframe_ms": 2.4192,
+      "tready_ms": 2.4192,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "measure",
+      "tx_hex": "a55a01100600060000006c6564203337357a",
+      "protocol": "framed",
+      "request_seq": 6,
+      "rx_chunks": [
+        14,
+        15
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 6,
+          "data": {
+            "decision_cycles": 35416,
+            "tool_cycles": 252,
+            "request_cycles": 35729,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "uart_status": 1,
+            "case": 39,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "receipt_kind": 1,
+            "receipt_match": 1,
+            "receipt_enabled": 0,
+            "model_used": 2,
+            "argument": 37,
+            "value": 37,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 50053,
+          "text": "",
+          "received_ns": 254893660477800,
+          "wire_bytes": 64,
+          "raw_hex": "a55a01213400060000002700000006040008000185022500000025000000588a0000fc000000918b0000250000002500000000000000000000000100000085c3"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893658095900,
+      "twrite_ns": 254893658252600,
+      "tfirst_ns": 254893660436100,
+      "result": {
+        "decision_cycles": 35416,
+        "tool_cycles": 252,
+        "request_cycles": 35729,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "uart_status": 1,
+        "case": 39,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "receipt_kind": 1,
+        "receipt_match": 1,
+        "receipt_enabled": 0,
+        "model_used": 2,
+        "argument": 37,
+        "value": 37,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893660477800,
+      "tready_ns": 254893660477800,
+      "twrite_ms": 0.1567,
+      "tfirst_ms": 2.3402,
+      "tframe_ms": 2.3819,
+      "tready_ms": 2.3819,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "measure",
+      "tx_hex": "a55a01100600070000006c65642033377015",
+      "protocol": "framed",
+      "request_seq": 7,
+      "rx_chunks": [
+        16,
+        17
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 7,
+          "data": {
+            "decision_cycles": 35416,
+            "tool_cycles": 252,
+            "request_cycles": 35729,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "uart_status": 1,
+            "case": 40,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "receipt_kind": 1,
+            "receipt_match": 1,
+            "receipt_enabled": 0,
+            "model_used": 2,
+            "argument": 37,
+            "value": 37,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 6336,
+          "text": "",
+          "received_ns": 254893663087300,
+          "wire_bytes": 64,
+          "raw_hex": "a55a01213400070000002800000006040008000185022500000025000000588a0000fc000000918b00002500000025000000000000000000000001000000c018"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893660652100,
+      "twrite_ns": 254893660743200,
+      "tfirst_ns": 254893663008900,
+      "result": {
+        "decision_cycles": 35416,
+        "tool_cycles": 252,
+        "request_cycles": 35729,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "uart_status": 1,
+        "case": 40,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "receipt_kind": 1,
+        "receipt_match": 1,
+        "receipt_enabled": 0,
+        "model_used": 2,
+        "argument": 37,
+        "value": 37,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893663087300,
+      "tready_ns": 254893663087300,
+      "twrite_ms": 0.0911,
+      "tfirst_ms": 2.3568,
+      "tframe_ms": 2.4352,
+      "tready_ms": 2.4352,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "measure",
+      "tx_hex": "a55a01100600080000006c6564203337c143",
+      "protocol": "framed",
+      "request_seq": 8,
+      "rx_chunks": [
+        18,
+        19
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 8,
+          "data": {
+            "decision_cycles": 35416,
+            "tool_cycles": 252,
+            "request_cycles": 35729,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "uart_status": 1,
+            "case": 41,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "receipt_kind": 1,
+            "receipt_match": 1,
+            "receipt_enabled": 0,
+            "model_used": 2,
+            "argument": 37,
+            "value": 37,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 39054,
+          "text": "",
+          "received_ns": 254893665635700,
+          "wire_bytes": 64,
+          "raw_hex": "a55a01213400080000002900000006040008000185022500000025000000588a0000fc000000918b000025000000250000000000000000000000010000008e98"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893663241400,
+      "twrite_ns": 254893663321600,
+      "tfirst_ns": 254893665561000,
+      "result": {
+        "decision_cycles": 35416,
+        "tool_cycles": 252,
+        "request_cycles": 35729,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "uart_status": 1,
+        "case": 41,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "receipt_kind": 1,
+        "receipt_match": 1,
+        "receipt_enabled": 0,
+        "model_used": 2,
+        "argument": 37,
+        "value": 37,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893665635700,
+      "tready_ns": 254893665635700,
+      "twrite_ms": 0.0802,
+      "tfirst_ms": 2.3196,
+      "tframe_ms": 2.3943,
+      "tready_ms": 2.3943,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "measure",
+      "tx_hex": "a55a01100600090000006c6564203337842c",
+      "protocol": "framed",
+      "request_seq": 9,
+      "rx_chunks": [
+        20,
+        21
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 9,
+          "data": {
+            "decision_cycles": 35416,
+            "tool_cycles": 252,
+            "request_cycles": 35729,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "uart_status": 1,
+            "case": 42,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "receipt_kind": 1,
+            "receipt_match": 1,
+            "receipt_enabled": 0,
+            "model_used": 2,
+            "argument": 37,
+            "value": 37,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 21641,
+          "text": "",
+          "received_ns": 254893668204600,
+          "wire_bytes": 64,
+          "raw_hex": "a55a01213400090000002a00000006040008000185022500000025000000588a0000fc000000918b000025000000250000000000000000000000010000008954"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893665825800,
+      "twrite_ns": 254893665993000,
+      "tfirst_ns": 254893668146700,
+      "result": {
+        "decision_cycles": 35416,
+        "tool_cycles": 252,
+        "request_cycles": 35729,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "uart_status": 1,
+        "case": 42,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "receipt_kind": 1,
+        "receipt_match": 1,
+        "receipt_enabled": 0,
+        "model_used": 2,
+        "argument": 37,
+        "value": 37,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893668204600,
+      "tready_ns": 254893668204600,
+      "twrite_ms": 0.1672,
+      "tfirst_ms": 2.3209,
+      "tframe_ms": 2.3788,
+      "tready_ms": 2.3788,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "measure",
+      "tx_hex": "a55a011006000a0000006c65642033374b9d",
+      "protocol": "framed",
+      "request_seq": 10,
+      "rx_chunks": [
+        22,
+        23
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 10,
+          "data": {
+            "decision_cycles": 35416,
+            "tool_cycles": 252,
+            "request_cycles": 35729,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "uart_status": 1,
+            "case": 43,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "receipt_kind": 1,
+            "receipt_match": 1,
+            "receipt_enabled": 0,
+            "model_used": 2,
+            "argument": 37,
+            "value": 37,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 60800,
+          "text": "",
+          "received_ns": 254893670757300,
+          "wire_bytes": 64,
+          "raw_hex": "a55a012134000a0000002b00000006040008000185022500000025000000588a0000fc000000918b0000250000002500000000000000000000000100000080ed"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893668359700,
+      "twrite_ns": 254893668450000,
+      "tfirst_ns": 254893670693900,
+      "result": {
+        "decision_cycles": 35416,
+        "tool_cycles": 252,
+        "request_cycles": 35729,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "uart_status": 1,
+        "case": 43,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "receipt_kind": 1,
+        "receipt_match": 1,
+        "receipt_enabled": 0,
+        "model_used": 2,
+        "argument": 37,
+        "value": 37,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893670757300,
+      "tready_ns": 254893670757300,
+      "twrite_ms": 0.0903,
+      "tfirst_ms": 2.3342,
+      "tframe_ms": 2.3976,
+      "tready_ms": 2.3976,
+      "validated": true
+    },
+    {
+      "text": "请读取FPGA当前温度。",
+      "phase": "measure",
+      "tx_hex": "a55a01101c000b000000e8afb7e8afbbe58f9646504741e5bd93e5898de6b8a9e5baa6e3808295c1",
+      "protocol": "framed",
+      "request_seq": 11,
+      "rx_chunks": [
+        24,
+        25
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 11,
+          "data": {
+            "decision_cycles": 71332,
+            "tool_cycles": 271,
+            "request_cycles": 71664,
+            "receipt_requested": 0,
+            "receipt_readback": 2589,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "uart_status": 1,
+            "case": 44,
+            "config": 6,
+            "selected_tool": 0,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 1,
+            "execute": 0,
+            "receipt_kind": 3,
+            "receipt_match": 1,
+            "receipt_enabled": 0,
+            "model_used": 2,
+            "argument": 0,
+            "value": 4245,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 59772,
+          "text": "",
+          "received_ns": 254893674639500,
+          "wire_bytes": 64,
+          "raw_hex": "a55a012134000b0000002c00000006000004000385020000000095100000a41601000f010000f0170100000000001d0a00000000000000000000010000007ce9"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893671004100,
+      "twrite_ns": 254893671125200,
+      "tfirst_ns": 254893674587300,
+      "result": {
+        "decision_cycles": 71332,
+        "tool_cycles": 271,
+        "request_cycles": 71664,
+        "receipt_requested": 0,
+        "receipt_readback": 2589,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "uart_status": 1,
+        "case": 44,
+        "config": 6,
+        "selected_tool": 0,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 1,
+        "execute": 0,
+        "receipt_kind": 3,
+        "receipt_match": 1,
+        "receipt_enabled": 0,
+        "model_used": 2,
+        "argument": 0,
+        "value": 4245,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893674639500,
+      "tready_ns": 254893674639500,
+      "twrite_ms": 0.1211,
+      "tfirst_ms": 3.5832,
+      "tframe_ms": 3.6354,
+      "tready_ms": 3.6354,
+      "validated": true
+    },
+    {
+      "text": "请读取FPGA当前温度。",
+      "phase": "measure",
+      "tx_hex": "a55a01101c000c000000e8afb7e8afbbe58f9646504741e5bd93e5898de6b8a9e5baa6e38082665f",
+      "protocol": "framed",
+      "request_seq": 12,
+      "rx_chunks": [
+        26,
+        27
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 12,
+          "data": {
+            "decision_cycles": 70962,
+            "tool_cycles": 271,
+            "request_cycles": 71294,
+            "receipt_requested": 0,
+            "receipt_readback": 2589,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "uart_status": 1,
+            "case": 45,
+            "config": 6,
+            "selected_tool": 0,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 1,
+            "execute": 0,
+            "receipt_kind": 3,
+            "receipt_match": 1,
+            "receipt_enabled": 0,
+            "model_used": 2,
+            "argument": 0,
+            "value": 4245,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 56686,
+          "text": "",
+          "received_ns": 254893678453700,
+          "wire_bytes": 64,
+          "raw_hex": "a55a012134000c0000002d00000006000004000385020000000095100000321501000f0100007e160100000000001d0a00000000000000000000010000006edd"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893674815200,
+      "twrite_ns": 254893674919500,
+      "tfirst_ns": 254893678388600,
+      "result": {
+        "decision_cycles": 70962,
+        "tool_cycles": 271,
+        "request_cycles": 71294,
+        "receipt_requested": 0,
+        "receipt_readback": 2589,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "uart_status": 1,
+        "case": 45,
+        "config": 6,
+        "selected_tool": 0,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 1,
+        "execute": 0,
+        "receipt_kind": 3,
+        "receipt_match": 1,
+        "receipt_enabled": 0,
+        "model_used": 2,
+        "argument": 0,
+        "value": 4245,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893678453700,
+      "tready_ns": 254893678453700,
+      "twrite_ms": 0.1043,
+      "tfirst_ms": 3.5734,
+      "tframe_ms": 3.6385,
+      "tready_ms": 3.6385,
+      "validated": true
+    },
+    {
+      "text": "请读取FPGA当前温度。",
+      "phase": "measure",
+      "tx_hex": "a55a01101c000d000000e8afb7e8afbbe58f9646504741e5bd93e5898de6b8a9e5baa6e380822006",
+      "protocol": "framed",
+      "request_seq": 13,
+      "rx_chunks": [
+        28,
+        29
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 13,
+          "data": {
+            "decision_cycles": 70946,
+            "tool_cycles": 271,
+            "request_cycles": 71278,
+            "receipt_requested": 0,
+            "receipt_readback": 2589,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "uart_status": 1,
+            "case": 46,
+            "config": 6,
+            "selected_tool": 0,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 1,
+            "execute": 0,
+            "receipt_kind": 3,
+            "receipt_match": 1,
+            "receipt_enabled": 0,
+            "model_used": 2,
+            "argument": 0,
+            "value": 4245,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 38399,
+          "text": "",
+          "received_ns": 254893682294700,
+          "wire_bytes": 64,
+          "raw_hex": "a55a012134000d0000002e00000006000004000385020000000095100000221501000f0100006e160100000000001d0a0000000000000000000001000000ff95"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893678666800,
+      "twrite_ns": 254893678785500,
+      "tfirst_ns": 254893682238600,
+      "result": {
+        "decision_cycles": 70946,
+        "tool_cycles": 271,
+        "request_cycles": 71278,
+        "receipt_requested": 0,
+        "receipt_readback": 2589,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "uart_status": 1,
+        "case": 46,
+        "config": 6,
+        "selected_tool": 0,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 1,
+        "execute": 0,
+        "receipt_kind": 3,
+        "receipt_match": 1,
+        "receipt_enabled": 0,
+        "model_used": 2,
+        "argument": 0,
+        "value": 4245,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893682294700,
+      "tready_ns": 254893682294700,
+      "twrite_ms": 0.1187,
+      "tfirst_ms": 3.5718,
+      "tframe_ms": 3.6279,
+      "tready_ms": 3.6279,
+      "validated": true
+    },
+    {
+      "text": "请读取FPGA当前温度。",
+      "phase": "measure",
+      "tx_hex": "a55a01101c000e000000e8afb7e8afbbe58f9646504741e5bd93e5898de6b8a9e5baa6e38082eaed",
+      "protocol": "framed",
+      "request_seq": 14,
+      "rx_chunks": [
+        30,
+        31
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 14,
+          "data": {
+            "decision_cycles": 70946,
+            "tool_cycles": 271,
+            "request_cycles": 71278,
+            "receipt_requested": 0,
+            "receipt_readback": 2589,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "uart_status": 1,
+            "case": 47,
+            "config": 6,
+            "selected_tool": 0,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 1,
+            "execute": 0,
+            "receipt_kind": 3,
+            "receipt_match": 1,
+            "receipt_enabled": 0,
+            "model_used": 2,
+            "argument": 0,
+            "value": 4245,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 11510,
+          "text": "",
+          "received_ns": 254893686186800,
+          "wire_bytes": 64,
+          "raw_hex": "a55a012134000e0000002f00000006000004000385020000000095100000221501000f0100006e160100000000001d0a0000000000000000000001000000f62c"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893682476900,
+      "twrite_ns": 254893682587000,
+      "tfirst_ns": 254893686094100,
+      "result": {
+        "decision_cycles": 70946,
+        "tool_cycles": 271,
+        "request_cycles": 71278,
+        "receipt_requested": 0,
+        "receipt_readback": 2589,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "uart_status": 1,
+        "case": 47,
+        "config": 6,
+        "selected_tool": 0,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 1,
+        "execute": 0,
+        "receipt_kind": 3,
+        "receipt_match": 1,
+        "receipt_enabled": 0,
+        "model_used": 2,
+        "argument": 0,
+        "value": 4245,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893686186800,
+      "tready_ns": 254893686186800,
+      "twrite_ms": 0.1101,
+      "tfirst_ms": 3.6172,
+      "tframe_ms": 3.7099,
+      "tready_ms": 3.7099,
+      "validated": true
+    },
+    {
+      "text": "请读取FPGA当前温度。",
+      "phase": "measure",
+      "tx_hex": "a55a01101c000f000000e8afb7e8afbbe58f9646504741e5bd93e5898de6b8a9e5baa6e38082acb4",
+      "protocol": "framed",
+      "request_seq": 15,
+      "rx_chunks": [
+        32,
+        33
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 15,
+          "data": {
+            "decision_cycles": 70946,
+            "tool_cycles": 271,
+            "request_cycles": 71278,
+            "receipt_requested": 0,
+            "receipt_readback": 2589,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "uart_status": 1,
+            "case": 48,
+            "config": 6,
+            "selected_tool": 0,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 1,
+            "execute": 0,
+            "receipt_kind": 3,
+            "receipt_match": 1,
+            "receipt_enabled": 0,
+            "model_used": 2,
+            "argument": 0,
+            "value": 4245,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 13140,
+          "text": "",
+          "received_ns": 254893690082700,
+          "wire_bytes": 64,
+          "raw_hex": "a55a012134000f0000003000000006000004000385020000000095100000221501000f0100006e160100000000001d0a00000000000000000000010000005433"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893686397300,
+      "twrite_ns": 254893686513500,
+      "tfirst_ns": 254893690007100,
+      "result": {
+        "decision_cycles": 70946,
+        "tool_cycles": 271,
+        "request_cycles": 71278,
+        "receipt_requested": 0,
+        "receipt_readback": 2589,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "uart_status": 1,
+        "case": 48,
+        "config": 6,
+        "selected_tool": 0,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 1,
+        "execute": 0,
+        "receipt_kind": 3,
+        "receipt_match": 1,
+        "receipt_enabled": 0,
+        "model_used": 2,
+        "argument": 0,
+        "value": 4245,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893690082700,
+      "tready_ns": 254893690082700,
+      "twrite_ms": 0.1162,
+      "tfirst_ms": 3.6098,
+      "tframe_ms": 3.6854,
+      "tready_ms": 3.6854,
+      "validated": true
+    },
+    {
+      "text": "请读取FPGA当前温度。",
+      "phase": "measure",
+      "tx_hex": "a55a01101c0010000000e8afb7e8afbbe58f9646504741e5bd93e5898de6b8a9e5baa6e38082e804",
+      "protocol": "framed",
+      "request_seq": 16,
+      "rx_chunks": [
+        34,
+        35
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 16,
+          "data": {
+            "decision_cycles": 70946,
+            "tool_cycles": 271,
+            "request_cycles": 71278,
+            "receipt_requested": 0,
+            "receipt_readback": 2589,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "uart_status": 1,
+            "case": 49,
+            "config": 6,
+            "selected_tool": 0,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 1,
+            "execute": 0,
+            "receipt_kind": 3,
+            "receipt_match": 1,
+            "receipt_enabled": 0,
+            "model_used": 2,
+            "argument": 0,
+            "value": 4245,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 61422,
+          "text": "",
+          "received_ns": 254893693944400,
+          "wire_bytes": 64,
+          "raw_hex": "a55a01213400100000003100000006000004000385020000000095100000221501000f0100006e160100000000001d0a0000000000000000000001000000eeef"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893690287500,
+      "twrite_ns": 254893690419900,
+      "tfirst_ns": 254893693882800,
+      "result": {
+        "decision_cycles": 70946,
+        "tool_cycles": 271,
+        "request_cycles": 71278,
+        "receipt_requested": 0,
+        "receipt_readback": 2589,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "uart_status": 1,
+        "case": 49,
+        "config": 6,
+        "selected_tool": 0,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 1,
+        "execute": 0,
+        "receipt_kind": 3,
+        "receipt_match": 1,
+        "receipt_enabled": 0,
+        "model_used": 2,
+        "argument": 0,
+        "value": 4245,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893693944400,
+      "tready_ns": 254893693944400,
+      "twrite_ms": 0.1324,
+      "tfirst_ms": 3.5953,
+      "tframe_ms": 3.6569,
+      "tready_ms": 3.6569,
+      "validated": true
+    },
+    {
+      "text": "请读取FPGA当前温度。",
+      "phase": "measure",
+      "tx_hex": "a55a01101c0011000000e8afb7e8afbbe58f9646504741e5bd93e5898de6b8a9e5baa6e38082ae5d",
+      "protocol": "framed",
+      "request_seq": 17,
+      "rx_chunks": [
+        36,
+        37
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 17,
+          "data": {
+            "decision_cycles": 70946,
+            "tool_cycles": 271,
+            "request_cycles": 71278,
+            "receipt_requested": 0,
+            "receipt_readback": 2589,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "uart_status": 1,
+            "case": 50,
+            "config": 6,
+            "selected_tool": 0,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 1,
+            "execute": 0,
+            "receipt_kind": 3,
+            "receipt_match": 1,
+            "receipt_enabled": 0,
+            "model_used": 2,
+            "argument": 0,
+            "value": 4245,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 9193,
+          "text": "",
+          "received_ns": 254893697756400,
+          "wire_bytes": 64,
+          "raw_hex": "a55a01213400110000003200000006000004000385020000000095100000221501000f0100006e160100000000001d0a0000000000000000000001000000e923"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893694136400,
+      "twrite_ns": 254893694248400,
+      "tfirst_ns": 254893697701700,
+      "result": {
+        "decision_cycles": 70946,
+        "tool_cycles": 271,
+        "request_cycles": 71278,
+        "receipt_requested": 0,
+        "receipt_readback": 2589,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "uart_status": 1,
+        "case": 50,
+        "config": 6,
+        "selected_tool": 0,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 1,
+        "execute": 0,
+        "receipt_kind": 3,
+        "receipt_match": 1,
+        "receipt_enabled": 0,
+        "model_used": 2,
+        "argument": 0,
+        "value": 4245,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893697756400,
+      "tready_ns": 254893697756400,
+      "twrite_ms": 0.112,
+      "tfirst_ms": 3.5653,
+      "tframe_ms": 3.62,
+      "tready_ms": 3.62,
+      "validated": true
+    },
+    {
+      "text": "请读取FPGA当前温度。",
+      "phase": "measure",
+      "tx_hex": "a55a01101c0012000000e8afb7e8afbbe58f9646504741e5bd93e5898de6b8a9e5baa6e3808264b6",
+      "protocol": "framed",
+      "request_seq": 18,
+      "rx_chunks": [
+        38,
+        39
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 18,
+          "data": {
+            "decision_cycles": 70946,
+            "tool_cycles": 271,
+            "request_cycles": 71278,
+            "receipt_requested": 0,
+            "receipt_readback": 2589,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "uart_status": 1,
+            "case": 51,
+            "config": 6,
+            "selected_tool": 0,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 1,
+            "execute": 0,
+            "receipt_kind": 3,
+            "receipt_match": 1,
+            "receipt_enabled": 0,
+            "model_used": 2,
+            "argument": 0,
+            "value": 4245,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 39648,
+          "text": "",
+          "received_ns": 254893701539400,
+          "wire_bytes": 64,
+          "raw_hex": "a55a01213400120000003300000006000004000385020000000095100000221501000f0100006e160100000000001d0a0000000000000000000001000000e09a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893697943000,
+      "twrite_ns": 254893698055400,
+      "tfirst_ns": 254893701506600,
+      "result": {
+        "decision_cycles": 70946,
+        "tool_cycles": 271,
+        "request_cycles": 71278,
+        "receipt_requested": 0,
+        "receipt_readback": 2589,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "uart_status": 1,
+        "case": 51,
+        "config": 6,
+        "selected_tool": 0,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 1,
+        "execute": 0,
+        "receipt_kind": 3,
+        "receipt_match": 1,
+        "receipt_enabled": 0,
+        "model_used": 2,
+        "argument": 0,
+        "value": 4245,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893701539400,
+      "tready_ns": 254893701539400,
+      "twrite_ms": 0.1124,
+      "tfirst_ms": 3.5636,
+      "tframe_ms": 3.5964,
+      "tready_ms": 3.5964,
+      "validated": true
+    },
+    {
+      "text": "请读取FPGA当前温度。",
+      "phase": "measure",
+      "tx_hex": "a55a01101c0013000000e8afb7e8afbbe58f9646504741e5bd93e5898de6b8a9e5baa6e3808222ef",
+      "protocol": "framed",
+      "request_seq": 19,
+      "rx_chunks": [
+        40,
+        41
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 19,
+          "data": {
+            "decision_cycles": 70946,
+            "tool_cycles": 271,
+            "request_cycles": 71278,
+            "receipt_requested": 0,
+            "receipt_readback": 2589,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "uart_status": 1,
+            "case": 52,
+            "config": 6,
+            "selected_tool": 0,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 1,
+            "execute": 0,
+            "receipt_kind": 3,
+            "receipt_match": 1,
+            "receipt_enabled": 0,
+            "model_used": 2,
+            "argument": 0,
+            "value": 4245,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 43974,
+          "text": "",
+          "received_ns": 254893705343200,
+          "wire_bytes": 64,
+          "raw_hex": "a55a01213400130000003400000006000004000385020000000095100000221501000f0100006e160100000000001d0a0000000000000000000001000000c6ab"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893701735600,
+      "twrite_ns": 254893701842300,
+      "tfirst_ns": 254893705294000,
+      "result": {
+        "decision_cycles": 70946,
+        "tool_cycles": 271,
+        "request_cycles": 71278,
+        "receipt_requested": 0,
+        "receipt_readback": 2589,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "uart_status": 1,
+        "case": 52,
+        "config": 6,
+        "selected_tool": 0,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 1,
+        "execute": 0,
+        "receipt_kind": 3,
+        "receipt_match": 1,
+        "receipt_enabled": 0,
+        "model_used": 2,
+        "argument": 0,
+        "value": 4245,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893705343200,
+      "tready_ns": 254893705343200,
+      "twrite_ms": 0.1067,
+      "tfirst_ms": 3.5584,
+      "tframe_ms": 3.6076,
+      "tready_ms": 3.6076,
+      "validated": true
+    },
+    {
+      "text": "请读取FPGA当前温度。",
+      "phase": "measure",
+      "tx_hex": "a55a01101c0014000000e8afb7e8afbbe58f9646504741e5bd93e5898de6b8a9e5baa6e38082d171",
+      "protocol": "framed",
+      "request_seq": 20,
+      "rx_chunks": [
+        42,
+        43
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 20,
+          "data": {
+            "decision_cycles": 70946,
+            "tool_cycles": 271,
+            "request_cycles": 71278,
+            "receipt_requested": 0,
+            "receipt_readback": 2589,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "uart_status": 1,
+            "case": 53,
+            "config": 6,
+            "selected_tool": 0,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 1,
+            "execute": 0,
+            "receipt_kind": 3,
+            "receipt_match": 1,
+            "receipt_enabled": 0,
+            "model_used": 2,
+            "argument": 0,
+            "value": 4245,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 1522,
+          "text": "",
+          "received_ns": 254893709152200,
+          "wire_bytes": 64,
+          "raw_hex": "a55a01213400140000003500000006000004000385020000000095100000221501000f0100006e160100000000001d0a0000000000000000000001000000f205"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893705512900,
+      "twrite_ns": 254893705613700,
+      "tfirst_ns": 254893709079800,
+      "result": {
+        "decision_cycles": 70946,
+        "tool_cycles": 271,
+        "request_cycles": 71278,
+        "receipt_requested": 0,
+        "receipt_readback": 2589,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "uart_status": 1,
+        "case": 53,
+        "config": 6,
+        "selected_tool": 0,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 1,
+        "execute": 0,
+        "receipt_kind": 3,
+        "receipt_match": 1,
+        "receipt_enabled": 0,
+        "model_used": 2,
+        "argument": 0,
+        "value": 4245,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893709152200,
+      "tready_ns": 254893709152200,
+      "twrite_ms": 0.1008,
+      "tfirst_ms": 3.5669,
+      "tframe_ms": 3.6393,
+      "tready_ms": 3.6393,
+      "validated": true
+    },
+    {
+      "text": "请将PWM占空比设置为20%。",
+      "phase": "measure",
+      "tx_hex": "a55a0110210015000000e8afb7e5b08650574de58da0e7a9bae6af94e8aebee7bdaee4b8ba323025e380821b93",
+      "protocol": "framed",
+      "request_seq": 21,
+      "rx_chunks": [
+        44,
+        45
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 21,
+          "data": {
+            "decision_cycles": 86416,
+            "tool_cycles": 343,
+            "request_cycles": 86820,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "uart_status": 1,
+            "case": 54,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "receipt_kind": 2,
+            "receipt_match": 1,
+            "receipt_enabled": 1,
+            "model_used": 2,
+            "argument": 20,
+            "value": 20,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 63751,
+          "text": "",
+          "received_ns": 254893713533900,
+          "wire_bytes": 64,
+          "raw_hex": "a55a012134001500000036000000060100100002870214000000140000009051010057010000245301001400000014000000349e0000a41f00000100000007f9"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893709396000,
+      "twrite_ns": 254893709519600,
+      "tfirst_ns": 254893713467800,
+      "result": {
+        "decision_cycles": 86416,
+        "tool_cycles": 343,
+        "request_cycles": 86820,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "uart_status": 1,
+        "case": 54,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "receipt_kind": 2,
+        "receipt_match": 1,
+        "receipt_enabled": 1,
+        "model_used": 2,
+        "argument": 20,
+        "value": 20,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893713533900,
+      "tready_ns": 254893713533900,
+      "twrite_ms": 0.1236,
+      "tfirst_ms": 4.0718,
+      "tframe_ms": 4.1379,
+      "tready_ms": 4.1379,
+      "validated": true
+    },
+    {
+      "text": "请将PWM占空比设置为20%。",
+      "phase": "measure",
+      "tx_hex": "a55a0110210016000000e8afb7e5b08650574de58da0e7a9bae6af94e8aebee7bdaee4b8ba323025e38082e79f",
+      "protocol": "framed",
+      "request_seq": 22,
+      "rx_chunks": [
+        46,
+        47
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 22,
+          "data": {
+            "decision_cycles": 86180,
+            "tool_cycles": 343,
+            "request_cycles": 86584,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "uart_status": 1,
+            "case": 55,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "receipt_kind": 2,
+            "receipt_match": 1,
+            "receipt_enabled": 1,
+            "model_used": 2,
+            "argument": 20,
+            "value": 20,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 46877,
+          "text": "",
+          "received_ns": 254893717883200,
+          "wire_bytes": 64,
+          "raw_hex": "a55a01213400160000003700000006010010000287021400000014000000a450010057010000385201001400000014000000349e0000a41f0000010000001db7"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893713747700,
+      "twrite_ns": 254893713871000,
+      "tfirst_ns": 254893717806100,
+      "result": {
+        "decision_cycles": 86180,
+        "tool_cycles": 343,
+        "request_cycles": 86584,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "uart_status": 1,
+        "case": 55,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "receipt_kind": 2,
+        "receipt_match": 1,
+        "receipt_enabled": 1,
+        "model_used": 2,
+        "argument": 20,
+        "value": 20,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893717883200,
+      "tready_ns": 254893717883200,
+      "twrite_ms": 0.1233,
+      "tfirst_ms": 4.0584,
+      "tframe_ms": 4.1355,
+      "tready_ms": 4.1355,
+      "validated": true
+    },
+    {
+      "text": "请将PWM占空比设置为20%。",
+      "phase": "measure",
+      "tx_hex": "a55a0110210017000000e8afb7e5b08650574de58da0e7a9bae6af94e8aebee7bdaee4b8ba323025e38082ac6b",
+      "protocol": "framed",
+      "request_seq": 23,
+      "rx_chunks": [
+        48,
+        49
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 23,
+          "data": {
+            "decision_cycles": 86180,
+            "tool_cycles": 343,
+            "request_cycles": 86584,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "uart_status": 1,
+            "case": 56,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "receipt_kind": 2,
+            "receipt_match": 1,
+            "receipt_enabled": 1,
+            "model_used": 2,
+            "argument": 20,
+            "value": 20,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 27736,
+          "text": "",
+          "received_ns": 254893722347400,
+          "wire_bytes": 64,
+          "raw_hex": "a55a01213400170000003800000006010010000287021400000014000000a450010057010000385201001400000014000000349e0000a41f000001000000586c"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893718114600,
+      "twrite_ns": 254893718272000,
+      "tfirst_ns": 254893722241800,
+      "result": {
+        "decision_cycles": 86180,
+        "tool_cycles": 343,
+        "request_cycles": 86584,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "uart_status": 1,
+        "case": 56,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "receipt_kind": 2,
+        "receipt_match": 1,
+        "receipt_enabled": 1,
+        "model_used": 2,
+        "argument": 20,
+        "value": 20,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893722347400,
+      "tready_ns": 254893722347400,
+      "twrite_ms": 0.1574,
+      "tfirst_ms": 4.1272,
+      "tframe_ms": 4.2328,
+      "tready_ms": 4.2328,
+      "validated": true
+    },
+    {
+      "text": "请将PWM占空比设置为20%。",
+      "phase": "measure",
+      "tx_hex": "a55a0110210018000000e8afb7e5b08650574de58da0e7a9bae6af94e8aebee7bdaee4b8ba323025e38082a054",
+      "protocol": "framed",
+      "request_seq": 24,
+      "rx_chunks": [
+        50,
+        51
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 24,
+          "data": {
+            "decision_cycles": 86180,
+            "tool_cycles": 343,
+            "request_cycles": 86584,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "uart_status": 1,
+            "case": 57,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "receipt_kind": 2,
+            "receipt_match": 1,
+            "receipt_enabled": 1,
+            "model_used": 2,
+            "argument": 20,
+            "value": 20,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 60438,
+          "text": "",
+          "received_ns": 254893726685300,
+          "wire_bytes": 64,
+          "raw_hex": "a55a01213400180000003900000006010010000287021400000014000000a450010057010000385201001400000014000000349e0000a41f00000100000016ec"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893722569100,
+      "twrite_ns": 254893722731000,
+      "tfirst_ns": 254893726643600,
+      "result": {
+        "decision_cycles": 86180,
+        "tool_cycles": 343,
+        "request_cycles": 86584,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "uart_status": 1,
+        "case": 57,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "receipt_kind": 2,
+        "receipt_match": 1,
+        "receipt_enabled": 1,
+        "model_used": 2,
+        "argument": 20,
+        "value": 20,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893726685300,
+      "tready_ns": 254893726685300,
+      "twrite_ms": 0.1619,
+      "tfirst_ms": 4.0745,
+      "tframe_ms": 4.1162,
+      "tready_ms": 4.1162,
+      "validated": true
+    },
+    {
+      "text": "请将PWM占空比设置为20%。",
+      "phase": "measure",
+      "tx_hex": "a55a0110210019000000e8afb7e5b08650574de58da0e7a9bae6af94e8aebee7bdaee4b8ba323025e38082eba0",
+      "protocol": "framed",
+      "request_seq": 25,
+      "rx_chunks": [
+        52,
+        53
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 25,
+          "data": {
+            "decision_cycles": 86180,
+            "tool_cycles": 343,
+            "request_cycles": 86584,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "uart_status": 1,
+            "case": 58,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "receipt_kind": 2,
+            "receipt_match": 1,
+            "receipt_enabled": 1,
+            "model_used": 2,
+            "argument": 20,
+            "value": 20,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 8209,
+          "text": "",
+          "received_ns": 254893731045600,
+          "wire_bytes": 64,
+          "raw_hex": "a55a01213400190000003a00000006010010000287021400000014000000a450010057010000385201001400000014000000349e0000a41f0000010000001120"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893726843400,
+      "twrite_ns": 254893727028100,
+      "tfirst_ns": 254893731014800,
+      "result": {
+        "decision_cycles": 86180,
+        "tool_cycles": 343,
+        "request_cycles": 86584,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "uart_status": 1,
+        "case": 58,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "receipt_kind": 2,
+        "receipt_match": 1,
+        "receipt_enabled": 1,
+        "model_used": 2,
+        "argument": 20,
+        "value": 20,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893731045600,
+      "tready_ns": 254893731045600,
+      "twrite_ms": 0.1847,
+      "tfirst_ms": 4.1714,
+      "tframe_ms": 4.2022,
+      "tready_ms": 4.2022,
+      "validated": true
+    },
+    {
+      "text": "请将PWM占空比设置为20%。",
+      "phase": "measure",
+      "tx_hex": "a55a011021001a000000e8afb7e5b08650574de58da0e7a9bae6af94e8aebee7bdaee4b8ba323025e3808217ac",
+      "protocol": "framed",
+      "request_seq": 26,
+      "rx_chunks": [
+        54,
+        55
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 26,
+          "data": {
+            "decision_cycles": 86180,
+            "tool_cycles": 343,
+            "request_cycles": 86584,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "uart_status": 1,
+            "case": 59,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "receipt_kind": 2,
+            "receipt_match": 1,
+            "receipt_enabled": 1,
+            "model_used": 2,
+            "argument": 20,
+            "value": 20,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 39192,
+          "text": "",
+          "received_ns": 254893735368300,
+          "wire_bytes": 64,
+          "raw_hex": "a55a012134001a0000003b00000006010010000287021400000014000000a450010057010000385201001400000014000000349e0000a41f0000010000001899"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893731247600,
+      "twrite_ns": 254893731359000,
+      "tfirst_ns": 254893735300700,
+      "result": {
+        "decision_cycles": 86180,
+        "tool_cycles": 343,
+        "request_cycles": 86584,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "uart_status": 1,
+        "case": 59,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "receipt_kind": 2,
+        "receipt_match": 1,
+        "receipt_enabled": 1,
+        "model_used": 2,
+        "argument": 20,
+        "value": 20,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893735368300,
+      "tready_ns": 254893735368300,
+      "twrite_ms": 0.1114,
+      "tfirst_ms": 4.0531,
+      "tframe_ms": 4.1207,
+      "tready_ms": 4.1207,
+      "validated": true
+    },
+    {
+      "text": "请将PWM占空比设置为20%。",
+      "phase": "measure",
+      "tx_hex": "a55a011021001b000000e8afb7e5b08650574de58da0e7a9bae6af94e8aebee7bdaee4b8ba323025e380825c58",
+      "protocol": "framed",
+      "request_seq": 27,
+      "rx_chunks": [
+        56,
+        57
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 27,
+          "data": {
+            "decision_cycles": 86180,
+            "tool_cycles": 343,
+            "request_cycles": 86584,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "uart_status": 1,
+            "case": 60,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "receipt_kind": 2,
+            "receipt_match": 1,
+            "receipt_enabled": 1,
+            "model_used": 2,
+            "argument": 20,
+            "value": 20,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 43070,
+          "text": "",
+          "received_ns": 254893739644600,
+          "wire_bytes": 64,
+          "raw_hex": "a55a012134001b0000003c00000006010010000287021400000014000000a450010057010000385201001400000014000000349e0000a41f0000010000003ea8"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893735544800,
+      "twrite_ns": 254893735681700,
+      "tfirst_ns": 254893739600800,
+      "result": {
+        "decision_cycles": 86180,
+        "tool_cycles": 343,
+        "request_cycles": 86584,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "uart_status": 1,
+        "case": 60,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "receipt_kind": 2,
+        "receipt_match": 1,
+        "receipt_enabled": 1,
+        "model_used": 2,
+        "argument": 20,
+        "value": 20,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893739644600,
+      "tready_ns": 254893739644600,
+      "twrite_ms": 0.1369,
+      "tfirst_ms": 4.056,
+      "tframe_ms": 4.0998,
+      "tready_ms": 4.0998,
+      "validated": true
+    },
+    {
+      "text": "请将PWM占空比设置为20%。",
+      "phase": "measure",
+      "tx_hex": "a55a011021001c000000e8afb7e5b08650574de58da0e7a9bae6af94e8aebee7bdaee4b8ba323025e38082efb5",
+      "protocol": "framed",
+      "request_seq": 28,
+      "rx_chunks": [
+        58,
+        59
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 28,
+          "data": {
+            "decision_cycles": 86180,
+            "tool_cycles": 343,
+            "request_cycles": 86584,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "uart_status": 1,
+            "case": 61,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "receipt_kind": 2,
+            "receipt_match": 1,
+            "receipt_enabled": 1,
+            "model_used": 2,
+            "argument": 20,
+            "value": 20,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 1546,
+          "text": "",
+          "received_ns": 254893744097600,
+          "wire_bytes": 64,
+          "raw_hex": "a55a012134001c0000003d00000006010010000287021400000014000000a450010057010000385201001400000014000000349e0000a41f0000010000000a06"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893739852400,
+      "twrite_ns": 254893740029700,
+      "tfirst_ns": 254893744018600,
+      "result": {
+        "decision_cycles": 86180,
+        "tool_cycles": 343,
+        "request_cycles": 86584,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "uart_status": 1,
+        "case": 61,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "receipt_kind": 2,
+        "receipt_match": 1,
+        "receipt_enabled": 1,
+        "model_used": 2,
+        "argument": 20,
+        "value": 20,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893744097600,
+      "tready_ns": 254893744097600,
+      "twrite_ms": 0.1773,
+      "tfirst_ms": 4.1662,
+      "tframe_ms": 4.2452,
+      "tready_ms": 4.2452,
+      "validated": true
+    },
+    {
+      "text": "请将PWM占空比设置为20%。",
+      "phase": "measure",
+      "tx_hex": "a55a011021001d000000e8afb7e5b08650574de58da0e7a9bae6af94e8aebee7bdaee4b8ba323025e38082a441",
+      "protocol": "framed",
+      "request_seq": 29,
+      "rx_chunks": [
+        60,
+        61
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 29,
+          "data": {
+            "decision_cycles": 86180,
+            "tool_cycles": 343,
+            "request_cycles": 86584,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "uart_status": 1,
+            "case": 62,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "receipt_kind": 2,
+            "receipt_match": 1,
+            "receipt_enabled": 1,
+            "model_used": 2,
+            "argument": 20,
+            "value": 20,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 51725,
+          "text": "",
+          "received_ns": 254893748435200,
+          "wire_bytes": 64,
+          "raw_hex": "a55a012134001d0000003e00000006010010000287021400000014000000a450010057010000385201001400000014000000349e0000a41f0000010000000dca"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893744308500,
+      "twrite_ns": 254893744425800,
+      "tfirst_ns": 254893748364300,
+      "result": {
+        "decision_cycles": 86180,
+        "tool_cycles": 343,
+        "request_cycles": 86584,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "uart_status": 1,
+        "case": 62,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "receipt_kind": 2,
+        "receipt_match": 1,
+        "receipt_enabled": 1,
+        "model_used": 2,
+        "argument": 20,
+        "value": 20,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893748435200,
+      "tready_ns": 254893748435200,
+      "twrite_ms": 0.1173,
+      "tfirst_ms": 4.0558,
+      "tframe_ms": 4.1267,
+      "tready_ms": 4.1267,
+      "validated": true
+    },
+    {
+      "text": "请将PWM占空比设置为20%。",
+      "phase": "measure",
+      "tx_hex": "a55a011021001e000000e8afb7e5b08650574de58da0e7a9bae6af94e8aebee7bdaee4b8ba323025e38082584d",
+      "protocol": "framed",
+      "request_seq": 30,
+      "rx_chunks": [
+        62,
+        63
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 30,
+          "data": {
+            "decision_cycles": 86180,
+            "tool_cycles": 343,
+            "request_cycles": 86584,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "uart_status": 1,
+            "case": 63,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "receipt_kind": 2,
+            "receipt_match": 1,
+            "receipt_enabled": 1,
+            "model_used": 2,
+            "argument": 20,
+            "value": 20,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 29444,
+          "text": "",
+          "received_ns": 254893752771700,
+          "wire_bytes": 64,
+          "raw_hex": "a55a012134001e0000003f00000006010010000287021400000014000000a450010057010000385201001400000014000000349e0000a41f0000010000000473"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893748620100,
+      "twrite_ns": 254893748749400,
+      "tfirst_ns": 254893752681300,
+      "result": {
+        "decision_cycles": 86180,
+        "tool_cycles": 343,
+        "request_cycles": 86584,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "uart_status": 1,
+        "case": 63,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "receipt_kind": 2,
+        "receipt_match": 1,
+        "receipt_enabled": 1,
+        "model_used": 2,
+        "argument": 20,
+        "value": 20,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893752771700,
+      "tready_ns": 254893752771700,
+      "twrite_ms": 0.1293,
+      "tfirst_ms": 4.0612,
+      "tframe_ms": 4.1516,
+      "tready_ms": 4.1516,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "restore",
+      "tx_hex": "a55a011006001f0000006c6564203337adcb",
+      "protocol": "framed",
+      "request_seq": 31,
+      "rx_chunks": [
+        64,
+        65
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 31,
+          "data": {
+            "decision_cycles": 35405,
+            "tool_cycles": 252,
+            "request_cycles": 35718,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "uart_status": 1,
+            "case": 64,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "receipt_kind": 1,
+            "receipt_match": 1,
+            "receipt_enabled": 0,
+            "model_used": 2,
+            "argument": 37,
+            "value": 37,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 6109,
+          "text": "",
+          "received_ns": 254893755366000,
+          "wire_bytes": 64,
+          "raw_hex": "a55a012134001f00000040000000060400080001850225000000250000004d8a0000fc000000868b00002500000025000000000000000000000001000000dd17"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893752967800,
+      "twrite_ns": 254893753063900,
+      "tfirst_ns": 254893755324700,
+      "result": {
+        "decision_cycles": 35405,
+        "tool_cycles": 252,
+        "request_cycles": 35718,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "uart_status": 1,
+        "case": 64,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "receipt_kind": 1,
+        "receipt_match": 1,
+        "receipt_enabled": 0,
+        "model_used": 2,
+        "argument": 37,
+        "value": 37,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893755366000,
+      "tready_ns": 254893755366000,
+      "twrite_ms": 0.0961,
+      "tfirst_ms": 2.3569,
+      "tframe_ms": 2.3982,
+      "tready_ms": 2.3982,
+      "validated": true
+    },
+    {
+      "text": "pwm 20",
+      "phase": "restore",
+      "tx_hex": "a55a011006002000000070776d20323098d1",
+      "protocol": "framed",
+      "request_seq": 32,
+      "rx_chunks": [
+        66,
+        67
+      ],
+      "events": [
+        {
+          "kind": "NR_BINARY",
+          "request_seq": 32,
+          "data": {
+            "decision_cycles": 34626,
+            "tool_cycles": 343,
+            "request_cycles": 35030,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "uart_status": 1,
+            "case": 65,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "receipt_kind": 2,
+            "receipt_match": 1,
+            "receipt_enabled": 1,
+            "model_used": 2,
+            "argument": 20,
+            "value": 20,
+            "context_used": 1,
+            "context_deny": 0,
+            "encoder_used": 0
+          },
+          "ready": true,
+          "crc16": 48722,
+          "text": "",
+          "received_ns": 254893757901400,
+          "wire_bytes": 64,
+          "raw_hex": "a55a012134002000000041000000060100100002870214000000140000004287000057010000d68800001400000014000000349e0000a41f00000100000052be"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 254893755554400,
+      "twrite_ns": 254893755658000,
+      "tfirst_ns": 254893757865100,
+      "result": {
+        "decision_cycles": 34626,
+        "tool_cycles": 343,
+        "request_cycles": 35030,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "uart_status": 1,
+        "case": 65,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "receipt_kind": 2,
+        "receipt_match": 1,
+        "receipt_enabled": 1,
+        "model_used": 2,
+        "argument": 20,
+        "value": 20,
+        "context_used": 1,
+        "context_deny": 0,
+        "encoder_used": 0
+      },
+      "tframe_ns": 254893757901400,
+      "tready_ns": 254893757901400,
+      "twrite_ms": 0.1036,
+      "tfirst_ms": 2.3107,
+      "tframe_ms": 2.347,
+      "tready_ms": 2.347,
+      "validated": true
+    },
+    {
+      "text": ":io",
+      "phase": "final_io",
+      "tx_hex": "3a696f0a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        68,
+        69
+      ],
+      "events": [
+        {
+          "kind": "NR_IO",
+          "text": "NR_IO {\"led_mask\":37,\"pwm_period\":40500,\"pwm_high\":8100,\"pwm_enabled\":1,\"pwm_duty\":20,\"restore_supported\":1}",
+          "data": {
+            "led_mask": 37,
+            "pwm_period": 40500,
+            "pwm_high": 8100,
+            "pwm_enabled": 1,
+            "pwm_duty": 20,
+            "restore_supported": 1
+          },
+          "received_ns": 254893759802700,
+          "wire_bytes": 109,
+          "raw_hex": "4e525f494f207b226c65645f6d61736b223a33372c2270776d5f706572696f64223a34303530302c2270776d5f68696768223a383130302c2270776d5f656e61626c6564223a312c2270776d5f64757479223a32302c22726573746f72655f737570706f72746564223a317d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 254893759802700,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [],
+      "t0write_ns": 254893758080400,
+      "twrite_ns": 254893758162700,
+      "tfirst_ns": 254893759717900,
+      "io": {
+        "led_mask": 37,
+        "pwm_period": 40500,
+        "pwm_high": 8100,
+        "pwm_enabled": 1,
+        "pwm_duty": 20,
+        "restore_supported": 1
+      },
+      "tframe_ns": 254893759802700,
+      "tready_ns": 254893759802700,
+      "twrite_ms": 0.0823,
+      "tfirst_ms": 1.6375,
+      "tframe_ms": 1.7223,
+      "tready_ms": 1.7223,
+      "validated": true
+    }
+  ],
+  "failures": [],
+  "settings": {
+    "baud": 921600,
+    "byte_size": 8,
+    "parity": 0,
+    "stop_bits": 0,
+    "dcb_flags": 1,
+    "read_timeouts": [
+      4294967295,
+      4294967295,
+      250
+    ],
+    "dtr": false,
+    "rts": false,
+    "handshake": "none"
+  },
+  "initial_driver_status": {
+    "error_flags": 0,
+    "input_queue": 0,
+    "output_queue": 0
+  },
+  "initial_link": {
+    "uart_baud": 921600,
+    "divider": 44,
+    "framed_seen": 0,
+    "last_request_seq": 0
+  },
+  "initial_io": {
+    "led_mask": 37,
+    "pwm_period": 40500,
+    "pwm_high": 8100,
+    "pwm_enabled": 1,
+    "pwm_duty": 20,
+    "restore_supported": 1
+  },
+  "final_io": {
+    "led_mask": 37,
+    "pwm_period": 40500,
+    "pwm_high": 8100,
+    "pwm_enabled": 1,
+    "pwm_duty": 20,
+    "restore_supported": 1
+  },
+  "io_restored": true,
+  "final_driver_status": {
+    "error_flags": 0,
+    "input_queue": 0,
+    "output_queue": 0
+  },
+  "summary": {
+    "led 37": {
+      "validated_samples": 10,
+      "metrics": {
+        "twrite_ms": {
+          "n": 10,
+          "median": 0.09495,
+          "min": 0.0802,
+          "max": 0.1672,
+          "empirical_p95_nearest_rank": 0.1672,
+          "all_samples": [
+            0.0936,
+            0.0963,
+            0.1568,
+            0.0913,
+            0.0964,
+            0.1567,
+            0.0911,
+            0.0802,
+            0.1672,
+            0.0903
+          ]
+        },
+        "tfirst_ms": {
+          "n": 10,
+          "median": 2.3453,
+          "min": 2.3196,
+          "max": 2.3846,
+          "empirical_p95_nearest_rank": 2.3846,
+          "all_samples": [
+            2.3504,
+            2.36,
+            2.3846,
+            2.3222,
+            2.3532,
+            2.3402,
+            2.3568,
+            2.3196,
+            2.3209,
+            2.3342
+          ]
+        },
+        "tframe_ms": {
+          "n": 10,
+          "median": 2.40245,
+          "min": 2.3788,
+          "max": 2.4559,
+          "empirical_p95_nearest_rank": 2.4559,
+          "all_samples": [
+            2.4073,
+            2.4559,
+            2.4525,
+            2.3828,
+            2.4192,
+            2.3819,
+            2.4352,
+            2.3943,
+            2.3788,
+            2.3976
+          ]
+        },
+        "tready_ms": {
+          "n": 10,
+          "median": 2.40245,
+          "min": 2.3788,
+          "max": 2.4559,
+          "empirical_p95_nearest_rank": 2.4559,
+          "all_samples": [
+            2.4073,
+            2.4559,
+            2.4525,
+            2.3828,
+            2.4192,
+            2.3819,
+            2.4352,
+            2.3943,
+            2.3788,
+            2.3976
+          ]
+        }
+      }
+    },
+    "请读取FPGA当前温度。": {
+      "validated_samples": 10,
+      "metrics": {
+        "twrite_ms": {
+          "n": 10,
+          "median": 0.1122,
+          "min": 0.1008,
+          "max": 0.1324,
+          "empirical_p95_nearest_rank": 0.1324,
+          "all_samples": [
+            0.1211,
+            0.1043,
+            0.1187,
+            0.1101,
+            0.1162,
+            0.1324,
+            0.112,
+            0.1124,
+            0.1067,
+            0.1008
+          ]
+        },
+        "tfirst_ms": {
+          "n": 10,
+          "median": 3.5726,
+          "min": 3.5584,
+          "max": 3.6172,
+          "empirical_p95_nearest_rank": 3.6172,
+          "all_samples": [
+            3.5832,
+            3.5734,
+            3.5718,
+            3.6172,
+            3.6098,
+            3.5953,
+            3.5653,
+            3.5636,
+            3.5584,
+            3.5669
+          ]
+        },
+        "tframe_ms": {
+          "n": 10,
+          "median": 3.63695,
+          "min": 3.5964,
+          "max": 3.7099,
+          "empirical_p95_nearest_rank": 3.7099,
+          "all_samples": [
+            3.6354,
+            3.6385,
+            3.6279,
+            3.7099,
+            3.6854,
+            3.6569,
+            3.62,
+            3.5964,
+            3.6076,
+            3.6393
+          ]
+        },
+        "tready_ms": {
+          "n": 10,
+          "median": 3.63695,
+          "min": 3.5964,
+          "max": 3.7099,
+          "empirical_p95_nearest_rank": 3.7099,
+          "all_samples": [
+            3.6354,
+            3.6385,
+            3.6279,
+            3.7099,
+            3.6854,
+            3.6569,
+            3.62,
+            3.5964,
+            3.6076,
+            3.6393
+          ]
+        }
+      }
+    },
+    "请将PWM占空比设置为20%。": {
+      "validated_samples": 10,
+      "metrics": {
+        "twrite_ms": {
+          "n": 10,
+          "median": 0.1331,
+          "min": 0.1114,
+          "max": 0.1847,
+          "empirical_p95_nearest_rank": 0.1847,
+          "all_samples": [
+            0.1236,
+            0.1233,
+            0.1574,
+            0.1619,
+            0.1847,
+            0.1114,
+            0.1369,
+            0.1773,
+            0.1173,
+            0.1293
+          ]
+        },
+        "tfirst_ms": {
+          "n": 10,
+          "median": 4.0665,
+          "min": 4.0531,
+          "max": 4.1714,
+          "empirical_p95_nearest_rank": 4.1714,
+          "all_samples": [
+            4.0718,
+            4.0584,
+            4.1272,
+            4.0745,
+            4.1714,
+            4.0531,
+            4.056,
+            4.1662,
+            4.0558,
+            4.0612
+          ]
+        },
+        "tframe_ms": {
+          "n": 10,
+          "median": 4.1367,
+          "min": 4.0998,
+          "max": 4.2452,
+          "empirical_p95_nearest_rank": 4.2452,
+          "all_samples": [
+            4.1379,
+            4.1355,
+            4.2328,
+            4.1162,
+            4.2022,
+            4.1207,
+            4.0998,
+            4.2452,
+            4.1267,
+            4.1516
+          ]
+        },
+        "tready_ms": {
+          "n": 10,
+          "median": 4.1367,
+          "min": 4.0998,
+          "max": 4.2452,
+          "empirical_p95_nearest_rank": 4.2452,
+          "all_samples": [
+            4.1379,
+            4.1355,
+            4.2328,
+            4.1162,
+            4.2022,
+            4.1207,
+            4.0998,
+            4.2452,
+            4.1267,
+            4.1516
+          ]
+        }
+      }
+    }
+  },
+  "status": "PASS"
+}

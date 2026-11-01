@@ -1,0 +1,58 @@
+{
+  "original80": {
+    "full": {
+      "correct": 76,
+      "total": 80,
+      "false_accept": 0,
+      "false_reject": 4
+    },
+    "fast": {
+      "correct": 80,
+      "total": 80,
+      "false_accept": 0,
+      "false_reject": 0
+    }
+  },
+  "aug192": {
+    "full": {
+      "correct": 178,
+      "total": 192,
+      "false_accept": 0,
+      "false_reject": 14
+    },
+    "fast": {
+      "correct": 192,
+      "total": 192,
+      "false_accept": 0,
+      "false_reject": 0
+    }
+  },
+  "observed288": {
+    "full": {
+      "correct": 254,
+      "total": 288,
+      "false_accept": 0,
+      "false_reject": 34
+    },
+    "fast": {
+      "correct": 254,
+      "total": 288,
+      "false_accept": 0,
+      "false_reject": 34
+    }
+  },
+  "old_validation541": {
+    "full": {
+      "correct": 537,
+      "total": 541,
+      "false_accept": 0,
+      "false_reject": 4
+    },
+    "fast": {
+      "correct": 541,
+      "total": 541,
+      "false_accept": 0,
+      "false_reject": 0
+    }
+  }
+}

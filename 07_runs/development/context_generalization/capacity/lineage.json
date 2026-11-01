@@ -1,0 +1,30 @@
+{
+  "train_rows": 25014,
+  "original_train": 21431,
+  "added": 3583,
+  "classcounts": {
+    "read_temp": 1457,
+    "set_pwm": 2488,
+    "run_coremark": 1104,
+    "read_counter": 1460,
+    "set_led": 2646,
+    "reject": 15859
+  },
+  "contextcounts": {
+    "0": 9155,
+    "8": 5362,
+    "1": 1997,
+    "2": 1381,
+    "3": 1032,
+    "4": 929,
+    "5": 1034,
+    "6": 1932,
+    "7": 2192
+  },
+  "old1138_status": "Observed development regression target; NOT heldout or blind; error families informed augmentation and checkpoint/threshold selection",
+  "old1138_exact_train_overlap": 0,
+  "old80_192_288_541_2031_exact_train_overlap": 0,
+  "old_first_evaluations_immutable": true,
+  "new_wrappers_independent": false,
+  "scope": "New action cores and parameter draws combined with observed error-family wrappers. No exact old1138 sentences added, but template knowledge leaks intentionally; not independent generalization."
+}

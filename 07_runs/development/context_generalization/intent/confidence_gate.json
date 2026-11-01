@@ -1,0 +1,1564 @@
+[
+  {
+    "threshold": 16,
+    "gate": false,
+    "metrics": {
+      "validation": {
+        "n": 541,
+        "correct": 416,
+        "by_class": {
+          "read_temp": [
+            10,
+            12
+          ],
+          "set_pwm": [
+            20,
+            23
+          ],
+          "run_coremark": [
+            11,
+            12
+          ],
+          "read_counter": [
+            12,
+            12
+          ],
+          "set_led": [
+            23,
+            24
+          ],
+          "reject": [
+            340,
+            458
+          ]
+        },
+        "false_accept": 118,
+        "false_reject": 5,
+        "macro_recall": 0.8867094382212096,
+        "legal_correct": 76
+      },
+      "original80": {
+        "n": 80,
+        "correct": 73,
+        "by_class": {
+          "read_temp": [
+            4,
+            4
+          ],
+          "set_pwm": [
+            29,
+            32
+          ],
+          "run_coremark": [
+            4,
+            4
+          ],
+          "read_counter": [
+            3,
+            4
+          ],
+          "set_led": [
+            30,
+            32
+          ],
+          "reject": [
+            3,
+            4
+          ]
+        },
+        "false_accept": 1,
+        "false_reject": 6,
+        "macro_recall": 0.890625,
+        "legal_correct": 70
+      },
+      "aug192": {
+        "n": 192,
+        "correct": 138,
+        "by_class": {
+          "read_temp": [
+            30,
+            32
+          ],
+          "set_pwm": [
+            21,
+            32
+          ],
+          "run_coremark": [
+            19,
+            32
+          ],
+          "read_counter": [
+            26,
+            32
+          ],
+          "set_led": [
+            24,
+            32
+          ],
+          "reject": [
+            18,
+            32
+          ]
+        },
+        "false_accept": 14,
+        "false_reject": 35,
+        "macro_recall": 0.71875,
+        "legal_correct": 120
+      },
+      "observed288": {
+        "n": 288,
+        "correct": 234,
+        "by_class": {
+          "read_temp": [
+            29,
+            32
+          ],
+          "set_pwm": [
+            24,
+            32
+          ],
+          "run_coremark": [
+            32,
+            32
+          ],
+          "read_counter": [
+            32,
+            32
+          ],
+          "set_led": [
+            31,
+            32
+          ],
+          "reject": [
+            86,
+            128
+          ]
+        },
+        "false_accept": 42,
+        "false_reject": 12,
+        "macro_recall": 0.8828125,
+        "legal_correct": 148
+      }
+    }
+  },
+  {
+    "threshold": 32,
+    "gate": false,
+    "metrics": {
+      "validation": {
+        "n": 541,
+        "correct": 421,
+        "by_class": {
+          "read_temp": [
+            10,
+            12
+          ],
+          "set_pwm": [
+            21,
+            23
+          ],
+          "run_coremark": [
+            11,
+            12
+          ],
+          "read_counter": [
+            12,
+            12
+          ],
+          "set_led": [
+            23,
+            24
+          ],
+          "reject": [
+            344,
+            458
+          ]
+        },
+        "false_accept": 114,
+        "false_reject": 4,
+        "macro_recall": 0.8954114191084953,
+        "legal_correct": 77
+      },
+      "original80": {
+        "n": 80,
+        "correct": 71,
+        "by_class": {
+          "read_temp": [
+            4,
+            4
+          ],
+          "set_pwm": [
+            29,
+            32
+          ],
+          "run_coremark": [
+            4,
+            4
+          ],
+          "read_counter": [
+            3,
+            4
+          ],
+          "set_led": [
+            28,
+            32
+          ],
+          "reject": [
+            3,
+            4
+          ]
+        },
+        "false_accept": 1,
+        "false_reject": 8,
+        "macro_recall": 0.8802083333333334,
+        "legal_correct": 68
+      },
+      "aug192": {
+        "n": 192,
+        "correct": 140,
+        "by_class": {
+          "read_temp": [
+            30,
+            32
+          ],
+          "set_pwm": [
+            23,
+            32
+          ],
+          "run_coremark": [
+            19,
+            32
+          ],
+          "read_counter": [
+            26,
+            32
+          ],
+          "set_led": [
+            24,
+            32
+          ],
+          "reject": [
+            18,
+            32
+          ]
+        },
+        "false_accept": 14,
+        "false_reject": 33,
+        "macro_recall": 0.7291666666666666,
+        "legal_correct": 122
+      },
+      "observed288": {
+        "n": 288,
+        "correct": 237,
+        "by_class": {
+          "read_temp": [
+            29,
+            32
+          ],
+          "set_pwm": [
+            26,
+            32
+          ],
+          "run_coremark": [
+            32,
+            32
+          ],
+          "read_counter": [
+            32,
+            32
+          ],
+          "set_led": [
+            31,
+            32
+          ],
+          "reject": [
+            87,
+            128
+          ]
+        },
+        "false_accept": 41,
+        "false_reject": 10,
+        "macro_recall": 0.89453125,
+        "legal_correct": 150
+      }
+    }
+  },
+  {
+    "threshold": 64,
+    "gate": false,
+    "metrics": {
+      "validation": {
+        "n": 541,
+        "correct": 431,
+        "by_class": {
+          "read_temp": [
+            10,
+            12
+          ],
+          "set_pwm": [
+            21,
+            23
+          ],
+          "run_coremark": [
+            11,
+            12
+          ],
+          "read_counter": [
+            12,
+            12
+          ],
+          "set_led": [
+            23,
+            24
+          ],
+          "reject": [
+            354,
+            458
+          ]
+        },
+        "false_accept": 104,
+        "false_reject": 4,
+        "macro_recall": 0.8990504292977238,
+        "legal_correct": 77
+      },
+      "original80": {
+        "n": 80,
+        "correct": 72,
+        "by_class": {
+          "read_temp": [
+            4,
+            4
+          ],
+          "set_pwm": [
+            30,
+            32
+          ],
+          "run_coremark": [
+            4,
+            4
+          ],
+          "read_counter": [
+            3,
+            4
+          ],
+          "set_led": [
+            28,
+            32
+          ],
+          "reject": [
+            3,
+            4
+          ]
+        },
+        "false_accept": 1,
+        "false_reject": 7,
+        "macro_recall": 0.8854166666666666,
+        "legal_correct": 69
+      },
+      "aug192": {
+        "n": 192,
+        "correct": 138,
+        "by_class": {
+          "read_temp": [
+            30,
+            32
+          ],
+          "set_pwm": [
+            24,
+            32
+          ],
+          "run_coremark": [
+            18,
+            32
+          ],
+          "read_counter": [
+            23,
+            32
+          ],
+          "set_led": [
+            24,
+            32
+          ],
+          "reject": [
+            19,
+            32
+          ]
+        },
+        "false_accept": 13,
+        "false_reject": 36,
+        "macro_recall": 0.71875,
+        "legal_correct": 119
+      },
+      "observed288": {
+        "n": 288,
+        "correct": 238,
+        "by_class": {
+          "read_temp": [
+            28,
+            32
+          ],
+          "set_pwm": [
+            28,
+            32
+          ],
+          "run_coremark": [
+            32,
+            32
+          ],
+          "read_counter": [
+            32,
+            32
+          ],
+          "set_led": [
+            31,
+            32
+          ],
+          "reject": [
+            87,
+            128
+          ]
+        },
+        "false_accept": 41,
+        "false_reject": 9,
+        "macro_recall": 0.8997395833333334,
+        "legal_correct": 151
+      }
+    }
+  },
+  {
+    "threshold": 96,
+    "gate": true,
+    "metrics": {
+      "validation": {
+        "n": 541,
+        "correct": 434,
+        "by_class": {
+          "read_temp": [
+            11,
+            12
+          ],
+          "set_pwm": [
+            23,
+            23
+          ],
+          "run_coremark": [
+            11,
+            12
+          ],
+          "read_counter": [
+            12,
+            12
+          ],
+          "set_led": [
+            23,
+            24
+          ],
+          "reject": [
+            354,
+            458
+          ]
+        },
+        "false_accept": 104,
+        "false_reject": 2,
+        "macro_recall": 0.9274320718098009,
+        "legal_correct": 80
+      },
+      "original80": {
+        "n": 80,
+        "correct": 73,
+        "by_class": {
+          "read_temp": [
+            4,
+            4
+          ],
+          "set_pwm": [
+            31,
+            32
+          ],
+          "run_coremark": [
+            4,
+            4
+          ],
+          "read_counter": [
+            3,
+            4
+          ],
+          "set_led": [
+            28,
+            32
+          ],
+          "reject": [
+            3,
+            4
+          ]
+        },
+        "false_accept": 1,
+        "false_reject": 6,
+        "macro_recall": 0.890625,
+        "legal_correct": 70
+      },
+      "aug192": {
+        "n": 192,
+        "correct": 138,
+        "by_class": {
+          "read_temp": [
+            30,
+            32
+          ],
+          "set_pwm": [
+            24,
+            32
+          ],
+          "run_coremark": [
+            18,
+            32
+          ],
+          "read_counter": [
+            23,
+            32
+          ],
+          "set_led": [
+            24,
+            32
+          ],
+          "reject": [
+            19,
+            32
+          ]
+        },
+        "false_accept": 13,
+        "false_reject": 36,
+        "macro_recall": 0.71875,
+        "legal_correct": 119
+      },
+      "observed288": {
+        "n": 288,
+        "correct": 238,
+        "by_class": {
+          "read_temp": [
+            27,
+            32
+          ],
+          "set_pwm": [
+            29,
+            32
+          ],
+          "run_coremark": [
+            32,
+            32
+          ],
+          "read_counter": [
+            32,
+            32
+          ],
+          "set_led": [
+            31,
+            32
+          ],
+          "reject": [
+            87,
+            128
+          ]
+        },
+        "false_accept": 41,
+        "false_reject": 9,
+        "macro_recall": 0.8997395833333334,
+        "legal_correct": 151
+      }
+    }
+  },
+  {
+    "threshold": 128,
+    "gate": true,
+    "metrics": {
+      "validation": {
+        "n": 541,
+        "correct": 433,
+        "by_class": {
+          "read_temp": [
+            11,
+            12
+          ],
+          "set_pwm": [
+            23,
+            23
+          ],
+          "run_coremark": [
+            11,
+            12
+          ],
+          "read_counter": [
+            12,
+            12
+          ],
+          "set_led": [
+            23,
+            24
+          ],
+          "reject": [
+            353,
+            458
+          ]
+        },
+        "false_accept": 105,
+        "false_reject": 2,
+        "macro_recall": 0.9270681707908781,
+        "legal_correct": 80
+      },
+      "original80": {
+        "n": 80,
+        "correct": 74,
+        "by_class": {
+          "read_temp": [
+            4,
+            4
+          ],
+          "set_pwm": [
+            32,
+            32
+          ],
+          "run_coremark": [
+            4,
+            4
+          ],
+          "read_counter": [
+            3,
+            4
+          ],
+          "set_led": [
+            28,
+            32
+          ],
+          "reject": [
+            3,
+            4
+          ]
+        },
+        "false_accept": 1,
+        "false_reject": 5,
+        "macro_recall": 0.8958333333333334,
+        "legal_correct": 71
+      },
+      "aug192": {
+        "n": 192,
+        "correct": 138,
+        "by_class": {
+          "read_temp": [
+            30,
+            32
+          ],
+          "set_pwm": [
+            24,
+            32
+          ],
+          "run_coremark": [
+            18,
+            32
+          ],
+          "read_counter": [
+            23,
+            32
+          ],
+          "set_led": [
+            24,
+            32
+          ],
+          "reject": [
+            19,
+            32
+          ]
+        },
+        "false_accept": 13,
+        "false_reject": 36,
+        "macro_recall": 0.71875,
+        "legal_correct": 119
+      },
+      "observed288": {
+        "n": 288,
+        "correct": 238,
+        "by_class": {
+          "read_temp": [
+            27,
+            32
+          ],
+          "set_pwm": [
+            29,
+            32
+          ],
+          "run_coremark": [
+            32,
+            32
+          ],
+          "read_counter": [
+            32,
+            32
+          ],
+          "set_led": [
+            31,
+            32
+          ],
+          "reject": [
+            87,
+            128
+          ]
+        },
+        "false_accept": 41,
+        "false_reject": 9,
+        "macro_recall": 0.8997395833333334,
+        "legal_correct": 151
+      }
+    }
+  },
+  {
+    "threshold": 192,
+    "gate": true,
+    "metrics": {
+      "validation": {
+        "n": 541,
+        "correct": 434,
+        "by_class": {
+          "read_temp": [
+            11,
+            12
+          ],
+          "set_pwm": [
+            23,
+            23
+          ],
+          "run_coremark": [
+            11,
+            12
+          ],
+          "read_counter": [
+            12,
+            12
+          ],
+          "set_led": [
+            23,
+            24
+          ],
+          "reject": [
+            354,
+            458
+          ]
+        },
+        "false_accept": 104,
+        "false_reject": 2,
+        "macro_recall": 0.9274320718098009,
+        "legal_correct": 80
+      },
+      "original80": {
+        "n": 80,
+        "correct": 74,
+        "by_class": {
+          "read_temp": [
+            4,
+            4
+          ],
+          "set_pwm": [
+            32,
+            32
+          ],
+          "run_coremark": [
+            4,
+            4
+          ],
+          "read_counter": [
+            3,
+            4
+          ],
+          "set_led": [
+            28,
+            32
+          ],
+          "reject": [
+            3,
+            4
+          ]
+        },
+        "false_accept": 1,
+        "false_reject": 5,
+        "macro_recall": 0.8958333333333334,
+        "legal_correct": 71
+      },
+      "aug192": {
+        "n": 192,
+        "correct": 138,
+        "by_class": {
+          "read_temp": [
+            30,
+            32
+          ],
+          "set_pwm": [
+            24,
+            32
+          ],
+          "run_coremark": [
+            18,
+            32
+          ],
+          "read_counter": [
+            23,
+            32
+          ],
+          "set_led": [
+            24,
+            32
+          ],
+          "reject": [
+            19,
+            32
+          ]
+        },
+        "false_accept": 13,
+        "false_reject": 36,
+        "macro_recall": 0.71875,
+        "legal_correct": 119
+      },
+      "observed288": {
+        "n": 288,
+        "correct": 238,
+        "by_class": {
+          "read_temp": [
+            27,
+            32
+          ],
+          "set_pwm": [
+            29,
+            32
+          ],
+          "run_coremark": [
+            32,
+            32
+          ],
+          "read_counter": [
+            32,
+            32
+          ],
+          "set_led": [
+            31,
+            32
+          ],
+          "reject": [
+            87,
+            128
+          ]
+        },
+        "false_accept": 41,
+        "false_reject": 9,
+        "macro_recall": 0.8997395833333334,
+        "legal_correct": 151
+      }
+    }
+  },
+  {
+    "threshold": 256,
+    "gate": true,
+    "metrics": {
+      "validation": {
+        "n": 541,
+        "correct": 434,
+        "by_class": {
+          "read_temp": [
+            11,
+            12
+          ],
+          "set_pwm": [
+            23,
+            23
+          ],
+          "run_coremark": [
+            11,
+            12
+          ],
+          "read_counter": [
+            12,
+            12
+          ],
+          "set_led": [
+            23,
+            24
+          ],
+          "reject": [
+            354,
+            458
+          ]
+        },
+        "false_accept": 104,
+        "false_reject": 2,
+        "macro_recall": 0.9274320718098009,
+        "legal_correct": 80
+      },
+      "original80": {
+        "n": 80,
+        "correct": 74,
+        "by_class": {
+          "read_temp": [
+            4,
+            4
+          ],
+          "set_pwm": [
+            32,
+            32
+          ],
+          "run_coremark": [
+            4,
+            4
+          ],
+          "read_counter": [
+            3,
+            4
+          ],
+          "set_led": [
+            28,
+            32
+          ],
+          "reject": [
+            3,
+            4
+          ]
+        },
+        "false_accept": 1,
+        "false_reject": 5,
+        "macro_recall": 0.8958333333333334,
+        "legal_correct": 71
+      },
+      "aug192": {
+        "n": 192,
+        "correct": 138,
+        "by_class": {
+          "read_temp": [
+            30,
+            32
+          ],
+          "set_pwm": [
+            24,
+            32
+          ],
+          "run_coremark": [
+            18,
+            32
+          ],
+          "read_counter": [
+            23,
+            32
+          ],
+          "set_led": [
+            24,
+            32
+          ],
+          "reject": [
+            19,
+            32
+          ]
+        },
+        "false_accept": 13,
+        "false_reject": 36,
+        "macro_recall": 0.71875,
+        "legal_correct": 119
+      },
+      "observed288": {
+        "n": 288,
+        "correct": 238,
+        "by_class": {
+          "read_temp": [
+            27,
+            32
+          ],
+          "set_pwm": [
+            29,
+            32
+          ],
+          "run_coremark": [
+            32,
+            32
+          ],
+          "read_counter": [
+            32,
+            32
+          ],
+          "set_led": [
+            31,
+            32
+          ],
+          "reject": [
+            87,
+            128
+          ]
+        },
+        "false_accept": 41,
+        "false_reject": 9,
+        "macro_recall": 0.8997395833333334,
+        "legal_correct": 151
+      }
+    }
+  },
+  {
+    "threshold": 384,
+    "gate": true,
+    "metrics": {
+      "validation": {
+        "n": 541,
+        "correct": 434,
+        "by_class": {
+          "read_temp": [
+            11,
+            12
+          ],
+          "set_pwm": [
+            23,
+            23
+          ],
+          "run_coremark": [
+            11,
+            12
+          ],
+          "read_counter": [
+            12,
+            12
+          ],
+          "set_led": [
+            23,
+            24
+          ],
+          "reject": [
+            354,
+            458
+          ]
+        },
+        "false_accept": 104,
+        "false_reject": 2,
+        "macro_recall": 0.9274320718098009,
+        "legal_correct": 80
+      },
+      "original80": {
+        "n": 80,
+        "correct": 74,
+        "by_class": {
+          "read_temp": [
+            4,
+            4
+          ],
+          "set_pwm": [
+            32,
+            32
+          ],
+          "run_coremark": [
+            4,
+            4
+          ],
+          "read_counter": [
+            3,
+            4
+          ],
+          "set_led": [
+            28,
+            32
+          ],
+          "reject": [
+            3,
+            4
+          ]
+        },
+        "false_accept": 1,
+        "false_reject": 5,
+        "macro_recall": 0.8958333333333334,
+        "legal_correct": 71
+      },
+      "aug192": {
+        "n": 192,
+        "correct": 138,
+        "by_class": {
+          "read_temp": [
+            30,
+            32
+          ],
+          "set_pwm": [
+            24,
+            32
+          ],
+          "run_coremark": [
+            18,
+            32
+          ],
+          "read_counter": [
+            23,
+            32
+          ],
+          "set_led": [
+            24,
+            32
+          ],
+          "reject": [
+            19,
+            32
+          ]
+        },
+        "false_accept": 13,
+        "false_reject": 36,
+        "macro_recall": 0.71875,
+        "legal_correct": 119
+      },
+      "observed288": {
+        "n": 288,
+        "correct": 238,
+        "by_class": {
+          "read_temp": [
+            27,
+            32
+          ],
+          "set_pwm": [
+            29,
+            32
+          ],
+          "run_coremark": [
+            32,
+            32
+          ],
+          "read_counter": [
+            32,
+            32
+          ],
+          "set_led": [
+            31,
+            32
+          ],
+          "reject": [
+            87,
+            128
+          ]
+        },
+        "false_accept": 41,
+        "false_reject": 9,
+        "macro_recall": 0.8997395833333334,
+        "legal_correct": 151
+      }
+    }
+  },
+  {
+    "threshold": 512,
+    "gate": true,
+    "metrics": {
+      "validation": {
+        "n": 541,
+        "correct": 434,
+        "by_class": {
+          "read_temp": [
+            11,
+            12
+          ],
+          "set_pwm": [
+            23,
+            23
+          ],
+          "run_coremark": [
+            11,
+            12
+          ],
+          "read_counter": [
+            12,
+            12
+          ],
+          "set_led": [
+            23,
+            24
+          ],
+          "reject": [
+            354,
+            458
+          ]
+        },
+        "false_accept": 104,
+        "false_reject": 2,
+        "macro_recall": 0.9274320718098009,
+        "legal_correct": 80
+      },
+      "original80": {
+        "n": 80,
+        "correct": 74,
+        "by_class": {
+          "read_temp": [
+            4,
+            4
+          ],
+          "set_pwm": [
+            32,
+            32
+          ],
+          "run_coremark": [
+            4,
+            4
+          ],
+          "read_counter": [
+            3,
+            4
+          ],
+          "set_led": [
+            28,
+            32
+          ],
+          "reject": [
+            3,
+            4
+          ]
+        },
+        "false_accept": 1,
+        "false_reject": 5,
+        "macro_recall": 0.8958333333333334,
+        "legal_correct": 71
+      },
+      "aug192": {
+        "n": 192,
+        "correct": 138,
+        "by_class": {
+          "read_temp": [
+            30,
+            32
+          ],
+          "set_pwm": [
+            24,
+            32
+          ],
+          "run_coremark": [
+            18,
+            32
+          ],
+          "read_counter": [
+            23,
+            32
+          ],
+          "set_led": [
+            24,
+            32
+          ],
+          "reject": [
+            19,
+            32
+          ]
+        },
+        "false_accept": 13,
+        "false_reject": 36,
+        "macro_recall": 0.71875,
+        "legal_correct": 119
+      },
+      "observed288": {
+        "n": 288,
+        "correct": 238,
+        "by_class": {
+          "read_temp": [
+            27,
+            32
+          ],
+          "set_pwm": [
+            29,
+            32
+          ],
+          "run_coremark": [
+            32,
+            32
+          ],
+          "read_counter": [
+            32,
+            32
+          ],
+          "set_led": [
+            31,
+            32
+          ],
+          "reject": [
+            87,
+            128
+          ]
+        },
+        "false_accept": 41,
+        "false_reject": 9,
+        "macro_recall": 0.8997395833333334,
+        "legal_correct": 151
+      }
+    }
+  },
+  {
+    "threshold": 768,
+    "gate": true,
+    "metrics": {
+      "validation": {
+        "n": 541,
+        "correct": 434,
+        "by_class": {
+          "read_temp": [
+            11,
+            12
+          ],
+          "set_pwm": [
+            23,
+            23
+          ],
+          "run_coremark": [
+            11,
+            12
+          ],
+          "read_counter": [
+            12,
+            12
+          ],
+          "set_led": [
+            23,
+            24
+          ],
+          "reject": [
+            354,
+            458
+          ]
+        },
+        "false_accept": 104,
+        "false_reject": 2,
+        "macro_recall": 0.9274320718098009,
+        "legal_correct": 80
+      },
+      "original80": {
+        "n": 80,
+        "correct": 74,
+        "by_class": {
+          "read_temp": [
+            4,
+            4
+          ],
+          "set_pwm": [
+            32,
+            32
+          ],
+          "run_coremark": [
+            4,
+            4
+          ],
+          "read_counter": [
+            3,
+            4
+          ],
+          "set_led": [
+            28,
+            32
+          ],
+          "reject": [
+            3,
+            4
+          ]
+        },
+        "false_accept": 1,
+        "false_reject": 5,
+        "macro_recall": 0.8958333333333334,
+        "legal_correct": 71
+      },
+      "aug192": {
+        "n": 192,
+        "correct": 138,
+        "by_class": {
+          "read_temp": [
+            30,
+            32
+          ],
+          "set_pwm": [
+            24,
+            32
+          ],
+          "run_coremark": [
+            18,
+            32
+          ],
+          "read_counter": [
+            23,
+            32
+          ],
+          "set_led": [
+            24,
+            32
+          ],
+          "reject": [
+            19,
+            32
+          ]
+        },
+        "false_accept": 13,
+        "false_reject": 36,
+        "macro_recall": 0.71875,
+        "legal_correct": 119
+      },
+      "observed288": {
+        "n": 288,
+        "correct": 238,
+        "by_class": {
+          "read_temp": [
+            27,
+            32
+          ],
+          "set_pwm": [
+            29,
+            32
+          ],
+          "run_coremark": [
+            32,
+            32
+          ],
+          "read_counter": [
+            32,
+            32
+          ],
+          "set_led": [
+            31,
+            32
+          ],
+          "reject": [
+            87,
+            128
+          ]
+        },
+        "false_accept": 41,
+        "false_reject": 9,
+        "macro_recall": 0.8997395833333334,
+        "legal_correct": 151
+      }
+    }
+  },
+  {
+    "threshold": 1024,
+    "gate": true,
+    "metrics": {
+      "validation": {
+        "n": 541,
+        "correct": 434,
+        "by_class": {
+          "read_temp": [
+            11,
+            12
+          ],
+          "set_pwm": [
+            23,
+            23
+          ],
+          "run_coremark": [
+            11,
+            12
+          ],
+          "read_counter": [
+            12,
+            12
+          ],
+          "set_led": [
+            23,
+            24
+          ],
+          "reject": [
+            354,
+            458
+          ]
+        },
+        "false_accept": 104,
+        "false_reject": 2,
+        "macro_recall": 0.9274320718098009,
+        "legal_correct": 80
+      },
+      "original80": {
+        "n": 80,
+        "correct": 74,
+        "by_class": {
+          "read_temp": [
+            4,
+            4
+          ],
+          "set_pwm": [
+            32,
+            32
+          ],
+          "run_coremark": [
+            4,
+            4
+          ],
+          "read_counter": [
+            3,
+            4
+          ],
+          "set_led": [
+            28,
+            32
+          ],
+          "reject": [
+            3,
+            4
+          ]
+        },
+        "false_accept": 1,
+        "false_reject": 5,
+        "macro_recall": 0.8958333333333334,
+        "legal_correct": 71
+      },
+      "aug192": {
+        "n": 192,
+        "correct": 138,
+        "by_class": {
+          "read_temp": [
+            30,
+            32
+          ],
+          "set_pwm": [
+            24,
+            32
+          ],
+          "run_coremark": [
+            18,
+            32
+          ],
+          "read_counter": [
+            23,
+            32
+          ],
+          "set_led": [
+            24,
+            32
+          ],
+          "reject": [
+            19,
+            32
+          ]
+        },
+        "false_accept": 13,
+        "false_reject": 36,
+        "macro_recall": 0.71875,
+        "legal_correct": 119
+      },
+      "observed288": {
+        "n": 288,
+        "correct": 238,
+        "by_class": {
+          "read_temp": [
+            27,
+            32
+          ],
+          "set_pwm": [
+            29,
+            32
+          ],
+          "run_coremark": [
+            32,
+            32
+          ],
+          "read_counter": [
+            32,
+            32
+          ],
+          "set_led": [
+            31,
+            32
+          ],
+          "reject": [
+            87,
+            128
+          ]
+        },
+        "false_accept": 41,
+        "false_reject": 9,
+        "macro_recall": 0.8997395833333334,
+        "legal_correct": 151
+      }
+    }
+  }
+]

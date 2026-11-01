@@ -1,0 +1,236 @@
+{
+  "schema": "needlervx.physical.context_generalization.v1",
+  "date_local": "2026-10-30",
+  "firmware": "software_context_generalization_oct29",
+  "protocol": 5,
+  "model_stage": "unicode_ngram_memory_oct29",
+  "neural_timing": "context_plus_encoder",
+  "context_head": 1,
+  "context_weights_bytes": 2056,
+  "model_weights_bytes": 61922,
+  "ram_only": true,
+  "clock_hz": 40500000,
+  "uart_baud": 921600,
+  "coremark_iterations": 1200,
+  "accepted": true,
+  "observed_fourth25_passed": 25,
+  "observed_context_rejections_passed": 50,
+  "observed_context_rejection_unique_cases": 25,
+  "observed_context_rejection_fast_modes": [
+    0,
+    1
+  ],
+  "paired_context_control_groups_passed": 8,
+  "score_forgery_guard_cases_passed": 8,
+  "scope": "Fourth25 is user-designated observed regression/demo;25 former context false acceptances are replayed in fast0/1,not independent or blind examples.8 paired control categories each contain one legal action and one rejection. These checks establish current system admission/tool+parameter/readback and no IO changes for rejects,not neural accuracy on642 examples.",
+  "coremark_runs": [
+    {
+      "iterations": 1200,
+      "cycles": 590712951,
+      "seconds": 14.585504962962963,
+      "coremark_per_mhz": 2.0314435259436188,
+      "crc": {
+        "seedcrc": "e9f5",
+        "crclist": "e714",
+        "crcmatrix": "1fd7",
+        "crcstate": "8e3a",
+        "crcfinal": "988c"
+      }
+    },
+    {
+      "iterations": 1200,
+      "cycles": 590712951,
+      "seconds": 14.585504962962963,
+      "coremark_per_mhz": 2.0314435259436188,
+      "crc": {
+        "seedcrc": "e9f5",
+        "crclist": "e714",
+        "crcmatrix": "1fd7",
+        "crcstate": "8e3a",
+        "crcfinal": "988c"
+      }
+    },
+    {
+      "iterations": 1200,
+      "cycles": 590712922,
+      "seconds": 14.58550424691358,
+      "coremark_per_mhz": 2.0314436256737243,
+      "crc": {
+        "seedcrc": "e9f5",
+        "crclist": "e714",
+        "crcmatrix": "1fd7",
+        "crcstate": "8e3a",
+        "crcfinal": "988c"
+      }
+    },
+    {
+      "iterations": 1200,
+      "cycles": 590712934,
+      "seconds": 14.585504543209877,
+      "coremark_per_mhz": 2.031443584406093,
+      "crc": {
+        "seedcrc": "e9f5",
+        "crclist": "e714",
+        "crcmatrix": "1fd7",
+        "crcstate": "8e3a",
+        "crcfinal": "988c"
+      }
+    }
+  ],
+  "crc_fields_per_run": 5,
+  "same_image_model_comparison": {
+    "software_cycles": 6966465,
+    "xnd_cycles": 377385,
+    "speedup": 18.45983544655988,
+    "logits_equal": true,
+    "scope": "Full neural context+encoder cycles; SW config0 vs XND config6; joint logits exact. No isolated context-head accelerator claim."
+  },
+  "model_raw_development": {
+    "original80": {
+      "correct": 73,
+      "total": 80
+    },
+    "aug192": {
+      "correct": 134,
+      "total": 192
+    },
+    "observed288": {
+      "correct": 237,
+      "total": 288
+    },
+    "scope": "Observed host model development,not physical accuracy."
+  },
+  "system_development": {
+    "original80": {
+      "fast": {
+        "correct": 80,
+        "total": 80,
+        "false_accept": 0,
+        "false_reject": 0
+      },
+      "full": {
+        "correct": 76,
+        "total": 80,
+        "false_accept": 0,
+        "false_reject": 4
+      }
+    },
+    "aug192": {
+      "fast": {
+        "correct": 192,
+        "total": 192,
+        "false_accept": 0,
+        "false_reject": 0
+      },
+      "full": {
+        "correct": 178,
+        "total": 192,
+        "false_accept": 0,
+        "false_reject": 14
+      }
+    },
+    "observed288": {
+      "fast": {
+        "correct": 254,
+        "total": 288,
+        "false_accept": 0,
+        "false_reject": 34
+      },
+      "full": {
+        "correct": 254,
+        "total": 288,
+        "false_accept": 0,
+        "false_reject": 34
+      }
+    },
+    "validation": {
+      "fast": {
+        "correct": 541,
+        "total": 541,
+        "false_accept": 0,
+        "false_reject": 0
+      },
+      "full": {
+        "correct": 537,
+        "total": 541,
+        "false_accept": 0,
+        "false_reject": 4
+      }
+    }
+  },
+  "heldout_first_evaluation": {
+    "source": "heldout_first_evaluation.json; immutable original first evaluation",
+    "scope": "First evaluation after checkpoint and threshold locked; synthetic family-separated and official public test-source OOD, not independent-human blind FPGA commands",
+    "class_balance": {
+      "total": 642,
+      "reject": 560,
+      "legal": 82
+    },
+    "raw_neural": {
+      "baseline_correct": 340,
+      "candidate_correct": 492,
+      "baseline_macro6_recall": 0.7396374458874458,
+      "candidate_macro6_recall": 0.7848755411255411,
+      "baseline_reject_correct": 277,
+      "candidate_reject_correct": 429,
+      "legal_correct_baseline": 63,
+      "legal_correct_candidate": 63,
+      "legal_false_reject_baseline": 15,
+      "legal_false_reject_candidate": 15
+    },
+    "interpretation": "Total accuracy is dominated by reject examples; report six-class macro recall and unchanged legal-command performance alongside total correct. Gains are learned rejection/context discrimination,not improved legal tool or argument recognition. Original25 system false acceptances remain in the immutable first-evaluation record; subsequent policy fixes are observed regression."
+  },
+  "sta": {
+    "all_constraints_met": true,
+    "setup_slow_ns": 1.133,
+    "hold_slow_ns": 0.144,
+    "setup_fast_ns": 10.553,
+    "hold_fast_ns": 0.101,
+    "tns": 0,
+    "ths": 0,
+    "failing_endpoints": 0,
+    "fmax_measured": false
+  },
+  "resources": {
+    "lut": 16296,
+    "ff": 17801,
+    "drm": 130,
+    "apm": 25,
+    "distributed_ram": 4
+  },
+  "board_status": "0x001ffca0",
+  "done": 1,
+  "over_temp": 0,
+  "driver_error_flags": 0,
+  "io_restored": true,
+  "final_io": {
+    "led_mask": 37,
+    "pwm_period": 40500,
+    "pwm_high": 8100,
+    "pwm_enabled": 1,
+    "pwm_duty": 20,
+    "restore_supported": 1
+  },
+  "physical_video_verified": false,
+  "physical_display_verified": false,
+  "display_scope": "Architecture scene visible and rotatable per user confirmation;new protocol5 live browser acceptance was not performed by the agent.",
+  "boot_session_notes": "An initial bootstrap failed because COM10 was absent. The first RAM program succeeded,but USB reconnection interrupted its serial capture (ClearCommError WinError5). After explicit user instruction,the same candidate was programmed again successfully. bootstrap_921600_reconnect.json,all native latency records and fourth_and_model_921600.json belong to that second successful boot; program_ram_reconnect.log reports0x001ffca0. Earlier failed capture and first program evidence are retained and are not counted as completed acceptance.",
+  "startup_sensor_manifest": {
+    "read_temp_available": 0,
+    "scope": "Initial tool-manifest startup snapshot only;later actual read_temp requests passed. Not a sustained sensor-unavailable claim."
+  },
+  "evidence": {
+    "physical": "fourth_and_model_921600.json",
+    "bootstrap": "bootstrap_921600_reconnect.json",
+    "native_text": "native_text_921600.json",
+    "native_framed": "native_framed_921600.json",
+    "program": "program_ram_reconnect.log",
+    "earlier_program": "program_ram.log",
+    "development_root": "07_runs/development/context_generalization",
+    "pds_outputs": "07_runs/development/context_generalization",
+    "measurement": "measurement_summary.json",
+    "original_first_evaluation": "heldout_first_evaluation.json",
+    "active_production_image": "06_pango_active/generate_bitstream/production.sbit",
+    "active_image_scope": "Active production image and firmware updated at file level only;full current implementation reports remain in the development build directory. No directory migration was performed."
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "scope": "Synthetic family-isolated diagnostics, not external blind test. Original80 and augmentation192 are observed development gates. User25/99/163 sets are not opened for training or model selection.",
+  "base_examples": 2352,
+  "base_unique": 1966,
+  "new_training_examples": 5116,
+  "new_training_families": 167,
+  "diagnostic_examples": 288,
+  "diagnostic_families": 36,
+  "train_counts": {
+    "read_temp": 264,
+    "set_pwm": 1008,
+    "run_coremark": 264,
+    "read_counter": 258,
+    "set_led": 1152,
+    "reject": 2170
+  },
+  "train_strata": {
+    "synonym": 688,
+    "question": 106,
+    "imperative": 864,
+    "polite": 352,
+    "explanation": 192,
+    "hypothetical": 128,
+    "status_query": 192,
+    "negation": 192,
+    "multi_action": 128,
+    "capability": 224,
+    "ood": 96,
+    "quotation": 96,
+    "english_context": 744,
+    "contract_context": 634,
+    "mask_anchor": 480
+  },
+  "diagnostic_counts": {
+    "read_temp": 32,
+    "set_pwm": 32,
+    "run_coremark": 32,
+    "read_counter": 32,
+    "set_led": 32,
+    "reject": 128
+  },
+  "architecture": "unchanged d64, 2 blocks,4 heads,64 byte tokens,INT4/INT8,47066 bytes",
+  "tool_argument_operation": "metadata separate; raw six-way classifier is only supervised on intent, decoder supplies argument/operation. Invalid capability/context labels reject.",
+  "first_group_training_examples": 3258,
+  "coverage_repair": "Add legitimate LED mask0..255, broad English supported commands/context contrasts; no observed user text used."
+}

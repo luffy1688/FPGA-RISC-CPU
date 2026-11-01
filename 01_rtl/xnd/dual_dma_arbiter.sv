@@ -14,17 +14,17 @@ module dual_dma_arbiter(
 );
  logic pending,owner,prefer_b,cancelled,chosen_b,chosen_valid;
  logic saved_write;logic[31:0]saved_addr,saved_wdata;logic[3:0]saved_wstrb;
- // Separate response assignments avoid an artificial ready->request
- // combinational dependency when nested in the existing CPU/RAM arbiter.
- assign chosen_b=pending?owner:(a_valid&&b_valid?prefer_b:b_valid);
+ // Requests cross one register boundary before reaching the RAM arbiter.
+ // Responses retain the owner until the captured downstream request drains.
+ assign chosen_b=a_valid&&b_valid?prefer_b:b_valid;
  assign chosen_valid=chosen_b?b_valid:a_valid;
- assign m_valid=pending?1'b1:chosen_valid;
- assign m_write=pending?saved_write:(chosen_b?b_write:a_write);
- assign m_addr=pending?saved_addr:(chosen_b?b_addr:a_addr);
- assign m_wdata=pending?saved_wdata:(chosen_b?b_wdata:a_wdata);
- assign m_wstrb=pending?saved_wstrb:(chosen_b?b_wstrb:a_wstrb);
- assign a_ready=m_valid&&m_ready&&!chosen_b&&a_valid&&!(pending&&cancelled);
- assign b_ready=m_valid&&m_ready&&chosen_b&&b_valid&&!(pending&&cancelled);
+ assign m_valid=pending;
+ assign m_write=saved_write;
+ assign m_addr=saved_addr;
+ assign m_wdata=saved_wdata;
+ assign m_wstrb=saved_wstrb;
+ assign a_ready=pending&&m_ready&&!owner&&a_valid&&!cancelled;
+ assign b_ready=pending&&m_ready&&owner&&b_valid&&!cancelled;
  assign a_rdata=m_rdata;assign b_rdata=m_rdata;
  assign a_error=a_ready&&m_error;assign b_error=b_ready&&m_error;
  always_ff @(posedge clk)begin
@@ -32,8 +32,11 @@ module dual_dma_arbiter(
   else begin
    if(!pending&&chosen_valid)begin
     owner<=chosen_b;cancelled<=0;
-    saved_write<=m_write;saved_addr<=m_addr;saved_wdata<=m_wdata;saved_wstrb<=m_wstrb;
-    if(m_ready)begin pending<=0;prefer_b<=!chosen_b;end else pending<=1;
+    saved_write<=chosen_b?b_write:a_write;
+    saved_addr<=chosen_b?b_addr:a_addr;
+    saved_wdata<=chosen_b?b_wdata:a_wdata;
+    saved_wstrb<=chosen_b?b_wstrb:a_wstrb;
+    pending<=1;
    end else if(pending)begin
     if(!(owner?b_valid:a_valid))cancelled<=1;
     if(m_ready)begin pending<=0;prefer_b<=!owner;cancelled<=0;end

@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "selftest_paths": 28,
+  "case_configs_exact": true,
+  "context_encoder_hardware_software_pair_exact": true,
+  "protocol6_uart_pass": true,
+  "actual_hardware_dma": {
+    "loads": 5,
+    "jobs": 5,
+    "read_bytes": 17600,
+    "write_bytes": 300
+  },
+  "host_versus_hardware_scope": "RTL simulator no physical ADC; temperature unavailable not actual measurement",
+  "selftest_source": "selftest.log",
+  "uart_source": "semantic_uart.log",
+  "final_policy_metacommand_denial": true,
+  "production_page_replay": {
+    "source": "actual_rtl_uart_through_production_page_js",
+    "compact_total": 5,
+    "compact_v3": 4,
+    "full_json": 7,
+    "errors": 0,
+    "browser_verified": false,
+    "physical_board_verified": false
+  },
+  "memory": {
+    "symbols": {
+      "__bss_end": 121408,
+      "__stack_bottom": 122880,
+      "__stack_top": 131072,
+      "__ai_const_start": 131072,
+      "__ai_const_end": 159056,
+      "__ai_scratch_start": 159056,
+      "__ai_scratch_used_end": 186800
+    },
+    "stack_reserved_bytes": 8192,
+    "cpu_margin_bytes": 1472,
+    "ai_constants_bytes": 27984,
+    "ai_scratch_used_bytes": 27744,
+    "ram_bytes": 262144,
+    "rtl_memory_capacity_changed": false
+  }
+}

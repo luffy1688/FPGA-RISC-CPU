@@ -1,0 +1,417 @@
+{
+  "exact_nn_cases": 1101,
+  "context_disabled_exact_cases": 1101,
+  "admission": {
+    "original80": {
+      "fast": {
+        "correct": 80,
+        "total": 80,
+        "false_accept": 0,
+        "false_reject": 0
+      },
+      "full": {
+        "correct": 76,
+        "total": 80,
+        "false_accept": 0,
+        "false_reject": 4
+      }
+    },
+    "aug192": {
+      "fast": {
+        "correct": 192,
+        "total": 192,
+        "false_accept": 0,
+        "false_reject": 0
+      },
+      "full": {
+        "correct": 178,
+        "total": 192,
+        "false_accept": 0,
+        "false_reject": 14
+      }
+    },
+    "observed288": {
+      "fast": {
+        "correct": 254,
+        "total": 288,
+        "false_accept": 0,
+        "false_reject": 34
+      },
+      "full": {
+        "correct": 254,
+        "total": 288,
+        "false_accept": 0,
+        "false_reject": 34
+      }
+    },
+    "validation": {
+      "fast": {
+        "correct": 541,
+        "total": 541,
+        "false_accept": 0,
+        "false_reject": 0
+      },
+      "full": {
+        "correct": 537,
+        "total": 541,
+        "false_accept": 0,
+        "false_reject": 4
+      }
+    }
+  },
+  "targeted_negative_controls": 7,
+  "production_integrated": true,
+  "heldout_rescored": false,
+  "last_policy_patch": {
+    "change": "same-tool sequential actions and external/future/history temperature domain refused before schema",
+    "neural_checkpoint_changed": false,
+    "old1101_nn_logits_unchanged": true,
+    "only_system_changes": [
+      {
+        "set": "validation",
+        "text": "运行一次CoreMark然后再启动CoreMark",
+        "expected": "reject",
+        "before": {
+          "selected": 2,
+          "status": 0,
+          "argument": 0,
+          "operation": 0,
+          "source": 0,
+          "fast_selected": 2,
+          "fast_status": 0,
+          "fast_argument": 0,
+          "fast_operation": 0,
+          "fast_source": 1
+        },
+        "after": {
+          "selected": 5,
+          "status": 8,
+          "argument": 0,
+          "operation": 0,
+          "source": 3,
+          "fast_selected": 5,
+          "fast_status": 8,
+          "fast_argument": 0,
+          "fast_operation": 0,
+          "fast_source": 3
+        }
+      },
+      {
+        "set": "validation",
+        "text": "启动CoreMark基准然后再启动CoreMark",
+        "expected": "reject",
+        "before": {
+          "selected": 2,
+          "status": 0,
+          "argument": 0,
+          "operation": 0,
+          "source": 0,
+          "fast_selected": 2,
+          "fast_status": 0,
+          "fast_argument": 0,
+          "fast_operation": 0,
+          "fast_source": 1
+        },
+        "after": {
+          "selected": 5,
+          "status": 8,
+          "argument": 0,
+          "operation": 0,
+          "source": 3,
+          "fast_selected": 5,
+          "fast_status": 8,
+          "fast_argument": 0,
+          "fast_operation": 0,
+          "fast_source": 3
+        }
+      },
+      {
+        "set": "validation",
+        "text": "让CPU跑一轮CoreMark然后再启动CoreMark",
+        "expected": "reject",
+        "before": {
+          "selected": 2,
+          "status": 0,
+          "argument": 0,
+          "operation": 0,
+          "source": 0,
+          "fast_selected": 2,
+          "fast_status": 0,
+          "fast_argument": 0,
+          "fast_operation": 0,
+          "fast_source": 1
+        },
+        "after": {
+          "selected": 5,
+          "status": 8,
+          "argument": 0,
+          "operation": 0,
+          "source": 3,
+          "fast_selected": 5,
+          "fast_status": 8,
+          "fast_argument": 0,
+          "fast_operation": 0,
+          "fast_source": 3
+        }
+      },
+      {
+        "set": "validation",
+        "text": "执行CoreMark并报告CRC然后再启动CoreMark",
+        "expected": "reject",
+        "before": {
+          "selected": 2,
+          "status": 0,
+          "argument": 0,
+          "operation": 0,
+          "source": 0,
+          "fast_selected": 2,
+          "fast_status": 0,
+          "fast_argument": 0,
+          "fast_operation": 0,
+          "fast_source": 1
+        },
+        "after": {
+          "selected": 5,
+          "status": 8,
+          "argument": 0,
+          "operation": 0,
+          "source": 3,
+          "fast_selected": 5,
+          "fast_status": 8,
+          "fast_argument": 0,
+          "fast_operation": 0,
+          "fast_source": 3
+        }
+      },
+      {
+        "set": "validation",
+        "text": "天气晴朗吗南方的温度是多少",
+        "expected": "reject",
+        "before": {
+          "selected": 0,
+          "status": 0,
+          "argument": 0,
+          "operation": 0,
+          "source": 0,
+          "fast_selected": 0,
+          "fast_status": 0,
+          "fast_argument": 0,
+          "fast_operation": 0,
+          "fast_source": 1
+        },
+        "after": {
+          "selected": 5,
+          "status": 8,
+          "argument": 0,
+          "operation": 0,
+          "source": 3,
+          "fast_selected": 5,
+          "fast_status": 8,
+          "fast_argument": 0,
+          "fast_operation": 0,
+          "fast_source": 3
+        }
+      },
+      {
+        "set": "validation",
+        "text": "明天那边外面温度多少啊",
+        "expected": "reject",
+        "before": {
+          "selected": 0,
+          "status": 0,
+          "argument": 0,
+          "operation": 0,
+          "source": 1,
+          "fast_selected": 0,
+          "fast_status": 0,
+          "fast_argument": 0,
+          "fast_operation": 0,
+          "fast_source": 1
+        },
+        "after": {
+          "selected": 5,
+          "status": 8,
+          "argument": 0,
+          "operation": 0,
+          "source": 3,
+          "fast_selected": 5,
+          "fast_status": 8,
+          "fast_argument": 0,
+          "fast_operation": 0,
+          "fast_source": 3
+        }
+      },
+      {
+        "set": "validation",
+        "text": "你给我的天气预报是错误的我想知道现在的温度",
+        "expected": "reject",
+        "before": {
+          "selected": 0,
+          "status": 0,
+          "argument": 0,
+          "operation": 0,
+          "source": 0,
+          "fast_selected": 5,
+          "fast_status": 1,
+          "fast_argument": 0,
+          "fast_operation": 0,
+          "fast_source": 3
+        },
+        "after": {
+          "selected": 5,
+          "status": 8,
+          "argument": 0,
+          "operation": 0,
+          "source": 3,
+          "fast_selected": 5,
+          "fast_status": 8,
+          "fast_argument": 0,
+          "fast_operation": 0,
+          "fast_source": 3
+        }
+      }
+    ],
+    "positive_controls": [
+      "运行CoreMark并报告CRC",
+      "启动运行CoreMark",
+      "执行CoreMark并显示CRC结果。",
+      "再读一次计数器当前值。",
+      "请读取当前片内温度。",
+      "只关闭LED0，其他LED保持不变。",
+      "请将PWM占空比设置为20%。"
+    ],
+    "negative_controls": [
+      "运行一次CoreMark然后再启动CoreMark",
+      "启动CoreMark基准然后再启动CoreMark",
+      "让CPU跑一轮CoreMark然后再启动CoreMark",
+      "执行CoreMark并报告CRC然后再启动CoreMark",
+      "天气晴朗吗南方的温度是多少",
+      "明天那边外面温度多少啊",
+      "你给我的天气预报是错误的我想知道现在的温度"
+    ],
+    "frozen_first_evaluation_file_untouched": true
+  },
+  "final_rom": "firmware/interactive.mem",
+  "physical_board_verified": false,
+  "pds_sta_verified": false,
+  "memory": {
+    "model_constant_bytes": 61922,
+    "runtime_workspace_bytes": 28288,
+    "context_constant_bytes": 2056,
+    "context_scratch_ai_bytes": 2048,
+    "cpu_bss_end": 120164,
+    "stack_bottom": 122880,
+    "reserved_stack_bytes": 8192,
+    "gap_below_reserved_stack": 2716,
+    "linker_assert_passed": true
+  },
+  "rtl_uart": {
+    "passed": true,
+    "transactions": 10,
+    "source": "context_uart.log",
+    "covers": [
+      "compactv2 schema",
+      "compactv2 context reject",
+      "fast0 fullencoder context deny source5",
+      "full-format context-only no fakeencoder/logits/PMU",
+      "binarymodel2 CRC/READY contextflags/source5"
+    ],
+    "timing_scope": "cycles=context_cycles+encoder_cycles, PMU onlyencoder",
+    "scope_before_last_policy_patch": "last patch only same-tool and externaltemp contracts; no emitter/NN/hardware changes",
+    "first_harness_failure": "context_uart_wrong_sim_baud.log, corrected41cycle sim input fromwrong44; no production fix needed"
+  },
+  "new_model_28_paths": {
+    "passed": true,
+    "source": "model_validation.json",
+    "scope_before_last_policy_patch": "last patch only textualcontract, no NN/hardware/math changes",
+    "checks": [
+      "joint/encoder/context logits",
+      "cycles=sum context+encoder",
+      "PMU onlyencoder bracket",
+      "stats XNDjobs unchanged by sparseCPU context"
+    ]
+  },
+  "protocol": {
+    "version": 5,
+    "firmware": "software_context_generalization_oct29",
+    "compact_version": 2,
+    "compact_fields": 25,
+    "binary_payload_bytes": 52,
+    "binary_total_bytes": 64,
+    "binary_reply_version": 1,
+    "source5": "irreversible neural context denial",
+    "model_used2": "context head plus schema/reject only; encoder never executed",
+    "compact_cycles": "independent head/encoder time not serialized; decision includescontext+schema"
+  },
+  "production_files": [
+    "03_sw/model/byte_tool_model.h",
+    "03_sw/model/byte_tool_model.c",
+    "03_sw/model/byte_context_data.h",
+    "03_sw/model/byte_context.c.inc",
+    "03_sw/model/host_demo.c",
+    "03_sw/model/Makefile",
+    "03_sw/model/main.c",
+    "03_sw/model/link_protocol.c",
+    "03_sw/model/link_protocol.h"
+  ],
+  "implementation": {
+    "source": "Local PDS final context_generalization implementation reports,read by root agent",
+    "observed_local_date": "2026-10-30",
+    "bitstream_generation": "completed",
+    "clock_hz": 40500000,
+    "timing": {
+      "slow_setup_slack_ns": 1.133,
+      "slow_hold_slack_ns": 0.144,
+      "fast_setup_slack_ns": 10.553,
+      "fast_hold_slack_ns": 0.101,
+      "failing_endpoints": 0
+    },
+    "resources": {
+      "LUT": 16296,
+      "FF": 17801,
+      "DRM": 130,
+      "APM": 25
+    },
+    "physical_acceptance": "PASS: protocol5 boot,observed fourth25,context refusal regression,paired controls,n10 native text/framed latency,CoreMark1200x4/five CRC fields,same-image full neural equivalence,zero serial driver errors and IO restoration.",
+    "pds_outputs": "07_runs/development/context_generalization",
+    "active_production_image": "06_pango_active/generate_bitstream/production.sbit",
+    "active_image_scope": "File-level image and firmware update only;full current implementation reports remain in the development build directory. No directory migration was performed."
+  },
+  "heldout_first_evaluation_summary": {
+    "source": "heldout_first_evaluation.json; immutable original first evaluation",
+    "scope": "First evaluation after checkpoint and threshold locked; synthetic family-separated and official public test-source OOD, not independent-human blind FPGA commands",
+    "class_balance": {
+      "total": 642,
+      "reject": 560,
+      "legal": 82
+    },
+    "raw_neural": {
+      "baseline_correct": 340,
+      "candidate_correct": 492,
+      "baseline_macro6_recall": 0.7396374458874458,
+      "candidate_macro6_recall": 0.7848755411255411,
+      "baseline_reject_correct": 277,
+      "candidate_reject_correct": 429,
+      "legal_correct_baseline": 63,
+      "legal_correct_candidate": 63,
+      "legal_false_reject_baseline": 15,
+      "legal_false_reject_candidate": 15
+    },
+    "interpretation": "Total accuracy is dominated by reject examples; report six-class macro recall and unchanged legal-command performance alongside total correct. Gains are learned rejection/context discrimination,not improved legal tool or argument recognition. Original25 system false acceptances remain in the immutable first-evaluation record; subsequent policy fixes are observed regression."
+  },
+  "physical": {
+    "accepted": true,
+    "date_local": "2026-10-30",
+    "ram_only": true,
+    "firmware": "software_context_generalization_oct29",
+    "protocol": 5,
+    "boot_evidence": "bootstrap_921600_reconnect.json",
+    "program_evidence": "program_ram_reconnect.log",
+    "status": "0x001ffca0",
+    "acceptance": "physical_acceptance.json",
+    "measurement": "measurement_summary.json",
+    "all_benchmark_raw_same_boot": true,
+    "observed_regression_not_blind": true,
+    "heldout_first_evaluation_unchanged": true
+  }
+}

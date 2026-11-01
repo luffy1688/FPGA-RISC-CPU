@@ -1,0 +1,103 @@
+{
+  "rows": {
+    "train": 18576,
+    "validation": 2031,
+    "fresh": 1138
+  },
+  "class_counts": {
+    "train": {
+      "read_temp": 782,
+      "set_pwm": 1988,
+      "run_coremark": 781,
+      "read_counter": 759,
+      "set_led": 2111,
+      "reject": 12155
+    },
+    "validation": {
+      "read_temp": 49,
+      "set_pwm": 104,
+      "run_coremark": 49,
+      "read_counter": 43,
+      "set_led": 107,
+      "reject": 1679
+    },
+    "fresh": {
+      "read_temp": 25,
+      "set_pwm": 64,
+      "run_coremark": 25,
+      "read_counter": 21,
+      "set_led": 61,
+      "reject": 942
+    }
+  },
+  "context_counts": {
+    "train": {
+      "0": 6421,
+      "8": 5362,
+      "1": 1267,
+      "2": 740,
+      "3": 559,
+      "4": 489,
+      "5": 559,
+      "6": 1878,
+      "7": 1301
+    },
+    "validation": {
+      "0": 352,
+      "1": 285,
+      "2": 169,
+      "3": 140,
+      "4": 144,
+      "5": 143,
+      "6": 331,
+      "7": 107,
+      "8": 360
+    },
+    "fresh": {
+      "0": 196,
+      "1": 155,
+      "2": 116,
+      "3": 114,
+      "4": 117,
+      "5": 113,
+      "6": 271,
+      "7": 56
+    }
+  },
+  "new_synthetic_counts": {
+    "train:0": 1162,
+    "train:1": 1010,
+    "train:2": 538,
+    "train:3": 404,
+    "train:4": 334,
+    "train:5": 404,
+    "train:6": 1778,
+    "validation:0": 269,
+    "validation:1": 230,
+    "validation:2": 114,
+    "validation:3": 115,
+    "validation:4": 116,
+    "validation:5": 115,
+    "validation:6": 303,
+    "fresh:0": 196,
+    "fresh:1": 155,
+    "fresh:2": 116,
+    "fresh:3": 114,
+    "fresh:4": 117,
+    "fresh:5": 113,
+    "fresh:6": 271,
+    "train:7": 1063,
+    "validation:7": 68,
+    "fresh:7": 56
+  },
+  "new_public_rows": {
+    "train": 1200,
+    "validation": 160
+  },
+  "split": "Wrapper/capability/same-tool/partial-negation families split before generating. Base action cores and parameter values may be shared; no speaker-disjoint or human-blind claim.",
+  "old_replay": true,
+  "old642_opened": false,
+  "observed_sets_not_in_gradient": true,
+  "public_license": "CC-BY-4.0, AmazonScience MASSIVE1.1 Chinese, original train/dev preserved",
+  "fresh_status": "Frozen for single evaluation only after checkpoint/threshold selection; not accessed by training script."
+}

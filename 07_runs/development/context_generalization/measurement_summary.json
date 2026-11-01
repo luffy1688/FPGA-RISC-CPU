@@ -1,0 +1,368 @@
+{
+  "firmware": "software_context_generalization_oct29",
+  "protocol": 5,
+  "native_request_ready_ms": {
+    "text": {
+      "led 37": {
+        "n": 10,
+        "median": 2.3308999999999997,
+        "min": 2.2291,
+        "max": 2.3548,
+        "empirical_p95_nearest_rank": 2.3548,
+        "all_samples": [
+          2.3284,
+          2.2291,
+          2.3397,
+          2.3361,
+          2.3209,
+          2.3531,
+          2.2777,
+          2.3548,
+          2.3334,
+          2.3256
+        ]
+      },
+      "请读取FPGA当前温度。": {
+        "n": 10,
+        "median": 3.60105,
+        "min": 3.5082,
+        "max": 3.6988,
+        "empirical_p95_nearest_rank": 3.6988,
+        "all_samples": [
+          3.5412,
+          3.674,
+          3.6988,
+          3.5082,
+          3.6845,
+          3.6126,
+          3.5737,
+          3.575,
+          3.5895,
+          3.6184
+        ]
+      },
+      "请将PWM占空比设置为20%。": {
+        "n": 10,
+        "median": 4.14875,
+        "min": 3.9994,
+        "max": 4.2199,
+        "empirical_p95_nearest_rank": 4.2199,
+        "all_samples": [
+          4.211,
+          4.1937,
+          4.0445,
+          4.1652,
+          4.1532,
+          4.1443,
+          4.0515,
+          3.9994,
+          4.1345,
+          4.2199
+        ]
+      }
+    },
+    "framed": {
+      "led 37": {
+        "n": 10,
+        "median": 2.40245,
+        "min": 2.3788,
+        "max": 2.4559,
+        "empirical_p95_nearest_rank": 2.4559,
+        "all_samples": [
+          2.4073,
+          2.4559,
+          2.4525,
+          2.3828,
+          2.4192,
+          2.3819,
+          2.4352,
+          2.3943,
+          2.3788,
+          2.3976
+        ]
+      },
+      "请读取FPGA当前温度。": {
+        "n": 10,
+        "median": 3.63695,
+        "min": 3.5964,
+        "max": 3.7099,
+        "empirical_p95_nearest_rank": 3.7099,
+        "all_samples": [
+          3.6354,
+          3.6385,
+          3.6279,
+          3.7099,
+          3.6854,
+          3.6569,
+          3.62,
+          3.5964,
+          3.6076,
+          3.6393
+        ]
+      },
+      "请将PWM占空比设置为20%。": {
+        "n": 10,
+        "median": 4.1367,
+        "min": 4.0998,
+        "max": 4.2452,
+        "empirical_p95_nearest_rank": 4.2452,
+        "all_samples": [
+          4.1379,
+          4.1355,
+          4.2328,
+          4.1162,
+          4.2022,
+          4.1207,
+          4.0998,
+          4.2452,
+          4.1267,
+          4.1516
+        ]
+      }
+    }
+  },
+  "board_decision_ms": {
+    "text": {
+      "led 37": {
+        "n": 10,
+        "median": 0.8723703703703704,
+        "min": 0.8723703703703704,
+        "max": 0.8737530864197531,
+        "empirical_p95_nearest_rank": 0.8737530864197531,
+        "all_samples": [
+          0.8737530864197531,
+          0.8723703703703704,
+          0.8723703703703704,
+          0.8723703703703704,
+          0.8723703703703704,
+          0.8723703703703704,
+          0.8723703703703704,
+          0.8723703703703704,
+          0.8723703703703704,
+          0.8723703703703704
+        ]
+      },
+      "请读取FPGA当前温度。": {
+        "n": 10,
+        "median": 1.7518765432098764,
+        "min": 1.7518765432098764,
+        "max": 1.7623209876543209,
+        "empirical_p95_nearest_rank": 1.7623209876543209,
+        "all_samples": [
+          1.7623209876543209,
+          1.7522962962962962,
+          1.7518765432098764,
+          1.7518765432098764,
+          1.7518765432098764,
+          1.7518765432098764,
+          1.7518765432098764,
+          1.7518765432098764,
+          1.7518765432098764,
+          1.7518765432098764
+        ]
+      },
+      "请将PWM占空比设置为20%。": {
+        "n": 10,
+        "median": 2.1279506172839504,
+        "min": 2.1279506172839504,
+        "max": 2.1355555555555554,
+        "empirical_p95_nearest_rank": 2.1355555555555554,
+        "all_samples": [
+          2.1355555555555554,
+          2.1279506172839504,
+          2.1279506172839504,
+          2.1279506172839504,
+          2.1279506172839504,
+          2.1279506172839504,
+          2.1279506172839504,
+          2.1279506172839504,
+          2.1279506172839504,
+          2.1279506172839504
+        ]
+      }
+    },
+    "framed": {
+      "led 37": {
+        "n": 10,
+        "median": 0.8744691358024691,
+        "min": 0.8744691358024691,
+        "max": 0.8756543209876543,
+        "empirical_p95_nearest_rank": 0.8756543209876543,
+        "all_samples": [
+          0.8756543209876543,
+          0.8744691358024691,
+          0.8744691358024691,
+          0.8744691358024691,
+          0.8744691358024691,
+          0.8744691358024691,
+          0.8744691358024691,
+          0.8744691358024691,
+          0.8744691358024691,
+          0.8744691358024691
+        ]
+      },
+      "请读取FPGA当前温度。": {
+        "n": 10,
+        "median": 1.751753086419753,
+        "min": 1.751753086419753,
+        "max": 1.761283950617284,
+        "empirical_p95_nearest_rank": 1.761283950617284,
+        "all_samples": [
+          1.761283950617284,
+          1.752148148148148,
+          1.751753086419753,
+          1.751753086419753,
+          1.751753086419753,
+          1.751753086419753,
+          1.751753086419753,
+          1.751753086419753,
+          1.751753086419753,
+          1.751753086419753
+        ]
+      },
+      "请将PWM占空比设置为20%。": {
+        "n": 10,
+        "median": 2.127901234567901,
+        "min": 2.127901234567901,
+        "max": 2.1337283950617283,
+        "empirical_p95_nearest_rank": 2.1337283950617283,
+        "all_samples": [
+          2.1337283950617283,
+          2.127901234567901,
+          2.127901234567901,
+          2.127901234567901,
+          2.127901234567901,
+          2.127901234567901,
+          2.127901234567901,
+          2.127901234567901,
+          2.127901234567901,
+          2.127901234567901
+        ]
+      }
+    }
+  },
+  "coremark_runs": [
+    {
+      "iterations": 1200,
+      "cycles": 590712951,
+      "seconds": 14.585504962962963,
+      "coremark_per_mhz": 2.0314435259436188,
+      "crc": {
+        "seedcrc": "e9f5",
+        "crclist": "e714",
+        "crcmatrix": "1fd7",
+        "crcstate": "8e3a",
+        "crcfinal": "988c"
+      }
+    },
+    {
+      "iterations": 1200,
+      "cycles": 590712951,
+      "seconds": 14.585504962962963,
+      "coremark_per_mhz": 2.0314435259436188,
+      "crc": {
+        "seedcrc": "e9f5",
+        "crclist": "e714",
+        "crcmatrix": "1fd7",
+        "crcstate": "8e3a",
+        "crcfinal": "988c"
+      }
+    },
+    {
+      "iterations": 1200,
+      "cycles": 590712922,
+      "seconds": 14.58550424691358,
+      "coremark_per_mhz": 2.0314436256737243,
+      "crc": {
+        "seedcrc": "e9f5",
+        "crclist": "e714",
+        "crcmatrix": "1fd7",
+        "crcstate": "8e3a",
+        "crcfinal": "988c"
+      }
+    },
+    {
+      "iterations": 1200,
+      "cycles": 590712934,
+      "seconds": 14.585504543209877,
+      "coremark_per_mhz": 2.031443584406093,
+      "crc": {
+        "seedcrc": "e9f5",
+        "crclist": "e714",
+        "crcmatrix": "1fd7",
+        "crcstate": "8e3a",
+        "crcfinal": "988c"
+      }
+    }
+  ],
+  "same_image_model_comparison": {
+    "software_cycles": 6966465,
+    "xnd_cycles": 377385,
+    "speedup": 18.45983544655988,
+    "logits_equal": true
+  },
+  "timing_scope": "Host WriteFile entry to actual received READY; n=10 per sentence/protocol. Not browser rendering,wire edge,or an estimated population P95. All measured fast requests run the learned context head only(model_used2); full encoder and XND are not run. board_decision includes schema/guards and context head,not a separately measured context-only time.",
+  "p95_note": "Empirical nearest-rank P95 at n10 equals max and is statistically unstable.",
+  "previous_version_comparison": {
+    "previous_firmware": "software_ai_pipeline_oct29",
+    "latency": {
+      "text": {
+        "led 37": {
+          "previous_median_ms": 1.59175,
+          "current_median_ms": 2.3308999999999997,
+          "delta_ms": 0.7391499999999998
+        },
+        "请读取FPGA当前温度。": {
+          "previous_median_ms": 2.26105,
+          "current_median_ms": 3.60105,
+          "delta_ms": 1.3399999999999999
+        },
+        "请将PWM占空比设置为20%。": {
+          "previous_median_ms": 2.6712499999999997,
+          "current_median_ms": 4.14875,
+          "delta_ms": 1.4775
+        }
+      },
+      "framed": {
+        "led 37": {
+          "previous_median_ms": 1.8655,
+          "current_median_ms": 2.40245,
+          "delta_ms": 0.53695
+        },
+        "请读取FPGA当前温度。": {
+          "previous_median_ms": 2.3842499999999998,
+          "current_median_ms": 3.63695,
+          "delta_ms": 1.2527000000000004
+        },
+        "请将PWM占空比设置为20%。": {
+          "previous_median_ms": 2.81015,
+          "current_median_ms": 4.1367,
+          "delta_ms": 1.3265500000000001
+        }
+      }
+    },
+    "model_constants_bytes": {
+      "previous": 59866,
+      "current": 61922,
+      "delta": 2056
+    },
+    "same_image_model_speedup": {
+      "previous": 19.493063856293876,
+      "current": 18.45983544655988,
+      "scope": "Software vs XND full-neural request on the same respective image; new total includes context head plus encoder,old total had encoder only. These are not isolated XND-engine speedups."
+    },
+    "coremark_per_mhz": {
+      "previous_median": 2.031489915255775,
+      "current_median": 2.0314435551748558
+    }
+  },
+  "boot_session_notes": "An initial bootstrap failed because COM10 was absent. The first RAM program succeeded,but USB reconnection interrupted its serial capture (ClearCommError WinError5). After explicit user instruction,the same candidate was programmed again successfully. bootstrap_921600_reconnect.json,all native latency records and fourth_and_model_921600.json belong to that second successful boot; program_ram_reconnect.log reports0x001ffca0. Earlier failed capture and first program evidence are retained and are not counted as completed acceptance.",
+  "source": "Physical native UART on second successful RAM boot,2026-10-30",
+  "evidence": {
+    "bootstrap": "bootstrap_921600_reconnect.json",
+    "native_text": "native_text_921600.json",
+    "native_framed": "native_framed_921600.json",
+    "acceptance": "fourth_and_model_921600.json",
+    "program": "program_ram_reconnect.log"
+  }
+}

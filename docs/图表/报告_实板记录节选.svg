@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (https://matplotlib.org/) -->
+<svg height="275.444656pt" version="1.1" viewBox="0 0 658.101484 275.444656" width="658.101484pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 275.444656 
+L 658.101484 275.444656 
+L 658.101484 -0 
+L 0 -0 
+z
+" style="fill:#ffffff;"/>
+  </g>
+  <g id="axes_1">
+   <g id="table_1">
+    <g id="patch_2">
+     <path d="M 35.605656 100.180016 
+L 189.055656 100.180016 
+L 189.055656 71.175656 
+L 35.605656 71.175656 
+z
+" style="fill:#eff4f7;stroke:#d9e2ea;stroke-linejoin:miter;"/>
+    </g>
+    <g id="text_1">
+     <text style="fill:#315d87;font-family:DejaVu Sans;font-size:11.5px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 50.950656, 88.851117)" x="50.950656" y="88.851117">输入</text>
+    </g>
+    <g id="patch_3">
+     <path d="M 189.055656 100.180016 
+L 637.129656 100.180016 
+L 637.129656 71.175656 
+L 189.055656 71.175656 
+z
+" style="fill:#ffffff;stroke:#d9e2ea;stroke-linejoin:miter;"/>
+    </g>
+    <g id="text_2">
+     <text style="fill:#28384a;font-family:DejaVu Sans;font-size:11.5px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 233.863056, 88.851117)" x="233.863056" y="88.851117">请将PWM占空比设置为20%。</text>
+    </g>
+    <g id="patch_4">
+     <path d="M 35.605656 129.184376 
+L 189.055656 129.184376 
+L 189.055656 100.180016 
+L 35.605656 100.180016 
+z
+" style="fill:#eff4f7;stroke:#d9e2ea;stroke-linejoin:miter;"/>
+    </g>
+    <g id="text_3">
+     <text style="fill:#315d87;font-family:DejaVu Sans;font-size:11.5px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 50.950656, 117.855477)" x="50.950656" y="117.855477">计算配置</text>
+    </g>
+    <g id="patch_5">
+     <path d="M 189.055656 129.184376 
+L 637.129656 129.184376 
+L 637.129656 100.180016 
+L 189.055656 100.180016 
+z
+" style="fill:#ffffff;stroke:#d9e2ea;stroke-linejoin:miter;"/>
+    </g>
+    <g id="text_4">
+     <text style="fill:#28384a;font-family:DejaVu Sans;font-size:11.5px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 233.863056, 117.855477)" x="233.863056" y="117.855477">54MHz · config6 · 完整模型</text>
+    </g>
+    <g id="patch_6">
+     <path d="M 35.605656 158.188736 
+L 189.055656 158.188736 
+L 189.055656 129.184376 
+L 35.605656 129.184376 
+z
+" style="fill:#eff4f7;stroke:#d9e2ea;stroke-linejoin:miter;"/>
+    </g>
+    <g id="text_5">
+     <text style="fill:#315d87;font-family:DejaVu Sans;font-size:11.5px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 50.950656, 146.859837)" x="50.950656" y="146.859837">模型计算</text>
+    </g>
+    <g id="patch_7">
+     <path d="M 189.055656 158.188736 
+L 637.129656 158.188736 
+L 637.129656 129.184376 
+L 189.055656 129.184376 
+z
+" style="fill:#ffffff;stroke:#d9e2ea;stroke-linejoin:miter;"/>
+    </g>
+    <g id="text_6">
+     <text style="fill:#28384a;font-family:DejaVu Sans;font-size:11.5px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 233.863056, 146.859837)" x="233.863056" y="146.859837">2950565周期 / 54.640ms</text>
+    </g>
+    <g id="patch_8">
+     <path d="M 35.605656 187.193096 
+L 189.055656 187.193096 
+L 189.055656 158.188736 
+L 35.605656 158.188736 
+z
+" style="fill:#eff4f7;stroke:#d9e2ea;stroke-linejoin:miter;"/>
+    </g>
+    <g id="text_7">
+     <text style="fill:#315d87;font-family:DejaVu Sans;font-size:11.5px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 50.950656, 175.864197)" x="50.950656" y="175.864197">执行与寄存器读回</text>
+    </g>
+    <g id="patch_9">
+     <path d="M 189.055656 187.193096 
+L 637.129656 187.193096 
+L 637.129656 158.188736 
+L 189.055656 158.188736 
+z
+" style="fill:#ffffff;stroke:#d9e2ea;stroke-linejoin:miter;"/>
+    </g>
+    <g id="text_8">
+     <text style="fill:#28384a;font-family:DejaVu Sans;font-size:11.5px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 233.863056, 175.864197)" x="233.863056" y="175.864197">请求20% / 读回20% / match=1</text>
+    </g>
+    <g id="patch_10">
+     <path d="M 35.605656 216.197456 
+L 189.055656 216.197456 
+L 189.055656 187.193096 
+L 35.605656 187.193096 
+z
+" style="fill:#eff4f7;stroke:#d9e2ea;stroke-linejoin:miter;"/>
+    </g>
+    <g id="text_9">
+     <text style="fill:#315d87;font-family:DejaVu Sans;font-size:11.5px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 50.950656, 204.868557)" x="50.950656" y="204.868557">PWM计数</text>
+    </g>
+    <g id="patch_11">
+     <path d="M 189.055656 216.197456 
+L 637.129656 216.197456 
+L 637.129656 187.193096 
+L 189.055656 187.193096 
+z
+" style="fill:#ffffff;stroke:#d9e2ea;stroke-linejoin:miter;"/>
+    </g>
+    <g id="text_10">
+     <text style="fill:#28384a;font-family:DejaVu Sans;font-size:11.5px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 233.863056, 204.868557)" x="233.863056" y="204.868557">周期54000 / 高电平10800 / 使能1</text>
+    </g>
+    <g id="patch_12">
+     <path d="M 35.605656 245.201816 
+L 189.055656 245.201816 
+L 189.055656 216.197456 
+L 35.605656 216.197456 
+z
+" style="fill:#eff4f7;stroke:#d9e2ea;stroke-linejoin:miter;"/>
+    </g>
+    <g id="text_11">
+     <text style="fill:#315d87;font-family:DejaVu Sans;font-size:11.5px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 50.950656, 233.872917)" x="50.950656" y="233.872917">并行检查</text>
+    </g>
+    <g id="patch_13">
+     <path d="M 189.055656 245.201816 
+L 637.129656 245.201816 
+L 637.129656 216.197456 
+L 189.055656 216.197456 
+z
+" style="fill:#ffffff;stroke:#d9e2ea;stroke-linejoin:miter;"/>
+    </g>
+    <g id="text_12">
+     <text style="fill:#28384a;font-family:DejaVu Sans;font-size:11.5px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 233.863056, 233.872917)" x="233.863056" y="233.872917">副核忙碌期间主核完成AI；模型数组与单独运行一致</text>
+    </g>
+   </g>
+   <g id="text_13">
+    <text style="fill:#315d87;font-family:Noto Sans CJK JP;font-size:19px;font-style:normal;font-weight:bold;text-anchor:start;" transform="rotate(-0, 41.743656, 33.032936)" x="41.743656" y="33.032936">中文PWM请求的实板返回</text>
+   </g>
+  </g>
+ </g>
+</svg>

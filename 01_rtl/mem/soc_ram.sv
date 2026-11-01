@@ -4,6 +4,7 @@
 `default_nettype none
 module soc_ram #(
   parameter integer RAM_WORDS=65536,
+  parameter bit FAST_WRITES=0,
   parameter INIT_FILE=""
 )(
   input logic clk,reset,
@@ -34,6 +35,12 @@ module soc_ram #(
   wire [31:0] i_read_addr = i_stream_next ? i_next_addr : i_addr;
   wire i_read_bad = i_stream_next ? i_burst_bad : i_bad;
   wire d_bad=d_addr>=RAM_BYTES || d_addr[1:0]!=0;
+  logic d_ready_q,d_error_q;
+  wire fast_write=FAST_WRITES&&d_valid&&d_write;
+  assign d_ready=fast_write||d_ready_q;
+  assign d_error=fast_write?d_bad:d_error_q;
+  wire d_accept=d_valid&&!d_ready_q;
+
 
   initial if(INIT_FILE!="") $readmemh(INIT_FILE,mem);
 
@@ -46,9 +53,9 @@ module soc_ram #(
       i_ready<=0; i_rdata<=0; i_error<=0;
       i_burst_active<=0; i_burst_bad<=0; i_burst_base<=0;
       i_burst_word<=0; i_burst_count<=0;
-      d_ready<=0; d_rdata<=0; d_error<=0;
+      d_ready_q<=0; d_rdata<=0; d_error_q<=0;
     end else begin
-      i_ready<=0; d_ready<=0;
+      i_ready<=0; d_ready_q<=0;
       // One syntactic instruction memory read preserves a true dual-port RAM.
       // Separate mem[] reads for first/stream beats infer an unwanted third
       // read port in ADS, even though their enables are mutually exclusive.
@@ -69,12 +76,17 @@ module soc_ram #(
           i_burst_word<=i_addr[4:2]; i_burst_count<=0;
         end
       end
-      if(d_valid && !d_ready) begin
-        d_ready<=1; d_error<=d_bad;
-        d_rdata<=d_bad ? 32'd0 : mem[d_addr[2 +: INDEX_BITS]];
-        if(d_write && !d_bad)
+      if(d_accept)begin
+        if(!fast_write)begin
+          d_ready_q<=1;d_error_q<=d_bad;
+          d_rdata<=d_bad?32'd0:mem[d_addr[2+:INDEX_BITS]];
+        end
+        // A write ACK is the same edge that commits enabled bytes. Read
+        // responses retain the registered SRAM latency. There is one data
+        // memory write port, shared by both transaction modes.
+        if(d_write&&!d_bad)
           for(b=0;b<4;b=b+1)
-            if(d_wstrb[b]) mem[d_addr[2 +: INDEX_BITS]][b*8 +: 8]<=d_wdata[b*8 +: 8];
+            if(d_wstrb[b])mem[d_addr[2+:INDEX_BITS]][b*8+:8]<=d_wdata[b*8+:8];
       end
     end
   end

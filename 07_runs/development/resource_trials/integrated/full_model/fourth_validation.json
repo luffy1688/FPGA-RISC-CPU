@@ -1,0 +1,188 @@
+{
+  "passed": true,
+  "scope": "ExperimentalactualRV32SoCUARTFourth25:23requestsresponsechecked(14completedtooloperations,5denials,4expectedADCunavailable). RemainingF24F25CoreMarkpermission/startcheckedseparately,nobenchmarkcompletionclaimforthese2. HARD_ADC=0,nofabricatedtemperature. TwoCoreMark1200iterationCRCvalidatedcompletionsareactualRISC-VRTLcycles,notphysicalorhostedCPU.",
+  "cases": 25,
+  "full_responses_verified": 23,
+  "completed_tool_operations": 14,
+  "denials_no_IO_change": 5,
+  "temperature_unavailable_expected": 4,
+  "remaining_start_only": [
+    {
+      "id": "F24",
+      "passed": true,
+      "phase": "tool_start",
+      "benchmark_completed": false,
+      "model_used": 0
+    },
+    {
+      "id": "F25",
+      "passed": true,
+      "phase": "tool_start",
+      "benchmark_completed": false,
+      "model_used": 1
+    }
+  ],
+  "coremark_completed_runs": [
+    {
+      "iterations": 1200,
+      "cycles": 590699515,
+      "seconds_at_simulated_clock": 14.585173209876544,
+      "coremark_per_mhz": 2.03148973298209,
+      "crc": {
+        "seedcrc": "e9f5",
+        "crclist": "e714",
+        "crcmatrix": "1fd7",
+        "crcstate": "8e3a",
+        "crcfinal": "988c"
+      }
+    },
+    {
+      "iterations": 1200,
+      "cycles": 590699503,
+      "seconds_at_simulated_clock": 14.585172913580246,
+      "coremark_per_mhz": 2.0314897742515963,
+      "crc": {
+        "seedcrc": "e9f5",
+        "crclist": "e714",
+        "crcmatrix": "1fd7",
+        "crcstate": "8e3a",
+        "crcfinal": "988c"
+      }
+    }
+  ],
+  "case_details": [
+    {
+      "id": "F01",
+      "model_used": 3,
+      "execute": 2
+    },
+    {
+      "id": "F02",
+      "model_used": 0,
+      "execute": 0
+    },
+    {
+      "id": "F03",
+      "model_used": 3,
+      "execute": 0
+    },
+    {
+      "id": "F04",
+      "model_used": 1,
+      "execute": 1
+    },
+    {
+      "id": "F05",
+      "model_used": 0,
+      "execute": 0
+    },
+    {
+      "id": "F06",
+      "model_used": 0,
+      "execute": 0
+    },
+    {
+      "id": "F07",
+      "model_used": 3,
+      "execute": 0
+    },
+    {
+      "id": "F08",
+      "model_used": 0,
+      "execute": 0
+    },
+    {
+      "id": "F09",
+      "model_used": 3,
+      "execute": 1
+    },
+    {
+      "id": "F10",
+      "model_used": 0,
+      "execute": 0
+    },
+    {
+      "id": "F11",
+      "model_used": 0,
+      "execute": 0
+    },
+    {
+      "id": "F12",
+      "model_used": 3,
+      "execute": 0
+    },
+    {
+      "id": "F13",
+      "model_used": 3,
+      "execute": 0
+    },
+    {
+      "id": "F14",
+      "model_used": 3,
+      "execute": 1
+    },
+    {
+      "id": "F15",
+      "model_used": 0,
+      "execute": 0
+    },
+    {
+      "id": "F16",
+      "model_used": 3,
+      "execute": 2
+    },
+    {
+      "id": "F17",
+      "model_used": 3,
+      "execute": 1
+    },
+    {
+      "id": "F18",
+      "model_used": 3,
+      "execute": 2
+    },
+    {
+      "id": "F19",
+      "model_used": 0,
+      "execute": 0
+    },
+    {
+      "id": "F20",
+      "model_used": 3,
+      "execute": 1
+    },
+    {
+      "id": "F21",
+      "model_used": 3,
+      "execute": 0
+    },
+    {
+      "id": "F22",
+      "model_used": 0,
+      "execute": 0
+    },
+    {
+      "id": "F23",
+      "model_used": 3,
+      "execute": 2
+    },
+    {
+      "id": "F24",
+      "passed": true,
+      "phase": "tool_start",
+      "benchmark_completed": false,
+      "model_used": 0
+    },
+    {
+      "id": "F25",
+      "passed": true,
+      "phase": "tool_start",
+      "benchmark_completed": false,
+      "model_used": 1
+    }
+  ],
+  "ram_download": false,
+  "physical": false,
+  "measurement_scope": "Cycle-derivedsimulated40.5MHzonly",
+  "test_plan_adjustment": "TwoidenticalCoreMarkalgorithm/CRCcompletionssuffice;remaining2phrasevariantsvalidatedonlytostart,toavoidredundantlongbenchmarkrepeats."
+}

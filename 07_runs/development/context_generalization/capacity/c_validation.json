@@ -1,0 +1,422 @@
+{
+  "scope": "Capacity64 frozen candidate numerical proof; observed1138 is development target,not blind;internal900 audit firstonce held apart from selection;no production changes",
+  "constant_bytes": 72044,
+  "c_python_all_scores_exact_cases": 5170,
+  "results": {
+    "original80": {
+      "n": 80,
+      "correct": 76,
+      "by_class": {
+        "read_temp": [
+          4,
+          4
+        ],
+        "set_pwm": [
+          29,
+          32
+        ],
+        "run_coremark": [
+          4,
+          4
+        ],
+        "read_counter": [
+          4,
+          4
+        ],
+        "set_led": [
+          32,
+          32
+        ],
+        "reject": [
+          3,
+          4
+        ]
+      },
+      "false_accept": 1,
+      "false_reject": 3,
+      "macro_recall": 0.9427083333333334,
+      "legal_correct": 73,
+      "legal_total": 76,
+      "legal_wrong_tool": 0,
+      "by_context": {
+        "8": {
+          "n": 80,
+          "correct": 76
+        }
+      }
+    },
+    "aug192": {
+      "n": 192,
+      "correct": 167,
+      "by_class": {
+        "read_temp": [
+          31,
+          32
+        ],
+        "set_pwm": [
+          30,
+          32
+        ],
+        "run_coremark": [
+          31,
+          32
+        ],
+        "read_counter": [
+          28,
+          32
+        ],
+        "set_led": [
+          26,
+          32
+        ],
+        "reject": [
+          21,
+          32
+        ]
+      },
+      "false_accept": 11,
+      "false_reject": 8,
+      "macro_recall": 0.8697916666666666,
+      "legal_correct": 146,
+      "legal_total": 160,
+      "legal_wrong_tool": 6,
+      "by_context": {
+        "8": {
+          "n": 192,
+          "correct": 167
+        }
+      }
+    },
+    "observed288": {
+      "n": 288,
+      "correct": 263,
+      "by_class": {
+        "read_temp": [
+          32,
+          32
+        ],
+        "set_pwm": [
+          31,
+          32
+        ],
+        "run_coremark": [
+          32,
+          32
+        ],
+        "read_counter": [
+          32,
+          32
+        ],
+        "set_led": [
+          32,
+          32
+        ],
+        "reject": [
+          104,
+          128
+        ]
+      },
+      "false_accept": 24,
+      "false_reject": 1,
+      "macro_recall": 0.9635416666666666,
+      "legal_correct": 159,
+      "legal_total": 160,
+      "legal_wrong_tool": 0,
+      "by_context": {
+        "8": {
+          "n": 288,
+          "correct": 263
+        }
+      }
+    },
+    "old_validation": {
+      "n": 541,
+      "correct": 454,
+      "by_class": {
+        "read_temp": [
+          11,
+          12
+        ],
+        "set_pwm": [
+          23,
+          23
+        ],
+        "run_coremark": [
+          12,
+          12
+        ],
+        "read_counter": [
+          12,
+          12
+        ],
+        "set_led": [
+          23,
+          24
+        ],
+        "reject": [
+          373,
+          458
+        ]
+      },
+      "false_accept": 85,
+      "false_reject": 0,
+      "macro_recall": 0.9482350800582241,
+      "legal_correct": 81,
+      "legal_total": 83,
+      "legal_wrong_tool": 2,
+      "by_context": {
+        "0": {
+          "n": 83,
+          "correct": 81
+        },
+        "1": {
+          "n": 55,
+          "correct": 37
+        },
+        "2": {
+          "n": 55,
+          "correct": 31
+        },
+        "3": {
+          "n": 25,
+          "correct": 23
+        },
+        "4": {
+          "n": 28,
+          "correct": 13
+        },
+        "5": {
+          "n": 28,
+          "correct": 28
+        },
+        "6": {
+          "n": 28,
+          "correct": 28
+        },
+        "7": {
+          "n": 39,
+          "correct": 19
+        },
+        "8": {
+          "n": 200,
+          "correct": 194
+        }
+      }
+    },
+    "validation": {
+      "n": 2031,
+      "correct": 1682,
+      "by_class": {
+        "read_temp": [
+          47,
+          49
+        ],
+        "set_pwm": [
+          94,
+          104
+        ],
+        "run_coremark": [
+          43,
+          49
+        ],
+        "read_counter": [
+          40,
+          43
+        ],
+        "set_led": [
+          101,
+          107
+        ],
+        "reject": [
+          1357,
+          1679
+        ]
+      },
+      "false_accept": 322,
+      "false_reject": 14,
+      "macro_recall": 0.9038263029317152,
+      "legal_correct": 325,
+      "legal_total": 352,
+      "legal_wrong_tool": 13,
+      "by_context": {
+        "0": {
+          "n": 352,
+          "correct": 325
+        },
+        "1": {
+          "n": 285,
+          "correct": 209
+        },
+        "2": {
+          "n": 169,
+          "correct": 145
+        },
+        "3": {
+          "n": 140,
+          "correct": 116
+        },
+        "4": {
+          "n": 144,
+          "correct": 101
+        },
+        "5": {
+          "n": 143,
+          "correct": 143
+        },
+        "6": {
+          "n": 331,
+          "correct": 229
+        },
+        "7": {
+          "n": 107,
+          "correct": 66
+        },
+        "8": {
+          "n": 360,
+          "correct": 348
+        }
+      }
+    },
+    "observed1138": {
+      "n": 1138,
+      "correct": 1066,
+      "by_class": {
+        "read_temp": [
+          25,
+          25
+        ],
+        "set_pwm": [
+          64,
+          64
+        ],
+        "run_coremark": [
+          19,
+          25
+        ],
+        "read_counter": [
+          18,
+          21
+        ],
+        "set_led": [
+          59,
+          61
+        ],
+        "reject": [
+          881,
+          942
+        ]
+      },
+      "false_accept": 61,
+      "false_reject": 2,
+      "macro_recall": 0.9199333555426277,
+      "legal_correct": 185,
+      "legal_total": 196,
+      "legal_wrong_tool": 9,
+      "by_context": {
+        "0": {
+          "n": 196,
+          "correct": 185
+        },
+        "1": {
+          "n": 155,
+          "correct": 146
+        },
+        "2": {
+          "n": 116,
+          "correct": 112
+        },
+        "3": {
+          "n": 114,
+          "correct": 112
+        },
+        "4": {
+          "n": 117,
+          "correct": 114
+        },
+        "5": {
+          "n": 113,
+          "correct": 112
+        },
+        "6": {
+          "n": 271,
+          "correct": 255
+        },
+        "7": {
+          "n": 56,
+          "correct": 30
+        }
+      }
+    },
+    "internal_audit": {
+      "n": 900,
+      "correct": 656,
+      "by_class": {
+        "read_temp": [
+          37,
+          40
+        ],
+        "set_pwm": [
+          31,
+          40
+        ],
+        "run_coremark": [
+          38,
+          40
+        ],
+        "read_counter": [
+          33,
+          40
+        ],
+        "set_led": [
+          28,
+          40
+        ],
+        "reject": [
+          489,
+          700
+        ]
+      },
+      "false_accept": 211,
+      "false_reject": 23,
+      "macro_recall": 0.8122619047619049,
+      "legal_correct": 167,
+      "legal_total": 200,
+      "legal_wrong_tool": 10,
+      "by_context": {
+        "0": {
+          "n": 200,
+          "correct": 167
+        },
+        "1": {
+          "n": 100,
+          "correct": 54
+        },
+        "2": {
+          "n": 100,
+          "correct": 54
+        },
+        "3": {
+          "n": 100,
+          "correct": 64
+        },
+        "4": {
+          "n": 100,
+          "correct": 60
+        },
+        "5": {
+          "n": 100,
+          "correct": 99
+        },
+        "6": {
+          "n": 100,
+          "correct": 70
+        },
+        "7": {
+          "n": 100,
+          "correct": 88
+        }
+      }
+    }
+  },
+  "constant_storage_note": "Actual compiled arrays72044B,linker16-byte section alignment72048B;previous72068 counted NumPy int64 threshold storage although C emittedINT32 thresholds. Values,weights,all scores unchanged."
+}

@@ -1,0 +1,45 @@
+{
+  "scope": "Candidate context64x16+oldrepair5+only-stillreject-tool5 and Unicode features only,allweights.ai_const shared SRAM; encoder not included; fake originalencoderreject used to exercise maximum repair branch,not classification accuracy",
+  "clock_hz": 40500000,
+  "calls_per_case": 16,
+  "constant_bytes": 72044,
+  "cases": [
+    {
+      "case": 0,
+      "cycles16": 1112948,
+      "bytes": 28,
+      "bucket": 5,
+      "text": "请读取FPGA当前温度。",
+      "cycles_per_call": 69559.25,
+      "ms": 1.7175123456790125
+    },
+    {
+      "case": 1,
+      "cycles16": 1234455,
+      "bytes": 33,
+      "bucket": 5,
+      "text": "请将PWM占空比设置为20%。",
+      "cycles_per_call": 77153.4375,
+      "ms": 1.905023148148148
+    },
+    {
+      "case": 2,
+      "cycles16": 1398203,
+      "bytes": 37,
+      "bucket": 5,
+      "text": "只关闭LED0，其他LED不要改变",
+      "cycles_per_call": 87387.6875,
+      "ms": 2.1577206790123458
+    },
+    {
+      "case": 3,
+      "cycles16": 1351055,
+      "bytes": 37,
+      "bucket": 5,
+      "text": "假设把LED0点亮会发生什么？",
+      "cycles_per_call": 84440.9375,
+      "ms": 2.0849614197530864
+    }
+  ],
+  "constant_storage_note": "Actual compiled arrays72044B,linker16-byte section alignment72048B;previous72068 counted NumPy int64 threshold storage although C emittedINT32 thresholds. Values,weights,all scores unchanged."
+}

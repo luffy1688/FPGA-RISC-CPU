@@ -1,0 +1,6035 @@
+{
+  "schema": "needlervx.native_latency.v1",
+  "started_utc": "2026-10-31T13:11:44.657860+00:00",
+  "clock": {
+    "implementation": "QueryPerformanceCounter()",
+    "monotonic": true,
+    "adjustable": false,
+    "resolution": 1e-07
+  },
+  "port": "COM10",
+  "baud": 921600,
+  "repeat": 10,
+  "protocol": "text",
+  "method": "Win32 overlapped full-duplex ReadFile event completion dedicated reader, first-byte-return COMMTIMEOUTS",
+  "timing_scope": "host WriteFile entry/completion and ReadFile chunk completion; not wire edges",
+  "p95_note": "empirical nearest-rank P95; n=10 gives max and is statistically unstable",
+  "initial_ready": "explicit coordinated handoff",
+  "rx_chunks": [
+    {
+      "received_ns": 47210365242700,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210365346600,
+      "hex": "525f494f207b226c65645f6d61736b223a33372c2270776d5f706572696f64223a34303530302c2270776d5f68696768223a383130302c2270776d5f656e61626c6564223a312c2270776d5f64757479223a32302c22726573746f72655f737570706f72746564223a317d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210366841400,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210366900800,
+      "hex": "525f46415354205b312c332c362c342c302c33372c302c322c302c33372c353235342c3233352c353534332c312c33372c33372c312c302c302c305d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210368351000,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210368434500,
+      "hex": "525f46415354205b312c342c362c342c302c33372c302c322c302c33372c353133302c3233352c353431392c312c33372c33372c312c302c302c305d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210369833500,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210369852200,
+      "hex": "525f46415354205b312c352c362c342c302c33372c302c322c302c33372c353133302c3233352c353431392c312c33372c33372c312c302c302c305d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210371314400,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210371389300,
+      "hex": "525f46415354205b312c362c362c342c302c33372c302c322c302c33372c353133302c3233352c353431392c312c33372c33372c312c302c302c305d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210372813000,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210372859700,
+      "hex": "525f46415354205b312c372c362c342c302c33372c302c322c302c33372c353133302c3233352c353431392c312c33372c33372c312c302c302c305d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210374250700,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210374305400,
+      "hex": "525f46415354205b312c382c362c342c302c33372c302c322c302c33372c353133302c3233352c353431392c312c33372c33372c312c302c302c305d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210375754200,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210375799300,
+      "hex": "525f46415354205b312c392c362c342c302c33372c302c322c302c33372c353133302c3233352c353431392c312c33372c33372c312c302c302c305d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210377203500,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210377237400,
+      "hex": "525f46415354205b312c31302c362c342c302c33372c302c322c302c33372c353133302c3233352c353431392c312c33372c33372c312c302c302c305d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210378741300,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210378769500,
+      "hex": "525f46415354205b312c31312c362c342c302c33372c302c322c302c33372c353133302c3233352c353431392c312c33372c33372c312c302c302c305d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210380188200,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210380231700,
+      "hex": "525f46415354205b312c31322c362c342c302c33372c302c322c302c33372c353133302c3233352c353431392c312c33372c33372c312c302c302c305d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210385350100,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210385465400,
+      "hex": "525f46415354205b332c31332c362c302c302c302c302c312c302c333733332c3132333933302c3237322c3132343235332c332c302c323534372c312c302c302c302c312c302c32352c2d33322c3135322c312c302c312c302c302c343839365d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210390802800,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210390859600,
+      "hex": "525f46415354205b332c31342c362c302c302c302c302c312c302c333733332c3132333939352c3237322c3132343331382c332c302c323534372c312c302c302c302c312c302c32352c2d33322c3135322c312c302c312c302c302c343839365d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210396033900,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210396137100,
+      "hex": "525f46415354205b332c31352c362c302c302c302c302c312c302c333733332c3132333939352c3237322c3132343331382c332c302c323534372c312c302c302c302c312c302c32352c2d33322c3135322c312c302c312c302c302c343839365d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210401277700,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210401316400,
+      "hex": "525f46415354205b332c31362c362c302c302c302c302c312c302c333733332c3132333939352c3237322c3132343331382c332c302c323534372c312c302c302c302c312c302c32352c2d33322c3135322c312c302c312c302c302c343839365d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210406556300,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210406600300,
+      "hex": "525f46415354205b332c31372c362c302c302c302c302c312c302c333733332c3132333939352c3237322c3132343331382c332c302c323534372c312c302c302c302c312c302c32352c2d33322c3135322c312c302c312c302c302c343839365d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210411913500,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210411974100,
+      "hex": "525f46415354205b332c31382c362c302c302c302c302c312c302c333733332c3132333939352c3237322c3132343331382c332c302c323534372c312c302c302c302c312c302c32352c2d33322c3135322c312c302c312c302c302c343839365d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210417052700,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210417127000,
+      "hex": "525f46415354205b332c31392c362c302c302c302c302c312c302c333733332c3132333939352c3237322c3132343331382c332c302c323534372c312c302c302c302c312c302c32352c2d33322c3135322c312c302c312c302c302c343839365d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210422242800,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210422321300,
+      "hex": "525f46415354205b332c32302c362c302c302c302c302c312c302c333733332c3132333939352c3237322c3132343331382c332c302c323534372c312c302c302c302c312c302c32352c2d33322c3135322c312c302c312c302c302c343839365d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210427593200,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210427723700,
+      "hex": "525f46415354205b332c32312c362c302c302c302c302c312c302c333733332c3132333939352c3237322c3132343331382c332c302c323534372c312c302c302c302c312c302c32352c2d33322c3135322c312c302c312c302c302c343839365d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210432981000,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210433030800,
+      "hex": "525f46415354205b332c32322c362c302c302c302c302c312c302c333733332c3132333939352c3237322c3132343331382c332c302c323534372c312c302c302c302c312c302c32352c2d33322c3135322c312c302c312c302c302c343839365d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210438151900,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210438239100,
+      "hex": "525f46415354205b332c32332c362c312c302c32302c302c342c302c32302c3131333634322c3336302c3131343035362c322c32302c32302c312c34303530302c383130302c312c312c302c32302c2d31362c3131362c312c302c312c302c302c343434385d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210443089400,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210443163400,
+      "hex": "525f46415354205b332c32342c362c312c302c32302c302c342c302c32302c3131333236302c3336302c3131333637342c322c32302c32302c312c34303530302c383130302c312c312c302c32302c2d31362c3131362c312c302c312c302c302c343434385d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210448044200,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210448114600,
+      "hex": "525f46415354205b332c32352c362c312c302c32302c302c342c302c32302c3131333236302c3336302c3131333637342c322c32302c32302c312c34303530302c383130302c312c312c302c32302c2d31362c3131362c312c302c312c302c302c343434385d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210453071500,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210453145000,
+      "hex": "525f46415354205b332c32362c362c312c302c32302c302c342c302c32302c3131333236302c3336302c3131333637342c322c32302c32302c312c34303530302c383130302c312c312c302c32302c2d31362c3131362c312c302c312c302c302c343434385d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210458133000,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210458272400,
+      "hex": "525f46415354205b332c32372c362c312c302c32302c302c342c302c32302c3131333236302c3336302c3131333637342c322c32302c32302c312c34303530302c383130302c312c312c302c32302c2d31362c3131362c312c302c312c302c302c343434385d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210463164900,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210463276500,
+      "hex": "525f46415354205b332c32382c362c312c302c32302c302c342c302c32302c3131333236302c3336302c3131333637342c322c32302c32302c312c34303530302c383130302c312c312c302c32302c2d31362c3131362c312c302c312c302c302c343434385d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210468139100,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210468232600,
+      "hex": "525f46415354205b332c32392c362c312c302c32302c302c342c302c32302c3131333236302c3336302c3131333637342c322c32302c32302c312c34303530302c383130302c312c312c302c32302c2d31362c3131362c312c302c312c302c302c343434385d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210473073700,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210473143900,
+      "hex": "525f46415354205b332c33302c362c312c302c32302c302c342c302c32302c3131333236302c3336302c3131333637342c322c32302c32302c312c34303530302c383130302c312c312c302c32302c2d31362c3131362c312c302c312c302c302c343434385d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210477962500,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210478031500,
+      "hex": "525f46415354205b332c33312c362c312c302c32302c302c342c302c32302c3131333236302c3336302c3131333637342c322c32302c32302c312c34303530302c383130302c312c312c302c32302c2d31362c3131362c312c302c312c302c302c343434385d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210482959600,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210482981700,
+      "hex": "525f46415354205b332c33322c362c312c302c32302c302c342c302c32302c3131333236302c3336302c3131333637342c322c32302c32302c312c34303530302c383130302c312c312c302c32302c2d31362c3131362c312c302c312c302c302c343434385d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210484988400,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210485015300,
+      "hex": "525f46415354205b312c33332c362c312c302c32302c302c342c302c32302c353938352c3336302c363339362c322c32302c32302c312c34303530302c383130302c315d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210486959900,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210486980400,
+      "hex": "525f46415354205b312c33342c362c312c302c32302c302c342c302c32302c353838362c3336302c363239372c322c32302c32302c312c34303530302c383130302c315d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210488998000,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210489078600,
+      "hex": "525f46415354205b312c33352c362c312c302c32302c302c342c302c32302c353838362c3336302c363239372c322c32302c32302c312c34303530302c383130302c315d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210490997400,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210491020700,
+      "hex": "525f46415354205b312c33362c362c312c302c32302c302c342c302c32302c353838362c3336302c363239372c322c32302c32302c312c34303530302c383130302c315d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210492925000,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210492988000,
+      "hex": "525f46415354205b312c33372c362c312c302c32302c302c342c302c32302c353838362c3336302c363239372c322c32302c32302c312c34303530302c383130302c315d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210494934400,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210494987300,
+      "hex": "525f46415354205b312c33382c362c312c302c32302c302c342c302c32302c353838362c3336302c363239372c322c32302c32302c312c34303530302c383130302c315d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210496934000,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210496985800,
+      "hex": "525f46415354205b312c33392c362c312c302c32302c302c342c302c32302c353838362c3336302c363239372c322c32302c32302c312c34303530302c383130302c315d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210498928100,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210498985000,
+      "hex": "525f46415354205b312c34302c362c312c302c32302c302c342c302c32302c353838362c3336302c363239372c322c32302c32302c312c34303530302c383130302c315d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210500928300,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210501009400,
+      "hex": "525f46415354205b312c34312c362c312c302c32302c302c342c302c32302c353838362c3336302c363239372c322c32302c32302c312c34303530302c383130302c315d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210502932900,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210502973000,
+      "hex": "525f46415354205b312c34322c362c312c302c32302c302c342c302c32302c353838362c3336302c363239372c322c32302c32302c312c34303530302c383130302c315d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210504388100,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210504445400,
+      "hex": "525f46415354205b312c34332c362c342c302c33372c302c322c302c33372c353139352c3233352c353438342c312c33372c33372c312c302c302c305d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210505940200,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210505992000,
+      "hex": "525f46415354205b312c34342c362c312c302c32302c302c342c302c32302c353930322c3335332c363330392c322c32302c32302c312c34303530302c383130302c315d0a4e525f52454144590a"
+    },
+    {
+      "received_ns": 47210507915700,
+      "hex": "4e"
+    },
+    {
+      "received_ns": 47210507970000,
+      "hex": "525f494f207b226c65645f6d61736b223a33372c2270776d5f706572696f64223a34303530302c2270776d5f68696768223a383130302c2270776d5f656e61626c6564223a312c2270776d5f64757479223a32302c22726573746f72655f737570706f72746564223a317d0a4e525f52454144590a"
+    }
+  ],
+  "initial_rx": [],
+  "samples": [
+    {
+      "text": ":io",
+      "phase": "initial_io",
+      "tx_hex": "3a696f0a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        0,
+        1
+      ],
+      "events": [
+        {
+          "kind": "NR_IO",
+          "text": "NR_IO {\"led_mask\":37,\"pwm_period\":40500,\"pwm_high\":8100,\"pwm_enabled\":1,\"pwm_duty\":20,\"restore_supported\":1}",
+          "data": {
+            "led_mask": 37,
+            "pwm_period": 40500,
+            "pwm_high": 8100,
+            "pwm_enabled": 1,
+            "pwm_duty": 20,
+            "restore_supported": 1
+          },
+          "received_ns": 47210365346600,
+          "wire_bytes": 109,
+          "raw_hex": "4e525f494f207b226c65645f6d61736b223a33372c2270776d5f706572696f64223a34303530302c2270776d5f68696768223a383130302c2270776d5f656e61626c6564223a312c2270776d5f64757479223a32302c22726573746f72655f737570706f72746564223a317d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210365346600,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [],
+      "t0write_ns": 47210363573500,
+      "twrite_ns": 47210363679700,
+      "tfirst_ns": 47210365242700,
+      "io": {
+        "led_mask": 37,
+        "pwm_period": 40500,
+        "pwm_high": 8100,
+        "pwm_enabled": 1,
+        "pwm_duty": 20,
+        "restore_supported": 1
+      },
+      "tframe_ns": 47210365346600,
+      "tready_ns": 47210365346600,
+      "twrite_ms": 0.1062,
+      "tfirst_ms": 1.6692,
+      "tframe_ms": 1.7731,
+      "tready_ms": 1.7731,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "measure",
+      "tx_hex": "6c65642033370a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        2,
+        3
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,3,6,4,0,37,0,2,0,37,5254,235,5543,1,37,37,1,0,0,0]",
+          "data": {
+            "version": 1,
+            "case": 3,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "argument": 37,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "value": 37,
+            "decision_cycles": 5254,
+            "tool_cycles": 235,
+            "request_cycles": 5543,
+            "receipt_kind": 1,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_match": 1,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "receipt_enabled": 0
+          },
+          "received_ns": 47210366900800,
+          "wire_bytes": 62,
+          "raw_hex": "4e525f46415354205b312c332c362c342c302c33372c302c322c302c33372c353235342c3233352c353534332c312c33372c33372c312c302c302c305d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210366900800,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210365505400,
+      "twrite_ns": 47210365603900,
+      "tfirst_ns": 47210366841400,
+      "result": {
+        "version": 1,
+        "case": 3,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "argument": 37,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "value": 37,
+        "decision_cycles": 5254,
+        "tool_cycles": 235,
+        "request_cycles": 5543,
+        "receipt_kind": 1,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_match": 1,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "receipt_enabled": 0
+      },
+      "tframe_ns": 47210366900800,
+      "tready_ns": 47210366900800,
+      "twrite_ms": 0.0985,
+      "tfirst_ms": 1.336,
+      "tframe_ms": 1.3954,
+      "tready_ms": 1.3954,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "measure",
+      "tx_hex": "6c65642033370a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        4,
+        5
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,4,6,4,0,37,0,2,0,37,5130,235,5419,1,37,37,1,0,0,0]",
+          "data": {
+            "version": 1,
+            "case": 4,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "argument": 37,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "value": 37,
+            "decision_cycles": 5130,
+            "tool_cycles": 235,
+            "request_cycles": 5419,
+            "receipt_kind": 1,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_match": 1,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "receipt_enabled": 0
+          },
+          "received_ns": 47210368434500,
+          "wire_bytes": 62,
+          "raw_hex": "4e525f46415354205b312c342c362c342c302c33372c302c322c302c33372c353133302c3233352c353431392c312c33372c33372c312c302c302c305d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210368434500,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210367025800,
+      "twrite_ns": 47210367142700,
+      "tfirst_ns": 47210368351000,
+      "result": {
+        "version": 1,
+        "case": 4,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "argument": 37,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "value": 37,
+        "decision_cycles": 5130,
+        "tool_cycles": 235,
+        "request_cycles": 5419,
+        "receipt_kind": 1,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_match": 1,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "receipt_enabled": 0
+      },
+      "tframe_ns": 47210368434500,
+      "tready_ns": 47210368434500,
+      "twrite_ms": 0.1169,
+      "tfirst_ms": 1.3252,
+      "tframe_ms": 1.4087,
+      "tready_ms": 1.4087,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "measure",
+      "tx_hex": "6c65642033370a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        6,
+        7
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,5,6,4,0,37,0,2,0,37,5130,235,5419,1,37,37,1,0,0,0]",
+          "data": {
+            "version": 1,
+            "case": 5,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "argument": 37,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "value": 37,
+            "decision_cycles": 5130,
+            "tool_cycles": 235,
+            "request_cycles": 5419,
+            "receipt_kind": 1,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_match": 1,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "receipt_enabled": 0
+          },
+          "received_ns": 47210369852200,
+          "wire_bytes": 62,
+          "raw_hex": "4e525f46415354205b312c352c362c342c302c33372c302c322c302c33372c353133302c3233352c353431392c312c33372c33372c312c302c302c305d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210369852200,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210368506000,
+      "twrite_ns": 47210368594100,
+      "tfirst_ns": 47210369833500,
+      "result": {
+        "version": 1,
+        "case": 5,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "argument": 37,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "value": 37,
+        "decision_cycles": 5130,
+        "tool_cycles": 235,
+        "request_cycles": 5419,
+        "receipt_kind": 1,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_match": 1,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "receipt_enabled": 0
+      },
+      "tframe_ns": 47210369852200,
+      "tready_ns": 47210369852200,
+      "twrite_ms": 0.0881,
+      "tfirst_ms": 1.3275,
+      "tframe_ms": 1.3462,
+      "tready_ms": 1.3462,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "measure",
+      "tx_hex": "6c65642033370a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        8,
+        9
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,6,6,4,0,37,0,2,0,37,5130,235,5419,1,37,37,1,0,0,0]",
+          "data": {
+            "version": 1,
+            "case": 6,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "argument": 37,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "value": 37,
+            "decision_cycles": 5130,
+            "tool_cycles": 235,
+            "request_cycles": 5419,
+            "receipt_kind": 1,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_match": 1,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "receipt_enabled": 0
+          },
+          "received_ns": 47210371389300,
+          "wire_bytes": 62,
+          "raw_hex": "4e525f46415354205b312c362c362c342c302c33372c302c322c302c33372c353133302c3233352c353431392c312c33372c33372c312c302c302c305d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210371389300,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210369945800,
+      "twrite_ns": 47210370079400,
+      "tfirst_ns": 47210371314400,
+      "result": {
+        "version": 1,
+        "case": 6,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "argument": 37,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "value": 37,
+        "decision_cycles": 5130,
+        "tool_cycles": 235,
+        "request_cycles": 5419,
+        "receipt_kind": 1,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_match": 1,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "receipt_enabled": 0
+      },
+      "tframe_ns": 47210371389300,
+      "tready_ns": 47210371389300,
+      "twrite_ms": 0.1336,
+      "tfirst_ms": 1.3686,
+      "tframe_ms": 1.4435,
+      "tready_ms": 1.4435,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "measure",
+      "tx_hex": "6c65642033370a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        10,
+        11
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,7,6,4,0,37,0,2,0,37,5130,235,5419,1,37,37,1,0,0,0]",
+          "data": {
+            "version": 1,
+            "case": 7,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "argument": 37,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "value": 37,
+            "decision_cycles": 5130,
+            "tool_cycles": 235,
+            "request_cycles": 5419,
+            "receipt_kind": 1,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_match": 1,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "receipt_enabled": 0
+          },
+          "received_ns": 47210372859700,
+          "wire_bytes": 62,
+          "raw_hex": "4e525f46415354205b312c372c362c342c302c33372c302c322c302c33372c353133302c3233352c353431392c312c33372c33372c312c302c302c305d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210372859700,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210371486500,
+      "twrite_ns": 47210371587200,
+      "tfirst_ns": 47210372813000,
+      "result": {
+        "version": 1,
+        "case": 7,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "argument": 37,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "value": 37,
+        "decision_cycles": 5130,
+        "tool_cycles": 235,
+        "request_cycles": 5419,
+        "receipt_kind": 1,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_match": 1,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "receipt_enabled": 0
+      },
+      "tframe_ns": 47210372859700,
+      "tready_ns": 47210372859700,
+      "twrite_ms": 0.1007,
+      "tfirst_ms": 1.3265,
+      "tframe_ms": 1.3732,
+      "tready_ms": 1.3732,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "measure",
+      "tx_hex": "6c65642033370a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        12,
+        13
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,8,6,4,0,37,0,2,0,37,5130,235,5419,1,37,37,1,0,0,0]",
+          "data": {
+            "version": 1,
+            "case": 8,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "argument": 37,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "value": 37,
+            "decision_cycles": 5130,
+            "tool_cycles": 235,
+            "request_cycles": 5419,
+            "receipt_kind": 1,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_match": 1,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "receipt_enabled": 0
+          },
+          "received_ns": 47210374305400,
+          "wire_bytes": 62,
+          "raw_hex": "4e525f46415354205b312c382c362c342c302c33372c302c322c302c33372c353133302c3233352c353431392c312c33372c33372c312c302c302c305d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210374305400,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210372928000,
+      "twrite_ns": 47210372996500,
+      "tfirst_ns": 47210374250700,
+      "result": {
+        "version": 1,
+        "case": 8,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "argument": 37,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "value": 37,
+        "decision_cycles": 5130,
+        "tool_cycles": 235,
+        "request_cycles": 5419,
+        "receipt_kind": 1,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_match": 1,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "receipt_enabled": 0
+      },
+      "tframe_ns": 47210374305400,
+      "tready_ns": 47210374305400,
+      "twrite_ms": 0.0685,
+      "tfirst_ms": 1.3227,
+      "tframe_ms": 1.3774,
+      "tready_ms": 1.3774,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "measure",
+      "tx_hex": "6c65642033370a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        14,
+        15
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,9,6,4,0,37,0,2,0,37,5130,235,5419,1,37,37,1,0,0,0]",
+          "data": {
+            "version": 1,
+            "case": 9,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "argument": 37,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "value": 37,
+            "decision_cycles": 5130,
+            "tool_cycles": 235,
+            "request_cycles": 5419,
+            "receipt_kind": 1,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_match": 1,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "receipt_enabled": 0
+          },
+          "received_ns": 47210375799300,
+          "wire_bytes": 62,
+          "raw_hex": "4e525f46415354205b312c392c362c342c302c33372c302c322c302c33372c353133302c3233352c353431392c312c33372c33372c312c302c302c305d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210375799300,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210374363200,
+      "twrite_ns": 47210374433400,
+      "tfirst_ns": 47210375754200,
+      "result": {
+        "version": 1,
+        "case": 9,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "argument": 37,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "value": 37,
+        "decision_cycles": 5130,
+        "tool_cycles": 235,
+        "request_cycles": 5419,
+        "receipt_kind": 1,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_match": 1,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "receipt_enabled": 0
+      },
+      "tframe_ns": 47210375799300,
+      "tready_ns": 47210375799300,
+      "twrite_ms": 0.0702,
+      "tfirst_ms": 1.391,
+      "tframe_ms": 1.4361,
+      "tready_ms": 1.4361,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "measure",
+      "tx_hex": "6c65642033370a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        16,
+        17
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,10,6,4,0,37,0,2,0,37,5130,235,5419,1,37,37,1,0,0,0]",
+          "data": {
+            "version": 1,
+            "case": 10,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "argument": 37,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "value": 37,
+            "decision_cycles": 5130,
+            "tool_cycles": 235,
+            "request_cycles": 5419,
+            "receipt_kind": 1,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_match": 1,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "receipt_enabled": 0
+          },
+          "received_ns": 47210377237400,
+          "wire_bytes": 63,
+          "raw_hex": "4e525f46415354205b312c31302c362c342c302c33372c302c322c302c33372c353133302c3233352c353431392c312c33372c33372c312c302c302c305d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210377237400,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210375854100,
+      "twrite_ns": 47210375933400,
+      "tfirst_ns": 47210377203500,
+      "result": {
+        "version": 1,
+        "case": 10,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "argument": 37,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "value": 37,
+        "decision_cycles": 5130,
+        "tool_cycles": 235,
+        "request_cycles": 5419,
+        "receipt_kind": 1,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_match": 1,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "receipt_enabled": 0
+      },
+      "tframe_ns": 47210377237400,
+      "tready_ns": 47210377237400,
+      "twrite_ms": 0.0793,
+      "tfirst_ms": 1.3494,
+      "tframe_ms": 1.3833,
+      "tready_ms": 1.3833,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "measure",
+      "tx_hex": "6c65642033370a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        18,
+        19
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,11,6,4,0,37,0,2,0,37,5130,235,5419,1,37,37,1,0,0,0]",
+          "data": {
+            "version": 1,
+            "case": 11,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "argument": 37,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "value": 37,
+            "decision_cycles": 5130,
+            "tool_cycles": 235,
+            "request_cycles": 5419,
+            "receipt_kind": 1,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_match": 1,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "receipt_enabled": 0
+          },
+          "received_ns": 47210378769500,
+          "wire_bytes": 63,
+          "raw_hex": "4e525f46415354205b312c31312c362c342c302c33372c302c322c302c33372c353133302c3233352c353431392c312c33372c33372c312c302c302c305d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210378769500,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210377330200,
+      "twrite_ns": 47210377487500,
+      "tfirst_ns": 47210378741300,
+      "result": {
+        "version": 1,
+        "case": 11,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "argument": 37,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "value": 37,
+        "decision_cycles": 5130,
+        "tool_cycles": 235,
+        "request_cycles": 5419,
+        "receipt_kind": 1,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_match": 1,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "receipt_enabled": 0
+      },
+      "tframe_ns": 47210378769500,
+      "tready_ns": 47210378769500,
+      "twrite_ms": 0.1573,
+      "tfirst_ms": 1.4111,
+      "tframe_ms": 1.4393,
+      "tready_ms": 1.4393,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "measure",
+      "tx_hex": "6c65642033370a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        20,
+        21
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,12,6,4,0,37,0,2,0,37,5130,235,5419,1,37,37,1,0,0,0]",
+          "data": {
+            "version": 1,
+            "case": 12,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "argument": 37,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "value": 37,
+            "decision_cycles": 5130,
+            "tool_cycles": 235,
+            "request_cycles": 5419,
+            "receipt_kind": 1,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_match": 1,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "receipt_enabled": 0
+          },
+          "received_ns": 47210380231700,
+          "wire_bytes": 63,
+          "raw_hex": "4e525f46415354205b312c31322c362c342c302c33372c302c322c302c33372c353133302c3233352c353431392c312c33372c33372c312c302c302c305d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210380231700,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210378836500,
+      "twrite_ns": 47210378919300,
+      "tfirst_ns": 47210380188200,
+      "result": {
+        "version": 1,
+        "case": 12,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "argument": 37,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "value": 37,
+        "decision_cycles": 5130,
+        "tool_cycles": 235,
+        "request_cycles": 5419,
+        "receipt_kind": 1,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_match": 1,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "receipt_enabled": 0
+      },
+      "tframe_ns": 47210380231700,
+      "tready_ns": 47210380231700,
+      "twrite_ms": 0.0828,
+      "tfirst_ms": 1.3517,
+      "tframe_ms": 1.3952,
+      "tready_ms": 1.3952,
+      "validated": true
+    },
+    {
+      "text": "请读取FPGA当前温度。",
+      "phase": "measure",
+      "tx_hex": "e8afb7e8afbbe58f9646504741e5bd93e5898de6b8a9e5baa6e380820a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        22,
+        23
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [3,13,6,0,0,0,0,1,0,3733,123930,272,124253,3,0,2547,1,0,0,0,1,0,25,-32,152,1,0,1,0,0,4896]",
+          "data": {
+            "version": 3,
+            "case": 13,
+            "config": 6,
+            "selected_tool": 0,
+            "decode": 0,
+            "argument": 0,
+            "operation": 0,
+            "selection_source": 1,
+            "execute": 0,
+            "value": 3733,
+            "decision_cycles": 123930,
+            "tool_cycles": 272,
+            "request_cycles": 124253,
+            "receipt_kind": 3,
+            "receipt_requested": 0,
+            "receipt_readback": 2547,
+            "receipt_match": 1,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "receipt_enabled": 0,
+            "context_used": 1,
+            "context_deny": 0,
+            "context_logit0": 25,
+            "context_logit1": -32,
+            "context_threshold": 152,
+            "context_xnd_used": 1,
+            "context_loads": 0,
+            "context_jobs": 1,
+            "context_dma_read_bytes": 0,
+            "context_dma_write_bytes": 0,
+            "context_engine_cycles": 4896,
+            "context_logits": [
+              25,
+              -32
+            ],
+            "model_used": 3,
+            "encoder_used": 0,
+            "cycles": null,
+            "context_hardware": {
+              "loads": 0,
+              "jobs": 1,
+              "dma_read_bytes": 0,
+              "dma_write_bytes": 0,
+              "engine_cycles": 4896
+            }
+          },
+          "received_ns": 47210385465400,
+          "wire_bytes": 99,
+          "raw_hex": "4e525f46415354205b332c31332c362c302c302c302c302c312c302c333733332c3132333933302c3237322c3132343235332c332c302c323534372c312c302c302c302c312c302c32352c2d33322c3135322c312c302c312c302c302c343839365d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210385465400,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210380351400,
+      "twrite_ns": 47210380459900,
+      "tfirst_ns": 47210385350100,
+      "result": {
+        "version": 3,
+        "case": 13,
+        "config": 6,
+        "selected_tool": 0,
+        "decode": 0,
+        "argument": 0,
+        "operation": 0,
+        "selection_source": 1,
+        "execute": 0,
+        "value": 3733,
+        "decision_cycles": 123930,
+        "tool_cycles": 272,
+        "request_cycles": 124253,
+        "receipt_kind": 3,
+        "receipt_requested": 0,
+        "receipt_readback": 2547,
+        "receipt_match": 1,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "receipt_enabled": 0,
+        "context_used": 1,
+        "context_deny": 0,
+        "context_logit0": 25,
+        "context_logit1": -32,
+        "context_threshold": 152,
+        "context_xnd_used": 1,
+        "context_loads": 0,
+        "context_jobs": 1,
+        "context_dma_read_bytes": 0,
+        "context_dma_write_bytes": 0,
+        "context_engine_cycles": 4896,
+        "context_logits": [
+          25,
+          -32
+        ],
+        "model_used": 3,
+        "encoder_used": 0,
+        "cycles": null,
+        "context_hardware": {
+          "loads": 0,
+          "jobs": 1,
+          "dma_read_bytes": 0,
+          "dma_write_bytes": 0,
+          "engine_cycles": 4896
+        }
+      },
+      "tframe_ns": 47210385465400,
+      "tready_ns": 47210385465400,
+      "twrite_ms": 0.1085,
+      "tfirst_ms": 4.9987,
+      "tframe_ms": 5.114,
+      "tready_ms": 5.114,
+      "validated": true
+    },
+    {
+      "text": "请读取FPGA当前温度。",
+      "phase": "measure",
+      "tx_hex": "e8afb7e8afbbe58f9646504741e5bd93e5898de6b8a9e5baa6e380820a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        24,
+        25
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [3,14,6,0,0,0,0,1,0,3733,123995,272,124318,3,0,2547,1,0,0,0,1,0,25,-32,152,1,0,1,0,0,4896]",
+          "data": {
+            "version": 3,
+            "case": 14,
+            "config": 6,
+            "selected_tool": 0,
+            "decode": 0,
+            "argument": 0,
+            "operation": 0,
+            "selection_source": 1,
+            "execute": 0,
+            "value": 3733,
+            "decision_cycles": 123995,
+            "tool_cycles": 272,
+            "request_cycles": 124318,
+            "receipt_kind": 3,
+            "receipt_requested": 0,
+            "receipt_readback": 2547,
+            "receipt_match": 1,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "receipt_enabled": 0,
+            "context_used": 1,
+            "context_deny": 0,
+            "context_logit0": 25,
+            "context_logit1": -32,
+            "context_threshold": 152,
+            "context_xnd_used": 1,
+            "context_loads": 0,
+            "context_jobs": 1,
+            "context_dma_read_bytes": 0,
+            "context_dma_write_bytes": 0,
+            "context_engine_cycles": 4896,
+            "context_logits": [
+              25,
+              -32
+            ],
+            "model_used": 3,
+            "encoder_used": 0,
+            "cycles": null,
+            "context_hardware": {
+              "loads": 0,
+              "jobs": 1,
+              "dma_read_bytes": 0,
+              "dma_write_bytes": 0,
+              "engine_cycles": 4896
+            }
+          },
+          "received_ns": 47210390859600,
+          "wire_bytes": 99,
+          "raw_hex": "4e525f46415354205b332c31342c362c302c302c302c302c312c302c333733332c3132333939352c3237322c3132343331382c332c302c323534372c312c302c302c302c312c302c32352c2d33322c3135322c312c302c312c302c302c343839365d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210390859600,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210385598300,
+      "twrite_ns": 47210385749700,
+      "tfirst_ns": 47210390802800,
+      "result": {
+        "version": 3,
+        "case": 14,
+        "config": 6,
+        "selected_tool": 0,
+        "decode": 0,
+        "argument": 0,
+        "operation": 0,
+        "selection_source": 1,
+        "execute": 0,
+        "value": 3733,
+        "decision_cycles": 123995,
+        "tool_cycles": 272,
+        "request_cycles": 124318,
+        "receipt_kind": 3,
+        "receipt_requested": 0,
+        "receipt_readback": 2547,
+        "receipt_match": 1,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "receipt_enabled": 0,
+        "context_used": 1,
+        "context_deny": 0,
+        "context_logit0": 25,
+        "context_logit1": -32,
+        "context_threshold": 152,
+        "context_xnd_used": 1,
+        "context_loads": 0,
+        "context_jobs": 1,
+        "context_dma_read_bytes": 0,
+        "context_dma_write_bytes": 0,
+        "context_engine_cycles": 4896,
+        "context_logits": [
+          25,
+          -32
+        ],
+        "model_used": 3,
+        "encoder_used": 0,
+        "cycles": null,
+        "context_hardware": {
+          "loads": 0,
+          "jobs": 1,
+          "dma_read_bytes": 0,
+          "dma_write_bytes": 0,
+          "engine_cycles": 4896
+        }
+      },
+      "tframe_ns": 47210390859600,
+      "tready_ns": 47210390859600,
+      "twrite_ms": 0.1514,
+      "tfirst_ms": 5.2045,
+      "tframe_ms": 5.2613,
+      "tready_ms": 5.2613,
+      "validated": true
+    },
+    {
+      "text": "请读取FPGA当前温度。",
+      "phase": "measure",
+      "tx_hex": "e8afb7e8afbbe58f9646504741e5bd93e5898de6b8a9e5baa6e380820a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        26,
+        27
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [3,15,6,0,0,0,0,1,0,3733,123995,272,124318,3,0,2547,1,0,0,0,1,0,25,-32,152,1,0,1,0,0,4896]",
+          "data": {
+            "version": 3,
+            "case": 15,
+            "config": 6,
+            "selected_tool": 0,
+            "decode": 0,
+            "argument": 0,
+            "operation": 0,
+            "selection_source": 1,
+            "execute": 0,
+            "value": 3733,
+            "decision_cycles": 123995,
+            "tool_cycles": 272,
+            "request_cycles": 124318,
+            "receipt_kind": 3,
+            "receipt_requested": 0,
+            "receipt_readback": 2547,
+            "receipt_match": 1,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "receipt_enabled": 0,
+            "context_used": 1,
+            "context_deny": 0,
+            "context_logit0": 25,
+            "context_logit1": -32,
+            "context_threshold": 152,
+            "context_xnd_used": 1,
+            "context_loads": 0,
+            "context_jobs": 1,
+            "context_dma_read_bytes": 0,
+            "context_dma_write_bytes": 0,
+            "context_engine_cycles": 4896,
+            "context_logits": [
+              25,
+              -32
+            ],
+            "model_used": 3,
+            "encoder_used": 0,
+            "cycles": null,
+            "context_hardware": {
+              "loads": 0,
+              "jobs": 1,
+              "dma_read_bytes": 0,
+              "dma_write_bytes": 0,
+              "engine_cycles": 4896
+            }
+          },
+          "received_ns": 47210396137100,
+          "wire_bytes": 99,
+          "raw_hex": "4e525f46415354205b332c31352c362c302c302c302c302c312c302c333733332c3132333939352c3237322c3132343331382c332c302c323534372c312c302c302c302c312c302c32352c2d33322c3135322c312c302c312c302c302c343839365d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210396137100,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210390952400,
+      "twrite_ns": 47210391041900,
+      "tfirst_ns": 47210396033900,
+      "result": {
+        "version": 3,
+        "case": 15,
+        "config": 6,
+        "selected_tool": 0,
+        "decode": 0,
+        "argument": 0,
+        "operation": 0,
+        "selection_source": 1,
+        "execute": 0,
+        "value": 3733,
+        "decision_cycles": 123995,
+        "tool_cycles": 272,
+        "request_cycles": 124318,
+        "receipt_kind": 3,
+        "receipt_requested": 0,
+        "receipt_readback": 2547,
+        "receipt_match": 1,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "receipt_enabled": 0,
+        "context_used": 1,
+        "context_deny": 0,
+        "context_logit0": 25,
+        "context_logit1": -32,
+        "context_threshold": 152,
+        "context_xnd_used": 1,
+        "context_loads": 0,
+        "context_jobs": 1,
+        "context_dma_read_bytes": 0,
+        "context_dma_write_bytes": 0,
+        "context_engine_cycles": 4896,
+        "context_logits": [
+          25,
+          -32
+        ],
+        "model_used": 3,
+        "encoder_used": 0,
+        "cycles": null,
+        "context_hardware": {
+          "loads": 0,
+          "jobs": 1,
+          "dma_read_bytes": 0,
+          "dma_write_bytes": 0,
+          "engine_cycles": 4896
+        }
+      },
+      "tframe_ns": 47210396137100,
+      "tready_ns": 47210396137100,
+      "twrite_ms": 0.0895,
+      "tfirst_ms": 5.0815,
+      "tframe_ms": 5.1847,
+      "tready_ms": 5.1847,
+      "validated": true
+    },
+    {
+      "text": "请读取FPGA当前温度。",
+      "phase": "measure",
+      "tx_hex": "e8afb7e8afbbe58f9646504741e5bd93e5898de6b8a9e5baa6e380820a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        28,
+        29
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [3,16,6,0,0,0,0,1,0,3733,123995,272,124318,3,0,2547,1,0,0,0,1,0,25,-32,152,1,0,1,0,0,4896]",
+          "data": {
+            "version": 3,
+            "case": 16,
+            "config": 6,
+            "selected_tool": 0,
+            "decode": 0,
+            "argument": 0,
+            "operation": 0,
+            "selection_source": 1,
+            "execute": 0,
+            "value": 3733,
+            "decision_cycles": 123995,
+            "tool_cycles": 272,
+            "request_cycles": 124318,
+            "receipt_kind": 3,
+            "receipt_requested": 0,
+            "receipt_readback": 2547,
+            "receipt_match": 1,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "receipt_enabled": 0,
+            "context_used": 1,
+            "context_deny": 0,
+            "context_logit0": 25,
+            "context_logit1": -32,
+            "context_threshold": 152,
+            "context_xnd_used": 1,
+            "context_loads": 0,
+            "context_jobs": 1,
+            "context_dma_read_bytes": 0,
+            "context_dma_write_bytes": 0,
+            "context_engine_cycles": 4896,
+            "context_logits": [
+              25,
+              -32
+            ],
+            "model_used": 3,
+            "encoder_used": 0,
+            "cycles": null,
+            "context_hardware": {
+              "loads": 0,
+              "jobs": 1,
+              "dma_read_bytes": 0,
+              "dma_write_bytes": 0,
+              "engine_cycles": 4896
+            }
+          },
+          "received_ns": 47210401316400,
+          "wire_bytes": 99,
+          "raw_hex": "4e525f46415354205b332c31362c362c302c302c302c302c312c302c333733332c3132333939352c3237322c3132343331382c332c302c323534372c312c302c302c302c312c302c32352c2d33322c3135322c312c302c312c302c302c343839365d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210401316400,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210396292000,
+      "twrite_ns": 47210396398600,
+      "tfirst_ns": 47210401277700,
+      "result": {
+        "version": 3,
+        "case": 16,
+        "config": 6,
+        "selected_tool": 0,
+        "decode": 0,
+        "argument": 0,
+        "operation": 0,
+        "selection_source": 1,
+        "execute": 0,
+        "value": 3733,
+        "decision_cycles": 123995,
+        "tool_cycles": 272,
+        "request_cycles": 124318,
+        "receipt_kind": 3,
+        "receipt_requested": 0,
+        "receipt_readback": 2547,
+        "receipt_match": 1,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "receipt_enabled": 0,
+        "context_used": 1,
+        "context_deny": 0,
+        "context_logit0": 25,
+        "context_logit1": -32,
+        "context_threshold": 152,
+        "context_xnd_used": 1,
+        "context_loads": 0,
+        "context_jobs": 1,
+        "context_dma_read_bytes": 0,
+        "context_dma_write_bytes": 0,
+        "context_engine_cycles": 4896,
+        "context_logits": [
+          25,
+          -32
+        ],
+        "model_used": 3,
+        "encoder_used": 0,
+        "cycles": null,
+        "context_hardware": {
+          "loads": 0,
+          "jobs": 1,
+          "dma_read_bytes": 0,
+          "dma_write_bytes": 0,
+          "engine_cycles": 4896
+        }
+      },
+      "tframe_ns": 47210401316400,
+      "tready_ns": 47210401316400,
+      "twrite_ms": 0.1066,
+      "tfirst_ms": 4.9857,
+      "tframe_ms": 5.0244,
+      "tready_ms": 5.0244,
+      "validated": true
+    },
+    {
+      "text": "请读取FPGA当前温度。",
+      "phase": "measure",
+      "tx_hex": "e8afb7e8afbbe58f9646504741e5bd93e5898de6b8a9e5baa6e380820a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        30,
+        31
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [3,17,6,0,0,0,0,1,0,3733,123995,272,124318,3,0,2547,1,0,0,0,1,0,25,-32,152,1,0,1,0,0,4896]",
+          "data": {
+            "version": 3,
+            "case": 17,
+            "config": 6,
+            "selected_tool": 0,
+            "decode": 0,
+            "argument": 0,
+            "operation": 0,
+            "selection_source": 1,
+            "execute": 0,
+            "value": 3733,
+            "decision_cycles": 123995,
+            "tool_cycles": 272,
+            "request_cycles": 124318,
+            "receipt_kind": 3,
+            "receipt_requested": 0,
+            "receipt_readback": 2547,
+            "receipt_match": 1,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "receipt_enabled": 0,
+            "context_used": 1,
+            "context_deny": 0,
+            "context_logit0": 25,
+            "context_logit1": -32,
+            "context_threshold": 152,
+            "context_xnd_used": 1,
+            "context_loads": 0,
+            "context_jobs": 1,
+            "context_dma_read_bytes": 0,
+            "context_dma_write_bytes": 0,
+            "context_engine_cycles": 4896,
+            "context_logits": [
+              25,
+              -32
+            ],
+            "model_used": 3,
+            "encoder_used": 0,
+            "cycles": null,
+            "context_hardware": {
+              "loads": 0,
+              "jobs": 1,
+              "dma_read_bytes": 0,
+              "dma_write_bytes": 0,
+              "engine_cycles": 4896
+            }
+          },
+          "received_ns": 47210406600300,
+          "wire_bytes": 99,
+          "raw_hex": "4e525f46415354205b332c31372c362c302c302c302c302c312c302c333733332c3132333939352c3237322c3132343331382c332c302c323534372c312c302c302c302c312c302c32352c2d33322c3135322c312c302c312c302c302c343839365d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210406600300,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210401448800,
+      "twrite_ns": 47210401552600,
+      "tfirst_ns": 47210406556300,
+      "result": {
+        "version": 3,
+        "case": 17,
+        "config": 6,
+        "selected_tool": 0,
+        "decode": 0,
+        "argument": 0,
+        "operation": 0,
+        "selection_source": 1,
+        "execute": 0,
+        "value": 3733,
+        "decision_cycles": 123995,
+        "tool_cycles": 272,
+        "request_cycles": 124318,
+        "receipt_kind": 3,
+        "receipt_requested": 0,
+        "receipt_readback": 2547,
+        "receipt_match": 1,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "receipt_enabled": 0,
+        "context_used": 1,
+        "context_deny": 0,
+        "context_logit0": 25,
+        "context_logit1": -32,
+        "context_threshold": 152,
+        "context_xnd_used": 1,
+        "context_loads": 0,
+        "context_jobs": 1,
+        "context_dma_read_bytes": 0,
+        "context_dma_write_bytes": 0,
+        "context_engine_cycles": 4896,
+        "context_logits": [
+          25,
+          -32
+        ],
+        "model_used": 3,
+        "encoder_used": 0,
+        "cycles": null,
+        "context_hardware": {
+          "loads": 0,
+          "jobs": 1,
+          "dma_read_bytes": 0,
+          "dma_write_bytes": 0,
+          "engine_cycles": 4896
+        }
+      },
+      "tframe_ns": 47210406600300,
+      "tready_ns": 47210406600300,
+      "twrite_ms": 0.1038,
+      "tfirst_ms": 5.1075,
+      "tframe_ms": 5.1515,
+      "tready_ms": 5.1515,
+      "validated": true
+    },
+    {
+      "text": "请读取FPGA当前温度。",
+      "phase": "measure",
+      "tx_hex": "e8afb7e8afbbe58f9646504741e5bd93e5898de6b8a9e5baa6e380820a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        32,
+        33
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [3,18,6,0,0,0,0,1,0,3733,123995,272,124318,3,0,2547,1,0,0,0,1,0,25,-32,152,1,0,1,0,0,4896]",
+          "data": {
+            "version": 3,
+            "case": 18,
+            "config": 6,
+            "selected_tool": 0,
+            "decode": 0,
+            "argument": 0,
+            "operation": 0,
+            "selection_source": 1,
+            "execute": 0,
+            "value": 3733,
+            "decision_cycles": 123995,
+            "tool_cycles": 272,
+            "request_cycles": 124318,
+            "receipt_kind": 3,
+            "receipt_requested": 0,
+            "receipt_readback": 2547,
+            "receipt_match": 1,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "receipt_enabled": 0,
+            "context_used": 1,
+            "context_deny": 0,
+            "context_logit0": 25,
+            "context_logit1": -32,
+            "context_threshold": 152,
+            "context_xnd_used": 1,
+            "context_loads": 0,
+            "context_jobs": 1,
+            "context_dma_read_bytes": 0,
+            "context_dma_write_bytes": 0,
+            "context_engine_cycles": 4896,
+            "context_logits": [
+              25,
+              -32
+            ],
+            "model_used": 3,
+            "encoder_used": 0,
+            "cycles": null,
+            "context_hardware": {
+              "loads": 0,
+              "jobs": 1,
+              "dma_read_bytes": 0,
+              "dma_write_bytes": 0,
+              "engine_cycles": 4896
+            }
+          },
+          "received_ns": 47210411974100,
+          "wire_bytes": 99,
+          "raw_hex": "4e525f46415354205b332c31382c362c302c302c302c302c312c302c333733332c3132333939352c3237322c3132343331382c332c302c323534372c312c302c302c302c312c302c32352c2d33322c3135322c312c302c312c302c302c343839365d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210411974100,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210406738200,
+      "twrite_ns": 47210406852700,
+      "tfirst_ns": 47210411913500,
+      "result": {
+        "version": 3,
+        "case": 18,
+        "config": 6,
+        "selected_tool": 0,
+        "decode": 0,
+        "argument": 0,
+        "operation": 0,
+        "selection_source": 1,
+        "execute": 0,
+        "value": 3733,
+        "decision_cycles": 123995,
+        "tool_cycles": 272,
+        "request_cycles": 124318,
+        "receipt_kind": 3,
+        "receipt_requested": 0,
+        "receipt_readback": 2547,
+        "receipt_match": 1,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "receipt_enabled": 0,
+        "context_used": 1,
+        "context_deny": 0,
+        "context_logit0": 25,
+        "context_logit1": -32,
+        "context_threshold": 152,
+        "context_xnd_used": 1,
+        "context_loads": 0,
+        "context_jobs": 1,
+        "context_dma_read_bytes": 0,
+        "context_dma_write_bytes": 0,
+        "context_engine_cycles": 4896,
+        "context_logits": [
+          25,
+          -32
+        ],
+        "model_used": 3,
+        "encoder_used": 0,
+        "cycles": null,
+        "context_hardware": {
+          "loads": 0,
+          "jobs": 1,
+          "dma_read_bytes": 0,
+          "dma_write_bytes": 0,
+          "engine_cycles": 4896
+        }
+      },
+      "tframe_ns": 47210411974100,
+      "tready_ns": 47210411974100,
+      "twrite_ms": 0.1145,
+      "tfirst_ms": 5.1753,
+      "tframe_ms": 5.2359,
+      "tready_ms": 5.2359,
+      "validated": true
+    },
+    {
+      "text": "请读取FPGA当前温度。",
+      "phase": "measure",
+      "tx_hex": "e8afb7e8afbbe58f9646504741e5bd93e5898de6b8a9e5baa6e380820a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        34,
+        35
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [3,19,6,0,0,0,0,1,0,3733,123995,272,124318,3,0,2547,1,0,0,0,1,0,25,-32,152,1,0,1,0,0,4896]",
+          "data": {
+            "version": 3,
+            "case": 19,
+            "config": 6,
+            "selected_tool": 0,
+            "decode": 0,
+            "argument": 0,
+            "operation": 0,
+            "selection_source": 1,
+            "execute": 0,
+            "value": 3733,
+            "decision_cycles": 123995,
+            "tool_cycles": 272,
+            "request_cycles": 124318,
+            "receipt_kind": 3,
+            "receipt_requested": 0,
+            "receipt_readback": 2547,
+            "receipt_match": 1,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "receipt_enabled": 0,
+            "context_used": 1,
+            "context_deny": 0,
+            "context_logit0": 25,
+            "context_logit1": -32,
+            "context_threshold": 152,
+            "context_xnd_used": 1,
+            "context_loads": 0,
+            "context_jobs": 1,
+            "context_dma_read_bytes": 0,
+            "context_dma_write_bytes": 0,
+            "context_engine_cycles": 4896,
+            "context_logits": [
+              25,
+              -32
+            ],
+            "model_used": 3,
+            "encoder_used": 0,
+            "cycles": null,
+            "context_hardware": {
+              "loads": 0,
+              "jobs": 1,
+              "dma_read_bytes": 0,
+              "dma_write_bytes": 0,
+              "engine_cycles": 4896
+            }
+          },
+          "received_ns": 47210417127000,
+          "wire_bytes": 99,
+          "raw_hex": "4e525f46415354205b332c31392c362c302c302c302c302c312c302c333733332c3132333939352c3237322c3132343331382c332c302c323534372c312c302c302c302c312c302c32352c2d33322c3135322c312c302c312c302c302c343839365d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210417127000,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210412073500,
+      "twrite_ns": 47210412161900,
+      "tfirst_ns": 47210417052700,
+      "result": {
+        "version": 3,
+        "case": 19,
+        "config": 6,
+        "selected_tool": 0,
+        "decode": 0,
+        "argument": 0,
+        "operation": 0,
+        "selection_source": 1,
+        "execute": 0,
+        "value": 3733,
+        "decision_cycles": 123995,
+        "tool_cycles": 272,
+        "request_cycles": 124318,
+        "receipt_kind": 3,
+        "receipt_requested": 0,
+        "receipt_readback": 2547,
+        "receipt_match": 1,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "receipt_enabled": 0,
+        "context_used": 1,
+        "context_deny": 0,
+        "context_logit0": 25,
+        "context_logit1": -32,
+        "context_threshold": 152,
+        "context_xnd_used": 1,
+        "context_loads": 0,
+        "context_jobs": 1,
+        "context_dma_read_bytes": 0,
+        "context_dma_write_bytes": 0,
+        "context_engine_cycles": 4896,
+        "context_logits": [
+          25,
+          -32
+        ],
+        "model_used": 3,
+        "encoder_used": 0,
+        "cycles": null,
+        "context_hardware": {
+          "loads": 0,
+          "jobs": 1,
+          "dma_read_bytes": 0,
+          "dma_write_bytes": 0,
+          "engine_cycles": 4896
+        }
+      },
+      "tframe_ns": 47210417127000,
+      "tready_ns": 47210417127000,
+      "twrite_ms": 0.0884,
+      "tfirst_ms": 4.9792,
+      "tframe_ms": 5.0535,
+      "tready_ms": 5.0535,
+      "validated": true
+    },
+    {
+      "text": "请读取FPGA当前温度。",
+      "phase": "measure",
+      "tx_hex": "e8afb7e8afbbe58f9646504741e5bd93e5898de6b8a9e5baa6e380820a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        36,
+        37
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [3,20,6,0,0,0,0,1,0,3733,123995,272,124318,3,0,2547,1,0,0,0,1,0,25,-32,152,1,0,1,0,0,4896]",
+          "data": {
+            "version": 3,
+            "case": 20,
+            "config": 6,
+            "selected_tool": 0,
+            "decode": 0,
+            "argument": 0,
+            "operation": 0,
+            "selection_source": 1,
+            "execute": 0,
+            "value": 3733,
+            "decision_cycles": 123995,
+            "tool_cycles": 272,
+            "request_cycles": 124318,
+            "receipt_kind": 3,
+            "receipt_requested": 0,
+            "receipt_readback": 2547,
+            "receipt_match": 1,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "receipt_enabled": 0,
+            "context_used": 1,
+            "context_deny": 0,
+            "context_logit0": 25,
+            "context_logit1": -32,
+            "context_threshold": 152,
+            "context_xnd_used": 1,
+            "context_loads": 0,
+            "context_jobs": 1,
+            "context_dma_read_bytes": 0,
+            "context_dma_write_bytes": 0,
+            "context_engine_cycles": 4896,
+            "context_logits": [
+              25,
+              -32
+            ],
+            "model_used": 3,
+            "encoder_used": 0,
+            "cycles": null,
+            "context_hardware": {
+              "loads": 0,
+              "jobs": 1,
+              "dma_read_bytes": 0,
+              "dma_write_bytes": 0,
+              "engine_cycles": 4896
+            }
+          },
+          "received_ns": 47210422321300,
+          "wire_bytes": 99,
+          "raw_hex": "4e525f46415354205b332c32302c362c302c302c302c302c312c302c333733332c3132333939352c3237322c3132343331382c332c302c323534372c312c302c302c302c312c302c32352c2d33322c3135322c312c302c312c302c302c343839365d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210422321300,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210417253800,
+      "twrite_ns": 47210417357200,
+      "tfirst_ns": 47210422242800,
+      "result": {
+        "version": 3,
+        "case": 20,
+        "config": 6,
+        "selected_tool": 0,
+        "decode": 0,
+        "argument": 0,
+        "operation": 0,
+        "selection_source": 1,
+        "execute": 0,
+        "value": 3733,
+        "decision_cycles": 123995,
+        "tool_cycles": 272,
+        "request_cycles": 124318,
+        "receipt_kind": 3,
+        "receipt_requested": 0,
+        "receipt_readback": 2547,
+        "receipt_match": 1,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "receipt_enabled": 0,
+        "context_used": 1,
+        "context_deny": 0,
+        "context_logit0": 25,
+        "context_logit1": -32,
+        "context_threshold": 152,
+        "context_xnd_used": 1,
+        "context_loads": 0,
+        "context_jobs": 1,
+        "context_dma_read_bytes": 0,
+        "context_dma_write_bytes": 0,
+        "context_engine_cycles": 4896,
+        "context_logits": [
+          25,
+          -32
+        ],
+        "model_used": 3,
+        "encoder_used": 0,
+        "cycles": null,
+        "context_hardware": {
+          "loads": 0,
+          "jobs": 1,
+          "dma_read_bytes": 0,
+          "dma_write_bytes": 0,
+          "engine_cycles": 4896
+        }
+      },
+      "tframe_ns": 47210422321300,
+      "tready_ns": 47210422321300,
+      "twrite_ms": 0.1034,
+      "tfirst_ms": 4.989,
+      "tframe_ms": 5.0675,
+      "tready_ms": 5.0675,
+      "validated": true
+    },
+    {
+      "text": "请读取FPGA当前温度。",
+      "phase": "measure",
+      "tx_hex": "e8afb7e8afbbe58f9646504741e5bd93e5898de6b8a9e5baa6e380820a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        38,
+        39
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [3,21,6,0,0,0,0,1,0,3733,123995,272,124318,3,0,2547,1,0,0,0,1,0,25,-32,152,1,0,1,0,0,4896]",
+          "data": {
+            "version": 3,
+            "case": 21,
+            "config": 6,
+            "selected_tool": 0,
+            "decode": 0,
+            "argument": 0,
+            "operation": 0,
+            "selection_source": 1,
+            "execute": 0,
+            "value": 3733,
+            "decision_cycles": 123995,
+            "tool_cycles": 272,
+            "request_cycles": 124318,
+            "receipt_kind": 3,
+            "receipt_requested": 0,
+            "receipt_readback": 2547,
+            "receipt_match": 1,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "receipt_enabled": 0,
+            "context_used": 1,
+            "context_deny": 0,
+            "context_logit0": 25,
+            "context_logit1": -32,
+            "context_threshold": 152,
+            "context_xnd_used": 1,
+            "context_loads": 0,
+            "context_jobs": 1,
+            "context_dma_read_bytes": 0,
+            "context_dma_write_bytes": 0,
+            "context_engine_cycles": 4896,
+            "context_logits": [
+              25,
+              -32
+            ],
+            "model_used": 3,
+            "encoder_used": 0,
+            "cycles": null,
+            "context_hardware": {
+              "loads": 0,
+              "jobs": 1,
+              "dma_read_bytes": 0,
+              "dma_write_bytes": 0,
+              "engine_cycles": 4896
+            }
+          },
+          "received_ns": 47210427723700,
+          "wire_bytes": 99,
+          "raw_hex": "4e525f46415354205b332c32312c362c302c302c302c302c312c302c333733332c3132333939352c3237322c3132343331382c332c302c323534372c312c302c302c302c312c302c32352c2d33322c3135322c312c302c312c302c302c343839365d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210427723700,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210422439500,
+      "twrite_ns": 47210422539400,
+      "tfirst_ns": 47210427593200,
+      "result": {
+        "version": 3,
+        "case": 21,
+        "config": 6,
+        "selected_tool": 0,
+        "decode": 0,
+        "argument": 0,
+        "operation": 0,
+        "selection_source": 1,
+        "execute": 0,
+        "value": 3733,
+        "decision_cycles": 123995,
+        "tool_cycles": 272,
+        "request_cycles": 124318,
+        "receipt_kind": 3,
+        "receipt_requested": 0,
+        "receipt_readback": 2547,
+        "receipt_match": 1,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "receipt_enabled": 0,
+        "context_used": 1,
+        "context_deny": 0,
+        "context_logit0": 25,
+        "context_logit1": -32,
+        "context_threshold": 152,
+        "context_xnd_used": 1,
+        "context_loads": 0,
+        "context_jobs": 1,
+        "context_dma_read_bytes": 0,
+        "context_dma_write_bytes": 0,
+        "context_engine_cycles": 4896,
+        "context_logits": [
+          25,
+          -32
+        ],
+        "model_used": 3,
+        "encoder_used": 0,
+        "cycles": null,
+        "context_hardware": {
+          "loads": 0,
+          "jobs": 1,
+          "dma_read_bytes": 0,
+          "dma_write_bytes": 0,
+          "engine_cycles": 4896
+        }
+      },
+      "tframe_ns": 47210427723700,
+      "tready_ns": 47210427723700,
+      "twrite_ms": 0.0999,
+      "tfirst_ms": 5.1537,
+      "tframe_ms": 5.2842,
+      "tready_ms": 5.2842,
+      "validated": true
+    },
+    {
+      "text": "请读取FPGA当前温度。",
+      "phase": "measure",
+      "tx_hex": "e8afb7e8afbbe58f9646504741e5bd93e5898de6b8a9e5baa6e380820a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        40,
+        41
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [3,22,6,0,0,0,0,1,0,3733,123995,272,124318,3,0,2547,1,0,0,0,1,0,25,-32,152,1,0,1,0,0,4896]",
+          "data": {
+            "version": 3,
+            "case": 22,
+            "config": 6,
+            "selected_tool": 0,
+            "decode": 0,
+            "argument": 0,
+            "operation": 0,
+            "selection_source": 1,
+            "execute": 0,
+            "value": 3733,
+            "decision_cycles": 123995,
+            "tool_cycles": 272,
+            "request_cycles": 124318,
+            "receipt_kind": 3,
+            "receipt_requested": 0,
+            "receipt_readback": 2547,
+            "receipt_match": 1,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "receipt_enabled": 0,
+            "context_used": 1,
+            "context_deny": 0,
+            "context_logit0": 25,
+            "context_logit1": -32,
+            "context_threshold": 152,
+            "context_xnd_used": 1,
+            "context_loads": 0,
+            "context_jobs": 1,
+            "context_dma_read_bytes": 0,
+            "context_dma_write_bytes": 0,
+            "context_engine_cycles": 4896,
+            "context_logits": [
+              25,
+              -32
+            ],
+            "model_used": 3,
+            "encoder_used": 0,
+            "cycles": null,
+            "context_hardware": {
+              "loads": 0,
+              "jobs": 1,
+              "dma_read_bytes": 0,
+              "dma_write_bytes": 0,
+              "engine_cycles": 4896
+            }
+          },
+          "received_ns": 47210433030800,
+          "wire_bytes": 99,
+          "raw_hex": "4e525f46415354205b332c32322c362c302c302c302c302c312c302c333733332c3132333939352c3237322c3132343331382c332c302c323534372c312c302c302c302c312c302c32352c2d33322c3135322c312c302c312c302c302c343839365d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210433030800,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210427871300,
+      "twrite_ns": 47210427976900,
+      "tfirst_ns": 47210432981000,
+      "result": {
+        "version": 3,
+        "case": 22,
+        "config": 6,
+        "selected_tool": 0,
+        "decode": 0,
+        "argument": 0,
+        "operation": 0,
+        "selection_source": 1,
+        "execute": 0,
+        "value": 3733,
+        "decision_cycles": 123995,
+        "tool_cycles": 272,
+        "request_cycles": 124318,
+        "receipt_kind": 3,
+        "receipt_requested": 0,
+        "receipt_readback": 2547,
+        "receipt_match": 1,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "receipt_enabled": 0,
+        "context_used": 1,
+        "context_deny": 0,
+        "context_logit0": 25,
+        "context_logit1": -32,
+        "context_threshold": 152,
+        "context_xnd_used": 1,
+        "context_loads": 0,
+        "context_jobs": 1,
+        "context_dma_read_bytes": 0,
+        "context_dma_write_bytes": 0,
+        "context_engine_cycles": 4896,
+        "context_logits": [
+          25,
+          -32
+        ],
+        "model_used": 3,
+        "encoder_used": 0,
+        "cycles": null,
+        "context_hardware": {
+          "loads": 0,
+          "jobs": 1,
+          "dma_read_bytes": 0,
+          "dma_write_bytes": 0,
+          "engine_cycles": 4896
+        }
+      },
+      "tframe_ns": 47210433030800,
+      "tready_ns": 47210433030800,
+      "twrite_ms": 0.1056,
+      "tfirst_ms": 5.1097,
+      "tframe_ms": 5.1595,
+      "tready_ms": 5.1595,
+      "validated": true
+    },
+    {
+      "text": "PWM按20%占空比输出",
+      "phase": "measure",
+      "tx_hex": "50574de68c89323025e58da0e7a9bae6af94e8be93e587ba0a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        42,
+        43
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [3,23,6,1,0,20,0,4,0,20,113642,360,114056,2,20,20,1,40500,8100,1,1,0,20,-16,116,1,0,1,0,0,4448]",
+          "data": {
+            "version": 3,
+            "case": 23,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "value": 20,
+            "decision_cycles": 113642,
+            "tool_cycles": 360,
+            "request_cycles": 114056,
+            "receipt_kind": 2,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_match": 1,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "receipt_enabled": 1,
+            "context_used": 1,
+            "context_deny": 0,
+            "context_logit0": 20,
+            "context_logit1": -16,
+            "context_threshold": 116,
+            "context_xnd_used": 1,
+            "context_loads": 0,
+            "context_jobs": 1,
+            "context_dma_read_bytes": 0,
+            "context_dma_write_bytes": 0,
+            "context_engine_cycles": 4448,
+            "context_logits": [
+              20,
+              -16
+            ],
+            "model_used": 3,
+            "encoder_used": 0,
+            "cycles": null,
+            "context_hardware": {
+              "loads": 0,
+              "jobs": 1,
+              "dma_read_bytes": 0,
+              "dma_write_bytes": 0,
+              "engine_cycles": 4448
+            }
+          },
+          "received_ns": 47210438239100,
+          "wire_bytes": 104,
+          "raw_hex": "4e525f46415354205b332c32332c362c312c302c32302c302c342c302c32302c3131333634322c3336302c3131343035362c322c32302c32302c312c34303530302c383130302c312c312c302c32302c2d31362c3131362c312c302c312c302c302c343434385d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210438239100,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210433216400,
+      "twrite_ns": 47210433325700,
+      "tfirst_ns": 47210438151900,
+      "result": {
+        "version": 3,
+        "case": 23,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "argument": 20,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "value": 20,
+        "decision_cycles": 113642,
+        "tool_cycles": 360,
+        "request_cycles": 114056,
+        "receipt_kind": 2,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_match": 1,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "receipt_enabled": 1,
+        "context_used": 1,
+        "context_deny": 0,
+        "context_logit0": 20,
+        "context_logit1": -16,
+        "context_threshold": 116,
+        "context_xnd_used": 1,
+        "context_loads": 0,
+        "context_jobs": 1,
+        "context_dma_read_bytes": 0,
+        "context_dma_write_bytes": 0,
+        "context_engine_cycles": 4448,
+        "context_logits": [
+          20,
+          -16
+        ],
+        "model_used": 3,
+        "encoder_used": 0,
+        "cycles": null,
+        "context_hardware": {
+          "loads": 0,
+          "jobs": 1,
+          "dma_read_bytes": 0,
+          "dma_write_bytes": 0,
+          "engine_cycles": 4448
+        }
+      },
+      "tframe_ns": 47210438239100,
+      "tready_ns": 47210438239100,
+      "twrite_ms": 0.1093,
+      "tfirst_ms": 4.9355,
+      "tframe_ms": 5.0227,
+      "tready_ms": 5.0227,
+      "validated": true
+    },
+    {
+      "text": "PWM按20%占空比输出",
+      "phase": "measure",
+      "tx_hex": "50574de68c89323025e58da0e7a9bae6af94e8be93e587ba0a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        44,
+        45
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [3,24,6,1,0,20,0,4,0,20,113260,360,113674,2,20,20,1,40500,8100,1,1,0,20,-16,116,1,0,1,0,0,4448]",
+          "data": {
+            "version": 3,
+            "case": 24,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "value": 20,
+            "decision_cycles": 113260,
+            "tool_cycles": 360,
+            "request_cycles": 113674,
+            "receipt_kind": 2,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_match": 1,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "receipt_enabled": 1,
+            "context_used": 1,
+            "context_deny": 0,
+            "context_logit0": 20,
+            "context_logit1": -16,
+            "context_threshold": 116,
+            "context_xnd_used": 1,
+            "context_loads": 0,
+            "context_jobs": 1,
+            "context_dma_read_bytes": 0,
+            "context_dma_write_bytes": 0,
+            "context_engine_cycles": 4448,
+            "context_logits": [
+              20,
+              -16
+            ],
+            "model_used": 3,
+            "encoder_used": 0,
+            "cycles": null,
+            "context_hardware": {
+              "loads": 0,
+              "jobs": 1,
+              "dma_read_bytes": 0,
+              "dma_write_bytes": 0,
+              "engine_cycles": 4448
+            }
+          },
+          "received_ns": 47210443163400,
+          "wire_bytes": 104,
+          "raw_hex": "4e525f46415354205b332c32342c362c312c302c32302c302c342c302c32302c3131333236302c3336302c3131333637342c322c32302c32302c312c34303530302c383130302c312c312c302c32302c2d31362c3131362c312c302c312c302c302c343434385d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210443163400,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210438377200,
+      "twrite_ns": 47210438476000,
+      "tfirst_ns": 47210443089400,
+      "result": {
+        "version": 3,
+        "case": 24,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "argument": 20,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "value": 20,
+        "decision_cycles": 113260,
+        "tool_cycles": 360,
+        "request_cycles": 113674,
+        "receipt_kind": 2,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_match": 1,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "receipt_enabled": 1,
+        "context_used": 1,
+        "context_deny": 0,
+        "context_logit0": 20,
+        "context_logit1": -16,
+        "context_threshold": 116,
+        "context_xnd_used": 1,
+        "context_loads": 0,
+        "context_jobs": 1,
+        "context_dma_read_bytes": 0,
+        "context_dma_write_bytes": 0,
+        "context_engine_cycles": 4448,
+        "context_logits": [
+          20,
+          -16
+        ],
+        "model_used": 3,
+        "encoder_used": 0,
+        "cycles": null,
+        "context_hardware": {
+          "loads": 0,
+          "jobs": 1,
+          "dma_read_bytes": 0,
+          "dma_write_bytes": 0,
+          "engine_cycles": 4448
+        }
+      },
+      "tframe_ns": 47210443163400,
+      "tready_ns": 47210443163400,
+      "twrite_ms": 0.0988,
+      "tfirst_ms": 4.7122,
+      "tframe_ms": 4.7862,
+      "tready_ms": 4.7862,
+      "validated": true
+    },
+    {
+      "text": "PWM按20%占空比输出",
+      "phase": "measure",
+      "tx_hex": "50574de68c89323025e58da0e7a9bae6af94e8be93e587ba0a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        46,
+        47
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [3,25,6,1,0,20,0,4,0,20,113260,360,113674,2,20,20,1,40500,8100,1,1,0,20,-16,116,1,0,1,0,0,4448]",
+          "data": {
+            "version": 3,
+            "case": 25,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "value": 20,
+            "decision_cycles": 113260,
+            "tool_cycles": 360,
+            "request_cycles": 113674,
+            "receipt_kind": 2,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_match": 1,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "receipt_enabled": 1,
+            "context_used": 1,
+            "context_deny": 0,
+            "context_logit0": 20,
+            "context_logit1": -16,
+            "context_threshold": 116,
+            "context_xnd_used": 1,
+            "context_loads": 0,
+            "context_jobs": 1,
+            "context_dma_read_bytes": 0,
+            "context_dma_write_bytes": 0,
+            "context_engine_cycles": 4448,
+            "context_logits": [
+              20,
+              -16
+            ],
+            "model_used": 3,
+            "encoder_used": 0,
+            "cycles": null,
+            "context_hardware": {
+              "loads": 0,
+              "jobs": 1,
+              "dma_read_bytes": 0,
+              "dma_write_bytes": 0,
+              "engine_cycles": 4448
+            }
+          },
+          "received_ns": 47210448114600,
+          "wire_bytes": 104,
+          "raw_hex": "4e525f46415354205b332c32352c362c312c302c32302c302c342c302c32302c3131333236302c3336302c3131333637342c322c32302c32302c312c34303530302c383130302c312c312c302c32302c2d31362c3131362c312c302c312c302c302c343434385d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210448114600,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210443287800,
+      "twrite_ns": 47210443378700,
+      "tfirst_ns": 47210448044200,
+      "result": {
+        "version": 3,
+        "case": 25,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "argument": 20,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "value": 20,
+        "decision_cycles": 113260,
+        "tool_cycles": 360,
+        "request_cycles": 113674,
+        "receipt_kind": 2,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_match": 1,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "receipt_enabled": 1,
+        "context_used": 1,
+        "context_deny": 0,
+        "context_logit0": 20,
+        "context_logit1": -16,
+        "context_threshold": 116,
+        "context_xnd_used": 1,
+        "context_loads": 0,
+        "context_jobs": 1,
+        "context_dma_read_bytes": 0,
+        "context_dma_write_bytes": 0,
+        "context_engine_cycles": 4448,
+        "context_logits": [
+          20,
+          -16
+        ],
+        "model_used": 3,
+        "encoder_used": 0,
+        "cycles": null,
+        "context_hardware": {
+          "loads": 0,
+          "jobs": 1,
+          "dma_read_bytes": 0,
+          "dma_write_bytes": 0,
+          "engine_cycles": 4448
+        }
+      },
+      "tframe_ns": 47210448114600,
+      "tready_ns": 47210448114600,
+      "twrite_ms": 0.0909,
+      "tfirst_ms": 4.7564,
+      "tframe_ms": 4.8268,
+      "tready_ms": 4.8268,
+      "validated": true
+    },
+    {
+      "text": "PWM按20%占空比输出",
+      "phase": "measure",
+      "tx_hex": "50574de68c89323025e58da0e7a9bae6af94e8be93e587ba0a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        48,
+        49
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [3,26,6,1,0,20,0,4,0,20,113260,360,113674,2,20,20,1,40500,8100,1,1,0,20,-16,116,1,0,1,0,0,4448]",
+          "data": {
+            "version": 3,
+            "case": 26,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "value": 20,
+            "decision_cycles": 113260,
+            "tool_cycles": 360,
+            "request_cycles": 113674,
+            "receipt_kind": 2,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_match": 1,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "receipt_enabled": 1,
+            "context_used": 1,
+            "context_deny": 0,
+            "context_logit0": 20,
+            "context_logit1": -16,
+            "context_threshold": 116,
+            "context_xnd_used": 1,
+            "context_loads": 0,
+            "context_jobs": 1,
+            "context_dma_read_bytes": 0,
+            "context_dma_write_bytes": 0,
+            "context_engine_cycles": 4448,
+            "context_logits": [
+              20,
+              -16
+            ],
+            "model_used": 3,
+            "encoder_used": 0,
+            "cycles": null,
+            "context_hardware": {
+              "loads": 0,
+              "jobs": 1,
+              "dma_read_bytes": 0,
+              "dma_write_bytes": 0,
+              "engine_cycles": 4448
+            }
+          },
+          "received_ns": 47210453145000,
+          "wire_bytes": 104,
+          "raw_hex": "4e525f46415354205b332c32362c362c312c302c32302c302c342c302c32302c3131333236302c3336302c3131333637342c322c32302c32302c312c34303530302c383130302c312c312c302c32302c2d31362c3131362c312c302c312c302c302c343434385d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210453145000,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210448224000,
+      "twrite_ns": 47210448320700,
+      "tfirst_ns": 47210453071500,
+      "result": {
+        "version": 3,
+        "case": 26,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "argument": 20,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "value": 20,
+        "decision_cycles": 113260,
+        "tool_cycles": 360,
+        "request_cycles": 113674,
+        "receipt_kind": 2,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_match": 1,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "receipt_enabled": 1,
+        "context_used": 1,
+        "context_deny": 0,
+        "context_logit0": 20,
+        "context_logit1": -16,
+        "context_threshold": 116,
+        "context_xnd_used": 1,
+        "context_loads": 0,
+        "context_jobs": 1,
+        "context_dma_read_bytes": 0,
+        "context_dma_write_bytes": 0,
+        "context_engine_cycles": 4448,
+        "context_logits": [
+          20,
+          -16
+        ],
+        "model_used": 3,
+        "encoder_used": 0,
+        "cycles": null,
+        "context_hardware": {
+          "loads": 0,
+          "jobs": 1,
+          "dma_read_bytes": 0,
+          "dma_write_bytes": 0,
+          "engine_cycles": 4448
+        }
+      },
+      "tframe_ns": 47210453145000,
+      "tready_ns": 47210453145000,
+      "twrite_ms": 0.0967,
+      "tfirst_ms": 4.8475,
+      "tframe_ms": 4.921,
+      "tready_ms": 4.921,
+      "validated": true
+    },
+    {
+      "text": "PWM按20%占空比输出",
+      "phase": "measure",
+      "tx_hex": "50574de68c89323025e58da0e7a9bae6af94e8be93e587ba0a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        50,
+        51
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [3,27,6,1,0,20,0,4,0,20,113260,360,113674,2,20,20,1,40500,8100,1,1,0,20,-16,116,1,0,1,0,0,4448]",
+          "data": {
+            "version": 3,
+            "case": 27,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "value": 20,
+            "decision_cycles": 113260,
+            "tool_cycles": 360,
+            "request_cycles": 113674,
+            "receipt_kind": 2,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_match": 1,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "receipt_enabled": 1,
+            "context_used": 1,
+            "context_deny": 0,
+            "context_logit0": 20,
+            "context_logit1": -16,
+            "context_threshold": 116,
+            "context_xnd_used": 1,
+            "context_loads": 0,
+            "context_jobs": 1,
+            "context_dma_read_bytes": 0,
+            "context_dma_write_bytes": 0,
+            "context_engine_cycles": 4448,
+            "context_logits": [
+              20,
+              -16
+            ],
+            "model_used": 3,
+            "encoder_used": 0,
+            "cycles": null,
+            "context_hardware": {
+              "loads": 0,
+              "jobs": 1,
+              "dma_read_bytes": 0,
+              "dma_write_bytes": 0,
+              "engine_cycles": 4448
+            }
+          },
+          "received_ns": 47210458272400,
+          "wire_bytes": 104,
+          "raw_hex": "4e525f46415354205b332c32372c362c312c302c32302c302c342c302c32302c3131333236302c3336302c3131333637342c322c32302c32302c312c34303530302c383130302c312c312c302c32302c2d31362c3131362c312c302c312c302c302c343434385d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210458272400,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210453338500,
+      "twrite_ns": 47210453453300,
+      "tfirst_ns": 47210458133000,
+      "result": {
+        "version": 3,
+        "case": 27,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "argument": 20,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "value": 20,
+        "decision_cycles": 113260,
+        "tool_cycles": 360,
+        "request_cycles": 113674,
+        "receipt_kind": 2,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_match": 1,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "receipt_enabled": 1,
+        "context_used": 1,
+        "context_deny": 0,
+        "context_logit0": 20,
+        "context_logit1": -16,
+        "context_threshold": 116,
+        "context_xnd_used": 1,
+        "context_loads": 0,
+        "context_jobs": 1,
+        "context_dma_read_bytes": 0,
+        "context_dma_write_bytes": 0,
+        "context_engine_cycles": 4448,
+        "context_logits": [
+          20,
+          -16
+        ],
+        "model_used": 3,
+        "encoder_used": 0,
+        "cycles": null,
+        "context_hardware": {
+          "loads": 0,
+          "jobs": 1,
+          "dma_read_bytes": 0,
+          "dma_write_bytes": 0,
+          "engine_cycles": 4448
+        }
+      },
+      "tframe_ns": 47210458272400,
+      "tready_ns": 47210458272400,
+      "twrite_ms": 0.1148,
+      "tfirst_ms": 4.7945,
+      "tframe_ms": 4.9339,
+      "tready_ms": 4.9339,
+      "validated": true
+    },
+    {
+      "text": "PWM按20%占空比输出",
+      "phase": "measure",
+      "tx_hex": "50574de68c89323025e58da0e7a9bae6af94e8be93e587ba0a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        52,
+        53
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [3,28,6,1,0,20,0,4,0,20,113260,360,113674,2,20,20,1,40500,8100,1,1,0,20,-16,116,1,0,1,0,0,4448]",
+          "data": {
+            "version": 3,
+            "case": 28,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "value": 20,
+            "decision_cycles": 113260,
+            "tool_cycles": 360,
+            "request_cycles": 113674,
+            "receipt_kind": 2,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_match": 1,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "receipt_enabled": 1,
+            "context_used": 1,
+            "context_deny": 0,
+            "context_logit0": 20,
+            "context_logit1": -16,
+            "context_threshold": 116,
+            "context_xnd_used": 1,
+            "context_loads": 0,
+            "context_jobs": 1,
+            "context_dma_read_bytes": 0,
+            "context_dma_write_bytes": 0,
+            "context_engine_cycles": 4448,
+            "context_logits": [
+              20,
+              -16
+            ],
+            "model_used": 3,
+            "encoder_used": 0,
+            "cycles": null,
+            "context_hardware": {
+              "loads": 0,
+              "jobs": 1,
+              "dma_read_bytes": 0,
+              "dma_write_bytes": 0,
+              "engine_cycles": 4448
+            }
+          },
+          "received_ns": 47210463276500,
+          "wire_bytes": 104,
+          "raw_hex": "4e525f46415354205b332c32382c362c312c302c32302c302c342c302c32302c3131333236302c3336302c3131333637342c322c32302c32302c312c34303530302c383130302c312c312c302c32302c2d31362c3131362c312c302c312c302c302c343434385d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210463276500,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210458419500,
+      "twrite_ns": 47210458530600,
+      "tfirst_ns": 47210463164900,
+      "result": {
+        "version": 3,
+        "case": 28,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "argument": 20,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "value": 20,
+        "decision_cycles": 113260,
+        "tool_cycles": 360,
+        "request_cycles": 113674,
+        "receipt_kind": 2,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_match": 1,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "receipt_enabled": 1,
+        "context_used": 1,
+        "context_deny": 0,
+        "context_logit0": 20,
+        "context_logit1": -16,
+        "context_threshold": 116,
+        "context_xnd_used": 1,
+        "context_loads": 0,
+        "context_jobs": 1,
+        "context_dma_read_bytes": 0,
+        "context_dma_write_bytes": 0,
+        "context_engine_cycles": 4448,
+        "context_logits": [
+          20,
+          -16
+        ],
+        "model_used": 3,
+        "encoder_used": 0,
+        "cycles": null,
+        "context_hardware": {
+          "loads": 0,
+          "jobs": 1,
+          "dma_read_bytes": 0,
+          "dma_write_bytes": 0,
+          "engine_cycles": 4448
+        }
+      },
+      "tframe_ns": 47210463276500,
+      "tready_ns": 47210463276500,
+      "twrite_ms": 0.1111,
+      "tfirst_ms": 4.7454,
+      "tframe_ms": 4.857,
+      "tready_ms": 4.857,
+      "validated": true
+    },
+    {
+      "text": "PWM按20%占空比输出",
+      "phase": "measure",
+      "tx_hex": "50574de68c89323025e58da0e7a9bae6af94e8be93e587ba0a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        54,
+        55
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [3,29,6,1,0,20,0,4,0,20,113260,360,113674,2,20,20,1,40500,8100,1,1,0,20,-16,116,1,0,1,0,0,4448]",
+          "data": {
+            "version": 3,
+            "case": 29,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "value": 20,
+            "decision_cycles": 113260,
+            "tool_cycles": 360,
+            "request_cycles": 113674,
+            "receipt_kind": 2,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_match": 1,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "receipt_enabled": 1,
+            "context_used": 1,
+            "context_deny": 0,
+            "context_logit0": 20,
+            "context_logit1": -16,
+            "context_threshold": 116,
+            "context_xnd_used": 1,
+            "context_loads": 0,
+            "context_jobs": 1,
+            "context_dma_read_bytes": 0,
+            "context_dma_write_bytes": 0,
+            "context_engine_cycles": 4448,
+            "context_logits": [
+              20,
+              -16
+            ],
+            "model_used": 3,
+            "encoder_used": 0,
+            "cycles": null,
+            "context_hardware": {
+              "loads": 0,
+              "jobs": 1,
+              "dma_read_bytes": 0,
+              "dma_write_bytes": 0,
+              "engine_cycles": 4448
+            }
+          },
+          "received_ns": 47210468232600,
+          "wire_bytes": 104,
+          "raw_hex": "4e525f46415354205b332c32392c362c312c302c32302c302c342c302c32302c3131333236302c3336302c3131333637342c322c32302c32302c312c34303530302c383130302c312c312c302c32302c2d31362c3131362c312c302c312c302c302c343434385d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210468232600,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210463397900,
+      "twrite_ns": 47210463528900,
+      "tfirst_ns": 47210468139100,
+      "result": {
+        "version": 3,
+        "case": 29,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "argument": 20,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "value": 20,
+        "decision_cycles": 113260,
+        "tool_cycles": 360,
+        "request_cycles": 113674,
+        "receipt_kind": 2,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_match": 1,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "receipt_enabled": 1,
+        "context_used": 1,
+        "context_deny": 0,
+        "context_logit0": 20,
+        "context_logit1": -16,
+        "context_threshold": 116,
+        "context_xnd_used": 1,
+        "context_loads": 0,
+        "context_jobs": 1,
+        "context_dma_read_bytes": 0,
+        "context_dma_write_bytes": 0,
+        "context_engine_cycles": 4448,
+        "context_logits": [
+          20,
+          -16
+        ],
+        "model_used": 3,
+        "encoder_used": 0,
+        "cycles": null,
+        "context_hardware": {
+          "loads": 0,
+          "jobs": 1,
+          "dma_read_bytes": 0,
+          "dma_write_bytes": 0,
+          "engine_cycles": 4448
+        }
+      },
+      "tframe_ns": 47210468232600,
+      "tready_ns": 47210468232600,
+      "twrite_ms": 0.131,
+      "tfirst_ms": 4.7412,
+      "tframe_ms": 4.8347,
+      "tready_ms": 4.8347,
+      "validated": true
+    },
+    {
+      "text": "PWM按20%占空比输出",
+      "phase": "measure",
+      "tx_hex": "50574de68c89323025e58da0e7a9bae6af94e8be93e587ba0a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        56,
+        57
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [3,30,6,1,0,20,0,4,0,20,113260,360,113674,2,20,20,1,40500,8100,1,1,0,20,-16,116,1,0,1,0,0,4448]",
+          "data": {
+            "version": 3,
+            "case": 30,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "value": 20,
+            "decision_cycles": 113260,
+            "tool_cycles": 360,
+            "request_cycles": 113674,
+            "receipt_kind": 2,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_match": 1,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "receipt_enabled": 1,
+            "context_used": 1,
+            "context_deny": 0,
+            "context_logit0": 20,
+            "context_logit1": -16,
+            "context_threshold": 116,
+            "context_xnd_used": 1,
+            "context_loads": 0,
+            "context_jobs": 1,
+            "context_dma_read_bytes": 0,
+            "context_dma_write_bytes": 0,
+            "context_engine_cycles": 4448,
+            "context_logits": [
+              20,
+              -16
+            ],
+            "model_used": 3,
+            "encoder_used": 0,
+            "cycles": null,
+            "context_hardware": {
+              "loads": 0,
+              "jobs": 1,
+              "dma_read_bytes": 0,
+              "dma_write_bytes": 0,
+              "engine_cycles": 4448
+            }
+          },
+          "received_ns": 47210473143900,
+          "wire_bytes": 104,
+          "raw_hex": "4e525f46415354205b332c33302c362c312c302c32302c302c342c302c32302c3131333236302c3336302c3131333637342c322c32302c32302c312c34303530302c383130302c312c312c302c32302c2d31362c3131362c312c302c312c302c302c343434385d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210473143900,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210468345900,
+      "twrite_ns": 47210468432600,
+      "tfirst_ns": 47210473073700,
+      "result": {
+        "version": 3,
+        "case": 30,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "argument": 20,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "value": 20,
+        "decision_cycles": 113260,
+        "tool_cycles": 360,
+        "request_cycles": 113674,
+        "receipt_kind": 2,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_match": 1,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "receipt_enabled": 1,
+        "context_used": 1,
+        "context_deny": 0,
+        "context_logit0": 20,
+        "context_logit1": -16,
+        "context_threshold": 116,
+        "context_xnd_used": 1,
+        "context_loads": 0,
+        "context_jobs": 1,
+        "context_dma_read_bytes": 0,
+        "context_dma_write_bytes": 0,
+        "context_engine_cycles": 4448,
+        "context_logits": [
+          20,
+          -16
+        ],
+        "model_used": 3,
+        "encoder_used": 0,
+        "cycles": null,
+        "context_hardware": {
+          "loads": 0,
+          "jobs": 1,
+          "dma_read_bytes": 0,
+          "dma_write_bytes": 0,
+          "engine_cycles": 4448
+        }
+      },
+      "tframe_ns": 47210473143900,
+      "tready_ns": 47210473143900,
+      "twrite_ms": 0.0867,
+      "tfirst_ms": 4.7278,
+      "tframe_ms": 4.798,
+      "tready_ms": 4.798,
+      "validated": true
+    },
+    {
+      "text": "PWM按20%占空比输出",
+      "phase": "measure",
+      "tx_hex": "50574de68c89323025e58da0e7a9bae6af94e8be93e587ba0a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        58,
+        59
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [3,31,6,1,0,20,0,4,0,20,113260,360,113674,2,20,20,1,40500,8100,1,1,0,20,-16,116,1,0,1,0,0,4448]",
+          "data": {
+            "version": 3,
+            "case": 31,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "value": 20,
+            "decision_cycles": 113260,
+            "tool_cycles": 360,
+            "request_cycles": 113674,
+            "receipt_kind": 2,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_match": 1,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "receipt_enabled": 1,
+            "context_used": 1,
+            "context_deny": 0,
+            "context_logit0": 20,
+            "context_logit1": -16,
+            "context_threshold": 116,
+            "context_xnd_used": 1,
+            "context_loads": 0,
+            "context_jobs": 1,
+            "context_dma_read_bytes": 0,
+            "context_dma_write_bytes": 0,
+            "context_engine_cycles": 4448,
+            "context_logits": [
+              20,
+              -16
+            ],
+            "model_used": 3,
+            "encoder_used": 0,
+            "cycles": null,
+            "context_hardware": {
+              "loads": 0,
+              "jobs": 1,
+              "dma_read_bytes": 0,
+              "dma_write_bytes": 0,
+              "engine_cycles": 4448
+            }
+          },
+          "received_ns": 47210478031500,
+          "wire_bytes": 104,
+          "raw_hex": "4e525f46415354205b332c33312c362c312c302c32302c302c342c302c32302c3131333236302c3336302c3131333637342c322c32302c32302c312c34303530302c383130302c312c312c302c32302c2d31362c3131362c312c302c312c302c302c343434385d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210478031500,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210473246600,
+      "twrite_ns": 47210473336300,
+      "tfirst_ns": 47210477962500,
+      "result": {
+        "version": 3,
+        "case": 31,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "argument": 20,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "value": 20,
+        "decision_cycles": 113260,
+        "tool_cycles": 360,
+        "request_cycles": 113674,
+        "receipt_kind": 2,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_match": 1,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "receipt_enabled": 1,
+        "context_used": 1,
+        "context_deny": 0,
+        "context_logit0": 20,
+        "context_logit1": -16,
+        "context_threshold": 116,
+        "context_xnd_used": 1,
+        "context_loads": 0,
+        "context_jobs": 1,
+        "context_dma_read_bytes": 0,
+        "context_dma_write_bytes": 0,
+        "context_engine_cycles": 4448,
+        "context_logits": [
+          20,
+          -16
+        ],
+        "model_used": 3,
+        "encoder_used": 0,
+        "cycles": null,
+        "context_hardware": {
+          "loads": 0,
+          "jobs": 1,
+          "dma_read_bytes": 0,
+          "dma_write_bytes": 0,
+          "engine_cycles": 4448
+        }
+      },
+      "tframe_ns": 47210478031500,
+      "tready_ns": 47210478031500,
+      "twrite_ms": 0.0897,
+      "tfirst_ms": 4.7159,
+      "tframe_ms": 4.7849,
+      "tready_ms": 4.7849,
+      "validated": true
+    },
+    {
+      "text": "PWM按20%占空比输出",
+      "phase": "measure",
+      "tx_hex": "50574de68c89323025e58da0e7a9bae6af94e8be93e587ba0a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        60,
+        61
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [3,32,6,1,0,20,0,4,0,20,113260,360,113674,2,20,20,1,40500,8100,1,1,0,20,-16,116,1,0,1,0,0,4448]",
+          "data": {
+            "version": 3,
+            "case": 32,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "value": 20,
+            "decision_cycles": 113260,
+            "tool_cycles": 360,
+            "request_cycles": 113674,
+            "receipt_kind": 2,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_match": 1,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "receipt_enabled": 1,
+            "context_used": 1,
+            "context_deny": 0,
+            "context_logit0": 20,
+            "context_logit1": -16,
+            "context_threshold": 116,
+            "context_xnd_used": 1,
+            "context_loads": 0,
+            "context_jobs": 1,
+            "context_dma_read_bytes": 0,
+            "context_dma_write_bytes": 0,
+            "context_engine_cycles": 4448,
+            "context_logits": [
+              20,
+              -16
+            ],
+            "model_used": 3,
+            "encoder_used": 0,
+            "cycles": null,
+            "context_hardware": {
+              "loads": 0,
+              "jobs": 1,
+              "dma_read_bytes": 0,
+              "dma_write_bytes": 0,
+              "engine_cycles": 4448
+            }
+          },
+          "received_ns": 47210482981700,
+          "wire_bytes": 104,
+          "raw_hex": "4e525f46415354205b332c33322c362c312c302c32302c302c342c302c32302c3131333236302c3336302c3131333637342c322c32302c32302c312c34303530302c383130302c312c312c302c32302c2d31362c3131362c312c302c312c302c302c343434385d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210482981700,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210478120200,
+      "twrite_ns": 47210478231900,
+      "tfirst_ns": 47210482959600,
+      "result": {
+        "version": 3,
+        "case": 32,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "argument": 20,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "value": 20,
+        "decision_cycles": 113260,
+        "tool_cycles": 360,
+        "request_cycles": 113674,
+        "receipt_kind": 2,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_match": 1,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "receipt_enabled": 1,
+        "context_used": 1,
+        "context_deny": 0,
+        "context_logit0": 20,
+        "context_logit1": -16,
+        "context_threshold": 116,
+        "context_xnd_used": 1,
+        "context_loads": 0,
+        "context_jobs": 1,
+        "context_dma_read_bytes": 0,
+        "context_dma_write_bytes": 0,
+        "context_engine_cycles": 4448,
+        "context_logits": [
+          20,
+          -16
+        ],
+        "model_used": 3,
+        "encoder_used": 0,
+        "cycles": null,
+        "context_hardware": {
+          "loads": 0,
+          "jobs": 1,
+          "dma_read_bytes": 0,
+          "dma_write_bytes": 0,
+          "engine_cycles": 4448
+        }
+      },
+      "tframe_ns": 47210482981700,
+      "tready_ns": 47210482981700,
+      "twrite_ms": 0.1117,
+      "tfirst_ms": 4.8394,
+      "tframe_ms": 4.8615,
+      "tready_ms": 4.8615,
+      "validated": true
+    },
+    {
+      "text": "请将PWM占空比设置为20%。",
+      "phase": "measure",
+      "tx_hex": "e8afb7e5b08650574de58da0e7a9bae6af94e8aebee7bdaee4b8ba323025e380820a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        62,
+        63
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,33,6,1,0,20,0,4,0,20,5985,360,6396,2,20,20,1,40500,8100,1]",
+          "data": {
+            "version": 1,
+            "case": 33,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "value": 20,
+            "decision_cycles": 5985,
+            "tool_cycles": 360,
+            "request_cycles": 6396,
+            "receipt_kind": 2,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_match": 1,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "receipt_enabled": 1
+          },
+          "received_ns": 47210485015300,
+          "wire_bytes": 70,
+          "raw_hex": "4e525f46415354205b312c33332c362c312c302c32302c302c342c302c32302c353938352c3336302c363339362c322c32302c32302c312c34303530302c383130302c315d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210485015300,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210483161500,
+      "twrite_ns": 47210483269600,
+      "tfirst_ns": 47210484988400,
+      "result": {
+        "version": 1,
+        "case": 33,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "argument": 20,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "value": 20,
+        "decision_cycles": 5985,
+        "tool_cycles": 360,
+        "request_cycles": 6396,
+        "receipt_kind": 2,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_match": 1,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "receipt_enabled": 1
+      },
+      "tframe_ns": 47210485015300,
+      "tready_ns": 47210485015300,
+      "twrite_ms": 0.1081,
+      "tfirst_ms": 1.8269,
+      "tframe_ms": 1.8538,
+      "tready_ms": 1.8538,
+      "validated": true
+    },
+    {
+      "text": "请将PWM占空比设置为20%。",
+      "phase": "measure",
+      "tx_hex": "e8afb7e5b08650574de58da0e7a9bae6af94e8aebee7bdaee4b8ba323025e380820a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        64,
+        65
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,34,6,1,0,20,0,4,0,20,5886,360,6297,2,20,20,1,40500,8100,1]",
+          "data": {
+            "version": 1,
+            "case": 34,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "value": 20,
+            "decision_cycles": 5886,
+            "tool_cycles": 360,
+            "request_cycles": 6297,
+            "receipt_kind": 2,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_match": 1,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "receipt_enabled": 1
+          },
+          "received_ns": 47210486980400,
+          "wire_bytes": 70,
+          "raw_hex": "4e525f46415354205b312c33342c362c312c302c32302c302c342c302c32302c353838362c3336302c363239372c322c32302c32302c312c34303530302c383130302c315d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210486980400,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210485115400,
+      "twrite_ns": 47210485206000,
+      "tfirst_ns": 47210486959900,
+      "result": {
+        "version": 1,
+        "case": 34,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "argument": 20,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "value": 20,
+        "decision_cycles": 5886,
+        "tool_cycles": 360,
+        "request_cycles": 6297,
+        "receipt_kind": 2,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_match": 1,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "receipt_enabled": 1
+      },
+      "tframe_ns": 47210486980400,
+      "tready_ns": 47210486980400,
+      "twrite_ms": 0.0906,
+      "tfirst_ms": 1.8445,
+      "tframe_ms": 1.865,
+      "tready_ms": 1.865,
+      "validated": true
+    },
+    {
+      "text": "请将PWM占空比设置为20%。",
+      "phase": "measure",
+      "tx_hex": "e8afb7e5b08650574de58da0e7a9bae6af94e8aebee7bdaee4b8ba323025e380820a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        66,
+        67
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,35,6,1,0,20,0,4,0,20,5886,360,6297,2,20,20,1,40500,8100,1]",
+          "data": {
+            "version": 1,
+            "case": 35,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "value": 20,
+            "decision_cycles": 5886,
+            "tool_cycles": 360,
+            "request_cycles": 6297,
+            "receipt_kind": 2,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_match": 1,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "receipt_enabled": 1
+          },
+          "received_ns": 47210489078600,
+          "wire_bytes": 70,
+          "raw_hex": "4e525f46415354205b312c33352c362c312c302c32302c302c342c302c32302c353838362c3336302c363239372c322c32302c32302c312c34303530302c383130302c315d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210489078600,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210487079000,
+      "twrite_ns": 47210487180400,
+      "tfirst_ns": 47210488998000,
+      "result": {
+        "version": 1,
+        "case": 35,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "argument": 20,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "value": 20,
+        "decision_cycles": 5886,
+        "tool_cycles": 360,
+        "request_cycles": 6297,
+        "receipt_kind": 2,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_match": 1,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "receipt_enabled": 1
+      },
+      "tframe_ns": 47210489078600,
+      "tready_ns": 47210489078600,
+      "twrite_ms": 0.1014,
+      "tfirst_ms": 1.919,
+      "tframe_ms": 1.9996,
+      "tready_ms": 1.9996,
+      "validated": true
+    },
+    {
+      "text": "请将PWM占空比设置为20%。",
+      "phase": "measure",
+      "tx_hex": "e8afb7e5b08650574de58da0e7a9bae6af94e8aebee7bdaee4b8ba323025e380820a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        68,
+        69
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,36,6,1,0,20,0,4,0,20,5886,360,6297,2,20,20,1,40500,8100,1]",
+          "data": {
+            "version": 1,
+            "case": 36,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "value": 20,
+            "decision_cycles": 5886,
+            "tool_cycles": 360,
+            "request_cycles": 6297,
+            "receipt_kind": 2,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_match": 1,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "receipt_enabled": 1
+          },
+          "received_ns": 47210491020700,
+          "wire_bytes": 70,
+          "raw_hex": "4e525f46415354205b312c33362c362c312c302c32302c302c342c302c32302c353838362c3336302c363239372c322c32302c32302c312c34303530302c383130302c315d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210491020700,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210489169900,
+      "twrite_ns": 47210489275200,
+      "tfirst_ns": 47210490997400,
+      "result": {
+        "version": 1,
+        "case": 36,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "argument": 20,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "value": 20,
+        "decision_cycles": 5886,
+        "tool_cycles": 360,
+        "request_cycles": 6297,
+        "receipt_kind": 2,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_match": 1,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "receipt_enabled": 1
+      },
+      "tframe_ns": 47210491020700,
+      "tready_ns": 47210491020700,
+      "twrite_ms": 0.1053,
+      "tfirst_ms": 1.8275,
+      "tframe_ms": 1.8508,
+      "tready_ms": 1.8508,
+      "validated": true
+    },
+    {
+      "text": "请将PWM占空比设置为20%。",
+      "phase": "measure",
+      "tx_hex": "e8afb7e5b08650574de58da0e7a9bae6af94e8aebee7bdaee4b8ba323025e380820a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        70,
+        71
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,37,6,1,0,20,0,4,0,20,5886,360,6297,2,20,20,1,40500,8100,1]",
+          "data": {
+            "version": 1,
+            "case": 37,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "value": 20,
+            "decision_cycles": 5886,
+            "tool_cycles": 360,
+            "request_cycles": 6297,
+            "receipt_kind": 2,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_match": 1,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "receipt_enabled": 1
+          },
+          "received_ns": 47210492988000,
+          "wire_bytes": 70,
+          "raw_hex": "4e525f46415354205b312c33372c362c312c302c32302c302c342c302c32302c353838362c3336302c363239372c322c32302c32302c312c34303530302c383130302c315d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210492988000,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210491111100,
+      "twrite_ns": 47210491216700,
+      "tfirst_ns": 47210492925000,
+      "result": {
+        "version": 1,
+        "case": 37,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "argument": 20,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "value": 20,
+        "decision_cycles": 5886,
+        "tool_cycles": 360,
+        "request_cycles": 6297,
+        "receipt_kind": 2,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_match": 1,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "receipt_enabled": 1
+      },
+      "tframe_ns": 47210492988000,
+      "tready_ns": 47210492988000,
+      "twrite_ms": 0.1056,
+      "tfirst_ms": 1.8139,
+      "tframe_ms": 1.8769,
+      "tready_ms": 1.8769,
+      "validated": true
+    },
+    {
+      "text": "请将PWM占空比设置为20%。",
+      "phase": "measure",
+      "tx_hex": "e8afb7e5b08650574de58da0e7a9bae6af94e8aebee7bdaee4b8ba323025e380820a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        72,
+        73
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,38,6,1,0,20,0,4,0,20,5886,360,6297,2,20,20,1,40500,8100,1]",
+          "data": {
+            "version": 1,
+            "case": 38,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "value": 20,
+            "decision_cycles": 5886,
+            "tool_cycles": 360,
+            "request_cycles": 6297,
+            "receipt_kind": 2,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_match": 1,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "receipt_enabled": 1
+          },
+          "received_ns": 47210494987300,
+          "wire_bytes": 70,
+          "raw_hex": "4e525f46415354205b312c33382c362c312c302c32302c302c342c302c32302c353838362c3336302c363239372c322c32302c32302c312c34303530302c383130302c315d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210494987300,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210493065500,
+      "twrite_ns": 47210493160200,
+      "tfirst_ns": 47210494934400,
+      "result": {
+        "version": 1,
+        "case": 38,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "argument": 20,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "value": 20,
+        "decision_cycles": 5886,
+        "tool_cycles": 360,
+        "request_cycles": 6297,
+        "receipt_kind": 2,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_match": 1,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "receipt_enabled": 1
+      },
+      "tframe_ns": 47210494987300,
+      "tready_ns": 47210494987300,
+      "twrite_ms": 0.0947,
+      "tfirst_ms": 1.8689,
+      "tframe_ms": 1.9218,
+      "tready_ms": 1.9218,
+      "validated": true
+    },
+    {
+      "text": "请将PWM占空比设置为20%。",
+      "phase": "measure",
+      "tx_hex": "e8afb7e5b08650574de58da0e7a9bae6af94e8aebee7bdaee4b8ba323025e380820a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        74,
+        75
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,39,6,1,0,20,0,4,0,20,5886,360,6297,2,20,20,1,40500,8100,1]",
+          "data": {
+            "version": 1,
+            "case": 39,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "value": 20,
+            "decision_cycles": 5886,
+            "tool_cycles": 360,
+            "request_cycles": 6297,
+            "receipt_kind": 2,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_match": 1,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "receipt_enabled": 1
+          },
+          "received_ns": 47210496985800,
+          "wire_bytes": 70,
+          "raw_hex": "4e525f46415354205b312c33392c362c312c302c32302c302c342c302c32302c353838362c3336302c363239372c322c32302c32302c312c34303530302c383130302c315d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210496985800,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210495060300,
+      "twrite_ns": 47210495163000,
+      "tfirst_ns": 47210496934000,
+      "result": {
+        "version": 1,
+        "case": 39,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "argument": 20,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "value": 20,
+        "decision_cycles": 5886,
+        "tool_cycles": 360,
+        "request_cycles": 6297,
+        "receipt_kind": 2,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_match": 1,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "receipt_enabled": 1
+      },
+      "tframe_ns": 47210496985800,
+      "tready_ns": 47210496985800,
+      "twrite_ms": 0.1027,
+      "tfirst_ms": 1.8737,
+      "tframe_ms": 1.9255,
+      "tready_ms": 1.9255,
+      "validated": true
+    },
+    {
+      "text": "请将PWM占空比设置为20%。",
+      "phase": "measure",
+      "tx_hex": "e8afb7e5b08650574de58da0e7a9bae6af94e8aebee7bdaee4b8ba323025e380820a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        76,
+        77
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,40,6,1,0,20,0,4,0,20,5886,360,6297,2,20,20,1,40500,8100,1]",
+          "data": {
+            "version": 1,
+            "case": 40,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "value": 20,
+            "decision_cycles": 5886,
+            "tool_cycles": 360,
+            "request_cycles": 6297,
+            "receipt_kind": 2,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_match": 1,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "receipt_enabled": 1
+          },
+          "received_ns": 47210498985000,
+          "wire_bytes": 70,
+          "raw_hex": "4e525f46415354205b312c34302c362c312c302c32302c302c342c302c32302c353838362c3336302c363239372c322c32302c32302c312c34303530302c383130302c315d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210498985000,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210497055700,
+      "twrite_ns": 47210497155100,
+      "tfirst_ns": 47210498928100,
+      "result": {
+        "version": 1,
+        "case": 40,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "argument": 20,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "value": 20,
+        "decision_cycles": 5886,
+        "tool_cycles": 360,
+        "request_cycles": 6297,
+        "receipt_kind": 2,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_match": 1,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "receipt_enabled": 1
+      },
+      "tframe_ns": 47210498985000,
+      "tready_ns": 47210498985000,
+      "twrite_ms": 0.0994,
+      "tfirst_ms": 1.8724,
+      "tframe_ms": 1.9293,
+      "tready_ms": 1.9293,
+      "validated": true
+    },
+    {
+      "text": "请将PWM占空比设置为20%。",
+      "phase": "measure",
+      "tx_hex": "e8afb7e5b08650574de58da0e7a9bae6af94e8aebee7bdaee4b8ba323025e380820a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        78,
+        79
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,41,6,1,0,20,0,4,0,20,5886,360,6297,2,20,20,1,40500,8100,1]",
+          "data": {
+            "version": 1,
+            "case": 41,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "value": 20,
+            "decision_cycles": 5886,
+            "tool_cycles": 360,
+            "request_cycles": 6297,
+            "receipt_kind": 2,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_match": 1,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "receipt_enabled": 1
+          },
+          "received_ns": 47210501009400,
+          "wire_bytes": 70,
+          "raw_hex": "4e525f46415354205b312c34312c362c312c302c32302c302c342c302c32302c353838362c3336302c363239372c322c32302c32302c312c34303530302c383130302c315d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210501009400,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210499058900,
+      "twrite_ns": 47210499155800,
+      "tfirst_ns": 47210500928300,
+      "result": {
+        "version": 1,
+        "case": 41,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "argument": 20,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "value": 20,
+        "decision_cycles": 5886,
+        "tool_cycles": 360,
+        "request_cycles": 6297,
+        "receipt_kind": 2,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_match": 1,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "receipt_enabled": 1
+      },
+      "tframe_ns": 47210501009400,
+      "tready_ns": 47210501009400,
+      "twrite_ms": 0.0969,
+      "tfirst_ms": 1.8694,
+      "tframe_ms": 1.9505,
+      "tready_ms": 1.9505,
+      "validated": true
+    },
+    {
+      "text": "请将PWM占空比设置为20%。",
+      "phase": "measure",
+      "tx_hex": "e8afb7e5b08650574de58da0e7a9bae6af94e8aebee7bdaee4b8ba323025e380820a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        80,
+        81
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,42,6,1,0,20,0,4,0,20,5886,360,6297,2,20,20,1,40500,8100,1]",
+          "data": {
+            "version": 1,
+            "case": 42,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "value": 20,
+            "decision_cycles": 5886,
+            "tool_cycles": 360,
+            "request_cycles": 6297,
+            "receipt_kind": 2,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_match": 1,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "receipt_enabled": 1
+          },
+          "received_ns": 47210502973000,
+          "wire_bytes": 70,
+          "raw_hex": "4e525f46415354205b312c34322c362c312c302c32302c302c342c302c32302c353838362c3336302c363239372c322c32302c32302c312c34303530302c383130302c315d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210502973000,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210501085500,
+      "twrite_ns": 47210501183300,
+      "tfirst_ns": 47210502932900,
+      "result": {
+        "version": 1,
+        "case": 42,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "argument": 20,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "value": 20,
+        "decision_cycles": 5886,
+        "tool_cycles": 360,
+        "request_cycles": 6297,
+        "receipt_kind": 2,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_match": 1,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "receipt_enabled": 1
+      },
+      "tframe_ns": 47210502973000,
+      "tready_ns": 47210502973000,
+      "twrite_ms": 0.0978,
+      "tfirst_ms": 1.8474,
+      "tframe_ms": 1.8875,
+      "tready_ms": 1.8875,
+      "validated": true
+    },
+    {
+      "text": "led 37",
+      "phase": "restore",
+      "tx_hex": "6c65642033370a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        82,
+        83
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,43,6,4,0,37,0,2,0,37,5195,235,5484,1,37,37,1,0,0,0]",
+          "data": {
+            "version": 1,
+            "case": 43,
+            "config": 6,
+            "selected_tool": 4,
+            "decode": 0,
+            "argument": 37,
+            "operation": 0,
+            "selection_source": 2,
+            "execute": 0,
+            "value": 37,
+            "decision_cycles": 5195,
+            "tool_cycles": 235,
+            "request_cycles": 5484,
+            "receipt_kind": 1,
+            "receipt_requested": 37,
+            "receipt_readback": 37,
+            "receipt_match": 1,
+            "receipt_period": 0,
+            "receipt_high": 0,
+            "receipt_enabled": 0
+          },
+          "received_ns": 47210504445400,
+          "wire_bytes": 63,
+          "raw_hex": "4e525f46415354205b312c34332c362c342c302c33372c302c322c302c33372c353139352c3233352c353438342c312c33372c33372c312c302c302c305d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210504445400,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 37,
+          "actual": 37,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210503050900,
+      "twrite_ns": 47210503119300,
+      "tfirst_ns": 47210504388100,
+      "result": {
+        "version": 1,
+        "case": 43,
+        "config": 6,
+        "selected_tool": 4,
+        "decode": 0,
+        "argument": 37,
+        "operation": 0,
+        "selection_source": 2,
+        "execute": 0,
+        "value": 37,
+        "decision_cycles": 5195,
+        "tool_cycles": 235,
+        "request_cycles": 5484,
+        "receipt_kind": 1,
+        "receipt_requested": 37,
+        "receipt_readback": 37,
+        "receipt_match": 1,
+        "receipt_period": 0,
+        "receipt_high": 0,
+        "receipt_enabled": 0
+      },
+      "tframe_ns": 47210504445400,
+      "tready_ns": 47210504445400,
+      "twrite_ms": 0.0684,
+      "tfirst_ms": 1.3372,
+      "tframe_ms": 1.3945,
+      "tready_ms": 1.3945,
+      "validated": true
+    },
+    {
+      "text": "pwm 20",
+      "phase": "restore",
+      "tx_hex": "70776d2032300a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        84,
+        85
+      ],
+      "events": [
+        {
+          "kind": "NR_FAST",
+          "text": "NR_FAST [1,44,6,1,0,20,0,4,0,20,5902,353,6309,2,20,20,1,40500,8100,1]",
+          "data": {
+            "version": 1,
+            "case": 44,
+            "config": 6,
+            "selected_tool": 1,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 4,
+            "execute": 0,
+            "value": 20,
+            "decision_cycles": 5902,
+            "tool_cycles": 353,
+            "request_cycles": 6309,
+            "receipt_kind": 2,
+            "receipt_requested": 20,
+            "receipt_readback": 20,
+            "receipt_match": 1,
+            "receipt_period": 40500,
+            "receipt_high": 8100,
+            "receipt_enabled": 1
+          },
+          "received_ns": 47210505992000,
+          "wire_bytes": 70,
+          "raw_hex": "4e525f46415354205b312c34342c362c312c302c32302c302c342c302c32302c353930322c3335332c363330392c322c32302c32302c312c34303530302c383130302c315d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210505992000,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [
+        {
+          "field": "selected_tool",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "execute",
+          "expected": 0,
+          "actual": 0,
+          "passed": true
+        },
+        {
+          "field": "value",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        }
+      ],
+      "t0write_ns": 47210504532500,
+      "twrite_ns": 47210504611800,
+      "tfirst_ns": 47210505940200,
+      "result": {
+        "version": 1,
+        "case": 44,
+        "config": 6,
+        "selected_tool": 1,
+        "decode": 0,
+        "argument": 20,
+        "operation": 0,
+        "selection_source": 4,
+        "execute": 0,
+        "value": 20,
+        "decision_cycles": 5902,
+        "tool_cycles": 353,
+        "request_cycles": 6309,
+        "receipt_kind": 2,
+        "receipt_requested": 20,
+        "receipt_readback": 20,
+        "receipt_match": 1,
+        "receipt_period": 40500,
+        "receipt_high": 8100,
+        "receipt_enabled": 1
+      },
+      "tframe_ns": 47210505992000,
+      "tready_ns": 47210505992000,
+      "twrite_ms": 0.0793,
+      "tfirst_ms": 1.4077,
+      "tframe_ms": 1.4595,
+      "tready_ms": 1.4595,
+      "validated": true
+    },
+    {
+      "text": ":io",
+      "phase": "final_io",
+      "tx_hex": "3a696f0a",
+      "protocol": "text",
+      "request_seq": null,
+      "rx_chunks": [
+        86,
+        87
+      ],
+      "events": [
+        {
+          "kind": "NR_IO",
+          "text": "NR_IO {\"led_mask\":37,\"pwm_period\":40500,\"pwm_high\":8100,\"pwm_enabled\":1,\"pwm_duty\":20,\"restore_supported\":1}",
+          "data": {
+            "led_mask": 37,
+            "pwm_period": 40500,
+            "pwm_high": 8100,
+            "pwm_enabled": 1,
+            "pwm_duty": 20,
+            "restore_supported": 1
+          },
+          "received_ns": 47210507970000,
+          "wire_bytes": 109,
+          "raw_hex": "4e525f494f207b226c65645f6d61736b223a33372c2270776d5f706572696f64223a34303530302c2270776d5f68696768223a383130302c2270776d5f656e61626c6564223a312c2270776d5f64757479223a32302c22726573746f72655f737570706f72746564223a317d0a"
+        },
+        {
+          "kind": "NR_READY",
+          "text": "NR_READY",
+          "received_ns": 47210507970000,
+          "wire_bytes": 9,
+          "raw_hex": "4e525f52454144590a"
+        }
+      ],
+      "validation": [],
+      "t0write_ns": 47210506080700,
+      "twrite_ns": 47210506157000,
+      "tfirst_ns": 47210507915700,
+      "io": {
+        "led_mask": 37,
+        "pwm_period": 40500,
+        "pwm_high": 8100,
+        "pwm_enabled": 1,
+        "pwm_duty": 20,
+        "restore_supported": 1
+      },
+      "tframe_ns": 47210507970000,
+      "tready_ns": 47210507970000,
+      "twrite_ms": 0.0763,
+      "tfirst_ms": 1.835,
+      "tframe_ms": 1.8893,
+      "tready_ms": 1.8893,
+      "validated": true
+    }
+  ],
+  "failures": [],
+  "settings": {
+    "baud": 921600,
+    "byte_size": 8,
+    "parity": 0,
+    "stop_bits": 0,
+    "dcb_flags": 1,
+    "read_timeouts": [
+      4294967295,
+      4294967295,
+      250
+    ],
+    "dtr": false,
+    "rts": false,
+    "handshake": "none"
+  },
+  "initial_driver_status": {
+    "error_flags": 0,
+    "input_queue": 0,
+    "output_queue": 0
+  },
+  "initial_io": {
+    "led_mask": 37,
+    "pwm_period": 40500,
+    "pwm_high": 8100,
+    "pwm_enabled": 1,
+    "pwm_duty": 20,
+    "restore_supported": 1
+  },
+  "final_io": {
+    "led_mask": 37,
+    "pwm_period": 40500,
+    "pwm_high": 8100,
+    "pwm_enabled": 1,
+    "pwm_duty": 20,
+    "restore_supported": 1
+  },
+  "io_restored": true,
+  "final_driver_status": {
+    "error_flags": 0,
+    "input_queue": 0,
+    "output_queue": 0
+  },
+  "summary": {
+    "led 37": {
+      "validated_samples": 10,
+      "metrics": {
+        "twrite_ms": {
+          "n": 10,
+          "median": 0.0933,
+          "min": 0.0685,
+          "max": 0.1573,
+          "empirical_p95_nearest_rank": 0.1573,
+          "all_samples": [
+            0.0985,
+            0.1169,
+            0.0881,
+            0.1336,
+            0.1007,
+            0.0685,
+            0.0702,
+            0.0793,
+            0.1573,
+            0.0828
+          ]
+        },
+        "tfirst_ms": {
+          "n": 10,
+          "median": 1.3427,
+          "min": 1.3227,
+          "max": 1.4111,
+          "empirical_p95_nearest_rank": 1.4111,
+          "all_samples": [
+            1.336,
+            1.3252,
+            1.3275,
+            1.3686,
+            1.3265,
+            1.3227,
+            1.391,
+            1.3494,
+            1.4111,
+            1.3517
+          ]
+        },
+        "tframe_ms": {
+          "n": 10,
+          "median": 1.3953,
+          "min": 1.3462,
+          "max": 1.4435,
+          "empirical_p95_nearest_rank": 1.4435,
+          "all_samples": [
+            1.3954,
+            1.4087,
+            1.3462,
+            1.4435,
+            1.3732,
+            1.3774,
+            1.4361,
+            1.3833,
+            1.4393,
+            1.3952
+          ]
+        },
+        "tready_ms": {
+          "n": 10,
+          "median": 1.3953,
+          "min": 1.3462,
+          "max": 1.4435,
+          "empirical_p95_nearest_rank": 1.4435,
+          "all_samples": [
+            1.3954,
+            1.4087,
+            1.3462,
+            1.4435,
+            1.3732,
+            1.3774,
+            1.4361,
+            1.3833,
+            1.4393,
+            1.3952
+          ]
+        }
+      }
+    },
+    "请读取FPGA当前温度。": {
+      "validated_samples": 10,
+      "metrics": {
+        "twrite_ms": {
+          "n": 10,
+          "median": 0.1047,
+          "min": 0.0884,
+          "max": 0.1514,
+          "empirical_p95_nearest_rank": 0.1514,
+          "all_samples": [
+            0.1085,
+            0.1514,
+            0.0895,
+            0.1066,
+            0.1038,
+            0.1145,
+            0.0884,
+            0.1034,
+            0.0999,
+            0.1056
+          ]
+        },
+        "tfirst_ms": {
+          "n": 10,
+          "median": 5.0945,
+          "min": 4.9792,
+          "max": 5.2045,
+          "empirical_p95_nearest_rank": 5.2045,
+          "all_samples": [
+            4.9987,
+            5.2045,
+            5.0815,
+            4.9857,
+            5.1075,
+            5.1753,
+            4.9792,
+            4.989,
+            5.1537,
+            5.1097
+          ]
+        },
+        "tframe_ms": {
+          "n": 10,
+          "median": 5.1555,
+          "min": 5.0244,
+          "max": 5.2842,
+          "empirical_p95_nearest_rank": 5.2842,
+          "all_samples": [
+            5.114,
+            5.2613,
+            5.1847,
+            5.0244,
+            5.1515,
+            5.2359,
+            5.0535,
+            5.0675,
+            5.2842,
+            5.1595
+          ]
+        },
+        "tready_ms": {
+          "n": 10,
+          "median": 5.1555,
+          "min": 5.0244,
+          "max": 5.2842,
+          "empirical_p95_nearest_rank": 5.2842,
+          "all_samples": [
+            5.114,
+            5.2613,
+            5.1847,
+            5.0244,
+            5.1515,
+            5.2359,
+            5.0535,
+            5.0675,
+            5.2842,
+            5.1595
+          ]
+        }
+      }
+    },
+    "PWM按20%占空比输出": {
+      "validated_samples": 10,
+      "metrics": {
+        "twrite_ms": {
+          "n": 10,
+          "median": 0.10405,
+          "min": 0.0867,
+          "max": 0.131,
+          "empirical_p95_nearest_rank": 0.131,
+          "all_samples": [
+            0.1093,
+            0.0988,
+            0.0909,
+            0.0967,
+            0.1148,
+            0.1111,
+            0.131,
+            0.0867,
+            0.0897,
+            0.1117
+          ]
+        },
+        "tfirst_ms": {
+          "n": 10,
+          "median": 4.7509,
+          "min": 4.7122,
+          "max": 4.9355,
+          "empirical_p95_nearest_rank": 4.9355,
+          "all_samples": [
+            4.9355,
+            4.7122,
+            4.7564,
+            4.8475,
+            4.7945,
+            4.7454,
+            4.7412,
+            4.7278,
+            4.7159,
+            4.8394
+          ]
+        },
+        "tframe_ms": {
+          "n": 10,
+          "median": 4.84585,
+          "min": 4.7849,
+          "max": 5.0227,
+          "empirical_p95_nearest_rank": 5.0227,
+          "all_samples": [
+            5.0227,
+            4.7862,
+            4.8268,
+            4.921,
+            4.9339,
+            4.857,
+            4.8347,
+            4.798,
+            4.7849,
+            4.8615
+          ]
+        },
+        "tready_ms": {
+          "n": 10,
+          "median": 4.84585,
+          "min": 4.7849,
+          "max": 5.0227,
+          "empirical_p95_nearest_rank": 5.0227,
+          "all_samples": [
+            5.0227,
+            4.7862,
+            4.8268,
+            4.921,
+            4.9339,
+            4.857,
+            4.8347,
+            4.798,
+            4.7849,
+            4.8615
+          ]
+        }
+      }
+    },
+    "请将PWM占空比设置为20%。": {
+      "validated_samples": 10,
+      "metrics": {
+        "twrite_ms": {
+          "n": 10,
+          "median": 0.1004,
+          "min": 0.0906,
+          "max": 0.1081,
+          "empirical_p95_nearest_rank": 0.1081,
+          "all_samples": [
+            0.1081,
+            0.0906,
+            0.1014,
+            0.1053,
+            0.1056,
+            0.0947,
+            0.1027,
+            0.0994,
+            0.0969,
+            0.0978
+          ]
+        },
+        "tfirst_ms": {
+          "n": 10,
+          "median": 1.85815,
+          "min": 1.8139,
+          "max": 1.919,
+          "empirical_p95_nearest_rank": 1.919,
+          "all_samples": [
+            1.8269,
+            1.8445,
+            1.919,
+            1.8275,
+            1.8139,
+            1.8689,
+            1.8737,
+            1.8724,
+            1.8694,
+            1.8474
+          ]
+        },
+        "tframe_ms": {
+          "n": 10,
+          "median": 1.90465,
+          "min": 1.8508,
+          "max": 1.9996,
+          "empirical_p95_nearest_rank": 1.9996,
+          "all_samples": [
+            1.8538,
+            1.865,
+            1.9996,
+            1.8508,
+            1.8769,
+            1.9218,
+            1.9255,
+            1.9293,
+            1.9505,
+            1.8875
+          ]
+        },
+        "tready_ms": {
+          "n": 10,
+          "median": 1.90465,
+          "min": 1.8508,
+          "max": 1.9996,
+          "empirical_p95_nearest_rank": 1.9996,
+          "all_samples": [
+            1.8538,
+            1.865,
+            1.9996,
+            1.8508,
+            1.8769,
+            1.9218,
+            1.9255,
+            1.9293,
+            1.9505,
+            1.8875
+          ]
+        }
+      }
+    }
+  },
+  "status": "PASS"
+}

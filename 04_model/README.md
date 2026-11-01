@@ -1,5 +1,3 @@
-> 2026-10-28当前状态：正式权重为tool_contract_20261027（seed103、24epoch），d64/2层/4头、47066B。下文早期bring-up与Stage3数值均属历史阶段，不能代替当前技术报告与实板结论。当前受控增强未采用，说明见文末。
-
 # Needle-inspired 小模型：当前板卡验证版
 
 本目录是神经模型的软件部分，CPU / XND 的 RTL 在 `01_rtl`。源码和实验均放在服务器，继续更新 current 文件，避免给每次训练另建 v1/v2/v3 文件。
@@ -82,24 +80,12 @@ C与Python所有logits的逐项对齐结果保存在 `golden/current_c_alignment
 
 上游源码保留于 `09_refs/needle`，遵循其Apache-2.0许可。此目录的训练结构与C实现是项目自己的小模型，不调用官方JAX/Flax架构或.cact运行时。
 
-## Stage 3 数据泛化模型（历史阶段，已由tool_contract替换）
+## Stage 3 数据泛化模型（当前正式采用）
 
-该历史阶段manifest标记 `stage3_generalization`。架构仍d64/两层/四头/64byte、模型常量47,066B。六类均衡3000句训练加入数字随机与#掩码、否定/不支持/多工具reject。训练前冻结的新135句/70表达模板集只在固定最后100epoch权重评价一次：原始INT4/INT8分类87/135（64.44%），策略后严格请求100/135（74.07%），Python/C定点精确135/135。它是Codex编写的合成模板评价，不是真实用户或开放中文识别率，此后已经被观察。
+当前manifest标记 `stage3_generalization`。架构仍d64/两层/四头/64byte、模型常量47,066B。六类均衡3000句训练加入数字随机与#掩码、否定/不支持/多工具reject。训练前冻结的新135句/70表达模板集只在固定最后100epoch权重评价一次：原始INT4/INT8分类87/135（64.44%），策略后严格请求100/135（74.07%），Python/C定点精确135/135。它是Codex编写的合成模板评价，不是真实用户或开放中文识别率，此后已经被观察。
 
 已观察90句开发集当前raw68/90、严格70/90；原始首轮raw49/90保存在frozen_semantic_baseline，不改原始记录。确定性拒识策略与神经网络分类分别报告。默认中文演示采用明确的训练语句“读取计数器”（margin208）；旧“我想查看计数器”（margin4）保留低置信拒绝回归，门槛仍16。
 
 正式文件仍使用train/current.pt、export/current_int4.npz、export/current_manifest.json与03_sw/model/byte_model_data.h。完整采用报告在07_runs/eval/current_generalization_report。固件、RTL性能和PDS证据由root刷新，不沿用旧权重数字。
 
 候选复现目录仅保留数据、脚本、protocol与原始初始化checkpoint。使用服务器现有CUDA Python运行 `04_model/train/train_export.py --stage3-candidate` 可复现隔离候选；该入口不会覆盖正式模型。不要把legacy默认模板训练当作stage3训练。复现后的同集评价只能作已观察开发对照。
-
-## 本次受控语料增强与实际修复（2026-10-28）
-
-保持47KB架构与生产权重不变，从正式seed103/24epoch warm-start仅做一次6epoch候选。原2352训练句加960句项目适配语料；新增192开发句按核心模板族与新增训练分开，已有80开发集作不退化门槛。99条用户语句按归一化文本排除，未运行四组来挑checkpoint，也不称新盲测。
-
-新增LED模板结构借鉴[OHF-Voice/intents](https://github.com/OHF-Voice/intents)的zh-CN HassTurnOn/name_only.yaml与HassTurnOff/name_only.yaml，遵循[CC BY4.0](https://github.com/OHF-Voice/intents/blob/main/LICENSE.md)，标明设备名替换、动词/礼貌扩写；其他域与非执行语境是助手编写的项目数据，不冒称真实用户语料。窗帘/门锁/阀门/温控/天气等按本项目能力标为拒绝。MASSIVE只核对许可与小分区可取性，端点404，未下载全包、没有用于训练。
-
-原始整数C分类：生产模型原80开发73/80、新192开发112/192。候选epoch2为65/80、126/192；epoch4为61/80、132/192；epoch6为63/80、136/192。虽新句提升，原开发明显退化，所有checkpoint均未过门槛，因此不采用。只保留一份诊断best.pt、必要来源/生成脚本/数据与报告，清掉编译中间物；不新增评审包或哈希审计。
-
-这次必要检查发现4句“给CoreMark成绩加N分”会从原始神经reject被错误救援成运行基准。已修复统一能力/语境门禁：成绩赋值、增减/倍数/伪造/指定等拒绝，真实加测/加跑与返回/查看成绩保留。旧634检查加当前相关边界，共7978项/0失败，覆盖6种强制原始类、margin0/15/16/999及真实dispatcher测试MMIO/无CoreMark误调用。权重、CPU和工具能力未变；这只是服务器软件验收，新PDS/RAM验收由主线另行执行。
-
-必要证据在07_runs/development/nlu_candidate/report.json、score_guard_first_failures.json、score_guard_real_predictions.json与score_guard_acceptance.log。参数解析/规则救援收益不计为神经准确率；解码接受率不称物理执行率。

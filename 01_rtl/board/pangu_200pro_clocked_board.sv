@@ -1,7 +1,7 @@
 // Clocked physical top; pin names stay compatible with the carrier constraints.
 `default_nettype none
 module pangu_200pro_clocked_board #(
- parameter integer CLK_HZ=40500000,
+ parameter integer CLK_HZ=54000000,
  parameter integer BAUD=921600,
  parameter INIT_FILE="firmware/model_interactive.mem",
  parameter bit HARD_ADC=1

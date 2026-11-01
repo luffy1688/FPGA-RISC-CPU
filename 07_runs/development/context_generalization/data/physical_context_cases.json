@@ -1,0 +1,227 @@
+[
+  {
+    "text": "读取FPGA温度这几个字怎么理解",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:5",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "把当前芯片结温报给我这几个字怎么理解",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:5",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "获取片内温度读数这几个字怎么理解",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:5",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "读一下板卡温度这几个字怎么理解",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:5",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "读取硬件计数器这几个字怎么理解",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:5",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "给我当前周期计数这几个字怎么理解",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:5",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "读一下CPU计数寄存器这几个字怎么理解",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:5",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "返回当前硬件计数值这几个字怎么理解",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:5",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "演示如何编写读取FPGA温度的指令",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:6",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "演示如何编写把当前芯片结温报给我的指令",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:6",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "演示如何编写获取片内温度读数的指令",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:6",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "演示如何编写读一下板卡温度的指令",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:6",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "演示如何编写读取硬件计数器的指令",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:6",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "演示如何编写给我当前周期计数的指令",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:6",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "演示如何编写读一下CPU计数寄存器的指令",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:6",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "演示如何编写返回当前硬件计数值的指令",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:6",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "确认一下之前是不是读取FPGA温度了",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:9",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "确认一下之前是不是把当前芯片结温报给我了",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:9",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "确认一下之前是不是获取片内温度读数了",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:9",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "确认一下之前是不是读一下板卡温度了",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:9",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "确认一下之前是不是读取硬件计数器了",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:9",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "确认一下之前是不是给我当前周期计数了",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:9",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "确认一下之前是不是读一下CPU计数寄存器了",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:9",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "确认一下之前是不是返回当前硬件计数值了",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 1,
+    "source": "synthetic_context_minimal_pairs",
+    "family": "heldout:wrapper:9",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  },
+  {
+    "text": "打开温度",
+    "tool": 5,
+    "execute": 1,
+    "expected_context_deny": 0,
+    "source": "MASSIVE1.1/zh-CN",
+    "family": "MASSIVE:test:weather",
+    "regression_reason": "Previous first-evaluation system false acceptance; now observed regression"
+  }
+]

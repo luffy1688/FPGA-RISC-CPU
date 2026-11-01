@@ -39,6 +39,15 @@ static int control_config(const uint8_t *line,uint32_t length,uint32_t *id) {
     if(line_is(line,length,":format full")||line_is(line,length,":format compact")) {
         compact_enabled=length==15;report_format();return 1;
     }
+    if(line_is(line,length,":worker start")) {
+        if(*(volatile uint32_t*)0x40020008u&1u){nr_puts("NR_WORKER {\"phase\":\"busy\"}\n");return 1;}
+        *(volatile uint32_t*)0x40020000u=1;
+        nr_puts("NR_WORKER {\"phase\":\"started\",\"isolated_ram_bytes\":65536}\n");return 1;
+    }
+    if(line_is(line,length,":worker status")) {
+        nr_puts("NR_WORKER {\"status\":");nr_put_u32(*(volatile uint32_t*)0x40020008u);
+        nr_puts(",\"cycles\":");nr_put_u32(*(volatile uint32_t*)0x4002000cu);nr_puts("}\n");return 1;
+    }
     if(line_is(line,length,":io")) {
         uint32_t led=NR_LED,period=NR_MMIO(0x10000038u),high=NR_MMIO(0x10000034u),enabled=NR_MMIO(0x1000003cu)&1u;
         uint32_t valid=period==NR_PWM_PERIOD_TICKS && high<=period;
@@ -193,7 +202,7 @@ int main(void) {
     nr_puts(NR_PLATFORM_CLOCK_HZ==27000000u?"experimental_position_fusion_oct30":"experimental_position_fusion_oct30");
     nr_puts(NR_MODEL_ENGRAM_ENABLED?"\",\"model_stage\":\"unicode_ngram_memory_oct29\",\"kernel_stage\":\"xnd_post_fetch_oct29\"":"\",\"model_stage\":\"tool_contract_replay_oct28\",\"kernel_stage\":\"xnd_post_fetch_oct29\"");
     nr_puts(",\"formal_fast\":1,\"neural_timing\":\"context_plus_encoder\"");field(",\"context_head\":",NR_MODEL_CONTEXT_ENABLED);field(",\"context_weights_bytes\":",NR_MODEL_CONTEXT_BYTES);field(",\"context_hidden\":",NR_MODEL_CONTEXT_HIDDEN);field(",\"context_outputs\":",NR_MODEL_CONTEXT_OUTPUTS);field(",\"intent_cascade\":",1);field(",\"semantic_calibration_revision\":",3);field(",\"position_features\":",2048);field(",\"semantic_weight_cache\":",NR_RESOURCE_CACHE_BACKEND);field(",\"sram_bytes\":",524288);field(",\"fusion_weights_bytes\":",NR_MODEL_FUSION_BYTES);field(",\"context_classes\":",9);field(",\"intent_repair\":",1);field(",\"context_xnd\":",1);field(",\"context_xnd_min_features\":",24);field(",\"semantic_memory\":",NR_MODEL_ENGRAM_ENABLED);field(",\"model_weights_bytes\":",NR_MODEL_WEIGHT_BYTES);field(",\"memory_weights_bytes\":",NR_MODEL_MEMORY_BYTES);
-    field(",\"clock_hz\":",NR_PLATFORM_CLOCK_HZ);field(",\"uart_baud\":",NR_UART_BAUD);field(",\"coremark_iterations\":",NR_COREMARK_ITERATIONS);nr_puts(",\"max_utf8_bytes\":64,\"confidence_threshold\":16");
+    field(",\"core_count\":",2);field(",\"clock_hz\":",NR_PLATFORM_CLOCK_HZ);field(",\"uart_baud\":",NR_UART_BAUD);field(",\"coremark_iterations\":",NR_COREMARK_ITERATIONS);nr_puts(",\"max_utf8_bytes\":64,\"confidence_threshold\":16");
     field(",\"tool_schema\":",2);field(",\"q_reuse\":",NR_OPT_Q_REUSE);field(",\"av4\":",NR_OPT_AV4);
     field(",\"post_fuse\":",NR_OPT_POST_FUSE);field(",\"xnd_postprocess\":",NR_OPT_XND_POSTPROCESS);field(",\"profile\":",NR_MODEL_PROFILE);nr_puts(",\"capabilities\":{\"fast\":1,\"compact\":1,\"io_snapshot\":1,\"receipt\":1,\"framed_rpc\":1,\"tool_manifest\":1}}\n");
 #if NR_MODEL_PROFILE

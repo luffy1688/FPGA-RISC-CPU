@@ -1,0 +1,4 @@
+#include <stdio.h>
+#include <string.h>
+#include "byte_tool_model.h"
+int main(void){char b[512];while(fgets(b,sizeof b,stdin)){size_t n=strlen(b);while(n&&(b[n-1]=='\n'||b[n-1]=='\r'))b[--n]=0;nr_prediction_t raw;nr_tool_request_t slow,fast;if(nr_model_predict((const uint8_t*)b,n,&raw))return 2;nr_tool_decode_prediction((const uint8_t*)b,n,&raw,&slow);int handled=nr_tool_decode_fast((const uint8_t*)b,n,&fast);if(!handled)nr_tool_decode_prediction((const uint8_t*)b,n,&raw,&fast);printf("{\"raw\":%d,\"margin\":%d,\"fast_handled\":%d,\"slow\":{\"tool\":%d,\"status\":%d,\"argument\":%d,\"operation\":%d,\"source\":%d},\"fast\":{\"tool\":%d,\"status\":%d,\"argument\":%d,\"operation\":%d,\"source\":%d}}\n",raw.tool,raw.margin,handled,slow.tool,slow.status,slow.argument,slow.operation,slow.selection_source,fast.tool,fast.status,fast.argument,fast.operation,fast.selection_source);}return 0;}

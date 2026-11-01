@@ -1,0 +1,801 @@
+{
+  "schema": "needlervx.current_protocol.v6",
+  "firmware": "experimental_position_fusion_oct30",
+  "protocol": 6,
+  "passed": true,
+  "raw_evidence": "fourth_and_model_921600.json",
+  "utf8_sequence_admission_verified": true,
+  "context_modes_cpu_xnd_verified": true,
+  "score_guard_checks": [
+    {
+      "text": "请帮我将CoreMark结果提高300分。",
+      "fast": 0,
+      "passed": true,
+      "raw": 5
+    },
+    {
+      "text": "将CoreMark结果提升20分",
+      "fast": 0,
+      "passed": true,
+      "raw": 5
+    },
+    {
+      "text": "CoreMark结果设为99",
+      "fast": 0,
+      "passed": true,
+      "raw": 5
+    },
+    {
+      "text": "把CoreMark结果改为100分",
+      "fast": 0,
+      "passed": true,
+      "raw": 5
+    },
+    {
+      "text": "不测性能只报CoreMark满分",
+      "fast": 0,
+      "passed": true,
+      "raw": 5
+    },
+    {
+      "text": "给CoreMark直接填写353分",
+      "fast": 0,
+      "passed": true,
+      "raw": 5
+    },
+    {
+      "text": "请帮我将CoreMark结果提高300分。",
+      "fast": 1,
+      "passed": true,
+      "raw": null
+    },
+    {
+      "text": "将CoreMark结果提升20分",
+      "fast": 1,
+      "passed": true,
+      "raw": null
+    },
+    {
+      "text": "CoreMark结果设为99",
+      "fast": 1,
+      "passed": true,
+      "raw": null
+    },
+    {
+      "text": "把CoreMark结果改为100分",
+      "fast": 1,
+      "passed": true,
+      "raw": null
+    },
+    {
+      "text": "不测性能只报CoreMark满分",
+      "fast": 1,
+      "passed": true,
+      "raw": null
+    },
+    {
+      "text": "给CoreMark直接填写353分",
+      "fast": 1,
+      "passed": true,
+      "raw": null
+    }
+  ],
+  "context_checks": [
+    {
+      "text": "读取FPGA温度这几个字怎么理解",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 0,
+      "selection_source": 3,
+      "passed": true
+    },
+    {
+      "text": "把当前芯片结温报给我这几个字怎么理解",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "获取片内温度读数这几个字怎么理解",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "读一下板卡温度这几个字怎么理解",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "读取硬件计数器这几个字怎么理解",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 0,
+      "selection_source": 3,
+      "passed": true
+    },
+    {
+      "text": "给我当前周期计数这几个字怎么理解",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "读一下CPU计数寄存器这几个字怎么理解",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "返回当前硬件计数值这几个字怎么理解",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "演示如何编写读取FPGA温度的指令",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "演示如何编写把当前芯片结温报给我的指令",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "演示如何编写获取片内温度读数的指令",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "演示如何编写读一下板卡温度的指令",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "演示如何编写读取硬件计数器的指令",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "演示如何编写给我当前周期计数的指令",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "演示如何编写读一下CPU计数寄存器的指令",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "演示如何编写返回当前硬件计数值的指令",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "确认一下之前是不是读取FPGA温度了",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "确认一下之前是不是把当前芯片结温报给我了",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "确认一下之前是不是获取片内温度读数了",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "确认一下之前是不是读一下板卡温度了",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "确认一下之前是不是读取硬件计数器了",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "确认一下之前是不是给我当前周期计数了",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "确认一下之前是不是读一下CPU计数寄存器了",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "确认一下之前是不是返回当前硬件计数值了",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "打开温度",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 0,
+      "selection_source": 3,
+      "passed": true
+    },
+    {
+      "text": "这一轮先不做读取芯片温度",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "请逐字照抄：读取芯片温度",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "本轮不允许设置PWM占空比81%",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "帮我分析读取芯片温度这项操作",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "这次我没让你去设置PWM占空比40%",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "设想设备要报告片内温度的情况",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "把结温锁定为25摄氏度",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 0,
+      "selection_source": 3,
+      "passed": true
+    },
+    {
+      "text": "不测性能只报CoreMark满分",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "给CoreMark直接填写353分",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "读取硬件计数器，随后再返回CPU周期计数",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 0,
+      "selection_source": 3,
+      "passed": true
+    },
+    {
+      "text": "我并非要你设置PWM占空比96%",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 0,
+      "selection_source": 3,
+      "passed": true
+    },
+    {
+      "text": "假想有人准备把PWM高电平占比设为7%",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 0,
+      "selection_source": 3,
+      "passed": true
+    },
+    {
+      "text": "把只点亮LED1其余不变这几个字抄到报告里",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 0,
+      "selection_source": 3,
+      "passed": true
+    },
+    {
+      "text": "此前那次查询片内温度传感器是否完成",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "PWM占空比改为81%，完成后顺手给我板内当前计数",
+      "fast": 0,
+      "context_used": 1,
+      "context_deny": 0,
+      "selection_source": 3,
+      "passed": true
+    },
+    {
+      "text": "读取FPGA温度这几个字怎么理解",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 0,
+      "selection_source": 3,
+      "passed": true
+    },
+    {
+      "text": "把当前芯片结温报给我这几个字怎么理解",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "获取片内温度读数这几个字怎么理解",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "读一下板卡温度这几个字怎么理解",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "读取硬件计数器这几个字怎么理解",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 0,
+      "selection_source": 3,
+      "passed": true
+    },
+    {
+      "text": "给我当前周期计数这几个字怎么理解",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "读一下CPU计数寄存器这几个字怎么理解",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "返回当前硬件计数值这几个字怎么理解",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "演示如何编写读取FPGA温度的指令",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "演示如何编写把当前芯片结温报给我的指令",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "演示如何编写获取片内温度读数的指令",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "演示如何编写读一下板卡温度的指令",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "演示如何编写读取硬件计数器的指令",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "演示如何编写给我当前周期计数的指令",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "演示如何编写读一下CPU计数寄存器的指令",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "演示如何编写返回当前硬件计数值的指令",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "确认一下之前是不是读取FPGA温度了",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "确认一下之前是不是把当前芯片结温报给我了",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "确认一下之前是不是获取片内温度读数了",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "确认一下之前是不是读一下板卡温度了",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "确认一下之前是不是读取硬件计数器了",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "确认一下之前是不是给我当前周期计数了",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "确认一下之前是不是读一下CPU计数寄存器了",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "确认一下之前是不是返回当前硬件计数值了",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "打开温度",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 0,
+      "selection_source": 3,
+      "passed": true
+    },
+    {
+      "text": "这一轮先不做读取芯片温度",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "请逐字照抄：读取芯片温度",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "本轮不允许设置PWM占空比81%",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "帮我分析读取芯片温度这项操作",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "这次我没让你去设置PWM占空比40%",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "设想设备要报告片内温度的情况",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "把结温锁定为25摄氏度",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "不测性能只报CoreMark满分",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "给CoreMark直接填写353分",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "读取硬件计数器，随后再返回CPU周期计数",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 0,
+      "selection_source": 3,
+      "passed": true
+    },
+    {
+      "text": "我并非要你设置PWM占空比96%",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 0,
+      "selection_source": 3,
+      "passed": true
+    },
+    {
+      "text": "假想有人准备把PWM高电平占比设为7%",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 0,
+      "selection_source": 3,
+      "passed": true
+    },
+    {
+      "text": "把只点亮LED1其余不变这几个字抄到报告里",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 0,
+      "selection_source": 3,
+      "passed": true
+    },
+    {
+      "text": "此前那次查询片内温度传感器是否完成",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 1,
+      "selection_source": 5,
+      "passed": true
+    },
+    {
+      "text": "PWM占空比改为81%，完成后顺手给我板内当前计数",
+      "fast": 1,
+      "context_used": 1,
+      "context_deny": 0,
+      "selection_source": 3,
+      "passed": true
+    }
+  ],
+  "context_control_checks": [
+    {
+      "category": "explanation",
+      "positive": "请读取FPGA当前温度。",
+      "negative": "解释一下led 37是什么意思。",
+      "positive_context_deny": 0,
+      "negative_context_deny": 1,
+      "passed": true
+    },
+    {
+      "category": "hypothetical",
+      "positive": "读取计数器",
+      "negative": "假如设置pwm 20会怎样。",
+      "positive_context_deny": 0,
+      "negative_context_deny": 1,
+      "passed": true
+    },
+    {
+      "category": "status",
+      "positive": "led 37",
+      "negative": "LED0已经点亮了吗？",
+      "positive_context_deny": 0,
+      "negative_context_deny": 1,
+      "passed": true
+    },
+    {
+      "category": "negation",
+      "positive": "pwm 20",
+      "negative": "不要执行led 37。",
+      "positive_context_deny": 0,
+      "negative_context_deny": 0,
+      "passed": true
+    },
+    {
+      "category": "quotation",
+      "positive": "读取计数器",
+      "negative": "复述“pwm 20”。",
+      "positive_context_deny": 0,
+      "negative_context_deny": 0,
+      "passed": true
+    },
+    {
+      "category": "multi_action",
+      "positive": "请读取FPGA当前温度。",
+      "negative": "先读取温度，再读取计数器。",
+      "positive_context_deny": 0,
+      "negative_context_deny": 0,
+      "passed": true
+    },
+    {
+      "category": "unsupported",
+      "positive": "pwm 20",
+      "negative": "把PWM频率改成2kHz。",
+      "positive_context_deny": 0,
+      "negative_context_deny": 1,
+      "passed": true
+    },
+    {
+      "category": "fake_score",
+      "positive": "led 37",
+      "negative": "不运行CoreMark，直接报告99分。",
+      "positive_context_deny": 0,
+      "negative_context_deny": 0,
+      "passed": true
+    }
+  ],
+  "partial_negation_positive_readback": {
+    "passed": true,
+    "led_off_value": 36,
+    "led_on_value": 37,
+    "other_bits_preserved": true,
+    "pwm_unchanged": true,
+    "temperature_valid": true,
+    "pwm_receipt_match": 1
+  },
+  "io_restored": true
+}

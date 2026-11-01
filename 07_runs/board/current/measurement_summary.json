@@ -1,0 +1,277 @@
+{
+  "firmware": "experimental_position_fusion_oct30",
+  "protocol": 6,
+  "native_request_ready_ms": {
+    "text": {
+      "led 37": {
+        "n": 10,
+        "median": 1.3953,
+        "min": 1.3462,
+        "max": 1.4435,
+        "empirical_p95_nearest_rank": 1.4435,
+        "all_samples": [
+          1.3954,
+          1.4087,
+          1.3462,
+          1.4435,
+          1.3732,
+          1.3774,
+          1.4361,
+          1.3833,
+          1.4393,
+          1.3952
+        ]
+      },
+      "请读取FPGA当前温度。": {
+        "n": 10,
+        "median": 5.1555,
+        "min": 5.0244,
+        "max": 5.2842,
+        "empirical_p95_nearest_rank": 5.2842,
+        "all_samples": [
+          5.114,
+          5.2613,
+          5.1847,
+          5.0244,
+          5.1515,
+          5.2359,
+          5.0535,
+          5.0675,
+          5.2842,
+          5.1595
+        ]
+      },
+      "PWM按20%占空比输出": {
+        "n": 10,
+        "median": 4.84585,
+        "min": 4.7849,
+        "max": 5.0227,
+        "empirical_p95_nearest_rank": 5.0227,
+        "all_samples": [
+          5.0227,
+          4.7862,
+          4.8268,
+          4.921,
+          4.9339,
+          4.857,
+          4.8347,
+          4.798,
+          4.7849,
+          4.8615
+        ]
+      },
+      "请将PWM占空比设置为20%。": {
+        "n": 10,
+        "median": 1.90465,
+        "min": 1.8508,
+        "max": 1.9996,
+        "empirical_p95_nearest_rank": 1.9996,
+        "all_samples": [
+          1.8538,
+          1.865,
+          1.9996,
+          1.8508,
+          1.8769,
+          1.9218,
+          1.9255,
+          1.9293,
+          1.9505,
+          1.8875
+        ]
+      }
+    },
+    "framed": {
+      "led 37": {
+        "n": 10,
+        "median": 1.62615,
+        "min": 1.5987,
+        "max": 1.6794,
+        "empirical_p95_nearest_rank": 1.6794,
+        "all_samples": [
+          1.6418,
+          1.6207,
+          1.6282,
+          1.611,
+          1.6213,
+          1.6241,
+          1.5987,
+          1.6314,
+          1.6794,
+          1.6306
+        ]
+      },
+      "请读取FPGA当前温度。": {
+        "n": 10,
+        "median": 4.9527,
+        "min": 4.9089,
+        "max": 5.0335,
+        "empirical_p95_nearest_rank": 5.0335,
+        "all_samples": [
+          4.9238,
+          4.9811,
+          4.9508,
+          4.9089,
+          4.9241,
+          4.9546,
+          5.0335,
+          5.0292,
+          4.9833,
+          4.9187
+        ]
+      },
+      "PWM按20%占空比输出": {
+        "n": 10,
+        "median": 4.63735,
+        "min": 4.5848,
+        "max": 4.7128,
+        "empirical_p95_nearest_rank": 4.7128,
+        "all_samples": [
+          4.7128,
+          4.6408,
+          4.6146,
+          4.6951,
+          4.7081,
+          4.6407,
+          4.5848,
+          4.6127,
+          4.634,
+          4.6229
+        ]
+      },
+      "请将PWM占空比设置为20%。": {
+        "n": 10,
+        "median": 2.0966500000000003,
+        "min": 2.0788,
+        "max": 2.1659,
+        "empirical_p95_nearest_rank": 2.1659,
+        "all_samples": [
+          2.1028,
+          2.0788,
+          2.1337,
+          2.1659,
+          2.096,
+          2.0796,
+          2.0863,
+          2.1291,
+          2.083,
+          2.0973
+        ]
+      }
+    }
+  },
+  "native_scope": "Win32 WriteFile entry to actual READY receive; includes USB/host scheduling, excludes browser rendering. Each sentence n=10. Nearest-rank P95 with n=10 is the maximum and unstable.",
+  "same_image_model_comparison": {
+    "software_cycles": 7043041,
+    "xnd_cycles": 410531,
+    "speedup": 17.155929759263003,
+    "logits_equal": true
+  },
+  "same_image_semantic_backend_comparison": {
+    "software_cycles": 40466391,
+    "xnd_cycles": 3019968,
+    "speedup": 13.399609201157098,
+    "all_scores_equal": true,
+    "software_context_cycles": 127064,
+    "xnd_context_cycles": 33913,
+    "context_hardware": {
+      "loads": 0,
+      "jobs": 1,
+      "dma_read_bytes": 0,
+      "dma_write_bytes": 0,
+      "engine_cycles": 5344,
+      "failures": 0
+    },
+    "expected_hardware_contract": {
+      "hidden": 64,
+      "outputs": 16,
+      "jobs": 1,
+      "weight_cache_bytes": 131072,
+      "macs_max": 132096
+    },
+    "score_fields_compared": [
+      "logits",
+      "encoder_logits",
+      "context_logits",
+      "context_category_logits",
+      "intent_delta",
+      "context_tool_logits",
+      "intent_cascade_delta",
+      "fusion_delta",
+      "fusion_used",
+      "fusion_gate_margin"
+    ],
+    "shape_source": "Actual NR_BUILD from this successful RAM bootstrap"
+  },
+  "coremark_runs": [
+    {
+      "iterations": 1200,
+      "cycles": 590699515,
+      "seconds": 14.585173209876544,
+      "coremark_per_mhz": 2.03148973298209,
+      "crc": {
+        "seedcrc": "e9f5",
+        "crclist": "e714",
+        "crcmatrix": "1fd7",
+        "crcstate": "8e3a",
+        "crcfinal": "988c"
+      }
+    },
+    {
+      "iterations": 1200,
+      "cycles": 590699503,
+      "seconds": 14.585172913580246,
+      "coremark_per_mhz": 2.0314897742515963,
+      "crc": {
+        "seedcrc": "e9f5",
+        "crclist": "e714",
+        "crcmatrix": "1fd7",
+        "crcstate": "8e3a",
+        "crcfinal": "988c"
+      }
+    },
+    {
+      "iterations": 1200,
+      "cycles": 590699475,
+      "seconds": 14.585172222222223,
+      "coremark_per_mhz": 2.031489870547117,
+      "crc": {
+        "seedcrc": "e9f5",
+        "crclist": "e714",
+        "crcmatrix": "1fd7",
+        "crcstate": "8e3a",
+        "crcfinal": "988c"
+      }
+    },
+    {
+      "iterations": 1200,
+      "cycles": 590699486,
+      "seconds": 14.58517249382716,
+      "coremark_per_mhz": 2.0314898327167326,
+      "crc": {
+        "seedcrc": "e9f5",
+        "crclist": "e714",
+        "crcmatrix": "1fd7",
+        "crcstate": "8e3a",
+        "crcfinal": "988c"
+      }
+    }
+  ],
+  "resources": {
+    "lut": 19456,
+    "ff": 19116,
+    "drm36_equivalent": 292.5,
+    "apm": 33.0,
+    "adc": 1.0,
+    "gpll": 1.0,
+    "distributed_ram": 148
+  },
+  "sta": {
+    "all_constraints_met": true,
+    "setup_slow_ns": 1.901,
+    "hold_slow_ns": 0.147,
+    "setup_fast_ns": 11.214,
+    "hold_fast_ns": 0.102,
+    "failing_endpoints": 0,
+    "fmax_measured": false
+  }
+}

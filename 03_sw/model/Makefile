@@ -1,33 +1,35 @@
 .RECIPEPREFIX := |
 SHELL := /bin/bash
 .SHELLFLAGS := -e -o pipefail -c
-ROOT := /work/LUO/NeedleRV-X
+ROOT ?= $(abspath $(dir $(lastword $(MAKEFILE_LIST)))/../..)
 TOOLCHAIN ?= /opt/Andestech/toolchains/nds32le-elf-mculib-v5/bin/riscv32-unknown-elf-
-OUT ?= $(ROOT)/07_runs/model
-CPU_HZ ?= 40500000
+OUT ?= $(ROOT)/07_runs/model/dual/primary
+CPU_HZ ?= 54000000
 UART_BAUD ?= 921600
-CORE_ITERATIONS ?= 1200
-CFLAGS := -DNR_PLATFORM_CLOCK_HZ=$(CPU_HZ) -DNR_UART_BAUD=$(UART_BAUD) -DNR_COREMARK_ITERATIONS=$(CORE_ITERATIONS) -march=rv32im_zicsr_zifencei -mabi=ilp32 -mstrict-align -O2 -std=c99 -Wall -Wextra -Werror -ffreestanding -fno-builtin -fno-common -ffunction-sections -fdata-sections -nostdlib -nostartfiles
+CORE_ITERATIONS ?= 3000
+CFLAGS := -DNR_PLATFORM_CLOCK_HZ=$(CPU_HZ) -DNR_UART_BAUD=$(UART_BAUD) -DNR_COREMARK_ITERATIONS=$(CORE_ITERATIONS) -march=rv32im_zicsr_zifencei -mabi=ilp32 -mstrict-align -O2 -std=c99 -Wall -Wextra -Werror -ffreestanding -fno-builtin -fno-common -ffunction-sections -fdata-sections -nostdlib -nostartfiles -I$(ROOT)/03_sw/model
 MODEL_FLAGS ?= -DNR_OPT_Q_REUSE=1 -DNR_OPT_AV4=1 -DNR_OPT_POST_FUSE=1 -DNR_OPT_SCORE_CACHE=1 -DNR_OPT_V_CACHE=1 -DNR_MODEL_PROFILE=0 -DNR_OPT_XND_POSTPROCESS=1
 CORE_DIR := $(ROOT)/09_refs/coremark
 CORE_NAMES := core_main core_list_join core_matrix core_state core_util core_portme core_portme_print
 CORE_OBJ := $(addprefix $(OUT)/coremark/,$(addsuffix .o,$(CORE_NAMES)))
-CORE_FLAGS := $(filter-out -Wall -Wextra -Werror,$(CFLAGS)) -I../coremark -I$(CORE_DIR) -DNR_COREMARK_LIBRARY=1 -DPERFORMANCE_RUN=1 -DITERATIONS=$(CORE_ITERATIONS) -DCPU_HZ=$(CPU_HZ) -DTOTAL_DATA_SIZE=2000 -DFLAGS_STR='"RV32IM O2 library $(CORE_ITERATIONS) iterations"'
+CORE_CC ?= /work/LUO/toolchains/gcc15-build/gcc/xgcc -B/work/LUO/toolchains/gcc15-build/gcc/
+CORE_OPTIONS := $(filter-out -O2 -march=rv32im_zicsr_zifencei -Wall -Wextra -Werror,$(CFLAGS)) -march=rv32im_zicsr_zifencei_zba_zbb_zbc_zbs_zicond -O3 -funroll-all-loops -mtune=rocket -DNR_COREMARK_LIBRARY=1 -DPERFORMANCE_RUN=1 -DITERATIONS=$(CORE_ITERATIONS) -DCPU_HZ=$(CPU_HZ) -DTOTAL_DATA_SIZE=2000
+CORE_FLAGS := $(CORE_OPTIONS) -I../coremark -I$(CORE_DIR) -DFLAGS_STR='"$(CORE_OPTIONS)"' 
 SRC := startup.S main.c coremark_tool.c tensor_plan.c byte_tool_model.c byte_tool_xnd.c semantic_xnd.c semantic_cached.c tool_dispatch.c link_protocol.c ../platform/needle_platform.c
 .PHONY: all host alignment simulator simulate
 all: $(OUT)/selftest.mem $(OUT)/interactive.mem
 $(OUT)/coremark/%.o: $(CORE_DIR)/%.c ../coremark/core_portme.h Makefile $(OUT)/build_config
 |mkdir -p $(OUT)/coremark
-|$(TOOLCHAIN)gcc $(CORE_FLAGS) $(if $(filter core_main,$*),-Dmain=nr_coremark_entry,) -c $< -o $@
+|$(CORE_CC) $(CORE_FLAGS) $(if $(filter core_main,$*),-Dmain=nr_coremark_entry,) -c $< -o $@
 $(OUT)/coremark/core_portme.o: ../coremark/core_portme.c ../coremark/core_portme.h ../coremark/fixed_ratio.h ../platform/needle_pmu.h Makefile $(OUT)/build_config
 |mkdir -p $(OUT)/coremark
-|$(TOOLCHAIN)gcc $(CORE_FLAGS) -c $< -o $@
+|$(CORE_CC) $(CORE_FLAGS) -c $< -o $@
 $(OUT)/coremark/core_portme_print.o: ../coremark/core_portme_print.c ../coremark/core_portme.h Makefile $(OUT)/build_config
 |mkdir -p $(OUT)/coremark
-|$(TOOLCHAIN)gcc $(CORE_FLAGS) -c $< -o $@
+|$(CORE_CC) $(CORE_FLAGS) -c $< -o $@
 $(OUT)/%.elf: $(CORE_OBJ) $(SRC) byte_tool_model.h byte_tool_xnd.h semantic_xnd.h semantic_cached.h byte_model_data.h byte_engram_data.h byte_engram.c.inc byte_context_data.h byte_semantic_data.h byte_context.c.inc byte_fusion.c.inc tool_dispatch.h ../platform/needle_platform.h ../platform/needle_pmu.h ../bringup/linker.ld ../xnd_runtime/xnd_mmio.h Makefile $(OUT)/build_config
 |mkdir -p $(dir $@)
-|$(TOOLCHAIN)gcc $(CFLAGS) $(MODEL_FLAGS) $(if $(filter selftest,$*),-DNR_MODEL_SELFTEST=1,) -I../coremark -I$(CORE_DIR) -T ../bringup/linker.ld $(SRC) $(CORE_OBJ) -Wl,--gc-sections,-Map,$(OUT)/$*.map -lgcc -o $@
+|$(TOOLCHAIN)gcc $(CFLAGS) $(MODEL_FLAGS) $(if $(filter selftest,$*),-DNR_MODEL_SELFTEST=1,) -I../coremark -I$(CORE_DIR) -T $(ROOT)/03_sw/model/linker.ld $(SRC) $(CORE_OBJ) -Wl,--gc-sections,-Map,$(OUT)/$*.map -lgcc -o $@
 |$(TOOLCHAIN)size $@
 $(OUT)/%.mem: $(OUT)/%.elf
 |$(TOOLCHAIN)objcopy -O binary $< $(OUT)/$*.bin
@@ -39,7 +41,7 @@ host:
 alignment: host
 |cd $(ROOT) && python3 04_model/golden/compare_c_reference.py
 simulator:
-|cd $(ROOT) && verilator --cc --exe --build -j 2 --top-module needle_soc -CFLAGS "-DNR_SIM_CLK_HZ=$(CPU_HZ) -DNR_SIM_BAUD=1000000" -GCLK_HZ=$(CPU_HZ) -GBAUD=1000000 '-GINIT_FILE="07_runs/model/current.mem"' -Wno-UNUSEDSIGNAL -Wno-UNUSEDPARAM -Wno-PINCONNECTEMPTY --Mdir 07_runs/model/obj_soc 01_rtl/cpu/*.sv 01_rtl/mem/*.sv 01_rtl/periph/*.sv 01_rtl/xnd/*.sv 01_rtl/soc/needle_soc.sv "$(abspath $(ROOT)/05_tools/sim/soc_run.cpp)"
+|cd $(ROOT) && verilator --cc --exe --build -j 2 --top-module needle_soc -CFLAGS "-DNR_SIM_CLK_HZ=$(CPU_HZ) -DNR_SIM_BAUD=1000000" -GCLK_HZ=$(CPU_HZ) -GBAUD=1000000 '-GINIT_FILE="07_runs/model/current.mem"' -Wno-UNUSEDSIGNAL -Wno-UNUSEDPARAM -Wno-PINCONNECTEMPTY --Mdir 07_runs/model/obj_soc 01_rtl/cpu/*.sv 01_rtl/mem/*.sv 01_rtl/periph/*.sv 01_rtl/xnd/*.sv 01_rtl/soc/*.sv "$(abspath $(ROOT)/05_tools/sim/soc_run.cpp)"
 simulate: all simulator host
 |cp $(OUT)/selftest.mem $(OUT)/current.mem
 |(cd $(ROOT) && 07_runs/model/obj_soc/Vneedle_soc MODEL_DONE 2000000000) | tee $(OUT)/selftest.log

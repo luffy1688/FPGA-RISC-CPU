@@ -13,8 +13,8 @@ ee_u32 default_num_contexts=1;
 static ee_u32 t0,t1;
 static nr_pmu_t pmu_begin,pmu_end;
 static ee_u32 cycle_lo(void) { ee_u32 v; __asm__ volatile("csrr %0,cycle":"=r"(v)); return v; }
-void start_time(void) { nr_pmu_snapshot(&pmu_begin); t0=cycle_lo(); }
-void stop_time(void) { t1=cycle_lo(); nr_pmu_snapshot(&pmu_end); }
+void start_time(void) { while(*(volatile ee_u32*)0x40020008u&1u){} *(volatile ee_u32*)0x40020000u=1; nr_pmu_snapshot(&pmu_begin); t0=cycle_lo(); }
+void stop_time(void) { t1=cycle_lo(); nr_pmu_snapshot(&pmu_end); *(volatile ee_u32*)0x40020004u=1; }
 CORE_TICKS get_time(void) { return (ee_u32)(t1-t0); }
 secs_ret time_in_secs(CORE_TICKS ticks) { return ticks/CPU_HZ; }
 void portable_init(core_portable *p,int *argc,char *argv[]) {
@@ -49,6 +49,12 @@ void portable_fini(core_portable *p) {
             "\"branches\":%u,\"redirect_misses\":%u,\"mem_load_stall_cycles\":%u,"
             "\"ic_misses\":%u,\"dc_misses\":%u}\n",
             d.cycles,d.instret,d.branches,d.redirect_misses,d.mem_load_stall_cycles,d.ic_misses,d.dc_misses);
+  {
+    volatile ee_u32 *w=(volatile ee_u32*)0x40020000u;
+    while(!(w[2]&2u)){}
+    ee_printf("NR_WORKER_CRC seedcrc=%08x crclist=%08x crcmatrix=%08x crcstate=%08x crcfinal=%08x validated=%u\n",w[8],w[9],w[10],w[11],w[12],w[5]);
+    ee_printf("NR_DUAL_COREMARK cores=2 mode=independent_instances primary_iterations=%u worker_iterations=%u primary_cycles=%u worker_cycles=%u span_cycles=%u worker_validated=%u worker_fault=%u\n",(ee_u32)seed4_volatile,w[4],get_time(),w[3],w[6],w[5],(w[2]>>2)&1u);
+  }
   // GPIO completion marker is observable by real board and simulation alike.
 #if defined(NR_COREMARK_LIBRARY)
   ee_printf("NR_COREMARK_RETURN\n");

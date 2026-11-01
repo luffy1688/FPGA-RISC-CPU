@@ -1,0 +1,231 @@
+{
+  "scope": "Read-only capacityandimplementationproposal; doesnotchangePDS/model/RTL orclaimaccuracygains",
+  "local_pds": "07_runs/development/semantic_branch/place_route/pangu_200pro_clocked_board.prr",
+  "local_sta": "07_runs/development/semantic_branch/report_timing/pangu_200pro_clocked_board.rtr",
+  "map": "07_runs/development/context_generalization/semantic_final/firmware/interactive.map",
+  "resources": {
+    "lut": {
+      "used": 16296,
+      "total": 159800,
+      "free": 143504
+    },
+    "ff": {
+      "used": 17801,
+      "total": 319600,
+      "free": 301799
+    },
+    "apm": {
+      "used": 25,
+      "total": 740,
+      "free": 715
+    },
+    "drm36_equivalent": {
+      "used": 130,
+      "total": 415,
+      "free": 285
+    }
+  },
+  "bram": {
+    "unit_bits": 36864,
+    "total_raw_KiB": 1867.5,
+    "used_raw_KiB": 585,
+    "free_raw_KiB": 1282.5,
+    "warning": "Rawblockbitsincludeparityandmodefragmentation,notdirectlyallocatablemainmemory",
+    "current_payload_main_KiB": 256,
+    "current_main_drm36": 128,
+    "current_cache_drm36": 2,
+    "primitive_counts": {
+      "main_GTP_DRM36K_E1": 128,
+      "cache_GTP_DRM18K_E1": 4
+    },
+    "same_mapping_estimates": [
+      {
+        "main_KiB": 512,
+        "estimated_drm36_with_current_caches": 258,
+        "fits_total": true
+      },
+      {
+        "main_KiB": 1024,
+        "estimated_drm36_with_current_caches": 514,
+        "fits_total": false
+      }
+    ],
+    "effective_added_payload_at_current_mapping_KiB": 570,
+    "one_MiB_note": "Notfeasibleusingcurrentinferredmapping; potentialafterRAMmode/replicationoptimizationneedsindependentPDSproof,notanabsolutechipcapacityprohibition"
+  },
+  "current_map_symbols": {
+    "__bss_end": 121408,
+    "__stack_bottom": 122880,
+    "__ai_const_start": 131072,
+    "__ai_const_end": 159056,
+    "__ai_scratch_start": 159056,
+    "__ai_scratch_used_end": 186800
+  },
+  "current_ai_used_bytes": 55728,
+  "current_ai_free_bytes": 75344,
+  "cpu_stack_reserved_bytes": 8192,
+  "cpu_free_before_stack": 1472,
+  "model_sizes": [
+    {
+      "hidden": 16,
+      "context_and_repair_constant_bytes": 21832,
+      "first_layer_weight_bytes": 16384,
+      "all_model_weight_bytes": 81698,
+      "additional_const_vs16": 0,
+      "semantic_module_additional_scratch_bytes": 0,
+      "estimated_ai_free_bytes": 75344,
+      "fits_current_ai": true,
+      "scope": "Weight/callbackbuffercapacity only; trainingqualityandfullkernel/linkmustbeverified; standalonecallbackcurrentlyMAXhidden32"
+    },
+    {
+      "hidden": 32,
+      "context_and_repair_constant_bytes": 38456,
+      "first_layer_weight_bytes": 32768,
+      "all_model_weight_bytes": 98322,
+      "additional_const_vs16": 16624,
+      "semantic_module_additional_scratch_bytes": 0,
+      "estimated_ai_free_bytes": 58720,
+      "fits_current_ai": true,
+      "scope": "Weight/callbackbuffercapacity only; trainingqualityandfullkernel/linkmustbeverified; standalonecallbackcurrentlyMAXhidden32"
+    },
+    {
+      "hidden": 64,
+      "context_and_repair_constant_bytes": 71704,
+      "first_layer_weight_bytes": 65536,
+      "all_model_weight_bytes": 131570,
+      "additional_const_vs16": 49872,
+      "semantic_module_additional_scratch_bytes": 544,
+      "estimated_ai_free_bytes": 24928,
+      "fits_current_ai": true,
+      "scope": "Weight/callbackbuffercapacity only; trainingqualityandfullkernel/linkmustbeverified; standalonecallbackcurrentlyMAXhidden32"
+    },
+    {
+      "hidden": 128,
+      "context_and_repair_constant_bytes": 138200,
+      "first_layer_weight_bytes": 131072,
+      "all_model_weight_bytes": 198066,
+      "additional_const_vs16": 116368,
+      "semantic_module_additional_scratch_bytes": 1632,
+      "estimated_ai_free_bytes": -42656,
+      "fits_current_ai": false,
+      "scope": "Weight/callbackbuffercapacity only; trainingqualityandfullkernel/linkmustbeverified; standalonecallbackcurrentlyMAXhidden32"
+    }
+  ],
+  "bandwidth": {
+    "final16_MACs": 16560,
+    "four_lane_MAC_lower_bound_cycles": 4140,
+    "actual_engine_cycles_approx": 9290,
+    "actual_read_dma_bytes": 17600,
+    "actual_write_dma_bytes": 300,
+    "read_words32": 4400,
+    "effective_MACs_per_engine_cycle": 1.782561894510226,
+    "four_lane_utilization": 0.4456404736275565,
+    "warning": "AddinglaneswithoutwiderweightbandwidthorresidentweightbanksdoesnotremoveDMAwaits"
+  },
+  "cache_options": [
+    {
+      "first_layer_cache_KiB": 16,
+      "serves_hidden": 16,
+      "bank_options": [
+        8,
+        16
+      ],
+      "estimated_drm36_equivalent_min": 4,
+      "estimated_drm36_for16_independent_banks": 8
+    },
+    {
+      "first_layer_cache_KiB": 64,
+      "serves_hidden": 64,
+      "bank_options": [
+        8,
+        16
+      ],
+      "estimated_drm36_equivalent_min": 16
+    }
+  ],
+  "cache_warning": "BRAMpacking/bankingestimates,notmappedresources;cacheonlyW1,smallW2/biascontinuetoDMA/CPU;coldfillandwarmrequestmustbereportedseparately",
+  "recommended_order": [
+    "Retainaccepted16baseline;train32/64usingclass/contextbalancedgatesandfrozenfirstevaluation",
+    "Resident16/64KiBW1cacheplus8bank/8laneindependentRTLpilot; comparecold/warmcycles,errorandbitexactoutputs",
+    "Onlyif128hiddenprovesbetter,expandsharedRAMto512KiBtotal;modifyaddressmap,linker,XNDwindow,cacheboundariesandboardSTA together"
+  ],
+  "external_DDR": {
+    "board_manual": "MES2L676-200HP硬件使用手册_v1.2.pdf",
+    "physical_capacity_GiB": 1,
+    "current_implementation_status": "NotclaimedusablebythisBRAMbaseline;DDRIP/PHY/calibration/arbiterverificationseparate"
+  },
+  "shape_bandwidth_budget": [
+    {
+      "hidden": 16,
+      "macs": 16560,
+      "dma_read_bytes": 17600,
+      "dma_write_bytes": 300,
+      "current_engine_cycles_from_two_shape_linear_fit": 9285.0,
+      "current_engine_ms_estimated": 0.22925925925925925,
+      "profile_status": "16/32shapeobserved;64/128extrapolationnotmeasured",
+      "four_lane_compute_lower_bound_cycles": 4140.0,
+      "eight_lane_compute_lower_bound_cycles": 2070.0,
+      "sixteen_lane_compute_lower_bound_cycles": 1035.0,
+      "shared32bit_two_cycle_read_floor": 8800.0,
+      "comparison_warning": "Computeonlyboundisnotfullrequestlatency;currentsharedDMAreadflooralreadylargerthan4laneMACfloor,somorelanesalonecannotachievethecomputeonlybound"
+    },
+    {
+      "hidden": 32,
+      "macs": 33120,
+      "dma_read_bytes": 34176,
+      "dma_write_bytes": 556,
+      "current_engine_cycles_from_two_shape_linear_fit": 17769.0,
+      "current_engine_ms_estimated": 0.43874074074074076,
+      "profile_status": "16/32shapeobserved;64/128extrapolationnotmeasured",
+      "four_lane_compute_lower_bound_cycles": 8280.0,
+      "eight_lane_compute_lower_bound_cycles": 4140.0,
+      "sixteen_lane_compute_lower_bound_cycles": 2070.0,
+      "shared32bit_two_cycle_read_floor": 17088.0,
+      "comparison_warning": "Computeonlyboundisnotfullrequestlatency;currentsharedDMAreadflooralreadylargerthan4laneMACfloor,somorelanesalonecannotachievethecomputeonlybound"
+    },
+    {
+      "hidden": 64,
+      "macs": 66240,
+      "dma_read_bytes": 67328,
+      "dma_write_bytes": 1068,
+      "current_engine_cycles_from_two_shape_linear_fit": 34737.0,
+      "current_engine_ms_estimated": 0.8577037037037037,
+      "profile_status": "16/32shapeobserved;64/128extrapolationnotmeasured",
+      "four_lane_compute_lower_bound_cycles": 16560.0,
+      "eight_lane_compute_lower_bound_cycles": 8280.0,
+      "sixteen_lane_compute_lower_bound_cycles": 4140.0,
+      "shared32bit_two_cycle_read_floor": 33664.0,
+      "comparison_warning": "Computeonlyboundisnotfullrequestlatency;currentsharedDMAreadflooralreadylargerthan4laneMACfloor,somorelanesalonecannotachievethecomputeonlybound"
+    },
+    {
+      "hidden": 128,
+      "macs": 132480,
+      "dma_read_bytes": 133632,
+      "dma_write_bytes": 2092,
+      "current_engine_cycles_from_two_shape_linear_fit": 68673.0,
+      "current_engine_ms_estimated": 1.6956296296296296,
+      "profile_status": "16/32shapeobserved;64/128extrapolationnotmeasured",
+      "four_lane_compute_lower_bound_cycles": 33120.0,
+      "eight_lane_compute_lower_bound_cycles": 16560.0,
+      "sixteen_lane_compute_lower_bound_cycles": 8280.0,
+      "shared32bit_two_cycle_read_floor": 66816.0,
+      "comparison_warning": "Computeonlyboundisnotfullrequestlatency;currentsharedDMAreadflooralreadylargerthan4laneMACfloor,somorelanesalonecannotachievethecomputeonlybound"
+    }
+  ],
+  "required_ram_expansion_changes": [
+    "soc_ramRAM_WORDS65536->131072for512KiB;dmemdecoder0x40000->0x80000;checkinstructionerrorandtopgenerics",
+    "xnd_engineRAM_LAST0x3ffff->0x7ffffandrangechecks;widthsofDMAaddressmath;AI_FIRSTcanstay0x20000ifCPU128KiBretained",
+    "xnd_mmio.hXND_AI_RAM_END0x40000->0x80000;allCPUbackendai_pointerboundsandstaticmemorybudget",
+    "linkerAI_RAMlength128KiB->384KiBwhileCPU128KiB+8KiBstackretained;orifCPU256KiBthenalsoAI_FIRST/cacheableboundaryto0x40000",
+    "cpuI/Dcacheuncachedboundarycurrently0x20000;keepthisboundaryfortheminimalAI-onlyexpansion",
+    "PDSBRAMinitializationimageaddressspan,simulationmemoryloader,testfixtures,physicalfirmwareidentityandnecessarySTA/correctness/boardacceptance"
+  ],
+  "mac_width_changes_required": [
+    "INT8weights8lanesrequires64weightbits/cycle,16lanes128bits/cycle;currentpackedword32cannotfeedthem",
+    "bankedreadonlyW1cachewithcol%lanesbankmapping,explicitvalid/tags/generationandreset/invalidate;respectconstantimmutability",
+    "activationreadports,productarray,vector_sumaddertree,pipelinevalid/control,colcounterincrement/lastpartialgroupandMACcounter",
+    "INT4packing8weights/wordandpostprocessmustremainbitexactalongsideINT8;preservecurrent4laneoptionforablation",
+    "allDMAlate/misaligned/error/fatalguardsandCPUfallbackownership;postprocessbias/residualmodechecks",
+    "newbanks/lanesmustpassindependentRTLnumeric/errorproofandownPDSsetup/hold/physicalacceptance"
+  ]
+}

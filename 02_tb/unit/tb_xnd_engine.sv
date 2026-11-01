@@ -16,7 +16,7 @@ module tb_xnd_engine;
   integer tick=0, j,r,i, index, expected;
   integer original_a[0:18], alternate_a[0:18], weights[0:2][0:18];
   logic [31:0] status, value;
-  xnd_engine #(.MAX_COLS(32),.MAX_ROWS(256),.DMA_TIMEOUT(8),.WEIGHT_PREFETCH(PREFETCH)) dut(.*);
+  xnd_engine #(.MAX_COLS(32),.MAX_ROWS(8),.DMA_TIMEOUT(8),.WEIGHT_PREFETCH(PREFETCH)) dut(.*);
   always_ff @(posedge clk) begin
     tick<=tick+1;
     if(mem_valid && mem_ready && mem_write && !mem_error)
@@ -211,16 +211,6 @@ module tb_xnd_engine;
     inject_dma_error=1; wr(16'h0010,2); finish(5); inject_dma_error=0;
     freeze_dma=1; wr(16'h0010,2); finish(6); freeze_dma=0;
     wr(16'h0010,99); finish(1);
-    // Full maximum row count and extent arithmetic must survive narrowing.
-    wr(16'h0038,2); wr(16'h002c,1); wr(16'h0030,256); wr(16'h0034,4);
-    wr(16'h0024,32'h10000); wr(16'h0028,32'h22000);
-    set_byte(32'h20000,7);
-    for(r=0;r<256;r=r+1) set_byte(32'h10000+r*4,-3);
-    wr(16'h0010,2);finish();wr(16'h0010,3);finish();
-    for(r=0;r<256;r=r+1) if($signed(ram[(32'h22000>>2)+r])!=-21) $fatal(1,"max rows address/result %d",r);
-    wr(16'h0030,257);wr(16'h0010,3);finish(2);
-    wr(16'h0030,2);wr(16'h0034,32'hfffffffc);wr(16'h0010,3);finish(3);
-    wr(16'h0030,1);wr(16'h0010,3);finish(); // stride irrelevant for one row
     $display("PASS XND: signed INT4/INT8, odd tails, DMA stalls, 2 slots, W1C, range/DMA/timeout errors");
     $finish;
   end

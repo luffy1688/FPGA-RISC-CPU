@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "firmware": "software_semantic_capacity_oct30",
+  "calibration_revision": 2,
+  "context_hidden": 64,
+  "context_outputs": 16,
+  "selftest_paths": 28,
+  "case_configs_exact": true,
+  "selftest_vs_host_c_exact": true,
+  "context_encoder_hardware_software_pair_exact": true,
+  "protocol6_uart_pass": true,
+  "actual_hardware_dma": {
+    "loads": 5,
+    "jobs": 5,
+    "read_bytes": 67648,
+    "write_bytes": 1088,
+    "macs": 66560
+  },
+  "context_ambiguous_deny_fullencoder_fallback": true,
+  "counter_threshold_134_verified": true,
+  "strict_chinese_canonical_counter_count": 3,
+  "canonical_coremark_start_only": true,
+  "coremark_benchmark_completed_in_this_harness": false,
+  "binary_crc_and_flags_cases": 2,
+  "host_versus_hardware_scope": "Actual RTL SoC with simulated UART divider41 (1M nominal at40.5MHz),firmware physical UART metadata921600; simulated ADC unavailable, no actual temperature measurement; no physical board claim.",
+  "selftest_source": "selftest.log",
+  "selftest_build_scope": "Retained pre_permission_guard capacity64 rev2 mathematical verification; weights,quantization and RTL unchanged; no rerun of28paths for permission-only change.",
+  "permission_guard_followup_reject_no_io_cases": 5,
+  "uart_build_scope": "Final permission_guard firmware after root rebuild; all UART cases rerun with this interactive.mem.",
+  "uart_source": "semantic_uart.log",
+  "memory": {
+    "interactive": {
+      "symbols": {
+        "__bss_end": 121632,
+        "__stack_top": 131072,
+        "__stack_bottom": 122880,
+        "__ai_const_start": 131072,
+        "__ai_const_end": 211776,
+        "__ai_scratch_start": 211776,
+        "__ai_scratch_used_end": 240064
+      },
+      "cpu_margin_bytes": 1248,
+      "ai_constants_bytes": 80704,
+      "ai_scratch_used_bytes": 28288,
+      "ai_remaining_bytes": 22080,
+      "stack_reserved_bytes": 8192
+    },
+    "selftest": {
+      "symbols": {
+        "__bss_end": 111364,
+        "__stack_top": 131072,
+        "__stack_bottom": 122880,
+        "__ai_const_start": 131072,
+        "__ai_const_end": 211776,
+        "__ai_scratch_start": 211776,
+        "__ai_scratch_used_end": 240064
+      },
+      "cpu_margin_bytes": 11516,
+      "ai_constants_bytes": 80704,
+      "ai_scratch_used_bytes": 28288,
+      "ai_remaining_bytes": 22080,
+      "stack_reserved_bytes": 8192
+    }
+  },
+  "rtl_memory_capacity_changed": false,
+  "production_page_replay": {
+    "source": "actual_rtl_uart_through_production_page_js",
+    "compact_total": 5,
+    "compact_v3": 4,
+    "full_json": 18,
+    "errors": 0,
+    "browser_verified": false,
+    "physical_board_verified": false
+  },
+  "memory_scope": "Final rebuilt link maps after permission guard change; mathematical28path RTL log belongs to preceding guard build and is retained because weights/quantization/RTL were not changed."
+}

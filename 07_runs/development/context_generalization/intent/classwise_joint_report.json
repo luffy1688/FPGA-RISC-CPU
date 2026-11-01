@@ -1,0 +1,1061 @@
+{
+  "scope": "Observed development class-conditional threshold candidate; no642/fresh accessed; minima protect every previously correct legal development item",
+  "baseline": {
+    "validation": {
+      "n": 2031,
+      "correct": 1279,
+      "by_class": {
+        "read_temp": [
+          35,
+          49
+        ],
+        "set_pwm": [
+          67,
+          104
+        ],
+        "run_coremark": [
+          32,
+          49
+        ],
+        "read_counter": [
+          34,
+          43
+        ],
+        "set_led": [
+          69,
+          107
+        ],
+        "reject": [
+          1042,
+          1679
+        ]
+      },
+      "false_accept": 637,
+      "false_reject": 103,
+      "macro_recall": 0.6779571166626567
+    },
+    "old_validation": {
+      "n": 541,
+      "correct": 414,
+      "by_class": {
+        "read_temp": [
+          10,
+          12
+        ],
+        "set_pwm": [
+          20,
+          23
+        ],
+        "run_coremark": [
+          11,
+          12
+        ],
+        "read_counter": [
+          12,
+          12
+        ],
+        "set_led": [
+          23,
+          24
+        ],
+        "reject": [
+          338,
+          458
+        ]
+      },
+      "false_accept": 120,
+      "false_reject": 5,
+      "macro_recall": 0.8859816361833639
+    },
+    "original80": {
+      "n": 80,
+      "correct": 73,
+      "by_class": {
+        "read_temp": [
+          4,
+          4
+        ],
+        "set_pwm": [
+          29,
+          32
+        ],
+        "run_coremark": [
+          4,
+          4
+        ],
+        "read_counter": [
+          3,
+          4
+        ],
+        "set_led": [
+          30,
+          32
+        ],
+        "reject": [
+          3,
+          4
+        ]
+      },
+      "false_accept": 1,
+      "false_reject": 6,
+      "macro_recall": 0.890625
+    },
+    "aug192": {
+      "n": 192,
+      "correct": 134,
+      "by_class": {
+        "read_temp": [
+          30,
+          32
+        ],
+        "set_pwm": [
+          18,
+          32
+        ],
+        "run_coremark": [
+          19,
+          32
+        ],
+        "read_counter": [
+          25,
+          32
+        ],
+        "set_led": [
+          24,
+          32
+        ],
+        "reject": [
+          18,
+          32
+        ]
+      },
+      "false_accept": 14,
+      "false_reject": 38,
+      "macro_recall": 0.6979166666666666
+    },
+    "observed288": {
+      "n": 288,
+      "correct": 237,
+      "by_class": {
+        "read_temp": [
+          32,
+          32
+        ],
+        "set_pwm": [
+          24,
+          32
+        ],
+        "run_coremark": [
+          32,
+          32
+        ],
+        "read_counter": [
+          32,
+          32
+        ],
+        "set_led": [
+          31,
+          32
+        ],
+        "reject": [
+          86,
+          128
+        ]
+      },
+      "false_accept": 42,
+      "false_reject": 9,
+      "macro_recall": 0.8984375
+    }
+  },
+  "candidates": [
+    {
+      "repair": "profile_reject_repair5_256.pt",
+      "context_profile": "shared8",
+      "minimum": [
+        256,
+        325,
+        225,
+        387,
+        0,
+        0
+      ],
+      "gate": false
+    },
+    {
+      "repair": "profile_reject_repair5_256.pt",
+      "context_profile": "residual_shared16",
+      "thresholds": [
+        117,
+        257,
+        213,
+        440,
+        0,
+        0
+      ],
+      "gate": true,
+      "global_gate": true,
+      "legal_class_gate": true,
+      "metrics": {
+        "validation": {
+          "n": 2031,
+          "correct": 1492,
+          "by_class": {
+            "read_temp": [
+              41,
+              49
+            ],
+            "set_pwm": [
+              80,
+              104
+            ],
+            "run_coremark": [
+              37,
+              49
+            ],
+            "read_counter": [
+              34,
+              43
+            ],
+            "set_led": [
+              73,
+              107
+            ],
+            "reject": [
+              1227,
+              1679
+            ]
+          },
+          "false_accept": 452,
+          "false_reject": 73,
+          "macro_recall": 0.7608000511958241,
+          "legal_correct": 265,
+          "legal_total": 352,
+          "legal_wrong_tool": 14
+        },
+        "old_validation": {
+          "n": 541,
+          "correct": 423,
+          "by_class": {
+            "read_temp": [
+              11,
+              12
+            ],
+            "set_pwm": [
+              23,
+              23
+            ],
+            "run_coremark": [
+              12,
+              12
+            ],
+            "read_counter": [
+              12,
+              12
+            ],
+            "set_led": [
+              21,
+              24
+            ],
+            "reject": [
+              344,
+              458
+            ]
+          },
+          "false_accept": 114,
+          "false_reject": 2,
+          "macro_recall": 0.9237930616205725,
+          "legal_correct": 79,
+          "legal_total": 83,
+          "legal_wrong_tool": 2
+        },
+        "original80": {
+          "n": 80,
+          "correct": 75,
+          "by_class": {
+            "read_temp": [
+              4,
+              4
+            ],
+            "set_pwm": [
+              29,
+              32
+            ],
+            "run_coremark": [
+              4,
+              4
+            ],
+            "read_counter": [
+              4,
+              4
+            ],
+            "set_led": [
+              31,
+              32
+            ],
+            "reject": [
+              3,
+              4
+            ]
+          },
+          "false_accept": 1,
+          "false_reject": 4,
+          "macro_recall": 0.9375,
+          "legal_correct": 72,
+          "legal_total": 76,
+          "legal_wrong_tool": 0
+        },
+        "aug192": {
+          "n": 192,
+          "correct": 145,
+          "by_class": {
+            "read_temp": [
+              30,
+              32
+            ],
+            "set_pwm": [
+              24,
+              32
+            ],
+            "run_coremark": [
+              20,
+              32
+            ],
+            "read_counter": [
+              27,
+              32
+            ],
+            "set_led": [
+              25,
+              32
+            ],
+            "reject": [
+              19,
+              32
+            ]
+          },
+          "false_accept": 13,
+          "false_reject": 29,
+          "macro_recall": 0.7552083333333334,
+          "legal_correct": 126,
+          "legal_total": 160,
+          "legal_wrong_tool": 5
+        },
+        "observed288": {
+          "n": 288,
+          "correct": 241,
+          "by_class": {
+            "read_temp": [
+              32,
+              32
+            ],
+            "set_pwm": [
+              27,
+              32
+            ],
+            "run_coremark": [
+              32,
+              32
+            ],
+            "read_counter": [
+              32,
+              32
+            ],
+            "set_led": [
+              32,
+              32
+            ],
+            "reject": [
+              86,
+              128
+            ]
+          },
+          "false_accept": 42,
+          "false_reject": 5,
+          "macro_recall": 0.9192708333333334,
+          "legal_correct": 155,
+          "legal_total": 160,
+          "legal_wrong_tool": 0
+        }
+      },
+      "context": {
+        "validation": {
+          "legal_denied": 40,
+          "reject_allowed": 502
+        },
+        "old_validation": {
+          "legal_denied": 2,
+          "reject_allowed": 140
+        },
+        "original80": {
+          "legal_denied": 0,
+          "reject_allowed": 1
+        },
+        "aug192": {
+          "legal_denied": 3,
+          "reject_allowed": 17
+        },
+        "observed288": {
+          "legal_denied": 4,
+          "reject_allowed": 60
+        }
+      }
+    },
+    {
+      "repair": "profile_reject_repair5_1024.pt",
+      "context_profile": "shared8",
+      "thresholds": [
+        256,
+        325,
+        225,
+        387,
+        0,
+        8
+      ],
+      "gate": true,
+      "global_gate": true,
+      "legal_class_gate": true,
+      "metrics": {
+        "validation": {
+          "n": 2031,
+          "correct": 1399,
+          "by_class": {
+            "read_temp": [
+              42,
+              49
+            ],
+            "set_pwm": [
+              82,
+              104
+            ],
+            "run_coremark": [
+              36,
+              49
+            ],
+            "read_counter": [
+              34,
+              43
+            ],
+            "set_led": [
+              71,
+              107
+            ],
+            "reject": [
+              1134,
+              1679
+            ]
+          },
+          "false_accept": 545,
+          "false_reject": 74,
+          "macro_recall": 0.7516582290763448,
+          "legal_correct": 265,
+          "legal_total": 352,
+          "legal_wrong_tool": 13
+        },
+        "old_validation": {
+          "n": 541,
+          "correct": 415,
+          "by_class": {
+            "read_temp": [
+              11,
+              12
+            ],
+            "set_pwm": [
+              23,
+              23
+            ],
+            "run_coremark": [
+              12,
+              12
+            ],
+            "read_counter": [
+              12,
+              12
+            ],
+            "set_led": [
+              21,
+              24
+            ],
+            "reject": [
+              336,
+              458
+            ]
+          },
+          "false_accept": 122,
+          "false_reject": 2,
+          "macro_recall": 0.9208818534691896,
+          "legal_correct": 79,
+          "legal_total": 83,
+          "legal_wrong_tool": 2
+        },
+        "original80": {
+          "n": 80,
+          "correct": 75,
+          "by_class": {
+            "read_temp": [
+              4,
+              4
+            ],
+            "set_pwm": [
+              29,
+              32
+            ],
+            "run_coremark": [
+              4,
+              4
+            ],
+            "read_counter": [
+              3,
+              4
+            ],
+            "set_led": [
+              32,
+              32
+            ],
+            "reject": [
+              3,
+              4
+            ]
+          },
+          "false_accept": 1,
+          "false_reject": 4,
+          "macro_recall": 0.9010416666666666,
+          "legal_correct": 72,
+          "legal_total": 76,
+          "legal_wrong_tool": 0
+        },
+        "aug192": {
+          "n": 192,
+          "correct": 152,
+          "by_class": {
+            "read_temp": [
+              30,
+              32
+            ],
+            "set_pwm": [
+              23,
+              32
+            ],
+            "run_coremark": [
+              26,
+              32
+            ],
+            "read_counter": [
+              28,
+              32
+            ],
+            "set_led": [
+              25,
+              32
+            ],
+            "reject": [
+              20,
+              32
+            ]
+          },
+          "false_accept": 12,
+          "false_reject": 23,
+          "macro_recall": 0.7916666666666666,
+          "legal_correct": 132,
+          "legal_total": 160,
+          "legal_wrong_tool": 5
+        },
+        "observed288": {
+          "n": 288,
+          "correct": 239,
+          "by_class": {
+            "read_temp": [
+              32,
+              32
+            ],
+            "set_pwm": [
+              25,
+              32
+            ],
+            "run_coremark": [
+              32,
+              32
+            ],
+            "read_counter": [
+              32,
+              32
+            ],
+            "set_led": [
+              32,
+              32
+            ],
+            "reject": [
+              86,
+              128
+            ]
+          },
+          "false_accept": 42,
+          "false_reject": 7,
+          "macro_recall": 0.9088541666666666,
+          "legal_correct": 153,
+          "legal_total": 160,
+          "legal_wrong_tool": 0
+        }
+      },
+      "context": {
+        "validation": {
+          "legal_denied": 39,
+          "reject_allowed": 604
+        },
+        "old_validation": {
+          "legal_denied": 2,
+          "reject_allowed": 136
+        },
+        "original80": {
+          "legal_denied": 1,
+          "reject_allowed": 1
+        },
+        "aug192": {
+          "legal_denied": 5,
+          "reject_allowed": 17
+        },
+        "observed288": {
+          "legal_denied": 6,
+          "reject_allowed": 61
+        }
+      }
+    },
+    {
+      "repair": "profile_reject_repair5_1024.pt",
+      "context_profile": "residual_shared16",
+      "thresholds": [
+        117,
+        257,
+        213,
+        440,
+        0,
+        48
+      ],
+      "gate": true,
+      "global_gate": true,
+      "legal_class_gate": true,
+      "metrics": {
+        "validation": {
+          "n": 2031,
+          "correct": 1505,
+          "by_class": {
+            "read_temp": [
+              42,
+              49
+            ],
+            "set_pwm": [
+              83,
+              104
+            ],
+            "run_coremark": [
+              39,
+              49
+            ],
+            "read_counter": [
+              34,
+              43
+            ],
+            "set_led": [
+              74,
+              107
+            ],
+            "reject": [
+              1233,
+              1679
+            ]
+          },
+          "false_accept": 446,
+          "false_reject": 67,
+          "macro_recall": 0.7779650501495747,
+          "legal_correct": 272,
+          "legal_total": 352,
+          "legal_wrong_tool": 13
+        },
+        "old_validation": {
+          "n": 541,
+          "correct": 427,
+          "by_class": {
+            "read_temp": [
+              11,
+              12
+            ],
+            "set_pwm": [
+              23,
+              23
+            ],
+            "run_coremark": [
+              12,
+              12
+            ],
+            "read_counter": [
+              12,
+              12
+            ],
+            "set_led": [
+              21,
+              24
+            ],
+            "reject": [
+              348,
+              458
+            ]
+          },
+          "false_accept": 110,
+          "false_reject": 2,
+          "macro_recall": 0.9252486656962639,
+          "legal_correct": 79,
+          "legal_total": 83,
+          "legal_wrong_tool": 2
+        },
+        "original80": {
+          "n": 80,
+          "correct": 76,
+          "by_class": {
+            "read_temp": [
+              4,
+              4
+            ],
+            "set_pwm": [
+              29,
+              32
+            ],
+            "run_coremark": [
+              4,
+              4
+            ],
+            "read_counter": [
+              4,
+              4
+            ],
+            "set_led": [
+              32,
+              32
+            ],
+            "reject": [
+              3,
+              4
+            ]
+          },
+          "false_accept": 1,
+          "false_reject": 3,
+          "macro_recall": 0.9427083333333334,
+          "legal_correct": 73,
+          "legal_total": 76,
+          "legal_wrong_tool": 0
+        },
+        "aug192": {
+          "n": 192,
+          "correct": 152,
+          "by_class": {
+            "read_temp": [
+              30,
+              32
+            ],
+            "set_pwm": [
+              24,
+              32
+            ],
+            "run_coremark": [
+              26,
+              32
+            ],
+            "read_counter": [
+              28,
+              32
+            ],
+            "set_led": [
+              25,
+              32
+            ],
+            "reject": [
+              19,
+              32
+            ]
+          },
+          "false_accept": 13,
+          "false_reject": 22,
+          "macro_recall": 0.7916666666666666,
+          "legal_correct": 133,
+          "legal_total": 160,
+          "legal_wrong_tool": 5
+        },
+        "observed288": {
+          "n": 288,
+          "correct": 243,
+          "by_class": {
+            "read_temp": [
+              32,
+              32
+            ],
+            "set_pwm": [
+              29,
+              32
+            ],
+            "run_coremark": [
+              32,
+              32
+            ],
+            "read_counter": [
+              32,
+              32
+            ],
+            "set_led": [
+              32,
+              32
+            ],
+            "reject": [
+              86,
+              128
+            ]
+          },
+          "false_accept": 42,
+          "false_reject": 3,
+          "macro_recall": 0.9296875,
+          "legal_correct": 157,
+          "legal_total": 160,
+          "legal_wrong_tool": 0
+        }
+      },
+      "context": {
+        "validation": {
+          "legal_denied": 31,
+          "reject_allowed": 526
+        },
+        "old_validation": {
+          "legal_denied": 2,
+          "reject_allowed": 145
+        },
+        "original80": {
+          "legal_denied": 0,
+          "reject_allowed": 1
+        },
+        "aug192": {
+          "legal_denied": 1,
+          "reject_allowed": 18
+        },
+        "observed288": {
+          "legal_denied": 2,
+          "reject_allowed": 65
+        }
+      }
+    }
+  ],
+  "selected": {
+    "repair": "profile_reject_repair5_1024.pt",
+    "context_profile": "residual_shared16",
+    "thresholds": [
+      117,
+      257,
+      213,
+      440,
+      0,
+      48
+    ],
+    "gate": true,
+    "global_gate": true,
+    "legal_class_gate": true,
+    "metrics": {
+      "validation": {
+        "n": 2031,
+        "correct": 1505,
+        "by_class": {
+          "read_temp": [
+            42,
+            49
+          ],
+          "set_pwm": [
+            83,
+            104
+          ],
+          "run_coremark": [
+            39,
+            49
+          ],
+          "read_counter": [
+            34,
+            43
+          ],
+          "set_led": [
+            74,
+            107
+          ],
+          "reject": [
+            1233,
+            1679
+          ]
+        },
+        "false_accept": 446,
+        "false_reject": 67,
+        "macro_recall": 0.7779650501495747,
+        "legal_correct": 272,
+        "legal_total": 352,
+        "legal_wrong_tool": 13
+      },
+      "old_validation": {
+        "n": 541,
+        "correct": 427,
+        "by_class": {
+          "read_temp": [
+            11,
+            12
+          ],
+          "set_pwm": [
+            23,
+            23
+          ],
+          "run_coremark": [
+            12,
+            12
+          ],
+          "read_counter": [
+            12,
+            12
+          ],
+          "set_led": [
+            21,
+            24
+          ],
+          "reject": [
+            348,
+            458
+          ]
+        },
+        "false_accept": 110,
+        "false_reject": 2,
+        "macro_recall": 0.9252486656962639,
+        "legal_correct": 79,
+        "legal_total": 83,
+        "legal_wrong_tool": 2
+      },
+      "original80": {
+        "n": 80,
+        "correct": 76,
+        "by_class": {
+          "read_temp": [
+            4,
+            4
+          ],
+          "set_pwm": [
+            29,
+            32
+          ],
+          "run_coremark": [
+            4,
+            4
+          ],
+          "read_counter": [
+            4,
+            4
+          ],
+          "set_led": [
+            32,
+            32
+          ],
+          "reject": [
+            3,
+            4
+          ]
+        },
+        "false_accept": 1,
+        "false_reject": 3,
+        "macro_recall": 0.9427083333333334,
+        "legal_correct": 73,
+        "legal_total": 76,
+        "legal_wrong_tool": 0
+      },
+      "aug192": {
+        "n": 192,
+        "correct": 152,
+        "by_class": {
+          "read_temp": [
+            30,
+            32
+          ],
+          "set_pwm": [
+            24,
+            32
+          ],
+          "run_coremark": [
+            26,
+            32
+          ],
+          "read_counter": [
+            28,
+            32
+          ],
+          "set_led": [
+            25,
+            32
+          ],
+          "reject": [
+            19,
+            32
+          ]
+        },
+        "false_accept": 13,
+        "false_reject": 22,
+        "macro_recall": 0.7916666666666666,
+        "legal_correct": 133,
+        "legal_total": 160,
+        "legal_wrong_tool": 5
+      },
+      "observed288": {
+        "n": 288,
+        "correct": 243,
+        "by_class": {
+          "read_temp": [
+            32,
+            32
+          ],
+          "set_pwm": [
+            29,
+            32
+          ],
+          "run_coremark": [
+            32,
+            32
+          ],
+          "read_counter": [
+            32,
+            32
+          ],
+          "set_led": [
+            32,
+            32
+          ],
+          "reject": [
+            86,
+            128
+          ]
+        },
+        "false_accept": 42,
+        "false_reject": 3,
+        "macro_recall": 0.9296875,
+        "legal_correct": 157,
+        "legal_total": 160,
+        "legal_wrong_tool": 0
+      }
+    },
+    "context": {
+      "validation": {
+        "legal_denied": 31,
+        "reject_allowed": 526
+      },
+      "old_validation": {
+        "legal_denied": 2,
+        "reject_allowed": 145
+      },
+      "original80": {
+        "legal_denied": 0,
+        "reject_allowed": 1
+      },
+      "aug192": {
+        "legal_denied": 1,
+        "reject_allowed": 18
+      },
+      "observed288": {
+        "legal_denied": 2,
+        "reject_allowed": 65
+      }
+    }
+  }
+}

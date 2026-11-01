@@ -1,29 +1,18 @@
-# 构建与运行
+# 代码与复现
 
-## 环境
+构建、RAM下载与网页入口见[README](README.md)。默认双核54MHz，各3000次CoreMark。两核固件的完整重建输入在03_sw与09_refs，构建脚本为05_tools/build_dual_firmware.py。
 
-开发板PG2L200H-6 / FBB676，PDS2022.2-SP6.4，RV32IM GCC，Python3与Node.js。训练使用PyTorch，控制台使用Edge的Web Serial。
+|目录|用途|
+|---|---|
+|01_rtl|双核、Cache、片上存储、AI和外设|
+|03_sw/model|主核应用、整数模型运行时及链接脚本|
+|03_sw/dual|副核程序、CoreMark移植层及私有RAM布局|
+|06_pango_active|当前ROM、54MHz约束、PDS入口与production.sbit|
+|07_runs/board/current|四批实板、网页UART、控制延迟与最终指标|
+|07_runs/frequency_current/dual54|当前双核物理验收、时序和资源|
 
-## 固件
+副核经0x40020000邮箱接收启动请求，使用64KiB私有RAM、32KiB指令Cache和4KiB数据Cache，不访问AI引擎和板卡执行器。两核是独立实例，累计吞吐按共同时间计算。
 
-在工程根目录运行：
+当前控制台通过真实UART完成15个事务。四批用户原文24/25、25/25、25/25、25/25；完整模型另有一条LED0置位误拒绝，默认混合路径通过20项位保持检查。原始失败保留在对应JSON，不能将系统通过率作为神经准确率。
 
-```bash
-make -C 03_sw/model ROOT="$PWD" TOOLCHAIN=/path/to/riscv32-unknown-elf- OUT="$PWD/07_runs/model" board-image
-```
-
-默认主频40.5MHz、UART921600、CoreMark1200迭代。模型参数已编入C头文件，可直接构建。重新训练的输入与脚本在07_runs/development中。
-
-## PDS与下载
-
-在06_pango_active/run_impl.tcl中设置taskRoot和taskDir，运行综合与布局布线。PG2L200H启动时隙使用DONE T3、GWEN/GRSN T2、GOUTEN T1。仓库内包含production.sbit，可通过PDS Programmer下载RAM；断电后重新下载。
-
-## 控制台
-
-```bash
-python -m http.server 8765 --bind 127.0.0.1 --directory 05_tools/console
-```
-
-Edge打开http://127.0.0.1:8765/?present=1&baud=921600&arch=1。选择CP210x串口并连接，短按KEY0，等待就绪。串口由一个程序使用。FTDI连接用于JTAG。
-
-一键AI识别发送中文PWM20%请求；快速控制准备完成后发送led 37；CPU自检运行CoreMark。04_model与07_runs/development保存模型处理、训练和选择脚本，02_tb保存RTL测试。
+仿真在服务器完成，本机PDS用于布局布线与RAM下载。不得用旧实验目录的ROM替换当前两份固件。只下载RAM，断电后重新下载。

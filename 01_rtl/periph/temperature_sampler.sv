@@ -43,7 +43,8 @@ module temperature_sampler #(
           if(seen_done) begin state<=SETUP;seen_done<=0;end
           else valid<=0;
         end else count<=count+1;
-        SETUP: begin state<=ACCESS;count<=0;end
+        // UG040009 section2.10.2: DEN precedes SECEN by at least2DCLKs.
+        SETUP: if(count==1)begin state<=ACCESS;count<=0;end else count<=count+1;
         ACCESS: begin
           if(adc_ready) begin
             // Register 0x40 stores DATA[11:0] in bits [15:4]; low bits unused.

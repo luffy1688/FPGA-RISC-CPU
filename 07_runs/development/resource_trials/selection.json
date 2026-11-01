@@ -1,0 +1,692 @@
+{
+  "schema": "needlervx.resource_trials.selection.v1",
+  "date_local": "2026-10-31",
+  "status": "PDS_STA_and_RAM_physical_acceptance_passed;program_frozen",
+  "primary": {
+    "name": "position2048_hidden64_identityfusion70to5_cache8",
+    "weights": "capacity/h64_f2048_position.npz",
+    "fusion": "experts/fusion_position_selected.npz",
+    "source": "integrated/full_model/03_sw",
+    "rtl": "integrated/full_model/rtl",
+    "firmware": "integrated/full_model/firmware/interactive.mem",
+    "learned_weight_bytes": 197816,
+    "auxiliary_constant_bytes": 137950,
+    "sram_bytes": 524288,
+    "w1_resident_cache_bytes": 131072,
+    "original_encoder_mac_lanes": 4,
+    "additional_semantic_mac_lanes": 8,
+    "semantics": "Unicodeglobal1024 plusfront/back512 each; INT8 2048to64to16; explicit learned5toolidentity residual useshidden64 plusencoder6 onlyforboundedlegalcandidates; samepermission/readbackdispatcher; explicitliteralgrammar source retained",
+    "ram_refined_core": "integrated/full_model/rtl_ram/semantic_cache.sv",
+    "local_source": "03_sw"
+  },
+  "observed_neural": {
+    "observed1138": {
+      "n": 1138,
+      "correct": 1087,
+      "by_class": {
+        "read_temp": [
+          25,
+          25
+        ],
+        "set_pwm": [
+          64,
+          64
+        ],
+        "run_coremark": [
+          24,
+          25
+        ],
+        "read_counter": [
+          21,
+          21
+        ],
+        "set_led": [
+          61,
+          61
+        ],
+        "reject": [
+          892,
+          942
+        ]
+      },
+      "false_accept": 50,
+      "false_reject": 0,
+      "macro_recall": 0.9844869072894551,
+      "per_class": {
+        "read_temp": {
+          "precision": 0.6578947368421053,
+          "recall": 1.0,
+          "f1": 0.7936507936507937,
+          "support": 25,
+          "predicted": 38,
+          "tp": 25
+        },
+        "set_pwm": {
+          "precision": 0.8767123287671232,
+          "recall": 1.0,
+          "f1": 0.9343065693430657,
+          "support": 64,
+          "predicted": 73,
+          "tp": 64
+        },
+        "run_coremark": {
+          "precision": 0.8,
+          "recall": 0.96,
+          "f1": 0.8727272727272728,
+          "support": 25,
+          "predicted": 30,
+          "tp": 24
+        },
+        "read_counter": {
+          "precision": 0.6176470588235294,
+          "recall": 1.0,
+          "f1": 0.7636363636363637,
+          "support": 21,
+          "predicted": 34,
+          "tp": 21
+        },
+        "set_led": {
+          "precision": 0.8591549295774648,
+          "recall": 1.0,
+          "f1": 0.9242424242424242,
+          "support": 61,
+          "predicted": 71,
+          "tp": 61
+        },
+        "reject": {
+          "precision": 1.0,
+          "recall": 0.9469214437367304,
+          "f1": 0.9727371864776445,
+          "support": 942,
+          "predicted": 892,
+          "tp": 892
+        }
+      },
+      "confusion_true_rows_pred_columns": [
+        [
+          25,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          64,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          24,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          21,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          61,
+          0
+        ],
+        [
+          12,
+          9,
+          6,
+          13,
+          10,
+          892
+        ]
+      ],
+      "macro_f1": 0.8768834350129273,
+      "legal_correct": 195,
+      "legal_total": 196,
+      "context_recall": {
+        "0": {
+          "correct": 195,
+          "n": 196
+        },
+        "1": {
+          "correct": 149,
+          "n": 155
+        },
+        "2": {
+          "correct": 113,
+          "n": 116
+        },
+        "3": {
+          "correct": 114,
+          "n": 114
+        },
+        "4": {
+          "correct": 115,
+          "n": 117
+        },
+        "5": {
+          "correct": 111,
+          "n": 113
+        },
+        "6": {
+          "correct": 259,
+          "n": 271
+        },
+        "7": {
+          "correct": 31,
+          "n": 56
+        }
+      }
+    },
+    "observed900": {
+      "n": 900,
+      "correct": 685,
+      "by_class": {
+        "read_temp": [
+          40,
+          40
+        ],
+        "set_pwm": [
+          30,
+          40
+        ],
+        "run_coremark": [
+          39,
+          40
+        ],
+        "read_counter": [
+          37,
+          40
+        ],
+        "set_led": [
+          29,
+          40
+        ],
+        "reject": [
+          510,
+          700
+        ]
+      },
+      "false_accept": 190,
+      "false_reject": 24,
+      "macro_recall": 0.8505952380952381,
+      "per_class": {
+        "read_temp": {
+          "precision": 0.4,
+          "recall": 1.0,
+          "f1": 0.5714285714285715,
+          "support": 40,
+          "predicted": 100,
+          "tp": 40
+        },
+        "set_pwm": {
+          "precision": 0.3409090909090909,
+          "recall": 0.75,
+          "f1": 0.46875,
+          "support": 40,
+          "predicted": 88,
+          "tp": 30
+        },
+        "run_coremark": {
+          "precision": 0.609375,
+          "recall": 0.975,
+          "f1": 0.7499999999999999,
+          "support": 40,
+          "predicted": 64,
+          "tp": 39
+        },
+        "read_counter": {
+          "precision": 0.5068493150684932,
+          "recall": 0.925,
+          "f1": 0.6548672566371682,
+          "support": 40,
+          "predicted": 73,
+          "tp": 37
+        },
+        "set_led": {
+          "precision": 0.7073170731707317,
+          "recall": 0.725,
+          "f1": 0.7160493827160495,
+          "support": 40,
+          "predicted": 41,
+          "tp": 29
+        },
+        "reject": {
+          "precision": 0.9550561797752809,
+          "recall": 0.7285714285714285,
+          "f1": 0.826580226904376,
+          "support": 700,
+          "predicted": 534,
+          "tp": 510
+        }
+      },
+      "confusion_true_rows_pred_columns": [
+        [
+          40,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          30,
+          0,
+          0,
+          0,
+          10
+        ],
+        [
+          0,
+          0,
+          39,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          37,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          29,
+          11
+        ],
+        [
+          59,
+          58,
+          25,
+          36,
+          12,
+          510
+        ]
+      ],
+      "macro_f1": 0.6646125729476943,
+      "legal_correct": 175,
+      "legal_total": 200,
+      "context_recall": {
+        "0": {
+          "correct": 175,
+          "n": 200
+        },
+        "1": {
+          "correct": 61,
+          "n": 100
+        },
+        "2": {
+          "correct": 60,
+          "n": 100
+        },
+        "3": {
+          "correct": 71,
+          "n": 100
+        },
+        "4": {
+          "correct": 58,
+          "n": 100
+        },
+        "5": {
+          "correct": 100,
+          "n": 100
+        },
+        "6": {
+          "correct": 72,
+          "n": 100
+        },
+        "7": {
+          "correct": 88,
+          "n": 100
+        }
+      }
+    }
+  },
+  "system": {
+    "original80": {
+      "full": {
+        "n": 80,
+        "correct": 73,
+        "legal_correct": 69,
+        "legal_total": 76,
+        "false_execution_admission": 0
+      },
+      "fast": {
+        "n": 80,
+        "correct": 80,
+        "legal_correct": 76,
+        "legal_total": 76,
+        "false_execution_admission": 0
+      }
+    },
+    "aug192": {
+      "full": {
+        "n": 192,
+        "correct": 188,
+        "legal_correct": 156,
+        "legal_total": 160,
+        "false_execution_admission": 0
+      },
+      "fast": {
+        "n": 192,
+        "correct": 192,
+        "legal_correct": 160,
+        "legal_total": 160,
+        "false_execution_admission": 0
+      }
+    },
+    "observed288": {
+      "full": {
+        "n": 288,
+        "correct": 260,
+        "legal_correct": 132,
+        "legal_total": 160,
+        "false_execution_admission": 0
+      },
+      "fast": {
+        "n": 288,
+        "correct": 260,
+        "legal_correct": 132,
+        "legal_total": 160,
+        "false_execution_admission": 0
+      }
+    },
+    "old_validation": {
+      "full": {
+        "n": 541,
+        "correct": 541,
+        "legal_correct": 83,
+        "legal_total": 83,
+        "false_execution_admission": 0
+      },
+      "fast": {
+        "n": 541,
+        "correct": 541,
+        "legal_correct": 83,
+        "legal_total": 83,
+        "false_execution_admission": 0
+      }
+    },
+    "validation": {
+      "full": {
+        "n": 2031,
+        "correct": 1949,
+        "legal_correct": 270,
+        "legal_total": 352,
+        "false_execution_admission": 0
+      },
+      "fast": {
+        "n": 2031,
+        "correct": 1950,
+        "legal_correct": 271,
+        "legal_total": 352,
+        "false_execution_admission": 0
+      }
+    },
+    "observed1138": {
+      "full": {
+        "n": 1138,
+        "correct": 1135,
+        "legal_correct": 193,
+        "legal_total": 196,
+        "false_execution_admission": 0
+      },
+      "fast": {
+        "n": 1138,
+        "correct": 1135,
+        "legal_correct": 193,
+        "legal_total": 196,
+        "false_execution_admission": 0
+      }
+    },
+    "observed900": {
+      "full": {
+        "n": 900,
+        "correct": 874,
+        "legal_correct": 174,
+        "legal_total": 200,
+        "false_execution_admission": 0
+      },
+      "fast": {
+        "n": 900,
+        "correct": 884,
+        "legal_correct": 184,
+        "legal_total": 200,
+        "false_execution_admission": 0
+      }
+    }
+  },
+  "correctness": {
+    "capacity_C": "capacity/c_validation.json",
+    "all7_sets_C": "integrated/full_model/host_numeric.json",
+    "full_CPU_cache_and_encoder": "integrated/full_model/rtl_validation.json",
+    "dual_DMA_and_failures": "integrated/full_model/tb/rtl_validation.json",
+    "head_cpu4vs8": "integrated/report.json",
+    "memory_512_768": "memory/report.json",
+    "fourth_RTL": "integrated/full_model/fourth_validation.json"
+  },
+  "cost": {
+    "cpu_bss_end": 120004,
+    "stack_bottom": 122880,
+    "full_stack_bytes": 8192,
+    "cpu_margin": 2876,
+    "ai_scratch_used_end": 317808,
+    "ai_remaining": 206480
+  },
+  "full_pwm_comparison": {
+    "software_cycles": 40466333,
+    "hardware_cycles": 3019840,
+    "speedup": 13.400157955388364,
+    "software_context_cycles": 127003,
+    "hardware_context_cycles": 33778
+  },
+  "recommendation_reason": "Best tested balanced combination after olddevelopmentclassrecall/falseacceptancegates,not highesttotal-only. Wider256 and4096buckets didnotjustifyresources; sixexpertsfragmentedtraining. Identityfusionfixeswronglegaltools withoutchangingrejectveto. Cache+zeroskip yieldsmorethanlanedoubling.",
+  "tradeoffs": {
+    "observed_900_neural_accuracy": 0.7611111111111111,
+    "observed_1138_has_been_used_for_development": true,
+    "all900_now_observed": true,
+    "first_scores_unchanged": true,
+    "system_rule_results_are_not_neural_accuracy": true,
+    "full_model_diagnostic_fast0_fourth": 23,
+    "default_fast1_fourth_host": 25,
+    "raw_neural_reject_false_accepts_1138": 50,
+    "raw_neural_reject_false_accepts_900": 190,
+    "physical_and_vendor_STA_pending": false
+  },
+  "vendor_resource_budget": {
+    "kind": "Pre-PDS estimate retained for comparison; actual usage in vendor_resources",
+    "main512k_drm36_estimate": 258,
+    "w1cache128k_minimum_drm36": 32,
+    "total_minimum": 290,
+    "device_drm36": 415,
+    "smallbanks_ff_lut_and_routing_not_accounted": true,
+    "reason_no_768k_main_with_cache": "386estimatedmain+32minimumcache=418>415"
+  },
+  "baseline_64_revision2": {
+    "raw1138": 1058,
+    "legal1138": 185,
+    "false_accepts1138": 69,
+    "raw900": 653,
+    "legal900": 169,
+    "false_accepts900": 216
+  },
+  "not_adopted_summary": "capacity/candidate_selection.json; experts/comparison.json; experts/quantization_validation.json",
+  "scope": "Observed regression sets with original denominators retained; not blind accuracy. Physical UART and register receipts validated; no new external pin waveform, power or measured FMAX claim.",
+  "accepted_board_baseline_firmware": "experimental_position_fusion_oct30",
+  "fourth_RTL": {
+    "cases": 25,
+    "full_responses_verified": 23,
+    "start_only_cases": [
+      "F24",
+      "F25"
+    ],
+    "temperature_unavailable_expected": 4,
+    "completed_CoreMark_runs": [
+      {
+        "iterations": 1200,
+        "cycles": 590699515,
+        "seconds_at_simulated_clock": 14.585173209876544,
+        "coremark_per_mhz": 2.03148973298209,
+        "crc": {
+          "seedcrc": "e9f5",
+          "crclist": "e714",
+          "crcmatrix": "1fd7",
+          "crcstate": "8e3a",
+          "crcfinal": "988c"
+        }
+      },
+      {
+        "iterations": 1200,
+        "cycles": 590699503,
+        "seconds_at_simulated_clock": 14.585172913580246,
+        "coremark_per_mhz": 2.0314897742515963,
+        "crc": {
+          "seedcrc": "e9f5",
+          "crclist": "e714",
+          "crcmatrix": "1fd7",
+          "crcstate": "8e3a",
+          "crcfinal": "988c"
+        }
+      }
+    ],
+    "source": "integrated/full_model/fourth_validation.json"
+  },
+  "pending": [
+    "New continuous physical browser/second-screen recording if required for submission",
+    "Official final submission/advanced-model eligibility confirmation"
+  ],
+  "selection_frozen": true,
+  "local_copy_purpose": "Onlycurrentengineeringresults,noformalreviewZIPorbackup",
+  "program_frozen": true,
+  "vendor_resources": {
+    "lut": 19456,
+    "ff": 19116,
+    "drm36_equivalent": 292.5,
+    "apm": 33.0,
+    "adc": 1.0,
+    "gpll": 1.0,
+    "distributed_ram": 148
+  },
+  "physical_sta": {
+    "all_constraints_met": true,
+    "setup_slow_ns": 1.901,
+    "hold_slow_ns": 0.147,
+    "setup_fast_ns": 11.214,
+    "hold_fast_ns": 0.102,
+    "failing_endpoints": 0,
+    "fmax_measured": false
+  },
+  "synthesis_refinement": {
+    "before_lut": 31208,
+    "before_ff": 43692,
+    "before_drm36_equivalent": 290.5,
+    "after_lut": 19456,
+    "after_ff": 19116,
+    "after_drm36_equivalent": 292.5,
+    "measurement_stage": "Same PRR used CLMA plus CLMS LUT count; no mixing synthesis/mapping stages",
+    "same_module_test_cycles": 355683,
+    "reason": "Activation/W2 single-write synchronous RAM inference with word nonzero bitmap; identical algorithm and pipeline cycle count"
+  },
+  "physical_attempt": {
+    "passed": true,
+    "firmware": "experimental_position_fusion_oct30",
+    "bootstrap": "integrated/full_model/bootstrap_device_startup_921600.json",
+    "status": "0x001ffca0",
+    "gouten": 1
+  },
+  "rebuild_notice": "Fixed-source rebuild completed 2026-10-31 15:10; complete routed ADF and timing report restored. Device startup variant generated directly from routed ADF at20:55.",
+  "startup_configuration": {
+    "source": "Installed PG2L200H device template",
+    "done": "T3",
+    "gwen": "T2",
+    "grsn": "T2",
+    "gouten": "T1",
+    "logic_source_unchanged": true
+  },
+  "prior_accepted_board": {
+    "firmware": "software_semantic_branch_oct30",
+    "model_weights_bytes": 81698,
+    "resources": {
+      "lut": 16296,
+      "ff": 17801,
+      "drm36_equivalent": 130,
+      "apm": 25,
+      "distributed_ram": 4
+    },
+    "sta": {
+      "all_constraints_met": true,
+      "setup_slow_ns": 1.133,
+      "hold_slow_ns": 0.144,
+      "setup_fast_ns": 10.553,
+      "hold_fast_ns": 0.101,
+      "failing_endpoints": 0,
+      "fmax_measured": false
+    },
+    "same_image_model_comparison": {
+      "software_cycles": 6966241,
+      "xnd_cycles": 371403,
+      "speedup": 18.756555547478076,
+      "logits_equal": true
+    },
+    "same_image_semantic_backend_comparison": {
+      "software_cycles": 40267937,
+      "xnd_cycles": 3015877,
+      "speedup": 13.351982524486244,
+      "all_scores_equal": true,
+      "software_context_cycles": 24896,
+      "xnd_context_cycles": 22280,
+      "context_hardware": {
+        "loads": 5,
+        "jobs": 5,
+        "dma_read_bytes": 17600,
+        "dma_write_bytes": 300,
+        "engine_cycles": 9291,
+        "failures": 0
+      }
+    }
+  },
+  "build_flow_notice": {
+    "raw_preparse_errors": [
+      "E: couldn't open \"D:/FPGA_PDS/07_runs/development/resource_trials/integrated/full_model/cache_ram/device_map/pangu_200pro_clocked_board.dmr\": no such file or directory",
+      "E: Flow-0163: Failed to parse file \"D:\\FPGA_PDS\\07_runs\\development\\resource_trials\\integrated\\full_model\\cache_ram\\run_flow.tcl\" at line 33. Check if the command options or arguments are valid.",
+      "E: can't read \"taskMap\": no such variable",
+      "E: Flow-0163: Failed to parse file \"D:\\FPGA_PDS\\07_runs\\development\\resource_trials\\integrated\\full_model\\cache_ram\\run_flow.tcl\" at line 34. Check if the command options or arguments are valid.",
+      "E: can't read \"taskMap\": no such variable",
+      "E: Flow-0163: Failed to parse file \"D:\\FPGA_PDS\\07_runs\\development\\resource_trials\\integrated\\full_model\\cache_ram\\run_flow.tcl\" at line 35. Check if the command options or arguments are valid."
+    ],
+    "cause": "Unused report-reading Tcl statements ran during project parsing before report existed; removed from run_flow.tcl. Original raw log retained.",
+    "actual_six_build_stages_completed": true,
+    "historical_log_only": true,
+    "final_rebuild_log": "D:\\FPGA_PDS\\07_runs\\development\\resource_trials\\integrated\\full_model\\cache_ram\\rebuild_stdout.log",
+    "final_gen_only_log": "D:\\FPGA_PDS\\07_runs\\development\\resource_trials\\integrated\\full_model\\cache_ram\\device_startup\\generate_stdout.log"
+  },
+  "physical_evidence": "07_runs/board/current/acceptance_report.json",
+  "presentation_status": {
+    "web_console_audit": "225 mock parser/state checks passed; isolated headless HTTP rendered without serial",
+    "offline_3d": "Actual WebGL rendered;12 step record replay,rotatable/exploded structure; not live board video",
+    "docx": "5 A4 pages rendered and visually reviewed",
+    "figures": "blue/gold route diagram,n10 latency distributions,dual observed confusion matrices",
+    "media": "30-second 2x burned-caption MP4/GIF + SRT + narration script",
+    "ppt": "15 slides;editable research charts and matrices;nativeGLB views on12/14/15;relative HTML and current MP4 links; package/render verified,not an Office UI test",
+    "program_unchanged": true
+  }
+}

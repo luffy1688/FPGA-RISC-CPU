@@ -1,0 +1,35 @@
+{
+  "scope": "Server-only resource-for-accuracy development experiments; fixed25014training rows unchanged; old80/192/288/541/2031 selection;1138/900 observed regression only after frozen checkpoint; no production changes. Select strict16 protection then mean developer macroF1+0.15legalrecall; strict64 separately recorded rather than hiding tradeoffs.",
+  "configs": [
+    {
+      "name": "h64_f2048_position",
+      "hidden": 64,
+      "bins": 2048,
+      "warm": true,
+      "feature_mode": "position",
+      "epochs": 200,
+      "lr": 0.0008,
+      "seed": 301206
+    },
+    {
+      "name": "h128_f2048_distill",
+      "hidden": 128,
+      "bins": 2048,
+      "warm": false,
+      "epochs": 200,
+      "lr": 0.002,
+      "seed": 301207
+    }
+  ],
+  "selection_sets": [
+    "original80",
+    "aug192",
+    "observed288",
+    "old_validation",
+    "validation"
+  ],
+  "observed_regression": [
+    "observed1138",
+    "observed900"
+  ]
+}

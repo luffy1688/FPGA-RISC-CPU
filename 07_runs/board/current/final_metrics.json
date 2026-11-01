@@ -1,0 +1,142 @@
+{
+  "date": "2026-11-01",
+  "brand": "澄灯 LumaRV",
+  "clock_hz": 54000000,
+  "core_count": 2,
+  "iterations_per_core": 3000,
+  "primary_cycles": [
+    742865015,
+    743124728,
+    743124668,
+    742840114,
+    742849838,
+    743149907,
+    742851382,
+    743149756,
+    742861728,
+    742861703,
+    742827540,
+    743125767,
+    743149801,
+    742861695,
+    742851764,
+    742849882,
+    742873884,
+    743114661,
+    742839138
+  ],
+  "primary_median_cycles": 742861728,
+  "primary_score_per_mhz": 4.038436611988174,
+  "primary_score_range": [
+    4.036870585250575,
+    4.038622477567269
+  ],
+  "primary_seconds_range": [
+    13.756065555555555,
+    13.762035314814815
+  ],
+  "worker_score_per_mhz": 3.8904107750777595,
+  "common_span_cycles": 771142760,
+  "common_seconds": 14.280421481481481,
+  "aggregate_per_mhz": 7.780660483669716,
+  "aggregate_iterations_per_second": 420.1556661181647,
+  "aggregate_per_lut": 0.007600912967747249,
+  "resources": {
+    "lut": 55277,
+    "ff": 39035,
+    "drm36_equivalent": 342.5,
+    "apm": 40,
+    "adc": 1,
+    "gpll": 1
+  },
+  "timing": {
+    "setup_slow_ns": 0.569,
+    "hold_slow_ns": 0.141,
+    "setup_fast_ns": 7.529,
+    "hold_fast_ns": 0.1
+  },
+  "pwm": {
+    "period": 54000,
+    "high": 10800,
+    "hz": 1000
+  },
+  "ai": {
+    "software_cycles": 35536262,
+    "hardware_cycles": 2950565,
+    "hardware_ms": 54.640092592592595,
+    "software_ms": 658.0789259259259,
+    "speedup": 12.043883798526723,
+    "cold_cycles": 3062774,
+    "cold_ms": 56.718037037037035
+  },
+  "control_medians": {
+    "led 37": 1.3167,
+    "请读取FPGA当前温度。": 3.65915,
+    "请将PWM占空比设置为20%。": 1.9061,
+    "读取计数器现在的数值。": 1.93675
+  },
+  "regression": [
+    {
+      "batch": 1,
+      "passed": 24,
+      "tested": 25
+    },
+    {
+      "batch": 2,
+      "passed": 25,
+      "tested": 25
+    },
+    {
+      "batch": 3,
+      "passed": 25,
+      "tested": 25
+    },
+    {
+      "batch": 4,
+      "passed": 25,
+      "tested": 25
+    }
+  ],
+  "known_failures": [
+    "AssertionError(\"unexpected selected_tool for '单独点亮LED0，其余LED保持原状。'\")"
+  ],
+  "background_application": {
+    "passed": true,
+    "secondary_busy_before": {
+      "status": 1,
+      "cycles": 0
+    },
+    "secondary_busy_after": {
+      "status": 1,
+      "cycles": 0
+    },
+    "model_cycles": 2950430,
+    "model_ms": 54.63759259259259,
+    "host_result_ms": 74.4968,
+    "readback": {
+      "kind": 2,
+      "requested": 20,
+      "readback": 20,
+      "match": 1,
+      "period": 54000,
+      "high": 10800,
+      "enabled": 1,
+      "adc_status": 0,
+      "adc_raw": 0
+    },
+    "outputs_match_single_foreground": true,
+    "restart_while_busy_rejected": true,
+    "completed_worker": {
+      "status": 10,
+      "cycles": 771126797
+    }
+  },
+  "console_transactions": 15,
+  "neural_observed": {
+    "n1138": 1087,
+    "n900": 685
+  },
+  "training_count": 25014,
+  "weights_bytes": 197816,
+  "primary_gain_pct": 98.79187900321887
+}

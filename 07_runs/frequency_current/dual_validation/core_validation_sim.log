@@ -1,0 +1,80 @@
+NeedleRV-X BRAM64; workspace=34716; clock_hz=63000000
+NR_BUILD {"protocol":6,"firmware":"experimental_position_fusion_oct30","model_stage":"unicode_ngram_memory_oct29","kernel_stage":"xnd_post_fetch_oct29","formal_fast":1,"neural_timing":"context_plus_encoder","context_head":1,"context_weights_bytes":137580,"context_hidden":64,"context_outputs":16,"intent_cascade":1,"semantic_calibration_revision":3,"position_features":2048,"semantic_weight_cache":1,"sram_bytes":524288,"fusion_weights_bytes":370,"context_classes":9,"intent_repair":1,"context_xnd":1,"context_xnd_min_features":24,"semantic_memory":1,"model_weights_bytes":197816,"memory_weights_bytes":12800,"core_count":2,"clock_hz":63000000,"uart_baud":921600,"coremark_iterations":3000,"max_utf8_bytes":64,"confidence_threshold":16,"tool_schema":2,"q_reuse":1,"av4":1,"post_fuse":1,"xnd_postprocess":1,"profile":0,"capabilities":{"fast":1,"compact":1,"io_snapshot":1,"receipt":1,"framed_rpc":1,"tool_manifest":1}}
+NR_CONFIG {"config":6,"mode":3,"graph":1,"dot4":1}
+NR_FAST_MODE {"enabled":1}
+NR_FORMAT {"compact":1}
+NR_READY
+NR_CONFIG {"config":0,"mode":0,"graph":0,"dot4":0}
+NR_READY
+NR_FAST_MODE {"enabled":0}
+NR_READY
+NR_FORMAT {"compact":0}
+NR_READY
+NR_RESULT {"case":0,"config":0,"graph":0,"dot4":0,"mode":0,"model_used":1,"encoder_used":1,"context_used":1,"context_xnd_used":0,"context_hardware_macs":0,"context_hardware":null,"context_deny":0,"context_cycles":91719,"encoder_cycles":35448870,"context_logits":[212,-208],"context_margin":-420,"context_threshold":116,"context_category":0,"context_bucket":1,"context_bucket_source":0,"context_category_logits":[342,1,-58,-56,-24,-30,-87,-117,33],"intent_repair_used":0,"intent_delta":[0,0,0,0,0],"context_tool_logits":[-221,165,-186,-238,-136],"intent_cascade_used":0,"intent_cascade_delta":[0,0,0,0,0],"fusion_used":1,"fusion_gate_margin":117,"fusion_delta":[8,-7,8,-43,38],"context_features":87,"context_scalar_macs":6592,"encoder_logits":[-221,349,-354,-134,-131,232],"decision_cycles":35611461,"tool":1,"selected_tool":1,"margin":110,"confidence_threshold":16,"decode":0,"argument":20,"operation":0,"selection_source":0,"cycles":35540589,"loads":0,"jobs":0,"reuses":0,"activation_bytes":0,"weight_bytes":0,"bias_bytes":0,"residual_bytes":0,"output_bytes":0,"engine_cycles":0,"failures":0,"execute":0,"value":20,"logits":[-213,342,-346,-177,-93,232],"tool_cycles":341,"request_cycles":35611860,"pmu":{"cycles":35448928,"instret":23580062,"branches":3797550,"redirect_misses":951922,"mem_load_stall_cycles":6259774,"ic_misses":171,"dc_misses":28703},"receipt":{"kind":2,"requested":20,"readback":20,"match":1,"period":63000,"high":12600,"enabled":1,"adc_status":0,"adc_raw":0}}
+NR_READY
+NR_CONFIG {"config":6,"mode":3,"graph":1,"dot4":1}
+NR_READY
+NR_RESULT {"case":1,"config":6,"graph":1,"dot4":1,"mode":3,"model_used":1,"encoder_used":1,"context_used":1,"context_xnd_used":1,"context_hardware_macs":39424,"context_hardware":{"loads":1,"jobs":1,"dma_read_bytes":131072,"dma_write_bytes":0,"engine_cycles":104448,"failures":0},"context_deny":0,"context_cycles":134896,"encoder_cycles":2927360,"context_logits":[212,-208],"context_margin":-420,"context_threshold":116,"context_category":0,"context_bucket":1,"context_bucket_source":0,"context_category_logits":[342,1,-58,-56,-24,-30,-87,-117,33],"intent_repair_used":0,"intent_delta":[0,0,0,0,0],"context_tool_logits":[-221,165,-186,-238,-136],"intent_cascade_used":0,"intent_cascade_delta":[0,0,0,0,0],"fusion_used":1,"fusion_gate_margin":117,"fusion_delta":[8,-7,8,-43,38],"context_features":87,"context_scalar_macs":0,"encoder_logits":[-221,349,-354,-134,-131,232],"decision_cycles":3130875,"tool":1,"selected_tool":1,"margin":110,"confidence_threshold":16,"decode":0,"argument":20,"operation":0,"selection_source":0,"cycles":3062256,"loads":266,"jobs":399,"reuses":133,"activation_bytes":21248,"weight_bytes":1085632,"bias_bytes":118784,"residual_bytes":33792,"output_bytes":29720,"engine_cycles":1280725,"failures":0,"execute":0,"value":20,"logits":[-213,342,-346,-177,-93,232],"tool_cycles":249,"request_cycles":3131171,"pmu":{"cycles":2927404,"instret":2070112,"branches":490319,"redirect_misses":8841,"mem_load_stall_cycles":324146,"ic_misses":143,"dc_misses":2700},"receipt":{"kind":2,"requested":20,"readback":20,"match":1,"period":63000,"high":12600,"enabled":1,"adc_status":0,"adc_raw":0}}
+NR_READY
+NR_FAST_MODE {"enabled":1}
+NR_READY
+NR_ACTION {"phase":"tool_start","case":2,"config":6,"model_used":0,"encoder_used":0,"context_used":0,"context_xnd_used":0,"context_deny":0,"context_cycles":0,"encoder_cycles":0,"context_logits":[0,0],"context_threshold":0,"tool":null,"selected_tool":2,"cycles":0,"decision_cycles":4335,"decode":0,"selection_source":1}
+2K validation run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 747229883
+Total time (secs): 11
+Iterations/Sec   : 272
+Iterations       : 3000
+Compiler version : GCC15.2.0
+Compiler flags   : -DNR_PLATFORM_CLOCK_HZ=63000000 -DNR_UART_BAUD=921600 -DNR_COREMARK_ITERATIONS=3000 -mabi=ilp32 -mstrict-align -std=c99 -ffreestanding -fno-builtin -fno-common -ffunction-sections -fdata-sections -nostdlib -nostartfiles -I/work/LUO/NeedleRV-X/03_sw/model -march=rv32im_zicsr_zifencei_zba_zbb_zbc_zbs_zicond -O3 -funroll-all-loops -mtune=rocket -DNR_COREMARK_LIBRARY=1 -DVALIDATION_RUN=1 -DITERATIONS=3000 -DCPU_HZ=63000000 -DTOTAL_DATA_SIZE=2000
+Memory location  : On-chip RAM; CPU:RAM:Cache clock ratio 1:1:1
+seedcrc          : 0x18f2
+[0]crclist       : 0xe3c1
+[0]crcmatrix     : 0x0747
+[0]crcstate      : 0x8d84
+[0]crcfinal      : 0x2717
+Correct operation validated. See README.md for run and reporting rules.
+NR_CYCLES=747229883 NR_HZ=63000000 NR_ITERATIONS=3000
+NR_COREMARK_PRECISE seconds=11.860791 coremark_per_mhz=4.014828 legacy_seconds_truncated=1
+BOOT_INSTRET=741683876 BRANCHES=152133353 MISPREDICTS=8865394 STALLS=10439257 IC_MISSES=1582 DC_MISSES=36146
+NR_PMU {"scope":"coremark_bracket","cycles":747229939,"instret":715631391,"branches":147746504,"redirect_misses":7898845,"mem_load_stall_cycles":771,"ic_misses":259,"dc_misses":141}
+W1 2K validation run parameters for coremark.
+W1 CoreMark Size    : 666
+W1 Total ticks      : 775852174
+W1 Total time (secs): 12
+W1 Iterations/Sec   : 250
+W1 Iterations       : 3000
+W1 Compiler version : GCC15.2.0
+W1 Compiler flags   : -march=rv32im_zicsr_zifencei_zba_zbb_zbc_zbs_zicond -mabi=ilp32 -mstrict-align -O3 -funroll-all-loops -mtune=rocket -std=c99 -ffreestanding -fno-builtin -fno-common -ffunction-sections -fdata-sections -nostdlib -nostartfiles -DNR_COREMARK_LIBRARY=1 -DVALIDATION_RUN=1 -DITERATIONS=3000 -DCPU_HZ=63000000 -DTOTAL_DATA_SIZE=2000 -I/work/LUO/NeedleRV-X/03_sw/coremark -I/work/LUO/NeedleRV-X/09_refs/coremark
+W1 Memory location  : On-chip RAM; CPU:RAM:Cache clock ratio 1:1:1
+W1 seedcrc          : 0x18f2
+W1 [0]crclist       : 0xe3c1
+W1 [0]crcmatrix     : 0x0747
+W1 [0]crcstate      : 0x8d84
+W1 [0]crcfinal      : 0x2717
+W1 Correct operation validated. See README.md for run and reporting rules.
+W1 NR_CYCLES=775852174 NR_HZ=63000000 NR_ITERATIONS=3000
+W1 NR_COREMARK_PRECISE seconds=12.315113 coremark_per_mhz=3.866715 legacy_seconds_truncated=1
+W1 BOOT_INSTRET=715662188 BRANCHES=147754130 MISPREDICTS=15055509 STALLS=3384 IC_MISSES=505 DC_MISSES=1696
+W1 NR_PMU {"scope":"coremark_bracket","cycles":775852231,"instret":715631388,"branches":147746504,"redirect_misses":15054394,"mem_load_stall_cycles":855,"ic_misses":257,"dc_misses":166}
+W1 NR_COREMARK_RETURN
+NR_WORKER_CRC seedcrc=000018f2 crclist=0000e3c1 crcmatrix=00000747 crcstate=00008d84 crcfinal=00002717 validated=1
+NR_DUAL_COREMARK cores=2 mode=independent_instances primary_iterations=3000 worker_iterations=3000 primary_cycles=747229883 worker_cycles=775852174 span_cycles=775868246 worker_validated=1 worker_fault=0
+NR_COREMARK_RETURN
+NR_RESULT {"case":2,"config":6,"graph":1,"dot4":1,"mode":3,"model_used":0,"encoder_used":0,"context_used":0,"context_xnd_used":0,"context_hardware_macs":0,"context_hardware":null,"context_deny":0,"context_cycles":0,"encoder_cycles":0,"context_logits":null,"context_margin":null,"context_threshold":null,"context_category":0,"context_bucket":0,"context_bucket_source":0,"context_category_logits":null,"intent_repair_used":0,"intent_delta":null,"context_tool_logits":null,"intent_cascade_used":0,"intent_cascade_delta":null,"fusion_used":0,"fusion_gate_margin":0,"fusion_delta":null,"context_features":0,"context_scalar_macs":0,"encoder_logits":null,"decision_cycles":4335,"tool":null,"selected_tool":2,"margin":null,"confidence_threshold":16,"decode":0,"argument":0,"operation":0,"selection_source":1,"cycles":0,"loads":0,"jobs":0,"reuses":0,"activation_bytes":0,"weight_bytes":0,"bias_bytes":0,"residual_bytes":0,"output_bytes":0,"engine_cycles":0,"failures":0,"execute":0,"value":747229883,"logits":null,"tool_cycles":776168299,"request_cycles":776172689,"pmu":null,"receipt":null}
+NR_READY
+NR_WORKER {"phase":"started","isolated_ram_bytes":65536}
+NR_READY
+NR_FAST_MODE {"enabled":0}
+NR_READY
+NR_RESULT {"case":3,"config":6,"graph":1,"dot4":1,"mode":3,"model_used":1,"encoder_used":1,"context_used":1,"context_xnd_used":1,"context_hardware_macs":39424,"context_hardware":{"loads":0,"jobs":1,"dma_read_bytes":0,"dma_write_bytes":0,"engine_cycles":6144,"failures":0},"context_deny":0,"context_cycles":26017,"encoder_cycles":2927443,"context_logits":[212,-208],"context_margin":-420,"context_threshold":116,"context_category":0,"context_bucket":1,"context_bucket_source":0,"context_category_logits":[342,1,-58,-56,-24,-30,-87,-117,33],"intent_repair_used":0,"intent_delta":[0,0,0,0,0],"context_tool_logits":[-221,165,-186,-238,-136],"intent_cascade_used":0,"intent_cascade_delta":[0,0,0,0,0],"fusion_used":1,"fusion_gate_margin":117,"fusion_delta":[8,-7,8,-43,38],"context_features":87,"context_scalar_macs":0,"encoder_logits":[-221,349,-354,-134,-131,232],"decision_cycles":3023162,"tool":1,"selected_tool":1,"margin":110,"confidence_threshold":16,"decode":0,"argument":20,"operation":0,"selection_source":0,"cycles":2953460,"loads":266,"jobs":399,"reuses":133,"activation_bytes":21248,"weight_bytes":1085632,"bias_bytes":118784,"residual_bytes":33792,"output_bytes":29720,"engine_cycles":1280725,"failures":0,"execute":0,"value":20,"logits":[-213,342,-346,-177,-93,232],"tool_cycles":324,"request_cycles":3023533,"pmu":{"cycles":2927501,"instret":2070134,"branches":490330,"redirect_misses":8823,"mem_load_stall_cycles":324236,"ic_misses":153,"dc_misses":2726},"receipt":{"kind":2,"requested":20,"readback":20,"match":1,"period":63000,"high":12600,"enabled":1,"adc_status":0,"adc_raw":0}}
+NR_READY
+NR_FAST_MODE {"enabled":1}
+NR_READY
+NR_RESULT {"case":4,"config":6,"graph":1,"dot4":1,"mode":3,"model_used":0,"encoder_used":0,"context_used":0,"context_xnd_used":0,"context_hardware_macs":0,"context_hardware":null,"context_deny":0,"context_cycles":0,"encoder_cycles":0,"context_logits":null,"context_margin":null,"context_threshold":null,"context_category":0,"context_bucket":0,"context_bucket_source":0,"context_category_logits":null,"intent_repair_used":0,"intent_delta":null,"context_tool_logits":null,"intent_cascade_used":0,"intent_cascade_delta":null,"fusion_used":0,"fusion_gate_margin":0,"fusion_delta":null,"context_features":0,"context_scalar_macs":0,"encoder_logits":null,"decision_cycles":3939,"tool":null,"selected_tool":4,"margin":null,"confidence_threshold":16,"decode":0,"argument":37,"operation":0,"selection_source":2,"cycles":0,"loads":0,"jobs":0,"reuses":0,"activation_bytes":0,"weight_bytes":0,"bias_bytes":0,"residual_bytes":0,"output_bytes":0,"engine_cycles":0,"failures":0,"execute":0,"value":37,"logits":null,"tool_cycles":113,"request_cycles":4084,"pmu":null,"receipt":{"kind":1,"requested":37,"readback":37,"match":1,"period":0,"high":0,"enabled":0,"adc_status":0,"adc_raw":0}}
+NR_READY
+NR_IO {"led_mask":37,"pwm_period":63000,"pwm_high":12600,"pwm_enabled":1,"pwm_duty":20,"restore_supported":1}
+NR_READY
+PWM_LINE_PASS clocks=63000 high=12600
+AI_BACKGROUND_OVERLAP=1 WORKER_BUSY=1
+SERVICE_UART_DONE sim_cycles=824133863

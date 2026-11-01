@@ -1,0 +1,41 @@
+{
+  "scope": "Private server quantized Torch/NumPy mathematical agreement only;not C/RTL/physical adoption;all5170rowsobserved development,unchanged training25014,no new labels or demos",
+  "profiles": [
+    {
+      "name": "shared64_sixexperts",
+      "quantized_torch_numpy_exact_cases": 5170,
+      "constant_bytes": 77484,
+      "active_dense_macs": 66560,
+      "activation_bytes": 1152
+    },
+    {
+      "name": "shared128_sixexperts",
+      "quantized_torch_numpy_exact_cases": 5170,
+      "constant_bytes": 149420,
+      "active_dense_macs": 133120,
+      "activation_bytes": 1216
+    },
+    {
+      "name": "independent32_sixexperts",
+      "quantized_torch_numpy_exact_cases": 5170,
+      "constant_bytes": 205996,
+      "active_dense_macs": 33280,
+      "activation_bytes": 1120
+    },
+    {
+      "name": "residual_selected",
+      "quantized_torch_numpy_exact_cases": 5170,
+      "constant_bytes": 78572,
+      "active_dense_macs": 67584,
+      "activation_bytes": 1152
+    },
+    {
+      "name": "candidate_route_selected",
+      "quantized_torch_numpy_exact_cases": 5170,
+      "constant_bytes": 78572,
+      "active_dense_macs": 67584,
+      "activation_bytes": 1152
+    }
+  ],
+  "production_modified": false
+}

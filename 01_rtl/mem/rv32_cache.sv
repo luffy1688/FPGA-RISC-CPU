@@ -9,13 +9,18 @@ module rv32_cache #(
   parameter integer CACHE_BYTES = 4096,
   parameter integer LINE_BYTES = 32,
   parameter bit STREAM_REFILL = 0,
-  parameter bit LOOKAHEAD_HIT = 0
+  parameter bit LOOKAHEAD_HIT = 0,
+  parameter bit IDLE_LOAD_LOOKAHEAD = 0,
+  parameter bit PRECOMPARE_TAGS = 0,
+  parameter bit DIRECT_BACKEND_RESPONSE = 0,
+  parameter bit EARLY_STORE_REQUEST = 0
 )(
   input  logic clk, reset,
   input  logic cpu_valid, cpu_write, cpu_cacheable,
   input  logic [31:0] cpu_addr, cpu_wdata,
   input  logic [3:0] cpu_wstrb,
-  input logic lookahead_valid,lookahead_cacheable,
+  input logic lookahead_valid,lookahead_cacheable,lookahead_write,
+  input logic[31:0]lookahead_wdata,input logic[3:0]lookahead_wstrb,
   input logic [31:0] lookahead_addr,
   output logic cpu_ready,
   output logic [31:0] cpu_rdata,
@@ -41,7 +46,7 @@ module rv32_cache #(
   localparam integer LAST_LINE_WORD = LINE_WORDS - 1;
   // ADS does not support enum declarations; preserve the six state values.
   localparam logic [2:0] S_IDLE=3'd0, S_LOOKUP=3'd1, S_WRITE=3'd2,
-    S_REFILL=3'd3, S_BYPASS=3'd4, S_RESP=3'd5;
+    S_REFILL=3'd3, S_BYPASS=3'd4, S_RESP=3'd5, S_STREAM_RESP=3'd6;
   logic [2:0] state;
 
   // Each set holds two candidate lines. Only tags/valid bits are reset.
@@ -60,46 +65,108 @@ module rv32_cache #(
   logic [3:0] req_wstrb;
   logic req_write, hit_way, req_hit, refill_way;
   logic response_error, pending_invalidate;
-  wire accept_lookahead;
+  wire accept_lookahead,read_ahead_probe;
+  wire request_match,lookup_hit0,lookup_hit1;
   logic [WORD_BITS-1:0] refill_word, refill_count;
   logic early_delivered, refill_failed;
+  logic stream_valid,stream_error;
+  logic [31:0]stream_addr,stream_data;
   integer set_number;
   wire [SET_BITS-1:0] req_set = req_addr[OFFSET_BITS +: SET_BITS];
   wire [TAG_BITS-1:0] req_tag = req_addr[31 -: TAG_BITS];
   wire [WORD_BITS-1:0] req_word = req_addr[2 +: WORD_BITS];
   wire [RAM_BITS-1:0] req_ram_index = {req_set, req_word};
   wire [RAM_BITS-1:0] incoming_ram_index =
-    accept_lookahead ? lookahead_addr[2 +: RAM_BITS] : cpu_addr[2 +: RAM_BITS];
+    read_ahead_probe ? lookahead_addr[2 +: RAM_BITS] : cpu_addr[2 +: RAM_BITS];
   wire [RAM_BITS-1:0] refill_index = {req_set, refill_word};
   // Reads and writes are mutually exclusive in the blocking cache FSM.  A
   // bank therefore has exactly one read address and one write address on a
   // clock edge, which preserves the old synchronous-read behavior.
   wire bank_read_enable = ((state == S_IDLE && cpu_valid && cpu_cacheable) ||
-                          accept_lookahead) && !pending_invalidate && !invalidate;
+                          read_ahead_probe);
   wire bank_refill_write = state == S_REFILL && mem_ready && !mem_error;
-  wire bank_hit_write = state == S_WRITE && mem_ready && !mem_error && req_hit;
+  wire early_store=EARLY_STORE_REQUEST&&state==S_LOOKUP&&req_write&&request_match;
+  wire bank_hit_write = mem_ready && !mem_error && ((state==S_WRITE&&req_hit)||(early_store&&(lookup_hit0||lookup_hit1)));
   wire bank_write_enable = !reset && (bank_refill_write || bank_hit_write);
   wire [RAM_BITS-1:0] bank_write_addr = bank_refill_write ? refill_index : req_ram_index;
-  wire bank_write_way = bank_refill_write ? refill_way : hit_way;
-  wire [3:0] bank_write_lane_enable = bank_refill_write ? 4'hf : req_wstrb;
-  wire [31:0] bank_write_data = bank_refill_write ? mem_rdata : req_wdata;
-  wire lookup_hit0 = valid0[req_set] && tag0[req_set] == req_tag;
-  wire lookup_hit1 = valid1[req_set] && tag1[req_set] == req_tag;
+  wire bank_write_way = bank_refill_write ? refill_way : early_store ? lookup_hit1 : hit_way;
+  wire [3:0] bank_write_lane_enable = bank_refill_write ? 4'hf : early_store ? cpu_wstrb : req_wstrb;
+  wire [31:0] bank_write_data = bank_refill_write ? mem_rdata : early_store ? cpu_wdata : req_wdata;
+  logic [TAG_BITS-1:0] read_tag0,read_tag1;
+  logic read_valid0,read_valid1;
+  wire [SET_BITS-1:0] incoming_set=read_ahead_probe?lookahead_addr[OFFSET_BITS+:SET_BITS]:cpu_addr[OFFSET_BITS+:SET_BITS];
+  always_ff @(posedge clk)begin
+    if(reset)begin read_valid0<=0;read_valid1<=0;end
+    else if(bank_read_enable)begin
+      read_valid0<=valid0[incoming_set];read_valid1<=valid1[incoming_set];
+    end
+    if(bank_read_enable)begin read_tag0<=tag0[incoming_set];read_tag1<=tag1[incoming_set];end
+  end
+  // Resolve metadata in the request acceptance cycle and register only the
+  // hit bits. This trades distributed tag storage for a short CPU-ready path,
+  // without adding a cache-hit cycle or changing replacement/write semantics.
+  wire[TAG_BITS-1:0]incoming_tag=read_ahead_probe?lookahead_addr[31-:TAG_BITS]:cpu_addr[31-:TAG_BITS];
+  logic early_hit0,early_hit1;
+  generate if(PRECOMPARE_TAGS)begin:early_tags
+    always_ff @(posedge clk)begin
+      if(reset)begin early_hit0<=0;early_hit1<=0;end
+      else if(bank_read_enable)begin
+        early_hit0<=valid0[incoming_set]&&tag0[incoming_set]==incoming_tag;
+        early_hit1<=valid1[incoming_set]&&tag1[incoming_set]==incoming_tag;
+      end
+    end
+  end else begin:no_early_tags
+    assign early_hit0=0;assign early_hit1=0;
+  end endgenerate
+  assign lookup_hit0 = PRECOMPARE_TAGS ? early_hit0 : read_valid0 && read_tag0 == req_tag;
+  assign lookup_hit1 = PRECOMPARE_TAGS ? early_hit1 : read_valid1 && read_tag1 == req_tag;
   wire read_hit = state == S_LOOKUP && !req_write &&
                   (lookup_hit0 || lookup_hit1);
 
   // Next-address sideband is a reservation, never a second outstanding miss.
-  assign accept_lookahead = LOOKAHEAD_HIT && read_hit && lookahead_valid &&
-      lookahead_cacheable && !pending_invalidate && !invalidate;
+  // RAM reads may be speculative even on a cancellation cycle. State and
+  // valid bits still serialize FENCE.I; no speculative read can retire by itself.
+  assign read_ahead_probe = LOOKAHEAD_HIT && lookahead_valid && lookahead_cacheable &&
+    (read_hit || (EARLY_STORE_REQUEST && early_store && mem_ready) || (IDLE_LOAD_LOOKAHEAD && state==S_IDLE && !cpu_valid));
+  assign accept_lookahead = read_ahead_probe && !pending_invalidate && !invalidate;
 
   // A burst owns the dedicated instruction SRAM port for exactly eight beats.
   // Forward only the word currently requested by the CPU. If it arrives after
   // its beat passed, it waits for the completed line and takes a normal hit.
-  wire stream_response = STREAM_REFILL && state == S_REFILL && mem_ready &&
+  wire stream_capture = STREAM_REFILL && state == S_REFILL && mem_ready &&
     cpu_valid && !cpu_write && cpu_cacheable &&
     cpu_addr[31:OFFSET_BITS] == req_addr[31:OFFSET_BITS] &&
     cpu_addr[2 +: WORD_BITS] == refill_word;
+  // The dedicated SRAM cannot pause its eight beats. Capture only the word
+  // matching the outstanding CPU request, then return data, error and address
+  // together one clock later. A cancelled/different request never sees it.
+  wire stream_response=STREAM_REFILL&&stream_valid&&cpu_valid&&!cpu_write&&
+    cpu_cacheable&&cpu_addr==stream_addr;
+  always_ff @(posedge clk)begin
+    if(reset)begin stream_valid<=0;stream_addr<=0;stream_data<=0;stream_error<=0;end
+    else begin
+      stream_valid<=stream_capture;
+      if(stream_capture)begin stream_addr<=cpu_addr;stream_data<=mem_rdata;stream_error<=mem_error;end
+    end
+  end
 
+  logic store_bypass_valid;logic[31:0]store_bypass_addr,store_bypass_data;logic[3:0]store_bypass_mask;
+  always_ff @(posedge clk)begin
+    if(reset)store_bypass_valid<=0;
+    else begin
+      store_bypass_valid<=EARLY_STORE_REQUEST&&bank_hit_write&&bank_read_enable;
+      if(bank_hit_write&&bank_read_enable)begin
+        store_bypass_addr<=req_addr;store_bypass_data<=bank_write_data;store_bypass_mask<=bank_write_lane_enable;
+      end
+    end
+  end
+  wire[31:0]raw_hit_data=lookup_hit1?read1:read0;
+  logic[31:0]hit_data;integer fb;
+  always_comb begin
+    hit_data=raw_hit_data;
+    if(store_bypass_valid&&store_bypass_addr==req_addr)
+      for(fb=0;fb<4;fb=fb+1)if(store_bypass_mask[fb])hit_data[fb*8+:8]=store_bypass_data[fb*8+:8];
+  end
   assign read0 = {read0_b3, read0_b2, read0_b1, read0_b0};
   assign read1 = {read1_b3, read1_b2, read1_b1, read1_b0};
 
@@ -144,10 +211,15 @@ module rv32_cache #(
   // cycle denotes a new request, allowing consecutive stores with no valid gap.
   // Keep response forwarding separate from request generation. This also
   // avoids a false delta-cycle feedback through zero-wait MMIO responders.
-  assign cpu_ready = state == S_RESP || read_hit || stream_response;
-  assign cpu_rdata = stream_response ? mem_rdata :
-      read_hit ? (lookup_hit1 ? read1 : read0) : response_data;
-  assign cpu_error = stream_response ? mem_error : read_hit ? 1'b0 : response_error;
+  wire complete_response=state==S_RESP&&(!STREAM_REFILL||(cpu_valid&&cpu_addr==req_addr));
+  // A lookahead is speculative. Only the matching live request may retire it.
+  // Comparing registered addresses removes CPU redirect/queue logic from BRAM CE.
+  assign request_match = !LOOKAHEAD_HIT || (cpu_valid && cpu_write == req_write && cpu_addr == req_addr);
+  wire backend_response=DIRECT_BACKEND_RESPONSE&&(state==S_WRITE||state==S_BYPASS||early_store)&&mem_ready;
+  assign cpu_ready = ((complete_response || read_hit) && request_match) || stream_response || backend_response;
+  assign cpu_rdata = backend_response ? (req_write?32'b0:mem_rdata) : stream_response ? stream_data :
+      read_hit ? hit_data : response_data;
+  assign cpu_error = backend_response ? mem_error : stream_response ? stream_error : read_hit ? 1'b0 : response_error;
   assign idle = state == S_IDLE && !pending_invalidate;
   always_comb begin
     mem_valid = 1'b0;
@@ -157,6 +229,9 @@ module rv32_cache #(
     mem_wdata = req_wdata;
     mem_wstrb = req_wstrb;
     case (state)
+      S_LOOKUP:begin
+        mem_valid=early_store;mem_write=req_write;mem_wdata=cpu_wdata;mem_wstrb=cpu_wstrb;
+      end
       S_WRITE, S_BYPASS: begin
         mem_valid = 1'b1;
         mem_write = req_write;
@@ -186,12 +261,12 @@ module rv32_cache #(
       hit_pulse <= 0; miss_pulse <= 0; refill_pulse <= 0;
       for (set_number = 0; set_number < SETS; set_number = set_number + 1) begin
         valid0[set_number] <= 0; valid1[set_number] <= 0;
-        tag0[set_number] <= 0; tag1[set_number] <= 0;
         victim[set_number] <= 0;
       end
     end else begin
       hit_pulse <= 0; miss_pulse <= 0; refill_pulse <= 0;
       if (invalidate) pending_invalidate <= 1;
+      if (stream_response) early_delivered<=1;
       case (state)
         S_IDLE: begin
           // FENCE.I is permitted while busy: defer it until this transaction
@@ -202,6 +277,9 @@ module rv32_cache #(
               valid1[set_number] <= 0;
             end
             pending_invalidate <= 0;
+          end else if (IDLE_LOAD_LOOKAHEAD && read_ahead_probe)begin
+            req_addr<=lookahead_addr;req_write<=lookahead_write;req_wdata<=lookahead_wdata;req_wstrb<=lookahead_wstrb;
+            req_hit<=0;response_data<=0;response_error<=0;state<=S_LOOKUP;
           end else if (cpu_valid) begin
             req_addr <= cpu_addr;
             req_wdata <= cpu_wdata;
@@ -215,15 +293,30 @@ module rv32_cache #(
           end
         end
         S_LOOKUP: begin
-          if (lookup_hit0 || lookup_hit1) begin
+          // A hint reserves a RAM read, never the store's authority/payload.
+          // Live MEM bytes are used on first issue and latched across stalls.
+          if(early_store)begin req_wdata<=cpu_wdata;req_wstrb<=cpu_wstrb;end
+          // An unused hint must not launch a miss or acknowledge another PC.
+          if (LOOKAHEAD_HIT && !request_match) begin
+            state <= S_IDLE;
+          end else if (lookup_hit0 || lookup_hit1) begin
             req_hit <= 1;
             hit_way <= lookup_hit1;
             victim[req_set] <= !lookup_hit1;
             hit_pulse <= 1;
-            if (req_write) state <= S_WRITE;
+            if (req_write)begin
+              if(early_store&&mem_ready)begin
+                response_data<=0;response_error<=mem_error;
+                if(mem_error)begin if(lookup_hit1)valid1[req_set]<=0;else valid0[req_set]<=0;end
+                if(accept_lookahead)begin
+                  req_addr<=lookahead_addr;req_write<=lookahead_write;req_wdata<=lookahead_wdata;req_wstrb<=lookahead_wstrb;
+                  req_hit<=0;state<=S_LOOKUP;
+                end else state<=S_IDLE;
+              end else state<=S_WRITE;
+            end
             else if (accept_lookahead) begin
-              req_addr <= lookahead_addr; req_write <= 0;
-              req_wdata <= 0; req_wstrb <= 0;
+              req_addr <= lookahead_addr; req_write <= IDLE_LOAD_LOOKAHEAD?lookahead_write:1'b0;
+              req_wdata <= lookahead_wdata; req_wstrb <= lookahead_wstrb;
               req_hit <= 0; response_data <= 0; response_error <= 0;
               state <= S_LOOKUP;
             end else state <= S_IDLE; // The registered RAM word is acknowledged now.
@@ -231,7 +324,14 @@ module rv32_cache #(
             miss_pulse <= 1;
             if (req_write) begin
               // No-write-allocate: a store miss is forwarded without a refill.
-              state <= S_WRITE;
+              if(early_store&&mem_ready)begin
+                response_data<=0;response_error<=mem_error;
+                if(accept_lookahead)begin
+                  req_addr<=lookahead_addr;req_write<=lookahead_write;req_wdata<=lookahead_wdata;req_wstrb<=lookahead_wstrb;
+                  req_hit<=0;state<=S_LOOKUP;
+                end else state<=S_IDLE;
+              end
+              else state<=S_WRITE;
             end else begin
               refill_way <= !valid0[req_set] ? 1'b0 :
                             !valid1[req_set] ? 1'b1 : victim[req_set];
@@ -257,12 +357,11 @@ module rv32_cache #(
             if (hit_way) valid1[req_set] <= 0;
             else valid0[req_set] <= 0;
           end
-          state <= S_RESP;
+          state <= DIRECT_BACKEND_RESPONSE ? S_IDLE : S_RESP;
         end
         S_REFILL: if (mem_ready) begin
           // Never abandon a burst after an early response or an error. Drain
           // all eight responses so a late beat cannot acknowledge a new miss.
-          if (stream_response) early_delivered <= 1;
           if (mem_error) refill_failed <= 1;
           else begin
             refill_pulse <= 1;
@@ -276,28 +375,42 @@ module rv32_cache #(
             if (!refill_failed && !mem_error) begin
               if (refill_way) begin
                 valid1[req_set] <= 1;
-                tag1[req_set] <= req_tag;
+
               end else begin
                 valid0[req_set] <= 1;
-                tag0[req_set] <= req_tag;
+
               end
               victim[req_set] <= !refill_way;
             end
             response_data <= refill_word == req_word ? mem_rdata : requested_word;
             response_error <= refill_failed || mem_error;
-            state <= STREAM_REFILL && (early_delivered || stream_response) ?
-                     S_IDLE : S_RESP;
+            // A last-beat match is still queued, even if an earlier request
+            // already completed. Hold the cache out of IDLE until its delayed
+            // ACK retires; otherwise IDLE could reaccept the old address.
+            if(STREAM_REFILL&&stream_capture)state<=S_STREAM_RESP;
+            else if(STREAM_REFILL&&(early_delivered||stream_response))state<=S_IDLE;
+            else state<=S_RESP;
           end else begin
             refill_word <= refill_word + 1'b1;
             refill_count <= refill_count + 1'b1;
           end
         end
+        S_STREAM_RESP:if(stream_response||!stream_valid)state<=S_IDLE;
         S_RESP: state <= S_IDLE;
         default: state <= S_IDLE;
       endcase
     end
   end
 
+  // Tag payload has one explicit write event, separate from validity/reset.
+  // Writing the inactive way's old value makes the pair one transaction;
+  // data and validity semantics remain unchanged.
+  always_ff @(posedge clk)begin
+    if(!reset && state==S_REFILL && mem_ready && refill_count==LAST_LINE_WORD[WORD_BITS-1:0] && !refill_failed && !mem_error)begin
+      tag0[req_set]<=refill_way?tag0[req_set]:req_tag;
+      tag1[req_set]<=refill_way?req_tag:tag1[req_set];
+    end
+  end
   // Unsupported geometry fails at elaboration rather than silently aliasing.
   initial begin
     if (STREAM_REFILL && LINE_BYTES != 32)
