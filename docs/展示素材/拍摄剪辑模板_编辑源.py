@@ -24,12 +24,12 @@ from PIL import Image,ImageDraw,ImageFont
 import argparse,json,math,subprocess,tempfile
 
 TIMELINE=[
- {'key':1,'duration':10,'title':'作品介绍','window':'作品题名与应用概念','cue':'澄灯 LumaRV：面向工业检修照明与状态指示。','placeholder':'题名页示意 · 待确认或替换'},
+ {'key':1,'duration':10,'title':'作品介绍','window':'作品题名与应用概念','cue':'澄灯 LumaRV：控制板试产与返修中的交互式调试。','placeholder':'题名页示意 · 待确认或替换'},
  {'key':2,'duration':15,'title':'硬件与连接','window':'板卡全貌与接线','cue':'固定机位，板卡、电源、UART与JTAG连接均进入画面。','placeholder':'待替换实拍'},
  {'key':3,'duration':30,'title':'中文PWM请求','window':'输入中文并等待真实结果','cue':'只录一条PWM指令，保留处理路径、执行许可与返回结果。','placeholder':'待替换实拍'},
  {'key':4,'duration':25,'title':'PWM实际回读','window':'PWM请求值与寄存器回读特写','cue':'拍清周期、高电平计数、实际占空比和一致性结果。','placeholder':'待替换实拍'},
- {'key':5,'duration':25,'title':'LED快速控制','window':'led 37 与实板灯变化','cue':'保持板卡和控制台同框，指令与实际变化连贯可见。','placeholder':'待替换实拍'},
- {'key':6,'duration':25,'title':'CPU自检','window':'开始 → 完整运行 → CRC与计时','cue':'按一次CoreMark按钮；保留约15秒运行及最终CRC、计时、READY。','placeholder':'待替换实拍'},
+ {'key':5,'duration':25,'title':'LED快速控制','window':'led 37 与实板灯变化','cue':'LED变化与回读同拍；末尾可追加一次PWM频率越界拒绝。','placeholder':'待替换实拍'},
+ {'key':6,'duration':25,'title':'CPU自检','window':'开始 → 完整运行 → CRC与计时','cue':'按一次CoreMark按钮；保留约14.28秒双核运行及各核CRC、共同计时、READY。','placeholder':'待替换实拍'},
  {'key':7,'duration':20,'title':'三维逻辑结构','window':'旋转与分层展示','cue':'可替换已有纯3D动画；须标明逻辑结构示意，不能当作实物。','placeholder':'待替换结构动画 · 非实拍'},
  {'key':8,'duration':15,'title':'证据导出与结束','window':'原始证据导出与作品结束画面','cue':'展示本次记录的导出操作，再回到作品名称结束。','placeholder':'待替换实拍'},
 ]
