@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LumaRV · 板卡自检与现场运维</title>
+<style>
+:root{color-scheme:light;--ink:#172934;--muted:#536977;--line:#dbe5eb;--paper:#f3f7f9;--blue:#1667a2;--green:#147663;--orange:#a15a00;--red:#b53535}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 system-ui,"Microsoft YaHei",sans-serif}main{max-width:1200px;margin:0 auto;padding:30px 24px 46px}h1{font-size:28px;margin:0}h2{font-size:19px;margin:0 0 12px}p{margin:8px 0}.subtitle{color:var(--muted)}.top{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:22px}.tag{background:#e4edf4;color:var(--blue);padding:7px 13px;border-radius:999px;white-space:nowrap}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{border:1px solid var(--line);border-radius:14px;background:#fff;padding:20px;box-shadow:0 3px 14px #17293404}.full{grid-column:1/-1}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}button{font:inherit;border:1px solid #c8d7e2;background:#fff;color:var(--ink);border-radius:8px;padding:8px 13px;cursor:pointer}button.primary{background:var(--blue);color:#fff;border-color:var(--blue)}button:disabled{opacity:.45;cursor:default}button:hover:not(:disabled){filter:brightness(.95)}textarea{font:inherit;width:100%;min-height:78px;resize:vertical;border:1px solid #c8d7e2;border-radius:8px;padding:12px;line-height:1.6}input{font:inherit}.hint{font-size:13px;color:var(--muted)}.status{padding:10px 13px;background:#f1f5f8;border-radius:8px;margin:12px 0}.status.good{background:#e8f5ef;color:var(--green)}.status.warn{background:#fff3e2;color:var(--orange)}.status.bad{background:#ffeded;color:var(--red)}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}.metric{background:#f4f7f9;padding:12px;border-radius:8px}.metric strong{display:block;font-size:21px;line-height:1.3}.metric span{font-size:12px;color:var(--muted)}dl{display:grid;grid-template-columns:100px 1fr;margin:0;gap:5px 12px}dt{color:var(--muted)}dd{margin:0;overflow-wrap:anywhere}pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:320px;overflow:auto;background:#101f29;color:#dcebf3;padding:14px;border-radius:8px;font:12px/1.65 Consolas,monospace;margin:12px 0 0}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:13px}td,th{text-align:left;padding:7px 9px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-weight:500}.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.step{border-top:3px solid #a8cee7;padding:8px 0}.step b{display:block}.step p{font-size:13px;color:var(--muted)}details{margin-top:12px}summary{cursor:pointer;color:var(--blue)}.badge{font-size:12px;color:var(--muted)}.split{display:flex;justify-content:space-between;gap:12px;align-items:center}.notice{border-left:3px solid var(--orange);padding:2px 10px;color:var(--muted);font-size:13px}a{color:var(--blue)}@media(max-width:800px){main{padding:20px 14px}.grid{grid-template-columns:1fr}.top{display:block}.top .tag{display:inline-block;margin-top:10px}.steps{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(2,1fr)}}
+
+/* Presentation only changes visibility and layout, never the serial session. */
+.card,.grid>*{min-width:0}.view-actions{display:flex;justify-content:flex-end;align-items:center;gap:8px;flex-wrap:wrap}.view-actions .view-hint{flex-basis:100%;font-size:12px;color:var(--muted);text-align:right}.fold-title{font-size:19px;font-weight:600;color:var(--ink)}.log-actions{margin-top:12px}
+body.presentation{font-size:17px;line-height:1.45}body.presentation main{max-width:1500px;padding:18px 20px 24px}body.presentation .top{margin-bottom:14px}body.presentation h1{font-size:27px}body.presentation h2,body.presentation .fold-title{font-size:18px}body.presentation .dashboard{gap:12px}body.presentation .card{padding:14px}body.presentation .status{margin:8px 0;padding:8px 10px}body.presentation .support-copy,body.presentation .detailed-only,body.presentation #learningPanel,body.presentation .footer-hint{display:none}body.presentation .row{gap:8px}body.presentation button{padding:7px 10px}body.presentation #command{min-height:62px}body.presentation #presets{gap:6px}body.presentation #presets button{font-size:14px;padding:5px 8px}body.presentation #presets button:nth-child(n+6){display:none}body.presentation #resultPanel>.metrics{grid-template-columns:repeat(2,minmax(0,1fr));margin:10px 0;gap:8px}body.presentation #resultPanel>.metrics>.metric:nth-child(n+3){display:none}body.presentation .metric{padding:9px 12px}body.presentation .metric strong{font-size:27px}body.presentation #resultPanel .result-meta{display:block}body.presentation #resultPanel .result-meta dl{grid-template-columns:88px minmax(0,1fr);gap:4px 12px}body.presentation #connectionPanel dl,body.presentation #corePanel>dl{grid-template-columns:80px minmax(0,1fr) 80px minmax(0,1fr);gap:4px 10px;font-size:14px}body.presentation #connectionPanel .badge{font-size:12px}body.presentation #configuration{font-size:14px!important}body.presentation #comparisonStatus{font-size:16px}body.presentation #coreRawDetails pre{max-height:230px}body.presentation #log{max-height:180px}
+@media(min-width:1101px){body.presentation .dashboard{grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr);grid-template-areas:"connection input" "result benchmark" "comparison benchmark" "health health" "logs logs"}body.presentation #connectionPanel{grid-area:connection}body.presentation #inputPanel{grid-area:input}body.presentation #resultPanel{grid-area:result;grid-column:auto}body.presentation #comparisonPanel{grid-area:comparison;grid-column:auto}body.presentation #corePanel{grid-area:benchmark}body.presentation #logPanel{grid-area:logs}body.presentation #healthPanel{grid-area:health}}
+@media(max-width:1100px){body.presentation .dashboard{grid-template-columns:minmax(0,1fr)}body.presentation .full{grid-column:auto}body.presentation .top{align-items:center;gap:12px}body.presentation .view-actions{max-width:58%}body.presentation .view-actions .tag{font-size:13px;padding:5px 9px}body.presentation .view-actions button{font-size:14px}body.presentation .subtitle{font-size:14px;margin-bottom:0}}
+@media(max-width:700px){body.presentation{font-size:15px}body.presentation main{padding:14px 12px 20px}body.presentation .top{display:block}body.presentation .view-actions{max-width:none;justify-content:flex-start;margin-top:10px}body.presentation .view-actions .view-hint{text-align:left}body.presentation #connectionPanel dl,body.presentation #corePanel>dl{grid-template-columns:84px minmax(0,1fr)}body.presentation .split{flex-wrap:wrap}body.presentation #resultPanel .result-meta dl{grid-template-columns:78px minmax(0,1fr)}}
+
+/* Judge view keeps measurements and engineering evidence accessible without dominating the result. */
+.mode-actions{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:8px;margin:10px 0}.mode-actions button{padding:12px 8px;font-weight:650}.mode-line{margin:8px 0;font-size:14px;color:var(--muted)}.outcome-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}.outcome-grid .outcome{padding:12px 14px;background:#f4f7f9;border-radius:8px}.outcome b{display:block;font-size:25px;line-height:1.4;overflow-wrap:anywhere}.outcome span{font-size:13px;color:var(--muted)}.outcome-facts{display:grid;grid-template-columns:90px 1fr;gap:5px 12px;font-size:14px}.last-command{font-size:15px;overflow-wrap:anywhere}.engineering-option{margin-top:12px}.engineering-option summary{font-size:14px}body.presentation #engineeringOptions:not([open]){margin-top:5px}body.presentation #resultExplanation,body.presentation #resultCase,body.presentation #contextSummary{display:none}body.presentation #comparisonPanel,body.presentation #healthPanel{display:none}body.presentation .dashboard{grid-template-areas:"connection input" "result benchmark" "logs logs"}body.presentation .view-hint{display:none}body.presentation #connectionPanel dl{grid-template-columns:78px 1fr;font-size:13px}body.presentation #connectionPanel h2,body.presentation #inputPanel h2{font-size:18px}body.presentation #resultPanel .outcome b{font-size:28px}body.presentation #corePanel>details:not(#coreRawDetails){display:none}body.presentation #corePanel{min-height:260px}body.presentation #logPanel .hint{display:none}body.presentation #resultEvidence>.metrics{grid-template-columns:repeat(3,minmax(0,1fr))}body.presentation #resultEvidence .metric strong{font-size:20px}body.presentation .full{grid-column:1/-1}body.presentation #presetDetails:not([open]){margin-top:8px}.compact-source{font-size:12px;color:var(--muted)}@media(max-width:1100px){body.presentation .dashboard{grid-template-areas:none}.mode-actions{grid-template-columns:1fr}.outcome b{font-size:22px}}
+</style>
+<link rel="stylesheet" href="architecture.css">
+</head>
+<body><main>
+<header class="top"><div><h1>澄灯 LumaRV</h1><p class="subtitle">工业检修照明 · 中文语义控制</p></div><div class="view-actions"><span class="tag" id="connectionTag">未连接设备</span><button id="presentationToggle" type="button" aria-pressed="false">演示布局</button><button id="fullscreenToggle" type="button">全屏显示</button><span class="view-hint" id="viewHint" role="status" aria-live="polite">演示布局便于外接屏，详细布局保留完整日志。</span></div></header>
+<div class="grid dashboard">
+<section class="card" id="connectionPanel"><h2>1. 连接实板</h2><div class="row"><button class="primary" id="connect">选择串口并连接</button><button id="disconnect" disabled>断开</button><label>串口速率 <select id="baudRate"><option value="115200">115200 恢复基线</option><option value="921600">921600 高速固件</option></select></label><span class="badge" id="uartIdentity">CP210x UART · 8N1</span></div><div class="status" id="status" role="status" aria-live="polite">没有串口连接。页面不会生成虚构的设备结果。</div><p class="hint support-copy">连接 USB-UART；先关闭占用同一串口的终端。连接后按板上 KEY0 复位，收到 NR_READY 后才能发送。</p><dl><dt>固件版本</dt><dd id="firmware">等待 NR_BUILD</dd><dt>固件串口速率</dt><dd id="reportedBaud">等待固件报告</dd><dt>固件频率</dt><dd id="clock">等待固件报告</dd><dt>运行状态</dt><dd id="readyState">未连接</dd><dt>确认配置</dt><dd id="activeConfig">等待 NR_CONFIG</dd></dl><p class="mode-line">当前已确认：<b id="confirmedMode">等待固件确认</b></p><details id="engineeringOptions" class="engineering-option"><summary>工程选项 · 后端、路径与协议</summary><label class="hint"><input id="otherUart" type="checkbox">其他USB-UART（高级）</label><div class="row" style="margin-top:12px"><select id="configuration" aria-label="推理执行配置" style="font:inherit;max-width:100%;padding:8px;border:1px solid #c8d7e2;border-radius:8px"><option value="0">0 · 软件 / natural</option><option value="1">1 · reload / natural</option><option value="2">2 · 单槽 / natural</option><option value="3">3 · reload / interleaved</option><option value="4">4 · 单槽 / interleaved</option><option value="5">5 · lifetime / interleaved</option><option value="6" selected>6 · lifetime + dot4 / interleaved</option></select><button id="applyConfig" disabled>切换配置</button></div><div class="row" style="margin-top:12px"><select id="fastMode" aria-label="处理路径"><option value="1">规则快路径优先，未命中才运行模型</option><option value="0">先运行模型（保留原始模型结果）</option></select><button id="applyFast" disabled>切换路径</button><span id="activeFast" class="badge">等待 NR_FAST_MODE</span><select id="resultFormat" aria-label="输出格式"><option value="compact">快路径紧凑帧</option><option value="full">完整 JSON</option></select><button id="applyFormat" disabled>切换输出</button><span id="activeFormat" class="badge">等待 NR_FORMAT</span></div><p class="hint support-copy">同一位流可切换 7 种策略，比较相同输入的周期与搬运。只有收到板上 NR_CONFIG 才确认切换；下拉选择本身不会发送。</p><p id="modeDraft" class="hint">下拉选择后须点击对应切换按钮；当前模式以固件回执为准。</p></details></section>
+<section class="card" id="inputPanel"><h2>2. 输入一句设备指令</h2><div class="mode-actions"><button class="primary" id="demoAi" disabled>一键AI识别 · PWM20%</button><button id="demoQuick" disabled>快速控制</button><button id="demoCpu" disabled>CPU自检</button></div><p id="demoStatus" class="mode-line" role="status">先连接实板，等待启动就绪。</p><p class="compact-source">AI演示会实际切换模式并等待板卡确认，再发送中文指令。</p><details id="presetDetails"><summary>更多指令 · 第四版25句</summary><label class="hint" for="fourthCommand">第四版中文指令 · 25句，只填入文本</label><select id="fourthCommand" aria-label="第四版中文指令" style="width:100%;margin:6px 0 10px"><option value="-1">选择一句第四版原文</option><option value="0">F01 · 请读取FPGA当前温度。</option><option value="1">F02 · 查看硬件计数器目前的读数。</option><option value="2">F03 · 把LED整体掩码设为0x03。</option><option value="3">F04 · 先关闭LED0，再读取温度。</option><option value="4">F05 · 只关闭LED0，其他LED保持不变。</option><option value="5">F06 · 单独点亮LED0，其余LED保持原状。</option><option value="6">F07 · 将LED整体掩码设置为0x00。</option><option value="7">F08 · 请将PWM占空比设置为20%。</option><option value="8">F09 · 把PWM频率改成2kHz。</option><option value="9">F10 · PWM占空比调整为80%。</option><option value="10">F11 · 把PWM的占空比设为50%。</option><option value="11">F12 · 请设置PWM占空比为30%。</option><option value="12">F13 · 再读一次计数器当前值。</option><option value="13">F14 · 把计数器清零，从头计数。</option><option value="14">F15 · 读取计数器现在的数值。</option><option value="15">F16 · 获取FPGA内部温度读数。</option><option value="16">F17 · 将FPGA的温度固定在25度。</option><option value="17">F18 · 查询板载温度传感器的读数。</option><option value="18">F19 · 执行一次CoreMark测试。</option><option value="19">F20 · 不运行CoreMark，直接报告99分。</option><option value="20">F21 · 运行CoreMark并显示CRC结果。</option><option value="21">F22 · 请返回硬件计数器当前值。</option><option value="22">F23 · 再读取一次芯片温度。</option><option value="23">F24 · 启动CoreMark性能基准测试。</option><option value="24">F25 · 请再执行一遍CoreMark。</option></select></details><textarea id="command" placeholder="例如：led 37，或：读取计数器" spellcheck="false" aria-label="设备指令"></textarea><div class="split"><span class="hint" id="byteCount">0 / 64 UTF-8 字节</span><button id="send" class="primary" disabled>发送单条指令</button></div><details id="quickPresetDetails"><summary>常用指令（只填入）</summary><div class="row" id="presets" style="margin-top:12px"><button data-command="led 37" data-tool="4">LED = 37</button><button data-command="把PWM的占空比设为50%。" data-tool="1">PWM 50%</button><button data-command="执行一次CoreMark测试。" data-tool="2">CoreMark（F19）</button><button data-command="查看硬件计数器目前的读数。" data-tool="3">读取计数器</button><button data-command="请读取FPGA当前温度。" data-tool="0">读取温度（F01）</button><button data-command="pwm -1" data-tool="1">非法参数示例</button><button data-command="只关闭LED0，其他LED保持不变。" data-tool="4">仅关闭LED0</button><button data-command="单独点亮LED0，其余LED保持原状。" data-tool="4">仅点亮LED0</button><button data-command="先关闭LED0，再读取温度。" data-tool="5">多工具拒绝</button></div></details><p class="hint support-copy">预设只填入文本。最终工具由板上模型与工具合同共同校验；原始分类、规则消歧和拒绝会原样显示。Ctrl + Enter 发送。</p></section>
+<section class="card full" id="resultPanel"><div class="split"><h2>3. 本次板上处理结果</h2><span id="resultCase" class="badge">尚无真实串口结果</span></div><div id="resultStatus" class="status">连接与结果互相独立：仅显示本次连接的真实 NR_RESULT / NR_FAST；模型未运行时单独标记。</div><p class="last-command">本次请求：<b id="displayCommand">等待发送</b></p><div class="outcome-grid"><div class="outcome"><span>实际动作与返回值</span><b id="displayAction">等待实板结果</b></div><div class="outcome"><span>寄存器回读</span><b id="displayReadback">—</b></div></div><dl class="outcome-facts"><dt>AI实际使用</dt><dd id="displayAi">—</dd><dt>完整模型耗时</dt><dd id="displayCompute">—</dd><dt>工具执行</dt><dd id="displayTool">—</dd><dt>本次请求模式</dt><dd id="displayMode">—</dd></dl><p class="compact-source">来源：本次串口返回；寄存器回读不代表外部引脚测量。</p><details id="resultEvidence"><summary>原始分数、路径与PMU证据</summary><p id="resultInterpretation" class="hint">尚无结果</p><p id="resultExplanation" class="hint">这里将解释识别耗时、工具运行及返回值。</p><div class="metrics"><div class="metric"><strong id="cycles">—</strong><span>神经计算周期 · 不含工具执行</span></div><div class="metric"><strong id="latency">—</strong><span>完整神经计算耗时 · 不含工具执行</span></div><div class="metric"><strong id="toolLatency">—</strong><span>工具派发耗时</span></div><div class="metric"><strong id="requestLatency">—</strong><span>推理＋解码＋派发 · 不含串口收发</span></div><div class="metric"><strong id="loads">—</strong><span>activation LOAD 次数</span></div><div class="metric"><strong id="reuses">—</strong><span>驻留复用次数</span></div><div class="metric"><strong id="jobs">—</strong><span>GEMV 任务数</span></div><div class="metric"><strong id="dma">—</strong><span>activation / weight / output 总字节</span></div><div class="metric"><strong id="requestCpi">—</strong><span>推理区间 PMU CPI · 含采样开销</span></div></div><p id="contextSummary" class="hint">语境判断与编码器结果分别报告。</p><details id="semanticDetails"><summary>语义分链路与语境加速证据</summary><p class="hint">辅助语境类别用于解释模型分支，不是工具指令或执行许可。原始整数分数不是概率；紧凑帧未携带的字段保持未报告。</p><dl><dt>语境计算硬件</dt><dd id="contextHardware">—</dd><dt>语境乘加</dt><dd id="contextHardwareMacs">—</dd><dt>辅助语境类别</dt><dd id="contextCategory">—</dd><dt>语境阈值分支</dt><dd id="contextBucket">—</dd><dt>九类原始分数</dt><dd id="contextCategoryScores">—</dd><dt>合法工具修复</dt><dd id="intentRepair">—</dd></dl></details><div class="grid result-meta"><dl><dt>学习语境头</dt><dd id="contextUse">—</dd><dt>语境头耗时</dt><dd id="contextLatency">—</dd><dt>编码器耗时</dt><dd id="encoderLatency">—</dd><dt>完整编码器</dt><dd id="encoderUse">—</dd><dt>语境分数</dt><dd id="contextScores">—</dd><dt>语境阈值</dt><dd id="contextMargin">—</dd><dt>决策门禁周期</dt><dd id="decisionCycles">—</dd><dt>决策门禁耗时</dt><dd id="decisionLatency">—</dd><dt>处理路径</dt><dd id="processingPath">—</dd><dt>神经输出</dt><dd id="tool">—</dd><dt>实际工具</dt><dd id="selectedTool">—</dd><dt class="detailed-only">LED操作</dt><dd class="detailed-only" id="operation">—</dd><dt>选择来源</dt><dd id="selectionSource">—</dd><dt class="detailed-only">分差 / 门限</dt><dd class="detailed-only" id="margin">—</dd><dt class="detailed-only">参数校验</dt><dd class="detailed-only" id="decode">—</dd><dt class="detailed-only">工具执行</dt><dd class="detailed-only" id="execution">—</dd><dt>参数 / 回值</dt><dd id="values">—</dd><dt>寄存器回读</dt><dd id="receipt">—</dd><dt>浏览器收结果</dt><dd id="hostResultLatency">—</dd><dt>浏览器收就绪</dt><dd id="hostReadyLatency">—</dd><dt class="detailed-only">工具派发周期</dt><dd class="detailed-only" id="toolCycles">—</dd><dt class="detailed-only">请求周期</dt><dd class="detailed-only" id="requestCycles">—</dd></dl><dl class="detailed-only"><dt>执行策略</dt><dd id="mode">—</dd><dt>QKV 图</dt><dd id="graph">—</dd><dt>CPU dot4</dt><dd id="dot4">—</dd><dt>引擎周期</dt><dd id="engine">—</dd><dt>硬件失败数</dt><dd id="failures">—</dd><dt>DMA 分项</dt><dd id="dmaDetail">—</dd></dl></div><details><summary>查看推理区间 PMU 计数与解释</summary><p class="hint">这是编码器前后计数器差分，不含前置语境头和工具派发。cycles 含采样开销；存储停顿含 memory hold 与 load hazard。条件分支数和重定向失配数分别显示，不能相除当作分支错预测率。</p><div class="table-wrap"><table><thead><tr><th>PMU 事件</th><th>次数 / 周期</th></tr></thead><tbody id="requestPmu"></tbody></table></div></details><details><summary>查看神经分数与编码器原始结果</summary><p class="hint"><span id="logitScope">旧固件六类分数为编码器输出；新固件将联合神经与编码器原判分列，分差均未校准为概率。</span></p><div class="table-wrap"><table><thead><tr><th>工具</th><th>INT32 分数</th></tr></thead><tbody id="logits"></tbody></table></div><details><summary>编码器原始六类分数（未被语境判断覆盖）</summary><div class="table-wrap"><table><thead><tr><th>工具</th><th>编码器 INT32 分数</th></tr></thead><tbody id="encoderLogits"></tbody></table></div></details><pre id="json">尚无结果</pre></details></details></section>
+<section class="card full" id="comparisonPanel"><h2>同一句话的软硬件对照</h2><div class="status" id="comparisonStatus">等待同一次连接中，相同指令的配置0和6结果。</div><p class="hint support-copy">先选择配置0发送一句，再切换配置6发送原句。收到两次结果并核对6类整数分数和工具参数后，显示推理周期比。工具执行、串口和电脑渲染不计入加速比。</p></section>
+<section class="card" id="corePanel"><h2>4. CoreMark 运行证据</h2><div id="coreStatus" class="status">尚未收到 CoreMark 输出。</div><dl><dt>计时周期</dt><dd id="coreCycles">—</dd><dt>精确耗时</dt><dd id="coreSeconds">—</dd><dt>迭代数</dt><dd id="coreIterations">—</dd><dt>CoreMark/MHz</dt><dd id="coreScore">—</dd><dt class="detailed-only">区间 PMU CPI</dt><dd class="detailed-only" id="coreCpi">—</dd></dl><p class="hint support-copy">等待算法校验信息、计时信息和工具执行结果。报告不足 10 秒时不会把数值标为有效基准成绩。</p><details><summary>CoreMark 区间 PMU</summary><p class="hint">NR_PMU 的 coremark_bracket 是额外采样区间，cycles 包括采样开销；CoreMark 成绩仍使用上面的算法计时周期。</p><div class="table-wrap"><table><thead><tr><th>PMU 事件</th><th>次数 / 周期</th></tr></thead><tbody id="corePmu"></tbody></table></div></details><details id="coreRawDetails" open><summary>CRC 与原始基准输出</summary><pre id="coreLog">尚无输出</pre></details></section>
+<section class="card full" id="architecturePanel"><details id="architectureDetails"><summary class="fold-title">芯片剖面 · 从中文请求到真实回读</summary>
+<div class="arch-header"><p>拖动旋转，滚轮缩放；点击器件查看内部结构。<span>逻辑结构示意，不是芯片物理布局。</span></p><span id="archRenderState" class="arch-engine">展开后加载本地3D</span></div>
+<div class="arch-toolbar"><div class="arch-toolbar-group"><button id="archView" type="button" aria-pressed="true">3D场景 · 切换平面</button><button id="archResetCamera" type="button">全景</button><button id="archExplode" type="button" aria-pressed="false">展开计算层</button><button id="archFullscreen" type="button">放大展示</button><button id="archExport" type="button" disabled>导出结构PNG</button></div><span id="archPath" class="arch-path" role="status" aria-live="polite">尚无本次返回</span></div>
+<div class="arch-layout"><div class="arch-stage-shell"><div id="archStage" class="arch-stage" hidden></div><div id="archSvg" class="arch-flat arch-flat-fallback" aria-label="无WebGL时的完整文字流程"><div class="arch-flat-item"><b>① 输入</b><span>UTF-8字节经UART进入CPU</span></div><div class="arch-flat-item"><b>② 上下文</b><span>显式合法请求可走快路径</span></div><div class="arch-flat-item"><b>③ 模型</b><span>双层编码器＋字符短语记忆</span></div><div class="arch-flat-item"><b>④ 计算</b><span>四路MAC＋融合后处理；软件配置则由CPU计算</span></div><div class="arch-flat-item"><b>⑤ 许可</b><span>核对工具、参数范围与硬件能力</span></div><div class="arch-flat-item"><b>⑥ 返回</b><span>执行后提供寄存器回读或CRC</span></div></div>
+<div class="arch-scene-badge" id="archSceneBadge">离线结构 · 未采集本次结果</div>
+<div class="arch-caption"><span id="archStepNumber">总览</span><p id="archCaption">这块板子如何理解一句话？选择下方步骤，或播放只读的结构讲解。</p></div><p class="arch-drag-hint" id="archDragHint">左键旋转 · 右键平移 · 滚轮缩放</p></div>
+<aside class="arch-info"><div class="arch-section-label">模块说明</div><h3 id="archInfoTitle">端侧决策，电脑显示</h3><p id="archInfoText">CPU运行门禁和固件，XND加速整数内积与后处理；模型和规则分别记录，执行后返回真实状态。</p><div id="archInfoFacts" class="arch-facts">点击器件查看数据格式与边界</div><div class="arch-live-title">本次串口返回</div><dl><dt>本次来源</dt><dd id="archSource">—</dd><dt>神经原判</dt><dd id="archRaw">—</dd><dt>最终工具</dt><dd id="archFinal">—</dd><dt>板上决策</dt><dd id="archTime">—</dd></dl><p class="arch-boundary">高亮只表示本次返回确认的处理路径，不代表逐层或逐拍遥测。</p></aside></div>
+<nav class="arch-module-nav" aria-label="选择模块"><button id="archNode_uart" class="arch-node" type="button">UART / USB</button><button id="archNode_cpu" class="arch-node" type="button">五级CPU / Cache</button><button id="archNode_guard" class="arch-node" type="button">上下文门禁</button><button id="archNode_memory" class="arch-node" type="button">字符短语记忆</button><button id="archNode_model" class="arch-node" type="button">语义编码器</button><button id="archNode_xnd" class="arch-node" type="button">四路MAC / 融合</button><button id="archNode_sram" class="arch-node" type="button">AI SRAM</button><button id="archNode_permit" class="arch-node" type="button">执行许可</button><button id="archNode_io" class="arch-node" type="button">板载外设</button></nav>
+<div class="arch-guide"><div class="arch-guide-head"><div><b>结构讲解</b><span id="archDemoMode">未播放 · 不发送指令</span></div><div class="arch-guide-controls"><select id="archGuidePath" aria-label="讲解路径"><option value="model" selected>模型路径</option><option value="fast">显式快路径</option><option value="reject">拒绝路径</option></select><button id="archPrev" type="button" aria-label="上一步">←</button><button id="archPlay" type="button" aria-pressed="false">播放讲解</button><button id="archNext" type="button" aria-label="下一步">→</button><select id="archSpeed" aria-label="讲解速度"><option value="1">1×</option><option value="2" selected>2×</option><option value="3">3×</option></select><button id="archLive" type="button">回到本次返回</button></div></div><div id="archSteps" class="arch-steps" aria-label="计算步骤"></div><p class="arch-guide-note">讲解动画仅用于说明流程，时间经过压缩；不运行模型、不操作外设，也不写入实测证据。</p></div>
+</details></section>
+<section class="card full" id="healthPanel"><h2>板卡健康检查</h2><p class="hint">电脑只按顺序发送独立请求并汇总，板上完成识别、许可与工具执行。每步必须收到对应结果及真实 NR_READY；CoreMark 保留真实运行时间。</p><div class="row"><select id="healthScope" aria-label="健康检查范围"><option value="readonly" selected>只读检查：CoreMark、温度、计数器与拒绝</option><option value="io">包含临时 LED/PWM 写入及恢复</option></select><button id="startHealth" class="primary" disabled>开始板卡健康检查</button><button id="stopHealth" disabled>停止后续请求</button><button id="downloadHealth" disabled>导出健康证据 JSON</button></div><p class="notice" id="healthIoNotice">含 IO 检查会将 PWM 暂设为 30%、关闭 LED0。必须先从板上读取初始 LED/PWM，检查末尾逐条恢复并核对；出错、断连或复位立即停止，可能需要按报告中的初始值手动恢复。固件未声明只读快照能力时不发送 IO 检查。</p><div id="healthStatus" class="status" role="status" aria-live="polite">尚未开始检查；无预填测量值。</div><div class="table-wrap"><table><thead><tr><th>检查 / 状态</th><th>单条请求</th><th>实际结果、回读与拒绝原因</th><th>板上决策 / 工具</th><th>浏览器结果 / 就绪</th><th>来源</th></tr></thead><tbody id="healthRows"></tbody></table></div><p id="healthRestore" class="hint">初始 IO 状态尚未读取。</p></section>
+<section class="card" id="logPanel"><details id="logDetails" open><summary class="fold-title">5. 串口日志与证据导出</summary><p class="hint" id="auditSummary">尚无本次串口请求。导出只包含本次串口接收，不含页面预设。</p><details><summary>逐条请求审计</summary><p class="hint">按单请求串行顺序关联文本回执；不是设备级请求序号认证。保留重启分段、实际结果、回读核对和完成状态。</p><div class="table-wrap"><table><thead><tr><th>请求 / 启动段</th><th>原始指令</th><th>实际路径与工具</th><th>回读</th><th>TX→READY</th><th>状态</th></tr></thead><tbody id="auditRows"></tbody></table></div></details><div class="row log-actions"><button id="download">下载文本日志</button><button id="downloadEvidence" disabled>下载证据 JSON</button><button id="clearLog">清空显示</button></div><p class="hint">JSON 只保存本次真实串口连接的原始收发与解析字段，并标注来源、时间、采样范围。未收到的数据不填数字。清空显示不删除已接收的证据。</p><pre id="log" aria-live="off">尚无串口数据</pre></details></section>
+<section class="card full" id="learningPanel"><h2>从一句话到外设：每一层做什么？</h2><div class="steps"><div class="step"><b>① UART 输入</b><p>USB-UART 把 UTF-8 字节送给 FPGA。CPU 读寄存器并整理为一行文本。</p></div><div class="step"><b>② 轻量语义模型</b><p>显式schema命中时跳过模型；未命中才计算6类分数。原创Needle-inspired窄域模型可能误判，实际执行仍受合同检查。</p></div><div class="step"><b>③ CPU 与 XND</b><p>CPU 执行程序并提交 GEMV；XND 并行计算 INT4 × INT8。输入槽驻留能减少重复搬运。</p></div><div class="step"><b>④ 参数校验</b><p>CPU 检查工具与数值边界。例如 PWM 必须是 0～100；模型不能直接写任意外设地址。</p></div><div class="step"><b>⑤ 工具与回报</b><p>通过校验后控制 LED、PWM 或查询计数器。片内 ADC 尚无有效温度样本时返回“暂不可用”。</p></div></div><p class="notice">驻留数据统计目前是片上 RAM 的 DMA 字节，不能解释成外部 DDR 流量；引擎周期不是 CPU 总周期；权重预取重叠的收益需按当前硬件实测分别说明。</p></section>
+</div><p class="hint footer-hint" style="margin-top:18px">无需安装 npm 或后台。Web Serial 需要兼容浏览器和安全上下文；使用本地 localhost 或 HTTPS。详见同目录 README。</p>
+</main>
+<script src="vendor/architecture-scene.min.js"></script>
+<script src="architecture.js"></script>
+<script>
+'use strict';
+// 串口生命周期只有一个owner：读循环释放reader，发送函数释放writer，disconnect最后close。
+const $=id=>document.getElementById(id);
+const tools=['读取温度 / read_temp','设置 PWM / set_pwm','运行 CoreMark / run_coremark','读取计数器 / read_counter','设置 LED / set_led','拒绝 / reject'];
+const decodes=['通过','模型拒绝','缺少参数','参数越界','空输入','输入过长','参数格式错误','推理后端错误','语义策略拒绝（否定、工具冲突或领域词不匹配）'];
+const executions=['执行成功','拒绝执行','暂不可用','执行失败'];
+const modes=['纯软件','逐次重新加载','简单单槽驻留','生命周期与双槽容量约束'];
+const encoder=new TextEncoder();
+let port=null,reader=null,readTask=null,writeTask=null,closeTask=null;
+let reading=false,ready=false,connecting=false,frequency=null,lineBuffer='',logText='';
+let expectedTool=null,lastCommand='',coreLines=[],coreActive=false,coreValidated=false,coreFailed=false,coreTiming=null;
+let evidenceSession=null,evidenceBytes=0,requestNumber=0;
+let pendingComparisonText=null;
+let pendingRequest=null,healthRun=null,healthAdvancing=false,bootEpoch=0,demoFlow=null,demoAdvancing=false,lastResultMode=null;
+const monotonicNow=()=>typeof performance!=='undefined'&&typeof performance.now==='function'?performance.now():Date.now();
+const comparisonEntries=new Map();
+const maxLog=2000000,maxLine=32768;
+const maxEvidenceBytes=2000000;
+const pmuLabels={cycles:'采样区间周期（含采样开销）',instret:'已退休指令',branches:'条件分支事件',redirect_misses:'重定向失配（含跳转/BTB情况）',mem_load_stall_cycles:'存储停顿周期（memory hold + load hazard）',ic_misses:'指令 Cache miss',dc_misses:'数据 Cache miss'};
+const fmt=n=>typeof n==='number'&&Number.isFinite(n)?n.toLocaleString('zh-CN'):'—';
+const cycleTime=n=>frequency>0&&Number.isFinite(n)&&n>=0?(n*1000/frequency).toFixed(3)+' ms':'—';
+// CPI 只除退休指令。branches 和 redirect_misses 的统计范围不同，不能生成错预测率。
+function renderPmu(pmu,tableId,cpiId){
+  $(tableId).replaceChildren();$(cpiId).textContent='—';
+  if(!pmu||typeof pmu!=='object')return;
+  for(const [key,label] of Object.entries(pmuLabels)){
+    const row=document.createElement('tr');for(const value of [label,fmt(pmu[key])]){const cell=document.createElement('td');cell.textContent=value;row.appendChild(cell);}$(tableId).appendChild(row);
+  }
+  if(Number.isFinite(pmu.cycles)&&pmu.cycles>=0&&Number.isFinite(pmu.instret)&&pmu.instret>0)$(cpiId).textContent=(pmu.cycles/pmu.instret).toFixed(3)+' · 含采样开销';
+}
+function recordEvidence(direction,line,parsed=null,wireBytes=null){
+  // 只有 connect 成功后才建立 session；不把页面预设、旧仿真成绩写成现场证据。
+  if(!evidenceSession)return;
+  const entry={time:new Date().toISOString(),direction,request:pendingRequest&&!pendingRequest.ready_received_at?pendingRequest.number:null,boot_epoch:parsed?.kind==='NR_BUILD'?bootEpoch+1:bootEpoch,line,utf8_line_bytes:encoder.encode(line).length,wire_bytes:wireBytes};if(parsed)entry.parsed=parsed;
+  const bytes=encoder.encode(JSON.stringify(entry)).length;
+  while(evidenceBytes+bytes>maxEvidenceBytes&&evidenceSession.entries.length){evidenceBytes-=encoder.encode(JSON.stringify(evidenceSession.entries.shift())).length;evidenceSession.truncated=true;}
+  evidenceSession.entries.push(entry);evidenceBytes+=bytes;
+  if(direction==='RX'){evidenceSession.received_lines++;$('downloadEvidence').disabled=false;}
+}
+function downloadBlob(contents,type,suffix){
+  const url=URL.createObjectURL(new Blob([contents],{type}));const link=document.createElement('a');link.href=url;link.download='NeedleRV-X-'+new Date().toISOString().replace(/[:.]/g,'-')+'.'+suffix;document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+function status(message,kind=''){ $('status').textContent=message;$('status').className='status '+kind; }
+function refreshControls(){
+  const demoBusy=!!demoFlow?.active;
+  for(const id of ['demoAi','demoQuick','demoCpu'])$(id).disabled=!port||!ready||!!writeTask||!!closeTask||!!healthRun?.active||demoBusy;
+  for(const id of ['configuration','fastMode','resultFormat'])$(id).disabled=demoBusy||!!healthRun?.active;
+  refreshModeSummary();
+  $('baudRate').disabled=connecting||!!port||!!closeTask;$('otherUart').disabled=connecting||!!port||!!closeTask;
+  $('connect').disabled=connecting||!!port;$('disconnect').disabled=!port||!!closeTask;
+  $('send').disabled=!port||!ready||!!writeTask||!!closeTask||!!healthRun?.active||demoBusy;
+  $('applyConfig').disabled=!port||!ready||!!writeTask||!!closeTask||!!healthRun?.active||demoBusy;
+  $('startHealth').disabled=!port||!ready||!!writeTask||!!closeTask||!!healthRun?.active||demoBusy;
+  $('applyFast').disabled=!port||!ready||!!writeTask||!!closeTask||!!healthRun?.active||demoBusy||evidenceSession?.firmware_build?.capabilities?.fast!==1;
+  $('applyFormat').disabled=!port||!ready||!!writeTask||!!closeTask||!!healthRun?.active||demoBusy||evidenceSession?.firmware_build?.capabilities?.compact!==1;
+  $('stopHealth').disabled=!healthRun?.active;$('healthScope').disabled=!!healthRun?.active;$('downloadHealth').disabled=!healthRun;
+  $('connectionTag').textContent=port?(ready?'串口已连接 · 固件就绪':'串口已连接 · 等待固件'):'未连接设备';
+  $('readyState').textContent=port?(ready?'NR_READY · 可以发送':'等待 NR_READY / 正在处理'):'未连接';
+}
+function log(direction,message){
+  const stamp=new Date().toLocaleTimeString('zh-CN',{hour12:false})+'.'+String(new Date().getMilliseconds()).padStart(3,'0');
+  logText+='['+stamp+'] '+direction+' '+message+'\n';
+  if(logText.length>maxLog) logText='[日志容量限制：较早记录已截断]\n'+logText.slice(-maxLog);
+  $('log').textContent=logText;$('log').scrollTop=$('log').scrollHeight;
+}
+function setCoreState(text,kind=''){$('coreStatus').textContent=text;$('coreStatus').className='status '+kind;}
+function resetCore(){setCoreState('本次指令尚未收到 CoreMark 输出。');coreLines=[];coreActive=false;coreValidated=false;coreFailed=false;coreTiming=null;$('coreLog').textContent='等待本次 CoreMark 输出';for(const id of ['coreCycles','coreSeconds','coreIterations','coreScore'])$(id).textContent='—';renderPmu(null,'corePmu','coreCpi');}
+function resetResult(){
+  $('resultInterpretation').textContent='尚无本次结果';$('displayCommand').textContent='等待发送';$('displayAction').textContent='等待实板结果';for(const id of ['displayReadback','displayAi','displayCompute','displayTool','displayMode'])$(id).textContent='—';lastResultMode=null;
+  globalThis.nrArchitecture?.reset();
+  for(const id of ['contextHardware','contextHardwareMacs','contextCategory','contextBucket','contextCategoryScores','intentRepair','contextUse','contextLatency','encoderLatency','encoderUse','contextScores','contextMargin','decisionCycles','decisionLatency','processingPath','receipt','hostResultLatency','hostReadyLatency','cycles','latency','toolLatency','requestLatency','loads','reuses','jobs','dma','tool','selectedTool','operation','selectionSource','margin','decode','execution','values','toolCycles','requestCycles','mode','graph','dot4','engine','failures','dmaDetail'])$(id).textContent='—';
+  $('resultExplanation').textContent='等待本次真实结果；识别耗时与工具执行时间分别显示。';renderPmu(null,'requestPmu','requestCpi');$('logits').replaceChildren();$('encoderLogits').replaceChildren();$('contextSummary').textContent='尚无本次语境与编码器结果';$('json').textContent='本次连接尚无结果';$('resultCase').textContent='本次连接尚无真实串口结果';$('resultStatus').textContent='等待本次连接的 NR_RESULT。';$('resultStatus').className='status';resetCore();
+}
+function handleCoreLine(line){
+  if(!coreActive && !/CoreMark|CoreMark Size|NR_CYCLES=|seedcrc|crclist|crcmatrix|crcstate|Correct operation|ERROR!/.test(line))return;
+  coreActive=true;coreLines.push(line);$('coreLog').textContent=coreLines.join('\n');
+  if(/ERROR!|Errors detected|Cannot validate/.test(line)){coreFailed=true;setCoreState('基准报告错误：请查看原始输出。','bad');}
+  if(/Correct operation validated/.test(line)){coreValidated=true;if(!coreFailed)setCoreState('算法校验通过；等待精确计时与工具返回。','warn');}
+  const timing=line.match(/NR_CYCLES=(\d+)\s+NR_HZ=(\d+)\s+NR_ITERATIONS=(\d+)/);
+  if(timing){
+    const cycles=Number(timing[1]),hz=Number(timing[2]),iterations=Number(timing[3]);
+    coreTiming={cycles,hz,iterations,seconds:hz>0?cycles/hz:null};
+    $('coreCycles').textContent=fmt(cycles);$('coreSeconds').textContent=hz>0?(cycles/hz).toFixed(6)+' 秒':'频率无效';$('coreIterations').textContent=fmt(iterations);
+    if(cycles>0&&hz>0&&iterations>0&&cycles/hz>=10)$('coreScore').textContent=(iterations*1000000/cycles).toFixed(6)+' · 待最终验收';
+    else{$('coreScore').textContent='未形成有效成绩';setCoreState('计时不足 10 秒或参数无效：仅作功能测试。','warn');}
+  }
+}
+function resetComparison(){
+  comparisonEntries.clear();pendingComparisonText=null;
+  $('comparisonStatus').textContent='等待同一次连接中，相同指令的配置0和6结果。';
+  $('comparisonStatus').className='status';
+  if(evidenceSession)evidenceSession.comparisons=[];
+}
+function collectComparison(result){
+  const text=pendingComparisonText;pendingComparisonText=null;
+  if(text===null||!evidenceSession||!evidenceSession.firmware_build||!(frequency>0))return;
+  if(!encoderUsed(result)||result.protocol_frame==='NR_FAST')return;
+  if(![0,6].includes(result.config)||!Number.isSafeInteger(result.cycles)||result.cycles<=0||result.failures!==0||!Array.isArray(result.logits)||result.logits.length!==6||!result.logits.every(Number.isSafeInteger))return;
+  const fields=['tool','selected_tool','decode','argument','operation','selection_source'];
+  if(!fields.every(k=>Number.isSafeInteger(result[k])))return;
+  if(result.config===0&&(result.mode!==0||result.graph!==0||result.dot4!==0))return;
+  if(result.config===6&&(result.mode!==3||result.graph!==1||result.dot4!==1))return;
+  const key=JSON.stringify([text,evidenceSession.firmware_build,frequency,bootEpoch]);
+  if(!comparisonEntries.has(key)&&comparisonEntries.size>=32)comparisonEntries.delete(comparisonEntries.keys().next().value);
+  const pair=comparisonEntries.get(key)||{};
+  pair[result.config]=JSON.parse(JSON.stringify(result));comparisonEntries.set(key,pair);
+  if(!pair[0]||!pair[6]){$('comparisonStatus').textContent='已记录“'+text+'”的配置'+result.config+'，等待另一配置。';return;}
+  const scoreFields=['logits','encoder_logits','context_logits','context_category_logits','context_tool_logits','intent_delta','intent_cascade_delta','fusion_delta','fusion_used','fusion_gate_margin'];
+  const equal=pair[0].encoder_used===pair[6].encoder_used&&pair[0].context_used===pair[6].context_used&&scoreFields.every(k=>JSON.stringify(pair[0][k])===JSON.stringify(pair[6][k]))&&pair[0].context_deny===pair[6].context_deny&&fields.every(k=>pair[0][k]===pair[6][k]);
+  const comparison={command:text,source:'same_web_serial_session',boot_epoch:bootEpoch,score_fields_compared:scoreFields.filter(k=>pair[0][k]!==undefined),firmware_build:evidenceSession.firmware_build,reported_clock_hz:frequency,software_cycles:pair[0].cycles,accelerated_cycles:pair[6].cycles,integer_and_decode_match:equal,inference_speedup:equal?pair[0].cycles/pair[6].cycles:null,scope:'protocol5/6 cycles are context+encoder neural computation; legacy cycles are encoder inference; excludes UART, decoding and tool execution'};
+  const records=evidenceSession.comparisons||(evidenceSession.comparisons=[]);
+  const at=records.findIndex(x=>x.command===text);if(at>=0)records[at]=comparison;else records.push(comparison);
+  $('comparisonStatus').className='status '+(equal?'good':'bad');
+  $('comparisonStatus').textContent=equal?'“'+text+'”：配置0 '+fmt(pair[0].cycles)+'周期；配置6 '+fmt(pair[6].cycles)+'周期；推理加速 '+comparison.inference_speedup.toFixed(3)+'×。已报告的编码器、语境、工具、级联及残差分数与工具参数一致。':'“'+text+'”：两路径整数分数或解码不一致，不形成有效加速结论。';
+}
+
+function wallTime(start,end){return Number.isFinite(start)&&Number.isFinite(end)&&end>=start?(end-start).toFixed(3)+' ms':'—';}
+function refreshAudit(){
+  $('auditRows').replaceChildren();const rows=evidenceSession?.requests||[];
+  for(const a of rows.slice(-12)){
+    const row=document.createElement('tr');const v=a.result;
+    const receipt=a.receipt_verification?(a.receipt_verification.required?(a.receipt_verification.passed?'已核对':'未通过：'+a.receipt_verification.reason):v?.receipt?'只读采样 '+fmt(v.receipt.readback):'本次无写回读'):'未报告';
+    const state=a.audit_state??'等待结果';
+    const values=[a.number+' / '+(a.boot_epoch??'?'),a.command,v?processingLabel(v)+' / '+(tools[v.selected_tool]??'未报告'):'—',receipt,Number.isFinite(a.ready_ms)?a.ready_ms.toFixed(3)+' ms':'—',state];
+    for(const value of values){const cell=document.createElement('td');cell.textContent=value;row.appendChild(cell);}$('auditRows').appendChild(row);
+  }
+  $('auditSummary').textContent=evidenceSession?'本次真实串口会话：'+rows.length+' 条保留请求；启动段 '+bootEpoch+'；表内显示最近12条。'+(evidenceSession.requests_truncated?' 较早请求已截断，原始日志也可能受容量限制。':''):'尚无本次串口请求。导出只包含本次串口接收，不含页面预设。';
+}
+function verifyWriteReceipt(result){
+  const required=[1,4].includes(result.selected_tool)&&result.execute===0&&evidenceSession?.firmware_build?.capabilities?.receipt===1;
+  const r=result.receipt;
+  if(!required&&!r)return {required:false,passed:true,reason:'not_required'};
+  if(![1,4].includes(result.selected_tool)||result.execute!==0)return {required:false,passed:true,reason:'not_write'};
+  if(!validReceipt(r))return {required,passed:false,reason:'missing_or_invalid'};
+  if(r.kind!==(result.selected_tool===4?1:2)||r.match!==1||r.requested!==r.readback||r.readback!==result.value)return {required,passed:false,reason:'kind_value_or_match'};
+  if(result.selected_tool===1&&(!Number.isSafeInteger(r.period)||r.period<=0||!Number.isSafeInteger(r.high)||r.high<0||r.high>r.period||r.enabled!==1||r.requested!==result.argument||r.high*100!==r.period*r.readback||frequency>0&&r.period!==frequency/1000))return {required,passed:false,reason:'pwm_registers'};
+  return {required,passed:true,reason:'matched_internal_registers'};
+}
+function auditResult(result){
+  const a=pendingRequest;
+  if(!a||a.ready_received_at)return true;
+  const isTool=a.kind==='tool'||a.kind==='health_tool';
+  const association=isTool&&!a.result_received_at&&(!Number.isInteger(a.confirmed_config)||a.confirmed_config===result.config);
+  if(!association&&evidenceSession?.firmware_build?.protocol>=6){a.response_associated=false;a.audit_state='回报关联未通过';(a.association_errors||(a.association_errors=[])).push({case:result.case,config:result.config,reason:!isTool?'wrong_response_kind':a.result_received_at?'duplicate_result':'configuration_mismatch'});refreshAudit();stopHealth('回报与当前请求不匹配，保留原始帧');status('回报关联未通过；未替换本次结果，请查看审计记录。','bad');return false;}
+  a.result=JSON.parse(JSON.stringify(result));a.receipt_verification=verifyWriteReceipt(result);
+  a.correlation='single_inflight_ascii_order_not_device_sequence';a.response_associated=association;
+  a.audit_state=!association?'回报关联未通过':!a.receipt_verification.passed?'回读核对未通过':'已收到结果，等待READY';refreshAudit();return true;
+}
+function acknowledgeControl(kind,value,wireBytes){
+  if(pendingRequest?.kind!==kind)return;
+  const wanted=pendingRequest.command.split(' ')[1];
+  const matched=String(value)===wanted;
+  pendingRequest.control_confirmation={kind,requested:wanted,reported:value,matched};pendingRequest.response_associated=matched;
+  markResponse(kind==='configuration'?'NR_CONFIG':kind==='fast'?'NR_FAST_MODE':'NR_FORMAT',wireBytes);
+  if(!matched){pendingRequest.audit_state='控制回执不匹配';status('固件控制回执与当前请求不同；实际报告已保留，请查看审计记录。','warn');}refreshAudit();
+}
+function beginRequest(text,kind){
+  if(kind==='tool'||kind==='health_tool'){resetResult();$('displayCommand').textContent=text;$('displayAction').textContent='等待板上返回';$('resultStatus').textContent='请求处理中，尚无本次结果。';$('resultStatus').className='status warn';}
+  requestNumber++;
+  pendingRequest={number:requestNumber,kind,command:text,tx_wire_bytes:encoder.encode(text+'\n').length,rx_line_utf8_bytes:0,rx_wire_bytes:0,tx_started_at:new Date().toISOString(),tx_started_ms:Date.now(),tx_started_monotonic_ms:monotonicNow(),boot_epoch:bootEpoch,confirmed_mode:confirmedModeSnapshot(),confirmed_config:evidenceSession?.current_configuration?.config??null,audit_state:'等待结果',tx_completed_at:null,result_received_at:null,ready_received_at:null,result_ms:null,ready_ms:null};
+  if(evidenceSession){const records=evidenceSession.requests||(evidenceSession.requests=[]);records.push(pendingRequest);if(records.length>256){records.shift();evidenceSession.requests_truncated=true;}}refreshAudit();
+  $('hostResultLatency').textContent='等待真实结果';$('hostReadyLatency').textContent='等待真实 NR_READY';
+  return pendingRequest;
+}
+function markResponse(kind,wireBytes=null){
+  if(!pendingRequest||pendingRequest.result_received_at)return;
+  const now=Date.now();pendingRequest.result_received_at=new Date(now).toISOString();pendingRequest.result_ms=monotonicNow()-pendingRequest.tx_started_monotonic_ms;pendingRequest.response_kind=kind;pendingRequest.response_wire_bytes=wireBytes;
+  $('hostResultLatency').textContent=pendingRequest.result_ms.toFixed(3)+' ms · TX开始→完整结果行';
+}
+function markReady(){
+  if(!pendingRequest||pendingRequest.ready_received_at)return;
+  const now=Date.now();pendingRequest.ready_received_at=new Date(now).toISOString();pendingRequest.ready_ms=monotonicNow()-pendingRequest.tx_started_monotonic_ms;
+  const a=pendingRequest;a.audit_state=!a.result_received_at?'READY前缺少回报':a.response_associated===false?'回报关联未通过':a.receipt_verification&&!a.receipt_verification.passed?'回读核对未通过':a.result?(executions[a.result.execute]??'未知执行状态'):'控制回执已收到';refreshAudit();
+  $('hostReadyLatency').textContent=pendingRequest.ready_ms.toFixed(3)+' ms · TX开始→NR_READY';
+}
+function encoderUsed(r){return r.encoder_used===1||(r.encoder_used===undefined&&(r.model_used===1||r.model_used===undefined&&Number.isInteger(r.tool)&&r.cycles>0));}
+function contextOnly(r){return [2,3].includes(r.model_used);}
+function contextUsed(r){return r.context_used===1||(r.context_used===undefined&&contextOnly(r));}
+function contextXndUsed(r){return r.context_xnd_used===1;}
+function neuralClassLabel(r){
+  if(r.model_used===0)return '未运行模型（无神经分类）';
+  if(contextOnly(r)||r.encoder_used===0&&contextUsed(r))return '仅语境头，编码器未运行（无六类分类）';
+  return (r.fusion_used===1?'融合神经输出：':r.encoder_logits?'分级神经输出：':'')+(tools[r.tool]??'未报告六类分类');
+}
+function validateNeuralScope(r){
+  if(contextOnly(r)&&(r.encoder_used!==0||r.context_used!==1||r.tool!==null))throw new Error('仅语境头状态与编码器标记矛盾');
+  if(r.model_used===3&&r.context_xnd_used!==1||r.model_used===2&&r.context_xnd_used===1||r.model_used===0&&(r.context_xnd_used===1||r.context_used===1)||r.context_xnd_used===1&&r.context_used!==1)throw new Error('语境XND与模型路径矛盾');
+  if(r.model_used===1&&r.encoder_used===0)throw new Error('完整模型状态与编码器标记矛盾');
+  if(r.context_used===1&&(!Array.isArray(r.context_logits)||r.context_logits.length!==2||!r.context_logits.every(x=>Number.isSafeInteger(x)&&x>=-2147483648&&x<=2147483647)||![0,1].includes(r.context_deny)))throw new Error('语境神经分数或拒绝标记无效');
+  if(r.context_category_logits!==undefined&&r.context_category_logits!==null&&(!Array.isArray(r.context_category_logits)||r.context_category_logits.length!==9||!r.context_category_logits.every(x=>Number.isSafeInteger(x)&&x>=-2147483648&&x<=2147483647)))throw new Error('辅助语境九类分数无效');
+  if(r.intent_delta!==undefined&&r.intent_delta!==null&&(!Array.isArray(r.intent_delta)||r.intent_delta.length!==5||!r.intent_delta.every(x=>Number.isSafeInteger(x)&&x>=-2147483648&&x<=2147483647)))throw new Error('工具修复五类分数无效');
+  if(r.fusion_used!==undefined&&![0,1].includes(r.fusion_used))throw new Error('身份融合标记无效');
+  if(r.fusion_used===1&&(!encoderUsed(r)||r.model_used!==1))throw new Error('身份融合必须来自完整编码器路径');
+  if(r.fusion_delta!==undefined&&r.fusion_delta!==null&&(!Array.isArray(r.fusion_delta)||r.fusion_delta.length!==5||!r.fusion_delta.every(x=>Number.isSafeInteger(x)&&x>=-2147483648&&x<=2147483647)))throw new Error('身份融合五类增量无效');
+  if(r.context_hardware){if(!contextXndUsed(r)&&Object.values(r.context_hardware).some(x=>x!==0))throw new Error('语境硬件计数与硬件标记矛盾');for(const [key,value]of Object.entries(r.context_hardware))if(!['loads','jobs','dma_read_bytes','dma_write_bytes','engine_cycles','failures'].includes(key)||!Number.isSafeInteger(value)||value<0||value>4294967295)throw new Error('语境硬件计数无效');}
+  if(r.context_deny===1&&(r.selected_tool!==5||r.decode===0||r.execute===0))throw new Error('学习语境拒绝与执行结果矛盾');
+  if(Number.isSafeInteger(r.encoder_cycles)&&Number.isSafeInteger(r.context_cycles)&&Number.isSafeInteger(r.cycles)&&r.cycles!==r.encoder_cycles+r.context_cycles)throw new Error('神经计时总和矛盾');
+}
+function renderNeuralTiming(r){
+  const compactUnknown=contextOnly(r)&&!Number.isSafeInteger(r.cycles);
+  $('cycles').textContent=r.model_used===0?'未运行':compactUnknown?'紧凑帧未单列':fmt(r.cycles);
+  $('latency').textContent=r.model_used===0?'模型未运行':compactUnknown?'语境头未独立计时':cycleTime(r.cycles);
+  $('encoderLatency').textContent=encoderUsed(r)?cycleTime(r.encoder_cycles??r.cycles):'编码器未运行';
+}
+function renderContext(r){
+  const ctx=contextUsed(r),enc=encoderUsed(r);
+  $('contextUse').textContent=ctx?'已运行 · 学习判断':(r.context_used===0||r.model_used===0)?'未运行':'旧固件未报告';
+  $('contextLatency').textContent=ctx&&Number.isSafeInteger(r.context_cycles)&&r.context_cycles>=0?cycleTime(r.context_cycles):ctx?'紧凑帧未独立报告':'—';
+  $('encoderUse').textContent=enc?'已运行':r.encoder_used===0||contextOnly(r)?'未运行':r.model_used===0?'未运行':'未报告';
+  $('contextScores').textContent=ctx&&Array.isArray(r.context_logits)&&r.context_logits.length===2?r.context_logits.map(fmt).join(' / ')+' · 允许 / 拒绝，非概率':'未报告';
+  $('contextMargin').textContent=ctx?fmt(r.context_margin??(Array.isArray(r.context_logits)?r.context_logits[1]-r.context_logits[0]:null))+' / '+fmt(r.context_threshold)+' · 拒绝分差 / 阈值，非概率':'—';
+  renderContextHardware(r);
+  $('contextSummary').textContent=ctx?(enc?'学习语境头与完整编码器均已运行；联合神经分类、编码器原判和执行工具分别保留。':'仅运行学习语境头，编码器未运行；实际工具来自schema或拒绝，不能计为神经六类分类正确。'):r.model_used===0?'显式整句指令直接解析；语境头和编码器均未运行。':'兼容旧固件：未独立报告学习语境头。';
+}
+function renderContextHardware(r){
+  const cached=evidenceSession?.firmware_build?.semantic_weight_cache===1;
+  const h=r.context_hardware,categories=['执行请求','否定执行','解释说明','假设条件','引用转述','状态询问','多个动作','能力越界','域外请求'];
+  $('contextHardware').textContent=contextXndUsed(r)?(h?(cached?'语义侧核 · '+(h.loads===0?'复用权重缓存':'装载权重缓存')+' · ':'XND · ')+'LOAD '+fmt(h.loads)+' / JOB '+fmt(h.jobs)+' / DMA读 '+fmt(h.dma_read_bytes)+' B / 写 '+fmt(h.dma_write_bytes)+' B / 引擎 '+fmt(h.engine_cycles)+' 周期'+(h.failures===undefined?' · 错误计数未单列':' / 错误 '+fmt(h.failures)):(cached?'语义侧核':'XND')+'已运行 · 本帧未携带硬件计数'):r.context_used===1?'CPU语境计算':r.context_used===0?'未运行':'未报告';
+  $('contextHardwareMacs').textContent=Number.isSafeInteger(r.context_hardware_macs)?fmt(r.context_hardware_macs)+' · 实收字段，计量范围见固件':'未报告';
+  $('contextCategory').textContent=contextUsed(r)&&Number.isInteger(r.context_category)&&r.context_category>=0&&r.context_category<9?categories[r.context_category]+' · 辅助分类，不能直接执行':'未报告';
+  $('contextBucket').textContent=contextUsed(r)&&Number.isInteger(r.context_bucket)?fmt(r.context_bucket)+' · '+(r.context_bucket_source===0?'编码器原判分支':r.context_bucket_source===1?'schema提示分支，非六类神经分类':'来源未报告'):'未报告';
+  $('contextCategoryScores').textContent=contextUsed(r)&&Array.isArray(r.context_category_logits)?r.context_category_logits.map((x,i)=>categories[i]+': '+fmt(x)).join('；'):'未报告';
+  $('intentRepair').textContent=r.intent_repair_used===1?'已使用学习的合法工具修复分支'+(Array.isArray(r.intent_delta)?'；五类增量 '+r.intent_delta.map(fmt).join(' / '):''):r.intent_repair_used===0?'未使用'+(encoderUsed(r)&&Array.isArray(r.intent_delta)?'；五类增量 '+r.intent_delta.map(fmt).join(' / '):''):'未报告';
+  if(r.intent_cascade_used!==undefined)$('intentRepair').textContent+='；第二级语义修复'+(r.intent_cascade_used===1?'已使用':'未使用')+(Array.isArray(r.intent_cascade_delta)?'，增量 '+r.intent_cascade_delta.map(fmt).join(' / '):'');
+  if(r.fusion_used!==undefined&&encoderUsed(r))$('intentRepair').textContent+='；工具身份融合'+(r.fusion_used===1?'已使用':'未使用')+(Array.isArray(r.fusion_delta)?'，五类增量 '+r.fusion_delta.map(fmt).join(' / '):'');
+  if(contextUsed(r)&&Array.isArray(r.context_tool_logits))$('intentRepair').textContent+='；语义工具头原始五类分数 '+r.context_tool_logits.map(fmt).join(' / ')+'（温度 / PWM / CoreMark / 计数器 / LED，非概率）';
+}
+function processingLabel(result){
+  if(contextOnly(result))return result.context_deny===1?'仅语境头'+(contextXndUsed(result)?'（XND）':'（CPU）')+' · 学习判断拒绝，编码器未运行':'仅语境头'+(contextXndUsed(result)?'（XND）':'（CPU）')+'＋schema · 编码器未运行';
+
+  if(result.model_used===0)return '规则快路径 · 模型未运行';
+  if(result.fusion_used===1)return '完整模型路径 · 语义编码＋工具身份融合＋执行许可';
+  if(result.model_used===1&&result.selection_source===5)return '完整模型路径 · 学习语境拒绝';
+  if(result.model_used===1&&result.intent_cascade_used===1)return '完整模型路径 · 级联工具修复＋执行许可';
+  if(result.model_used===1)return [1,2,4].includes(result.selection_source)?'模型＋规则辅助':'模型路径 · 经执行许可';
+  return '旧固件未报告模型是否运行';
+}
+function validReceipt(r){return !!r&&Number.isInteger(r.kind)&&r.kind>=1&&r.kind<=4&&Number.isSafeInteger(r.requested)&&Number.isSafeInteger(r.readback)&&[0,1].includes(r.match);}
+function receiptLabel(result){
+  const r=result.receipt;
+  if(result.selected_tool===2)return 'CoreMark结果见真实CRC与算法计时';
+  if(result.selected_tool===0)return validReceipt(r)&&r.kind===3?'片内ADC原码 '+fmt(r.adc_raw??r.readback)+(Number.isInteger(r.adc_status)?'；状态 '+fmt(r.adc_status):'')+'；换算温度见回值':'未报告有效ADC回读';
+  if(result.selected_tool===3)return validReceipt(r)&&r.kind===4?'CPU周期计数 '+fmt(r.readback)+'（32位，可回绕）':'未报告有效计数回读';
+  if(!validReceipt(r))return '未报告有效寄存器回读，不能据此确认写入';
+  return '请求 '+fmt(r.requested)+' / 回读 '+fmt(r.readback)+' / '+(r.match===1&&(![1,2].includes(r.kind)||r.requested===r.readback)?'寄存器比对一致（不代表外部物理测量）':r.match===0||r.requested!==r.readback?'不一致':'未报告比对');
+}
+function ioSnapshotSupported(){return evidenceSession?.firmware_build?.capabilities?.io_snapshot===1;}
+function renderHealth(){
+  $('healthRows').replaceChildren();if(!healthRun){$('healthStatus').textContent='尚未开始检查；无预填测量值。';$('healthStatus').className='status';$('healthRestore').textContent='初始 IO 状态尚未读取。';return;}
+  for(const row of healthRun.rows){
+    const tr=document.createElement('tr'),r=row.result;
+    let summary=row.error||row.skipped_reason||'尚未收到结果';
+    if(row.io)summary='LED '+fmt(row.io.led_mask)+'；PWM '+(row.io.pwm_duty===null?'百分比不可恢复':fmt(row.io.pwm_duty)+'%')+'；原始 period/high/enabled '+row.io.pwm_period+'/'+row.io.pwm_high+'/'+row.io.pwm_enabled;
+    else if(r){summary='工具 '+(tools[r.selected_tool]??'未报告')+'；'+(decodes[r.decode]??r.decode)+'；'+(executions[r.execute]??r.execute)+'；回值 '+fmt(r.value);if(r.selected_tool===0&&r.execute===0){const v=r.value>=2147483648?r.value-4294967296:r.value;summary+='（'+(v/100).toFixed(2)+' °C）';}if([1,4].includes(r.selected_tool))summary+='；'+receiptLabel(r);if(row.coremark)summary+='；CRC '+(row.coremark.validated&&!row.coremark.failed?'算法校验通过':'未通过完整校验')+'；原始 CRC 行 '+row.coremark.crc_lines.length+'；'+(row.coremark.timing?row.coremark.timing.seconds.toFixed(6)+' 秒':'缺计时');}
+    if(row.error&&r)summary+='；停止原因：'+row.error;
+    const q=row.request;
+    const cells=[row.label+' · '+row.state,row.command,summary,r?cycleTime(!encoderUsed(r)?r.decision_cycles:r.cycles)+' / '+cycleTime(r.tool_cycles):'—',q?(q.result_ms===null?'—':q.result_ms.toFixed(3)+' ms')+' / '+(q.ready_ms===null?'—':q.ready_ms.toFixed(3)+' ms'):'—',r?processingLabel(r):row.io?'板上只读寄存器快照':'—'];
+    for(const text of cells){const td=document.createElement('td');td.textContent=text;tr.appendChild(td);}$('healthRows').appendChild(tr);
+  }
+  if(healthRun.initial_io)$('healthRestore').textContent='已保存初始值：LED整体掩码 '+healthRun.initial_io.led_mask+'；PWM原始 period/high/enabled '+healthRun.initial_io.pwm_period+'/'+healthRun.initial_io.pwm_high+'/'+healthRun.initial_io.pwm_enabled+'（百分比 '+fmt(healthRun.initial_io.pwm_duty)+'）。恢复状态：'+healthRun.restore_state+'。'+(healthRun.may_have_changed&&healthRun.restore_state!=='已逐条回读验证'?'若已停止，请确认设备身份及状态后手动恢复这些初始值。':'');
+  else $('healthRestore').textContent=healthRun.scope==='readonly'?'本次只读检查，不更改 LED/PWM。':'初始 IO 状态尚未取得；未发送 IO 写入。';
+}
+function stopHealth(reason){
+  stopDemo(reason);
+  if(!healthRun?.active)return;
+  healthRun.active=false;healthRun.state='stopped';healthRun.stopped_at=new Date().toISOString();healthRun.stop_reason=reason;
+  const row=healthRun.rows[healthRun.index];if(row&&row.state!=='已完成'){row.state='已停止';row.error=reason;}
+  if(healthRun.may_have_changed)healthRun.restore_state='检查中止，未完成恢复保证';
+  $('healthStatus').textContent='检查停止：'+reason+'。不再发送后续请求。';$('healthStatus').className='status bad';renderHealth();refreshControls();
+}
+function healthResult(result){
+  if(!healthRun?.active)return;
+  const row=healthRun.rows[healthRun.index];
+  if(!row||row.state!=='等待结果'||row.kind==='io'){stopHealth('收到与当前步骤不匹配的工具结果');return;}
+  row.result=JSON.parse(JSON.stringify(result));
+  if(row.tool===2)row.coremark={validated:coreValidated,failed:coreFailed,timing:coreTiming?{...coreTiming}:null,crc_lines:coreLines.filter(line=>/crc/i.test(line)),raw_lines:[...coreLines]};
+  const accepted=row.tool===5?result.selected_tool===5&&result.execute===1&&Number.isInteger(result.decode)&&result.decode>0&&result.decode<decodes.length:result.selected_tool===row.tool&&result.decode===0&&result.execute===0;
+  if(Number.isInteger(result.failures)&&result.failures!==0){stopHealth('板上后端报告硬件失败');return;}
+  if(!accepted){stopHealth('工具、许可或执行状态不符合当前单项检查：'+(decodes[result.decode]??result.decode)+' / '+(executions[result.execute]??result.execute));return;}
+  if(row.tool===2&&(!coreValidated||coreFailed||!coreTiming||!Number.isFinite(coreTiming.seconds)||coreTiming.seconds<10||!(coreTiming.cycles>0)||!(coreTiming.iterations>0))){stopHealth('CoreMark缺少完整CRC校验或至少10秒计时');return;}
+  if(row.write){const r=result.receipt;if(!validReceipt(r)||r.kind!==(row.tool===4?1:2)||r.match!==1||r.requested!==r.readback||r.readback!==row.expected_readback||(row.tool===1&&(r.period!==40500||r.high!==405*row.expected_readback||r.enabled!==1))){stopHealth('IO写入缺少有效匹配回读');return;}if(row.restore&&r.readback!==healthRun.initial_io[row.restore]){stopHealth('恢复回读与初始值不一致');return;}}
+  row.state='等待 NR_READY';renderHealth();
+}
+function healthIo(io){
+  if(!healthRun?.active)return;
+  const row=healthRun.rows[healthRun.index];
+  if(!row||row.kind!=='io'||row.state!=='等待结果'||!Number.isInteger(io.led_mask)||io.led_mask<0||io.led_mask>255||![0,1].includes(io.restore_supported)||![0,1].includes(io.pwm_enabled)||!Number.isSafeInteger(io.pwm_period)||io.pwm_period<0||!Number.isSafeInteger(io.pwm_high)||io.pwm_high<0||(io.pwm_duty!==null&&(!Number.isInteger(io.pwm_duty)||io.pwm_duty<0||io.pwm_duty>100))){stopHealth('只读IO快照缺失、越界或不匹配');return;}
+  row.io={...io};healthRun.initial_io={...io};
+  const pwmRestorable=io.restore_supported===1&&io.pwm_enabled===1&&io.pwm_period===40500&&Number.isInteger(io.pwm_duty)&&io.pwm_high===405*io.pwm_duty;
+  if(!pwmRestorable){for(const item of healthRun.rows)if(item.tool===1){item.state='已跳过';item.skipped_reason='初始PWM寄存器状态无法由百分比命令精确恢复；未发送PWM写入';}healthRun.pwm_skipped=true;}
+  healthRun.restore_state='已保存初始值，尚未写入';row.state='等待 NR_READY';renderHealth();
+}
+async function advanceHealth(){
+  if(healthAdvancing||!healthRun?.active)return;
+  healthAdvancing=true;const active=healthRun;
+  try{
+    if(writeTask)await writeTask;
+    if(healthRun!==active||!active.active||!port||!ready||closeTask)return;
+    const prior=active.rows[active.index];
+    if(prior?.request){if(prior.state!=='等待 NR_READY'){stopHealth('NR_READY之前缺少当前单项结果');return;}prior.state='已完成';active.index++;}
+    while(active.rows[active.index]?.state==='已跳过')active.index++;
+    if(active.index===active.rows.length){active.active=false;active.state='completed';active.completed_at=new Date().toISOString();if(active.scope==='io')active.restore_state='已逐条回读验证';$('healthStatus').textContent='检查完成：'+active.rows.filter(x=>x.state==='已完成').length+' 条独立请求均收到结果与 NR_READY。'+(active.pwm_skipped?' PWM写入因不能精确恢复而跳过。':'');$('healthStatus').className='status good';renderHealth();refreshControls();return;}
+    const row=active.rows[active.index];
+    if(row.restore){if(!active.initial_io){stopHealth('缺少初始IO值，禁止猜测恢复');return;}row.command=row.restore==='led_mask'?'led '+active.initial_io.led_mask:'pwm '+active.initial_io.pwm_duty;active.restore_state='恢复中，等待逐条回读';}
+    if(row.write){active.may_have_changed=true;row.expected_readback=row.restore?active.initial_io[row.restore]:row.tool===1?30:(active.initial_io.led_mask&~1);}
+    row.state='等待结果';expectedTool=null;lastCommand=row.command;pendingComparisonText=null;resetCore();
+    ready=false;row.request=beginRequest(row.command,'health_'+row.kind);$('healthStatus').textContent='已完成 '+active.rows.filter(x=>x.state==='已完成').length+' / '+active.rows.length+'；正在等待 '+row.label+' 的真实结果。';$('healthStatus').className='status warn';renderHealth();
+    await transmit(row.command);
+  }catch(error){stopHealth('串口发送失败：'+error.message);}
+  finally{healthAdvancing=false;refreshControls();if(healthRun?.active&&ready)advanceHealth();}
+}
+function startHealth(){
+  if(!port||!ready||writeTask||closeTask||healthRun?.active||demoFlow?.active)return;
+  const scope=$('healthScope').value==='io'?'io':'readonly';
+  if(scope==='io'&&!ioSnapshotSupported()){status('当前固件未声明只读IO快照能力，不能取得初始值；请选择只读检查。','warn');return;}
+  const rows=[];const add=(label,command,tool,extra={})=>rows.push({label,command,tool,kind:'tool',state:'未发送',...extra});
+  if(scope==='io')rows.push({label:'读取初始IO',command:':io',kind:'io',state:'未发送'});
+  add('CPU / CoreMark','运行CoreMark并显示CRC结果。',2);add('FPGA片内温度','请读取FPGA当前温度。',0);add('32位周期计数器','查看硬件计数器目前的读数。',3);
+  if(scope==='io'){add('PWM 30%','请设置PWM占空比为30%。',1,{write:true});add('仅关闭LED0','只关闭LED0，其他LED保持不变。',4,{write:true});}
+  add('拒绝修改计数器','把计数器清零，从头计数。',5);
+  if(scope==='io'){add('恢复LED初始掩码','等待初始值',4,{write:true,restore:'led_mask'});add('恢复PWM初始占空比','等待初始值',1,{write:true,restore:'pwm_duty'});}
+  healthRun={source:'web_serial_summary',scope,started_at:new Date().toISOString(),active:true,state:'running',index:0,rows,initial_io:null,may_have_changed:false,restore_state:'未开始',firmware_build:evidenceSession?.firmware_build??null};
+  if(evidenceSession){const records=evidenceSession.health_checks||(evidenceSession.health_checks=[]);records.push(healthRun);if(records.length>8)records.shift();}
+  advanceHealth();
+}
+async function transmit(text){
+  const transaction=pendingRequest;
+  writeTask=(async()=>{const writer=port.writable.getWriter();try{await writer.write(encoder.encode(text+'\n'));if(transaction)transaction.tx_completed_at=new Date().toISOString();recordEvidence('TX',text,null,encoder.encode(text+'\n').length);log('TX',text);}finally{writer.releaseLock();}})();
+  refreshControls();try{await writeTask;}catch(error){if(transaction)transaction.write_error=error.message;stopHealth('串口发送失败：'+error.message);throw error;}finally{writeTask=null;refreshControls();}
+}
+
+function renderResult(result){
+  renderSimpleResult(result);
+  globalThis.nrArchitecture?.render(result,{frequency,memory:evidenceSession?.firmware_build?.semantic_memory,build:evidenceSession?.firmware_build});
+  collectComparison(result);
+  // 只用收到的JSON填值；不要用预设工具覆盖模型结果。
+  $('resultCase').textContent='最近实串口结果 · case '+(result.case??'?')+' / config '+(result.config??'?');
+  $('processingPath').textContent=processingLabel(result);
+  $('tool').textContent=neuralClassLabel(result);renderContext(result);
+  $('receipt').textContent=receiptLabel(result);
+  const selectedTool=Number.isInteger(result.selected_tool)?result.selected_tool:null;
+  $('selectedTool').textContent=selectedTool!==null?(tools[selectedTool]??'未知工具 '+selectedTool):'固件未报告 selected_tool';
+  const operation=Number.isInteger(result.operation)?result.operation:null;
+  $('operation').textContent=selectedTool===4
+    ? (operation===0?'整体掩码':operation===1?'点亮 LED'+result.argument:operation===2?'关闭 LED'+result.argument:operation===null?'旧固件未报告':'未知操作 '+operation)
+    : '本次没有 LED 操作';
+  const sources=['神经分类，经工具合同校验','只读工具 schema 消歧','明确 LED schema 消歧','拒绝执行','明确 PWM schema 消歧','学习语境头拒绝'];
+  $('selectionSource').textContent=Number.isInteger(result.selection_source)
+    ? (sources[result.selection_source]??'未知来源 '+result.selection_source) : '旧固件未报告';
+  $('margin').textContent=fmt(result.margin)+' / '+fmt(result.confidence_threshold)+' · 未校准整数分差';
+  $('decode').textContent=decodes[result.decode]??'未知状态 '+result.decode;
+  $('execution').textContent=executions[result.execute]??'未知状态 '+result.execute;
+  let renderedValue=fmt(result.value);
+  if(result.execute===0&&Number.isFinite(result.value)) {
+    const valueTool=selectedTool??result.tool; // 兼容旧固件；新固件按实际派发工具解释回值。
+    if(valueTool===0){const signed=result.value>=2147483648?result.value-4294967296:result.value;renderedValue=(signed/100).toFixed(2)+' °C · FPGA片内温度（小数位为换算显示）';}
+    else if(valueTool===1)renderedValue=fmt(result.value)+'% PWM 占空比';
+    else if(valueTool===2)renderedValue=fmt(result.value)+' CoreMark 计时周期';
+    else if(valueTool===3)renderedValue=fmt(result.value)+' CPU 周期计数值';
+    else if(valueTool===4)renderedValue='0x'+result.value.toString(16).padStart(2,'0')+' LED 掩码';
+  } else if(result.execute===2)renderedValue='没有有效硬件结果';
+  $('values').textContent=(selectedTool===4&&(operation===1||operation===2)?'目标 LED'+result.argument:'参数 '+fmt(result.argument))+' / 回值 '+renderedValue;
+  renderNeuralTiming(result);$('decisionCycles').textContent=fmt(result.decision_cycles);$('decisionLatency').textContent=cycleTime(result.decision_cycles);
+  
+  $('toolCycles').textContent=fmt(result.tool_cycles);$('toolLatency').textContent=cycleTime(result.tool_cycles);
+  $('requestCycles').textContent=fmt(result.request_cycles);$('requestLatency').textContent=cycleTime(result.request_cycles);
+  renderPmu(encoderUsed(result)?result.pmu:null,'requestPmu','requestCpi');
+  $('loads').textContent=fmt(result.loads);$('reuses').textContent=fmt(result.reuses);$('jobs').textContent=fmt(result.jobs);
+  const extra=[result.bias_bytes,result.residual_bytes];const bytes=[result.activation_bytes,result.weight_bytes,result.output_bytes,...(extra.some(v=>v!==undefined)?extra:[])];
+  $('dma').textContent=bytes.every(Number.isFinite)?fmt(bytes.reduce((a,b)=>a+b,0))+' B':'—';
+  $('dmaDetail').textContent='激活 '+fmt(bytes[0])+' B / 权重 '+fmt(bytes[1])+' B / 输出 '+fmt(bytes[2])+' B / 偏置 '+fmt(result.bias_bytes)+' B / 残差 '+fmt(result.residual_bytes)+' B';
+  $('mode').textContent=modes[result.mode]??'未知模式 '+result.mode;
+  $('graph').textContent=result.graph===1?'两 token 交错 QKV':result.graph===0?'token-major QKV':'未知';
+  $('dot4').textContent=result.dot4===1?'启用 custom dot4':result.dot4===0?'标量内积':'未知';
+  $('engine').textContent=fmt(result.engine_cycles);$('failures').textContent=fmt(result.failures);
+  let text=(result.encoder_logits?'分级神经分类 ':'原始分类 ')+(tools[result.tool]??result.tool)+'；实际工具 '+(selectedTool!==null?(tools[selectedTool]??selectedTool):'未报告')+'；'+(decodes[result.decode]??result.decode)+'；'+(executions[result.execute]??result.execute);
+  let kind=result.execute===0?'good':result.execute===2?'warn':'bad';
+  if(encoderUsed(result)&&expectedTool!==null&&result.tool!==expectedTool){text+='。与本次预设期望的工具不同，可能发生模型误分类。';kind='warn';}
+  if(result.execute===2)text+='。硬件/功能未接入，不能视为成功执行。';
+  const ruleAssisted=[1,2,4].includes(result.selection_source);
+  if(ruleAssisted){text='最终'+(result.execute===0?'执行成功':'执行状态：'+(executions[result.execute]??result.execute))+'：'+(tools[selectedTool]??selectedTool)+'；原始模型分类：'+(tools[result.tool]??result.tool)+'。由规则辅助路由，不能计为神经分类正确。';kind='warn';}
+  if(contextOnly(result)){text='仅语境头，编码器未运行；'+(result.context_deny===1?'学习语境判断拒绝':'schema选择工具')+'；实际工具 '+(tools[selectedTool]??'未报告')+'；'+(decodes[result.decode]??result.decode)+'；'+(executions[result.execute]??result.execute)+'。无六类神经分类成绩。';kind=result.context_deny===1?'warn':kind;}
+  if(result.model_used===0){text='规则快路径；模型未运行；实际工具 '+(tools[selectedTool]??'未报告')+'；'+(decodes[result.decode]??result.decode)+'；'+(executions[result.execute]??result.execute)+'。不能计为神经分类正确。';}
+  const receiptCheck=verifyWriteReceipt(result);const receiptFailed=!receiptCheck.passed;
+  if(receiptFailed){text=receiptCheck.reason==='pwm_registers'?'PWM寄存器不一致：周期 '+fmt(result.receipt.period)+'、高电平 '+fmt(result.receipt.high)+'、使能 '+fmt(result.receipt.enabled)+'；不能确认写入成功。':validReceipt(result.receipt)?'回读类型、结果值或匹配标记不一致：请求 '+fmt(result.receipt.requested)+'，回读 '+fmt(result.receipt.readback)+'；不能确认写入成功。':'缺少有效寄存器回读，不能确认写入成功。';$('receipt').textContent='核对未通过；'+receiptLabel(result);text+=' 固件execute/value保持原样供排查。';kind='bad';$('execution').textContent='回读核对未通过（固件execute='+result.execute+'）';}
+  if(result.selection_source===5)kind='warn';
+  $('resultInterpretation').textContent=text;
+  if(result.model_used===0&&result.execute===0&&!receiptFailed){text='实板已执行 · 快速控制';kind='good';}
+  else if(result.execute===0&&!receiptFailed&&encoderUsed(result))text='实板已执行 · AI识别'+(ruleAssisted?'（规则辅助）':'');
+  if(!receiptFailed&&result.execute===0&&contextOnly(result))text='实板已执行 · 语境识别＋工具匹配';
+  $('resultStatus').textContent=text;$('resultStatus').className='status '+kind;
+  $('resultExplanation').textContent=result.execute===0
+    ? ('识别用时 '+cycleTime(result.cycles)+'；'+(selectedTool===2&&coreTiming?'CoreMark实际计时 '+coreTiming.seconds.toFixed(6)+' 秒，识别和基准测试分别计时。':'实际回值 '+renderedValue+'。'))
+    : (result.execute===1?'此请求未执行有效工具动作；拒绝是系统的预期能力之一。':'工具未成功返回，保留原始状态供排查。');
+  if(result.execute===0&&ruleAssisted)$('resultExplanation').textContent='实际结果：'+renderedValue+'。模型原判'+(tools[result.tool]??result.tool)+'，规则辅助选择'+(tools[selectedTool]??selectedTool)+'并执行成功；这次没有被系统拒绝。识别耗时 '+cycleTime(result.cycles)+'。';
+  if(result.model_used===0)$('resultExplanation').textContent='本条未运行模型；板上规则与许可决策 '+cycleTime(result.decision_cycles)+'；工具派发 '+cycleTime(result.tool_cycles)+'。'+(selectedTool===2&&coreTiming?'CoreMark实际计时 '+coreTiming.seconds.toFixed(6)+' 秒。':'回值 '+renderedValue+'。');
+  if(contextOnly(result))$('resultExplanation').textContent='本条运行了学习语境头，完整编码器未运行；决策（含语境头与schema/许可） '+cycleTime(result.decision_cycles)+'；工具派发 '+cycleTime(result.tool_cycles)+'。'+(result.context_deny===1?'学习语境判断拒绝，未派发工具。':selectedTool===2&&coreTiming?'CoreMark实际 '+coreTiming.seconds.toFixed(6)+' 秒。':'回值 '+renderedValue+'。');
+  if(result.selection_source===5&&encoderUsed(result))$('resultExplanation').textContent='学习语境头否决执行；保留编码器原始分数，规则不能把拒绝救回。';
+  if(receiptFailed)$('resultExplanation').textContent='IO回读核对未通过；请求、固件状态和寄存器原始值已保留。';
+  $('json').textContent=JSON.stringify(result,null,2);$('logits').replaceChildren();
+  $('encoderLogits').replaceChildren();
+  $('logitScope').textContent=contextOnly(result)?'本条只运行语境二分类，没有六类编码器或联合分数。':result.encoder_logits?'上表为分级神经联合分数；下表保留编码器原判。整数分差均不是概率。':'旧固件：六类编码器输出，整数分数不是概率。';
+  const scoreRows=(values,id)=>{if(!Array.isArray(values))return;values.forEach((value,index)=>{const row=document.createElement('tr');for(const text of [tools[index]??String(index),String(value)]){const cell=document.createElement('td');cell.textContent=text;row.appendChild(cell);}$(id).appendChild(row);});};
+  if(!contextOnly(result))scoreRows(result.logits,'logits');
+  if(encoderUsed(result))scoreRows(result.encoder_logits??result.logits,'encoderLogits');
+  if((selectedTool??result.tool)===2){
+    if(result.execute!==0||coreFailed||!coreValidated)setCoreState('CoreMark 尚未通过完整验收；保留输出供排查。',result.execute===2?'warn':'bad');
+    else if(coreTiming&&coreTiming.seconds>=10){setCoreState('算法校验与计时通过；工具已返回。','good');$('coreScore').textContent=(coreTiming.iterations*1000000/coreTiming.cycles).toFixed(6);}
+    else setCoreState('算法通过，但缺少 >=10 秒的精确计时证据。','warn');
+  }
+  coreActive=false;
+}
+function decodeCompact(frame){
+  if(!Array.isArray(frame)||!((frame[0]===1&&frame.length===20)||(frame[0]===2&&frame.length===25)||(frame[0]===3&&frame.length===31))||!frame.every(Number.isSafeInteger))throw new Error('NR_FAST需要v1/20、v2/25或v3/31个整数');
+  const [version,caseNumber,config,selected_tool,decode,argument,operation,selection_source,execute,value,decision_cycles,tool_cycles,request_cycles,kind,requested,readback,match,period,high,enabled]=frame;
+  if(caseNumber<0||config<0||config>6||selected_tool<0||selected_tool>5||decode<0||decode>8||operation<0||operation>2||selection_source<0||selection_source>(version>=2?5:4)||execute<0||execute>3||decision_cycles<0||tool_cycles<0||request_cycles<0||kind<0||kind>4||![0,1].includes(match)||![0,1].includes(enabled)||period<0||high<0)throw new Error('NR_FAST字段越界');
+  const result={protocol_frame:'NR_FAST',compact_version:version,case:caseNumber,config,model_used:0,path:'fast',tool:null,selected_tool,decode,argument,operation,selection_source,execute,value,cycles:0,decision_cycles,tool_cycles,request_cycles};
+  if(version>=2){const [context_used,context_deny,c0,c1,threshold]=frame.slice(20);if(context_used!==1||![0,1].includes(context_deny)||c0<-2147483648||c0>2147483647||c1<-2147483648||c1>2147483647||threshold<0||threshold>2147483647)throw new Error('NR_FAST v2语境字段无效');Object.assign(result,{model_used:version===3?3:2,context_xnd_used:version===3?1:0,encoder_used:0,context_used,context_deny,context_logits:[c0,c1],context_margin:c1-c0,context_threshold:threshold,cycles:null,logits:null,encoder_logits:null});}
+  if(version===3){const [xnd,loads,jobs,dma_read_bytes,dma_write_bytes,engine_cycles]=frame.slice(25);if(xnd!==1||![loads,jobs,dma_read_bytes,dma_write_bytes,engine_cycles].every(x=>x>=0&&x<=4294967295))throw new Error('NR_FAST v3语境硬件字段无效');result.context_hardware={loads,jobs,dma_read_bytes,dma_write_bytes,engine_cycles};}
+  if(kind!==0)result.receipt={kind,requested,readback,match,period,high,enabled};
+  if(version>=2){if(contextUsed(result)&&result.context_deny===1&&selection_source!==5)throw new Error('语境拒绝来源矛盾');validateNeuralScope(result);}
+  return result;
+}
+function receiveLine(line,wireBytes=null){
+  if(!line){if(pendingRequest&&!pendingRequest.ready_received_at)pendingRequest.rx_wire_bytes=wireBytes===null||pendingRequest.rx_wire_bytes===null?null:pendingRequest.rx_wire_bytes+wireBytes;if(wireBytes!==null)recordEvidence('RX','',null,wireBytes);return;}log('RX',line);
+  if(pendingRequest&&!pendingRequest.ready_received_at){pendingRequest.rx_line_utf8_bytes+=encoder.encode(line).length;pendingRequest.rx_wire_bytes=wireBytes===null||pendingRequest.rx_wire_bytes===null?null:pendingRequest.rx_wire_bytes+wireBytes;}
+  let parsed=null;
+  const recordKind=line.match(/^NR_(RESULT|FAST|PMU|BUILD|CONFIG|ACTION|IO|FAST_MODE|FORMAT)\s+/);
+  if(recordKind){try{parsed={kind:'NR_'+recordKind[1],data:JSON.parse(line.slice(line.indexOf(recordKind[1]==='FAST'?'[':'{')))};}catch(_){}}
+  recordEvidence('RX',line,parsed,wireBytes);
+  const hz=line.match(/clock_hz=(\d+)/);if(hz&&Number(hz[1])>0){frequency=Number(hz[1]);$('clock').textContent=fmt(frequency)+' Hz · 固件报告';}
+  if(hz&&frequency&&evidenceSession)evidenceSession.reported_clock_hz=frequency;
+  if(/^NR_BUILD\s+/.test(line)){
+    // A reboot starts a new result epoch; wait for its own NR_READY.
+    stopHealth('检测到NR_BUILD，设备已重启');$('demoStatus').textContent='取得本次启动身份，等待就绪。';if(pendingRequest&&!pendingRequest.ready_received_at){pendingRequest.audit_state='设备重启中断';pendingRequest.interrupted_at=new Date().toISOString();}pendingRequest=null;bootEpoch++;frequency=null;$('firmware').textContent='等待有效NR_BUILD';$('reportedBaud').textContent='等待固件报告';$('clock').textContent='等待固件报告';$('activeConfig').textContent='等待 NR_CONFIG';if(evidenceSession){const boots=evidenceSession.boots||(evidenceSession.boots=[]);boots.push({boot_epoch:bootEpoch,received_at:new Date().toISOString(),previous_build:evidenceSession.firmware_build??null});evidenceSession.firmware_build=null;evidenceSession.current_configuration=null;evidenceSession.current_fast_mode=null;evidenceSession.current_format=null;evidenceSession.reported_clock_hz=null;}refreshAudit();$('activeFast').textContent='等待 NR_FAST_MODE';$('activeFormat').textContent='等待 NR_FORMAT';ready=false;resetResult();resetComparison();refreshControls();
+    try{const build=JSON.parse(line.slice(line.indexOf('{')));if(!build||typeof build.firmware!=='string')throw new Error('缺少固件版本');$('reportedBaud').textContent=Number.isInteger(build.uart_baud)?fmt(build.uart_baud)+' baud · 固件报告':'旧固件未报告';
+    if(Number.isInteger(build.uart_baud)&&build.uart_baud!==evidenceSession?.serial?.baud_rate)status('固件报告速率与主机设置不同，请断开后核对。','warn');
+    $('firmware').textContent=build.firmware+' · protocol '+(build.protocol??'未报告');if(Number.isFinite(build.clock_hz)&&build.clock_hz>0){frequency=build.clock_hz;$('clock').textContent=fmt(frequency)+' Hz · 固件报告';}if(evidenceSession){evidenceSession.firmware_build=build;evidenceSession.reported_clock_hz=frequency;}}
+    catch(error){status('固件 BUILD JSON 无法解析：'+error.message,'warn');}return;
+  }
+  if(/^NR_FAST_MODE\s+/.test(line)||/^NR_FORMAT\s+/.test(line)){
+    try{const data=JSON.parse(line.slice(line.indexOf('{'))),fast=line.startsWith('NR_FAST_MODE '),value=fast?data.enabled:data.compact;if(![0,1].includes(value))throw new Error('确认值无效');if(fast){$('fastMode').value=String(value);$('activeFast').textContent=value?(evidenceSession?.firmware_build?.formal_fast===1?'已确认：精确机器语法优先；自然语言走语义分支':evidenceSession?.firmware_build?.context_head===1?'已确认：语境头→schema优先':'已确认：规则优先'):(evidenceSession?.firmware_build?.context_head===1?'已确认：语境头→完整模型':'已确认：先运行模型');if(evidenceSession)evidenceSession.current_fast_mode=data;}else{$('resultFormat').value=value?'compact':'full';$('activeFormat').textContent=value?'已确认：快路径紧凑帧':'已确认：完整JSON';if(evidenceSession)evidenceSession.current_format=data;}acknowledgeControl(fast?'fast':'format',fast?value:value?'compact':'full',wireBytes);refreshModeSummary();}
+    catch(error){stopHealth('协议控制回执无法解析：'+error.message);status('协议控制回执无法解析：'+error.message,'bad');}return;
+  }
+  if(/^NR_FAST\s+/.test(line)){
+    try{const result=decodeCompact(JSON.parse(line.slice(line.indexOf('['))));if(!auditResult(result))return;markResponse('NR_FAST',wireBytes);renderResult(result);healthResult(result);}
+    catch(error){stopHealth('紧凑结果无法解析：'+error.message);status('紧凑结果无法解析：'+error.message,'bad');}return;
+  }
+  if(/^NR_CONFIG\s+/.test(line)){
+    try{const config=JSON.parse(line.slice(line.indexOf('{')));if(!config||!Number.isInteger(config.config)||config.config<0||config.config>6)throw new Error('配置编号无效');$('configuration').value=String(config.config);$('activeConfig').textContent=config.config+' · '+(modes[config.mode]??'未知模式')+' / '+(config.graph===1?'interleaved QKV':config.graph===0?'natural QKV':'未报告 graph')+' / '+(config.dot4===1?'dot4':config.dot4===0?'scalar':'未报告 dot4');if(evidenceSession)evidenceSession.current_configuration=config;acknowledgeControl('configuration',config.config,wireBytes);refreshModeSummary();}
+    catch(error){stopDemo('配置回执无法解析：'+error.message);status('固件 CONFIG JSON 无法解析：'+error.message,'warn');}return;
+  }
+  if(/^NR_CONTROL_ERROR/.test(line)){stopHealth('固件拒绝控制请求：'+line);ready=false;status('配置控制被固件拒绝：'+line+'；等待 NR_READY，原配置未变。','warn');return;}
+  if(line==='NR_READY'){markReady();ready=!!evidenceSession?.firmware_build&&frequency>0;if(!ready){stopHealth('缺少有效NR_BUILD与频率，不能确认本次固件身份');status('收到READY，但缺少有效NR_BUILD与频率；请按KEY0重新获取启动身份。','warn');}else if(pendingRequest&&/未通过|缺少|不匹配/.test(pendingRequest.audit_state??''))status('固件已就绪；上一条请求未通过完整回执确认，请查看审计记录。','warn');else status('固件已就绪，可以发送一条指令。','good');refreshControls();if(healthRun?.active)advanceHealth();if(demoFlow?.active)advanceDemo();return;}
+  if(/^NR_ACTION\s+/.test(line)){
+    try{
+      const a=JSON.parse(line.slice(line.indexOf('{')));validateNeuralScope(a);
+      if(a.phase!=='tool_start'||a.selected_tool!==2||a.decode!==0||!Number.isInteger(a.cycles)||(!encoderUsed(a)?![0,2,3].includes(a.model_used)||a.cycles<0||a.model_used===0&&a.cycles!==0||!Number.isInteger(a.decision_cycles)||a.decision_cycles<0:a.cycles<=0))throw new Error('无效工具阶段通知');
+      renderNeuralTiming(a);$('decisionCycles').textContent=fmt(a.decision_cycles);$('decisionLatency').textContent=cycleTime(a.decision_cycles);$('processingPath').textContent=processingLabel(a);
+      $('tool').textContent=neuralClassLabel(a);renderContext(a);$('selectedTool').textContent=tools[a.selected_tool];
+      $('selectionSource').textContent=a.selection_source===0?'神经分类，经工具合同校验':a.selection_source===1?'只读工具 schema 消歧':'固件阶段通知';
+      $('resultCase').textContent='阶段通知 · case '+a.case+' / config '+a.config;
+      $('resultStatus').textContent='识别已完成；CoreMark正在运行，尚未返回成绩。';$('resultStatus').className='status warn';
+      $('resultExplanation').textContent=(a.model_used===0?'规则快路径，模型未运行；决策用时 '+cycleTime(a.decision_cycles):contextOnly(a)?'仅语境头，编码器未运行；决策用时 '+cycleTime(a.decision_cycles):'中文识别用时 '+cycleTime(a.cycles))+'。CoreMark基准需至少10秒；等待真实CRC和计时，不显示预计分数。';
+      $('execution').textContent='工具运行中，尚未返回';$('values').textContent='等待真实工具返回值';
+      $('displayCommand').textContent=lastCommand||'CoreMark';$('displayAction').textContent='CoreMark正在运行';$('displayReadback').textContent='等待CRC与计时';$('displayAi').textContent=a.model_used===0?'未使用 · 快速控制':contextOnly(a)?'已使用语境头':'已使用完整模型';$('displayCompute').textContent=a.model_used===0?'本条无需模型':cycleTime(a.cycles);$('displayTool').textContent='运行中';$('displayMode').textContent=modeSnapshotLabel(pendingRequest?.confirmed_mode);setCoreState('CoreMark正在运行；等待CRC、精确计时和工具返回。','warn');
+    }catch(error){stopHealth('阶段通知无法解析：'+error.message);status('阶段通知无法解析：'+error.message,'warn');}return;
+  }
+  if(/^NR_RESULT\s+/.test(line)){
+    try{const result=JSON.parse(line.slice(line.indexOf('{')));if(!result||typeof result!=='object'||(!Number.isInteger(result.tool)&&![0,2,3].includes(result.model_used)))throw new Error('缺少工具编号');validateNeuralScope(result);if(!auditResult(result))return;markResponse('NR_RESULT',wireBytes);renderResult(result);healthResult(result);}
+    catch(error){stopHealth('结果JSON无法解析：'+error.message);status('结果JSON无法解析：'+error.message,'bad');}return;
+  }
+  if(/^NR_IO\s+/.test(line)){try{const io=JSON.parse(line.slice(line.indexOf('{')));if(pendingRequest&&!pendingRequest.ready_received_at)pendingRequest.io_reply=JSON.parse(JSON.stringify(io));markResponse('NR_IO',wireBytes);healthIo(io);}catch(error){stopHealth('只读IO回执无法解析：'+error.message);status('只读IO回执无法解析：'+error.message,'bad');}return;}
+  if(/^NR_PMU\s+/.test(line)){
+    try{const pmu=JSON.parse(line.slice(line.indexOf('{')));if(!pmu||pmu.scope!=='coremark_bracket')throw new Error('未知 PMU 采样范围');renderPmu(pmu,'corePmu','coreCpi');}
+    catch(error){status('PMU JSON 无法解析：'+error.message,'warn');}return;
+  }
+  if(/^NR_BACKEND_ERROR/.test(line)){stopHealth('板上推理后端错误');ready=false;status('板上推理后端错误；请复位板卡并等待新的 NR_READY。','bad');refreshControls();return;}
+  if(/^NR_INPUT_ERROR/.test(line)){stopHealth('固件拒绝输入：'+line);ready=false;refreshControls();status('固件拒绝输入：'+line+'；等待恢复就绪。','warn');return;}
+  if(!/^NR_/.test(line)||/^NR_CYCLES=|^NR_COREMARK_RETURN/.test(line))handleCoreLine(line);
+  if(/ERROR!|Errors detected|Cannot validate/.test(line))stopHealth('CoreMark原始输出报告错误');
+}
+async function readLoop(activePort){
+  const decoder=new TextDecoder('utf-8');let incompleteWireBytes=0;const wireLineBytes=[];
+  // stream:true 保留跨USB包的半个UTF-8字符；USB包边界不是文本行边界。
+  while(reading&&activePort.readable){
+    reader=activePort.readable.getReader();
+    try{while(reading){const {value,done}=await reader.read();if(done)break;if(value){for(const byte of value){incompleteWireBytes++;if(byte===10){wireLineBytes.push(incompleteWireBytes);incompleteWireBytes=0;}}lineBuffer+=decoder.decode(value,{stream:true});let at;while((at=lineBuffer.indexOf('\n'))>=0){const rawLine=lineBuffer.slice(0,at),line=rawLine.replace(/\r$/,'');lineBuffer=lineBuffer.slice(at+1);receiveLine(line,wireLineBytes.shift()??null);}if(lineBuffer.length>maxLine){stopHealth('串口单行过长');log('WARN','单行过长，丢弃未完成行');lineBuffer='';ready=false;status('串口长行异常；请检查波特率并复位。','warn');refreshControls();}}}}
+    catch(error){if(reading){stopHealth('串口读取异常：'+error.message);ready=false;log('ERROR','串口读取：'+error.message);status('串口读取异常；等待固件再次就绪。','warn');refreshControls();}}
+    finally{reader.releaseLock();reader=null;}
+  }
+}
+async function connect(){
+  if(port||connecting)return;
+  if(!window.isSecureContext||!('serial'in navigator)){status('请用支持 Web Serial 的 Chrome/Edge，通过 localhost 或 HTTPS 打开。','bad');return;}
+  const connectionBaud=Number($('baudRate').value);
+  if(![115200,921600].includes(connectionBaud)){status('请选择支持的串口速率。','bad');return;}
+  connecting=true;refreshControls();let selected,selectedInfo=null,opened=false;
+  try{
+    const other=$('otherUart').checked===true;
+    selected=await navigator.serial.requestPort(other?{}:{filters:[{usbVendorId:0x10c4,usbProductId:0xea60}]}); // 用户明确选择，默认仅列出板载UART。
+    selectedInfo=selected.getInfo?selected.getInfo():{};
+    if(selectedInfo.usbVendorId===0x0403&&selectedInfo.usbProductId===0x6010)throw new Error('这是FTDI双通道JTAG设备，不是板载UART，请选CP210x。');
+    if(!other&&(selectedInfo.usbVendorId!==0x10c4||selectedInfo.usbProductId!==0xea60))throw new Error('所选设备不是板载CP210x UART。');
+    await selected.open({baudRate:connectionBaud,dataBits:8,stopBits:1,parity:'none',flowControl:'none',bufferSize:8192});opened=true;$('uartIdentity').textContent=selectedInfo.usbVendorId===0x10c4&&selectedInfo.usbProductId===0xea60?'CP210x UART · 8N1':'其他USB-UART · 8N1';
+    port=selected;healthRun=null;pendingRequest=null;bootEpoch=0;renderHealth();ready=false;frequency=null;lineBuffer='';reading=true;resetResult();$('clock').textContent='等待固件报告';$('firmware').textContent='等待 NR_BUILD';$('activeConfig').textContent='等待 NR_CONFIG';status('串口已打开；按板上 KEY0 复位，等待启动报告和 NR_READY。','warn');$('reportedBaud').textContent='等待固件报告';log('INFO','串口连接 '+connectionBaud+'/8N1');
+    evidenceSession={schema:'needlervx.uart.evidence.v1',source:'web_serial',started_at:new Date().toISOString(),closed_at:null,serial:{baud_rate:connectionBaud,data_bits:8,stop_bits:1,parity:'none',flow_control:'none'},usb:selectedInfo,reported_clock_hz:null,received_lines:0,truncated:false,entries:[]};evidenceBytes=0;requestNumber=0;resetComparison();refreshAudit();$('downloadEvidence').disabled=true;
+    readTask=readLoop(selected);readTask.then(()=>{if(port===selected&&reading)disconnect('串口数据流已结束。');}).catch(error=>log('ERROR',error.message));
+  }catch(error){if(selected){try{await selected.close();}catch(_){}}port=null;ready=false;reading=false;frequency=null;readTask=null;status(error.name==='NotFoundError'?'已取消选择UART。':!opened?'串口尚未打开：'+error.message+' 请选CP210x UART，并关闭占用它的其他串口页面或终端；此阶段按KEY0不能解决端口打开失败。':'串口初始化失败：'+error.message+'；已关闭本次连接，请重新选择UART。','warn');}
+  finally{connecting=false;refreshControls();}
+}
+async function disconnect(reason='已断开串口。'){
+  if(closeTask)return closeTask;if(!port)return;
+  const activePort=port;
+  closeTask=(async()=>{
+    stopHealth('串口断开：'+reason);ready=false;reading=false;refreshControls();
+    // cancel唤醒正在等字节的read，使finally释放锁；然后才能close。
+    try{if(reader)await reader.cancel();}catch(_){}
+    try{if(readTask)await readTask;}catch(_){}
+    try{if(writeTask)await writeTask;}catch(_){}
+    try{await activePort.close();}catch(error){log('WARN','关闭串口：'+error.message);}
+    if(evidenceSession)evidenceSession.closed_at=new Date().toISOString();
+    if(port===activePort)port=null;readTask=null;lineBuffer='';frequency=null;$('clock').textContent='等待固件报告';status(reason);log('INFO',reason);
+  })();
+  refreshControls();try{await closeTask;}finally{closeTask=null;refreshControls();}
+}
+async function send(){
+  if(!port||!ready||writeTask||closeTask||healthRun?.active||demoFlow?.active)return;
+  const text=$('command').value.trim();const data=encoder.encode(text);
+  if(!text||/[\r\n]/.test(text)){status('请输入一行非空指令。','warn');return;}
+  if(data.length>64){status('输入超过 64 UTF-8 字节，请缩短。中文通常每字 3 字节。','warn');return;}
+  ready=false;lastCommand=text;pendingComparisonText=text;resetCore();beginRequest(text,'tool');status('指令已提交；等待板上结果与新的 NR_READY。','warn');
+  try{await transmit(text);}catch(error){status('串口发送失败：'+error.message+'；请断开后重连。','bad');log('ERROR',error.message);}
+}
+async function sendConfig(){
+  if(!port||!ready||writeTask||closeTask||healthRun?.active||demoFlow?.active)return;
+  const config=Number($('configuration').value);if(!Number.isInteger(config)||config<0||config>6)return;
+  const text=':config '+config;ready=false;pendingComparisonText=null;expectedTool=null;beginRequest(text,'configuration');status('已请求配置 '+config+'；等待板上 NR_CONFIG 确认与 NR_READY。','warn');
+  try{await transmit(text);}catch(error){status('配置发送失败：'+error.message,'bad');log('ERROR',error.message);}
+}
+
+async function sendProtocolControl(kind){
+  if(!port||!ready||writeTask||closeTask||healthRun?.active||demoFlow?.active)return;
+  const capability=kind==='fast'?'fast':'compact';if(evidenceSession?.firmware_build?.capabilities?.[capability]!==1)return;
+  const value=kind==='fast'?$('fastMode').value:$('resultFormat').value;
+  if(kind==='fast'&&!['0','1'].includes(value)||kind==='format'&&!['full','compact'].includes(value))return;
+  const text=kind==='fast'?':fast '+value:':format '+value;ready=false;pendingComparisonText=null;expectedTool=null;beginRequest(text,kind);status('等待固件确认 '+text+' 与 NR_READY。','warn');
+  try{await transmit(text);}catch(error){status('协议控制发送失败：'+error.message,'bad');}
+}
+
+function confirmedModeSnapshot(){return {fast:evidenceSession?.current_fast_mode?.enabled??null,config:evidenceSession?.current_configuration?.config??null,compact:evidenceSession?.current_format?.compact??null};}
+function modeSnapshotLabel(m){if(!m)return '未报告';return (m.fast===0?'AI优先':m.fast===1?'快速控制':'路径未确认')+' · '+(m.config===null?'配置未确认':'配置'+m.config)+' · '+(m.compact===0?'完整回报':m.compact===1?'紧凑回报':'格式未确认');}
+function refreshModeSummary(){
+  const m=confirmedModeSnapshot();$('confirmedMode').textContent=modeSnapshotLabel(m);
+  const changed=(m.fast!==null&&String(m.fast)!==$('fastMode').value)||(m.config!==null&&String(m.config)!==$('configuration').value)||(m.compact!==null&&(m.compact?'compact':'full')!==$('resultFormat').value);
+  $('modeDraft').textContent=changed?'下拉选择尚未应用。当前模式仍以固件已确认回执为准。':'下拉选择与已确认值一致；切换操作须等板上回执。';
+}
+function renderSimpleResult(r){
+  const a=pendingRequest?.result===undefined?null:pendingRequest;lastResultMode=a?.confirmed_mode??confirmedModeSnapshot();
+  $('displayCommand').textContent=a?.command||lastCommand||'串口结果（未关联本次输入）';
+  const labels=['读取温度','PWM占空比','CoreMark','周期计数','LED掩码','拒绝执行'];let v='未报告';
+  if(r.execute===0){if(r.selected_tool===0){const n=r.value>=2147483648?r.value-4294967296:r.value;v=(n/100).toFixed(2)+' °C';}else if(r.selected_tool===1)v=r.value+'%';else if(r.selected_tool===4)v='0x'+r.value.toString(16).padStart(2,'0');else if(r.selected_tool===2)v=coreTiming?coreTiming.seconds.toFixed(3)+' 秒':'等待计时';else v=fmt(r.value);}
+  $('displayAction').textContent=r.execute===0?(labels[r.selected_tool]??'工具')+' '+v:r.execute===1?'请求已拒绝':r.execute===2?'功能暂不可用':'执行失败';
+  const check=verifyWriteReceipt(r);$('displayReadback').textContent=!check.passed?'核对未通过':r.receipt?.kind===1?'0x'+r.receipt.readback.toString(16).padStart(2,'0')+' · 一致':r.receipt?.kind===2?r.receipt.readback+'% · 一致':r.selected_tool===2?(coreValidated&&!coreFailed?'CRC通过':'等待CRC'):r.receipt?'已收到采样值':'本条无写操作';
+  $('displayAi').textContent=r.model_used===0?'未使用 · 快速控制':contextOnly(r)?'已使用语境头 · 编码器未运行':encoderUsed(r)?'已使用完整模型':'固件未报告';
+  $('displayCompute').textContent=r.model_used===0?'本条无需模型':Number.isFinite(r.cycles)?cycleTime(r.cycles):'紧凑帧未单列';
+  $('displayTool').textContent=cycleTime(r.tool_cycles);$('displayMode').textContent=modeSnapshotLabel(lastResultMode);
+}
+function stopDemo(reason){
+  if(!demoFlow?.active)return;demoFlow.active=false;if(demoFlow.timer!==undefined)clearTimeout(demoFlow.timer);demoFlow.state='stopped';demoFlow.reason=reason;demoFlow.stopped_at=new Date().toISOString();$('demoStatus').textContent='演示已停止：'+reason;refreshControls();
+}
+async function startDemo(kind){
+  if(!port||!ready||writeTask||closeTask||healthRun?.active||demoFlow?.active)return;
+  if(evidenceSession?.firmware_build?.capabilities?.fast!==1||evidenceSession?.firmware_build?.capabilities?.compact!==1){$('demoStatus').textContent='固件未报告所需模式能力；请检查启动身份。';return;}
+  const ai=kind==='ai',steps=[{command:':fast '+(ai?0:1),kind:'fast'},{command:':config 6',kind:'configuration'},{command:':format '+(ai?'full':'compact'),kind:'format'}];
+  if(ai)steps.push({command:'请将PWM占空比设置为20%。',kind:'tool',expected_tool:1,expected_argument:20,require_encoder:true});else if(kind==='cpu')steps.push({command:'运行CoreMark并显示CRC结果。',kind:'tool',expected_tool:2});
+  resetResult();$('resultStatus').textContent='正在确认演示模式，尚未发送工具请求。';$('resultStatus').className='status warn';
+  demoFlow={active:true,state:'running',kind,index:0,steps,boot_epoch:bootEpoch,started_at:new Date().toISOString()};
+  if(evidenceSession)(evidenceSession.demonstrations||(evidenceSession.demonstrations=[])).push(demoFlow);
+  $('demoStatus').textContent='正在等待板卡逐项确认模式…';refreshControls();await advanceDemo();
+}
+async function advanceDemo(){
+  if(demoAdvancing||!demoFlow?.active)return;demoAdvancing=true;const flow=demoFlow;
+  try{
+    if(writeTask)await writeTask;if(demoFlow!==flow||!flow.active||!port||!ready||closeTask)return;
+    const previous=flow.steps[flow.index];
+    if(previous?.request){const a=previous.request;
+      if(!a.ready_received_at||!a.result_received_at||a.response_associated===false||a.write_error){stopDemo('缺少匹配的结果/控制回执与READY');return;}
+      if(flow.timer!==undefined)clearTimeout(flow.timer);
+      if(previous.kind!=='tool'&&a.control_confirmation?.matched!==true){stopDemo('模式回执未确认');return;}
+      if(previous.kind==='tool'&&(!a.result||a.result.execute!==0||a.result.selected_tool!==previous.expected_tool||Number.isInteger(previous.expected_argument)&&a.result.argument!==previous.expected_argument||!verifyWriteReceipt(a.result).passed||previous.require_encoder&&!encoderUsed(a.result)||previous.expected_tool===2&&(!coreValidated||coreFailed||!(coreTiming?.seconds>=10)))){stopDemo(previous.require_encoder&&!encoderUsed(a.result??{})?'本条未运行完整模型，不能作为AI识别演示':'工具拒绝、不可用或回读未通过');return;}
+      previous.completed=true;flow.index++;
+    }
+    if(flow.index===flow.steps.length){flow.active=false;if(flow.timer!==undefined)clearTimeout(flow.timer);flow.state='completed';flow.completed_at=new Date().toISOString();$('demoStatus').textContent=flow.kind==='quick'?'快速控制已由板卡确认；输入一条指令后发送。':flow.kind==='ai'?'AI识别与PWM回读已完成。':'CPU自检已完成，请查看CRC和计时。';if(flow.kind==='quick'){$('command').value='led 37';countBytes();}refreshControls();return;}
+    const step=flow.steps[flow.index];ready=false;lastCommand=step.command;pendingComparisonText=step.kind==='tool'?step.command:null;expectedTool=null;
+    step.request=beginRequest(step.command,step.kind);flow.timer=setTimeout(()=>{if(flow.active&&flow.steps[flow.index]===step)stopDemo('等待板卡回执超时；未自动重发。');},step.kind==='tool'?60000:15000);$('demoStatus').textContent='第'+(flow.index+1)+'/'+flow.steps.length+'步：'+(step.kind==='tool'?'等待板上执行结果':'等待确认 '+step.command);await transmit(step.command);
+  }catch(error){stopDemo('发送失败：'+error.message);}
+  finally{demoAdvancing=false;refreshControls();if(demoFlow?.active&&ready)advanceDemo();}
+}
+// Display controls never connect, transmit, clear evidence, or synthesize data.
+let presentationEnabled=false;
+function setPresentation(enabled){
+  presentationEnabled=Boolean(enabled);
+  document.body.classList.toggle('presentation',presentationEnabled);
+  $('presentationToggle').textContent=presentationEnabled?'详细布局':'演示布局';
+  $('presentationToggle').setAttribute('aria-pressed',String(presentationEnabled));
+  $('logDetails').open=!presentationEnabled;
+  $('coreRawDetails').open=!presentationEnabled;
+  $('viewHint').textContent=presentationEnabled?'实板演示 · 工程信息按需展开':'详细布局 · 保留全部测量与审计';
+}
+function refreshFullscreen(){
+  $('fullscreenToggle').textContent=document.fullscreenElement?'退出全屏':'全屏显示';
+}
+async function toggleFullscreen(){
+  try{
+    if(document.fullscreenElement)await document.exitFullscreen();
+    else if(document.documentElement&&document.documentElement.requestFullscreen)await document.documentElement.requestFullscreen();
+    else throw new Error('当前浏览器不支持全屏，请使用 F11。');
+    refreshFullscreen();
+  }catch(error){$('viewHint').textContent='全屏未开启：'+error.message;}
+}
+$('presentationToggle').addEventListener('click',()=>setPresentation(!presentationEnabled));
+$('fullscreenToggle').addEventListener('click',toggleFullscreen);
+document.addEventListener('fullscreenchange',refreshFullscreen);
+let initialPresentation=false;
+if(window.location&&typeof URLSearchParams==='function')initialPresentation=new URLSearchParams(window.location.search).get('present')==='1';
+setPresentation(initialPresentation);refreshFullscreen();
+
+$('demoAi').addEventListener('click',()=>startDemo('ai'));$('demoQuick').addEventListener('click',()=>startDemo('quick'));$('demoCpu').addEventListener('click',()=>startDemo('cpu'));
+for(const id of ['fastMode','configuration','resultFormat'])$(id).addEventListener('change',refreshModeSummary);
+$('applyFast').addEventListener('click',()=>sendProtocolControl('fast'));$('applyFormat').addEventListener('click',()=>sendProtocolControl('format'));
+$('startHealth').addEventListener('click',startHealth);$('stopHealth').addEventListener('click',()=>stopHealth('用户停止后续请求，板上已开始的工具不会被取消'));$('downloadHealth').addEventListener('click',()=>{if(healthRun&&evidenceSession)downloadBlob(JSON.stringify({schema:'needlervx.health.evidence.v1',source:'web_serial',exported_at:new Date().toISOString(),health_check:healthRun,raw_uart_evidence:evidenceSession,timing_notes:{browser_wall:'TX start to complete result line / real NR_READY; includes USB, UART, scheduling and tool runtime',fpga_cycles:'firmware measured compute and tool cycles, converted using reported clock; excludes UART logging'},physical_board_verified_by_export:false},null,2),'application/json;charset=utf-8','json');});
+$('connect').addEventListener('click',connect);$('disconnect').addEventListener('click',()=>disconnect());$('send').addEventListener('click',send);$('applyConfig').addEventListener('click',sendConfig);
+function countBytes(){const length=encoder.encode($('command').value.trim()).length;$('byteCount').textContent=length+' / 64 UTF-8 字节';$('byteCount').style.color=length>64?'var(--red)':'';}
+$('command').addEventListener('input',()=>{expectedTool=null;countBytes();});$('command').addEventListener('keydown',event=>{if(event.ctrlKey&&event.key==='Enter'){event.preventDefault();send();}});
+const FOURTH_CASES=[{"text": "请读取FPGA当前温度。", "tool": 0}, {"text": "查看硬件计数器目前的读数。", "tool": 3}, {"text": "把LED整体掩码设为0x03。", "tool": 4}, {"text": "先关闭LED0，再读取温度。", "tool": 5}, {"text": "只关闭LED0，其他LED保持不变。", "tool": 4}, {"text": "单独点亮LED0，其余LED保持原状。", "tool": 4}, {"text": "将LED整体掩码设置为0x00。", "tool": 4}, {"text": "请将PWM占空比设置为20%。", "tool": 1}, {"text": "把PWM频率改成2kHz。", "tool": 5}, {"text": "PWM占空比调整为80%。", "tool": 1}, {"text": "把PWM的占空比设为50%。", "tool": 1}, {"text": "请设置PWM占空比为30%。", "tool": 1}, {"text": "再读一次计数器当前值。", "tool": 3}, {"text": "把计数器清零，从头计数。", "tool": 5}, {"text": "读取计数器现在的数值。", "tool": 3}, {"text": "获取FPGA内部温度读数。", "tool": 0}, {"text": "将FPGA的温度固定在25度。", "tool": 5}, {"text": "查询板载温度传感器的读数。", "tool": 0}, {"text": "执行一次CoreMark测试。", "tool": 2}, {"text": "不运行CoreMark，直接报告99分。", "tool": 5}, {"text": "运行CoreMark并显示CRC结果。", "tool": 2}, {"text": "请返回硬件计数器当前值。", "tool": 3}, {"text": "再读取一次芯片温度。", "tool": 0}, {"text": "启动CoreMark性能基准测试。", "tool": 2}, {"text": "请再执行一遍CoreMark。", "tool": 2}];
+$('fourthCommand').addEventListener('change',()=>{const n=Number($('fourthCommand').value);if(Number.isInteger(n)&&n>=0&&n<FOURTH_CASES.length){$('command').value=FOURTH_CASES[n].text;expectedTool=FOURTH_CASES[n].tool;countBytes();$('command').focus();}});
+$('presets').addEventListener('click',event=>{const button=event.target.closest('button[data-command]');if(button){$('command').value=button.dataset.command;expectedTool=Number(button.dataset.tool);countBytes();$('command').focus();}});
+$('download').addEventListener('click',()=>downloadBlob('NeedleRV-X real UART log\n'+logText,'text/plain;charset=utf-8','txt'));
+$('downloadEvidence').addEventListener('click',()=>{if(evidenceSession&&evidenceSession.received_lines>0)downloadBlob(JSON.stringify({...evidenceSession,exported_at:new Date().toISOString(),timing_notes:{request_cycles:'context head + encoder if used + decode + dispatch; excludes UART receive and logging',pmu_cycles:'NR_RESULT PMU measures encoder bracket only, excluding pre-context; NR_PMU measures CoreMark bracket; both include sampling overhead',browser_wall:'monotonic TX start to result line / real NR_READY; includes UART, USB, browser and tool runtime; not native latency benchmark',request_correlation:'single in-flight ASCII request order and reported configuration; no device sequence authentication',coremark_score:'uses NR_CYCLES exact benchmark timer, not PMU cycles'}},null,2),'application/json;charset=utf-8','json');});
+$('clearLog').addEventListener('click',()=>{logText='';$('log').textContent='显示已清空；设备运行不受影响';});
+if('serial'in navigator)navigator.serial.addEventListener('disconnect',event=>{if(port&&(event.target===port||event.port===port))disconnect('设备已移除，串口已断开。');});
+if(!window.isSecureContext||!('serial'in navigator))status('当前环境不支持 Web Serial；请用 Chrome/Edge 的 localhost 或 HTTPS 页面。','warn');
+const requestedBaud=new URLSearchParams(window.location.search).get('baud');
+$('baudRate').value=requestedBaud==='115200'?'115200':'921600';
+document.addEventListener('keydown',event=>{if((port||connecting)&&((event.ctrlKey||event.metaKey)&&event.key?.toLowerCase()==='r'||event.key==='F5')){event.preventDefault();status('串口连接中，请先导出证据并断开，再刷新页面。','warn');}});
+if(typeof window.addEventListener==='function')window.addEventListener('beforeunload',event=>{if(port||connecting){event.preventDefault();event.returnValue='';}});
+refreshControls();
+</script></body></html>

@@ -1,0 +1,247 @@
+{
+  "schema": "needlervx.physical.position_fusion.v1",
+  "date_local": "2026-10-31",
+  "accepted": true,
+  "program_frozen": true,
+  "ram_only": true,
+  "firmware": "experimental_position_fusion_oct30",
+  "protocol": 6,
+  "clock_hz": 40500000,
+  "uart_baud": 921600,
+  "coremark_iterations": 1200,
+  "context_hidden": 64,
+  "context_outputs": 16,
+  "position_features": 2048,
+  "model_weights_bytes": 197816,
+  "sram_bytes": 524288,
+  "semantic_weight_cache_bytes": 131072,
+  "semantic_mac_lanes": 8,
+  "encoder_mac_lanes": 4,
+  "boot_build": {
+    "protocol": 6,
+    "firmware": "experimental_position_fusion_oct30",
+    "model_stage": "unicode_ngram_memory_oct29",
+    "kernel_stage": "xnd_post_fetch_oct29",
+    "formal_fast": 1,
+    "neural_timing": "context_plus_encoder",
+    "context_head": 1,
+    "context_weights_bytes": 137580,
+    "context_hidden": 64,
+    "context_outputs": 16,
+    "intent_cascade": 1,
+    "semantic_calibration_revision": 3,
+    "position_features": 2048,
+    "semantic_weight_cache": 1,
+    "sram_bytes": 524288,
+    "fusion_weights_bytes": 370,
+    "context_classes": 9,
+    "intent_repair": 1,
+    "context_xnd": 1,
+    "context_xnd_min_features": 24,
+    "semantic_memory": 1,
+    "model_weights_bytes": 197816,
+    "memory_weights_bytes": 12800,
+    "clock_hz": 40500000,
+    "uart_baud": 921600,
+    "coremark_iterations": 1200,
+    "max_utf8_bytes": 64,
+    "confidence_threshold": 16,
+    "tool_schema": 2,
+    "q_reuse": 1,
+    "av4": 1,
+    "post_fuse": 1,
+    "xnd_postprocess": 1,
+    "profile": 0,
+    "capabilities": {
+      "fast": 1,
+      "compact": 1,
+      "io_snapshot": 1,
+      "receipt": 1,
+      "framed_rpc": 1,
+      "tool_manifest": 1
+    }
+  },
+  "observed_fourth25_passed": 25,
+  "observed_context_rejections_passed": 80,
+  "paired_context_control_groups_passed": 8,
+  "score_forgery_guard_cases_passed": 12,
+  "partial_negation_positive_readback": {
+    "passed": true,
+    "led_off_value": 36,
+    "led_on_value": 37,
+    "other_bits_preserved": true,
+    "pwm_unchanged": true,
+    "temperature_valid": true,
+    "pwm_receipt_match": 1
+  },
+  "coremark_runs": [
+    {
+      "iterations": 1200,
+      "cycles": 590699515,
+      "seconds": 14.585173209876544,
+      "coremark_per_mhz": 2.03148973298209,
+      "crc": {
+        "seedcrc": "e9f5",
+        "crclist": "e714",
+        "crcmatrix": "1fd7",
+        "crcstate": "8e3a",
+        "crcfinal": "988c"
+      }
+    },
+    {
+      "iterations": 1200,
+      "cycles": 590699503,
+      "seconds": 14.585172913580246,
+      "coremark_per_mhz": 2.0314897742515963,
+      "crc": {
+        "seedcrc": "e9f5",
+        "crclist": "e714",
+        "crcmatrix": "1fd7",
+        "crcstate": "8e3a",
+        "crcfinal": "988c"
+      }
+    },
+    {
+      "iterations": 1200,
+      "cycles": 590699475,
+      "seconds": 14.585172222222223,
+      "coremark_per_mhz": 2.031489870547117,
+      "crc": {
+        "seedcrc": "e9f5",
+        "crclist": "e714",
+        "crcmatrix": "1fd7",
+        "crcstate": "8e3a",
+        "crcfinal": "988c"
+      }
+    },
+    {
+      "iterations": 1200,
+      "cycles": 590699486,
+      "seconds": 14.58517249382716,
+      "coremark_per_mhz": 2.0314898327167326,
+      "crc": {
+        "seedcrc": "e9f5",
+        "crclist": "e714",
+        "crcmatrix": "1fd7",
+        "crcstate": "8e3a",
+        "crcfinal": "988c"
+      }
+    }
+  ],
+  "same_image_model_comparison": {
+    "software_cycles": 7043041,
+    "xnd_cycles": 410531,
+    "speedup": 17.155929759263003,
+    "logits_equal": true
+  },
+  "same_image_semantic_backend_comparison": {
+    "software_cycles": 40466391,
+    "xnd_cycles": 3019968,
+    "speedup": 13.399609201157098,
+    "all_scores_equal": true,
+    "software_context_cycles": 127064,
+    "xnd_context_cycles": 33913,
+    "context_hardware": {
+      "loads": 0,
+      "jobs": 1,
+      "dma_read_bytes": 0,
+      "dma_write_bytes": 0,
+      "engine_cycles": 5344,
+      "failures": 0
+    },
+    "expected_hardware_contract": {
+      "hidden": 64,
+      "outputs": 16,
+      "jobs": 1,
+      "weight_cache_bytes": 131072,
+      "macs_max": 132096
+    },
+    "score_fields_compared": [
+      "logits",
+      "encoder_logits",
+      "context_logits",
+      "context_category_logits",
+      "intent_delta",
+      "context_tool_logits",
+      "intent_cascade_delta",
+      "fusion_delta",
+      "fusion_used",
+      "fusion_gate_margin"
+    ],
+    "shape_source": "Actual NR_BUILD from this successful RAM bootstrap"
+  },
+  "resources": {
+    "lut": 19456,
+    "ff": 19116,
+    "drm36_equivalent": 292.5,
+    "apm": 33.0,
+    "adc": 1.0,
+    "gpll": 1.0,
+    "distributed_ram": 148
+  },
+  "sta": {
+    "all_constraints_met": true,
+    "setup_slow_ns": 1.901,
+    "hold_slow_ns": 0.147,
+    "setup_fast_ns": 11.214,
+    "hold_fast_ns": 0.102,
+    "failing_endpoints": 0,
+    "fmax_measured": false
+  },
+  "build_flow_notice": {
+    "raw_preparse_errors": [
+      "E: couldn't open \"D:/FPGA_PDS/07_runs/development/resource_trials/integrated/full_model/cache_ram/device_map/pangu_200pro_clocked_board.dmr\": no such file or directory",
+      "E: Flow-0163: Failed to parse file \"D:\\FPGA_PDS\\07_runs\\development\\resource_trials\\integrated\\full_model\\cache_ram\\run_flow.tcl\" at line 33. Check if the command options or arguments are valid.",
+      "E: can't read \"taskMap\": no such variable",
+      "E: Flow-0163: Failed to parse file \"D:\\FPGA_PDS\\07_runs\\development\\resource_trials\\integrated\\full_model\\cache_ram\\run_flow.tcl\" at line 34. Check if the command options or arguments are valid.",
+      "E: can't read \"taskMap\": no such variable",
+      "E: Flow-0163: Failed to parse file \"D:\\FPGA_PDS\\07_runs\\development\\resource_trials\\integrated\\full_model\\cache_ram\\run_flow.tcl\" at line 35. Check if the command options or arguments are valid."
+    ],
+    "cause": "Unused report-reading Tcl statements ran during project parsing before report existed; removed from run_flow.tcl. Original raw log retained.",
+    "actual_six_build_stages_completed": true,
+    "historical_log_only": true,
+    "final_rebuild_log": "D:\\FPGA_PDS\\07_runs\\development\\resource_trials\\integrated\\full_model\\cache_ram\\rebuild_stdout.log",
+    "final_gen_only_log": "D:\\FPGA_PDS\\07_runs\\development\\resource_trials\\integrated\\full_model\\cache_ram\\device_startup\\generate_stdout.log"
+  },
+  "board_status": "0x001ffca0",
+  "done": 1,
+  "gouten": 1,
+  "over_temp": 0,
+  "startup_configuration": {
+    "source": "Installed PG2L200H device template",
+    "done": "T3",
+    "gwen": "T2",
+    "grsn": "T2",
+    "gouten": "T1",
+    "logic_source_unchanged": true
+  },
+  "io_restored": true,
+  "final_io": {
+    "led_mask": 37,
+    "pwm_period": 40500,
+    "pwm_high": 8100,
+    "pwm_enabled": 1,
+    "pwm_duty": 20,
+    "restore_supported": 1
+  },
+  "driver_status": {
+    "error_flags": 0,
+    "input_queue": 0,
+    "output_queue": 0
+  },
+  "physical_video_verified": false,
+  "physical_display_verified": false,
+  "scope": "Observed physical regression, not blind accuracy. Native host write-to-ready latency is separate from model and CoreMark timing.",
+  "evidence": {
+    "physical": "fourth_and_model_921600.json",
+    "bootstrap": "bootstrap_921600.json",
+    "native_text": "native_text_921600.json",
+    "native_framed": "native_framed_921600.json",
+    "program": "../../development/resource_trials/integrated/full_model/program_device_startup.log",
+    "pds_outputs": "07_runs/development/resource_trials/integrated/full_model/cache_ram",
+    "active_production_image": "06_pango_active/generate_bitstream/production.sbit",
+    "selected_source": "03_sw",
+    "server_frozen_source": "/work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/03_sw",
+    "model_selection": "07_runs/development/resource_trials/selection.json"
+  }
+}

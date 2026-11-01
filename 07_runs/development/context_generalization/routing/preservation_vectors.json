@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "positive_contract_cases": 192,
+  "negative_contract_cases": 252,
+  "model_bypassed_in_probe": true,
+  "scope": "Exhaustive8LED preservation grammar isolated checks. Full learned head still observes original text; this is not NN accuracy."
+}

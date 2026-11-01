@@ -1,0 +1,15 @@
+{
+  "seed": 109,
+  "epochs": 12,
+  "lr": 0.0002,
+  "end_lr": 4e-05,
+  "batch": 64,
+  "threads": 4,
+  "device": "cpu",
+  "examples": 3312,
+  "dataset_sha256": "8d301fba888d645030e367382ed3d50e9151c301d03456f022e83369e0882ecd",
+  "initialization_archive": "07_runs/eval/tool_contract_20261027/first_release_sources.tar.gz",
+  "purpose": "Post-observation developmental refinement; user second set is now observed; not new independent accuracy.",
+  "second_user_exact_train_overlap": 0,
+  "checkpoint_selection": "fixed final epoch 12"
+}

@@ -1,0 +1,54 @@
+{
+  "scope": "Only protocol5 native parser ABI and 900/1200 CoreMark acceptance compatibility",
+  "physical_board_verified": false,
+  "serial_opened": false,
+  "source_files": [
+    "05_tools/board/native_latency.py",
+    "05_tools/board/check_framed_rpc.py",
+    "05_tools/board/verify_link_board.py"
+  ],
+  "native_latency": {
+    "selftest": "PASS",
+    "binary_split_boundaries": 127,
+    "binary_checks": [
+      "CRC check vector 29B1",
+      "request byte layout",
+      "1..64 UTF8 request bounds",
+      "mixed full-neural and binary reply",
+      "one-byte binary fragmentation with LF in payload",
+      "bad CRC",
+      "bad length",
+      "missing READY",
+      "context-head-only reply without encoder telemetry",
+      "protocol5 context veto and reserved/contradictory flags",
+      "NR_FASTv1/v2 compatibility",
+      "wrong host sequence",
+      "duplicate case",
+      "duplicate reply",
+      "ASCII error not success or automatic retry"
+    ],
+    "text_split_boundaries": 98,
+    "checks": [
+      "one-byte fragmentation",
+      "signed temperature",
+      "full result",
+      "malformed rejection",
+      "ten sequence-correlated request/READY exchanges",
+      "separate frame and READY timestamps"
+    ]
+  },
+  "check_framed_rpc": {
+    "selftest": "PASS",
+    "hardware_access": false,
+    "checks": [
+      "six negative frame layouts",
+      "CRC corruption",
+      "single raw write no retry",
+      "error/READY fragmentation",
+      "wrong error rejected",
+      "900/1200-iteration CRC parsing",
+      "10second minimum",
+      "wrong CRC rejected"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+.ssh/
+*.key
+*.pem
+known_hosts
+node_modules/
+.arch-build/

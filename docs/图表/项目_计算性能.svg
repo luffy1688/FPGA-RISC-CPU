@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (https://matplotlib.org/) -->
+<svg height="319.871625pt" version="1.1" viewBox="0 0 720.554938 319.871625" width="720.554938pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 319.871625 
+L 720.554938 319.871625 
+L 720.554938 0 
+L 0 0 
+z
+" style="fill:#ffffff;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 69.4 251.638875 
+L 497.944 251.638875 
+L 497.944 72.070875 
+L 69.4 72.070875 
+z
+" style="fill:#ffffff;"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path clip-path="url(#p026fe3db2d)" d="M 69.4 251.638875 
+L 69.4 72.070875 
+" style="fill:none;stroke:#dce3ec;stroke-linecap:square;stroke-width:0.7;"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path d="M 0 0 
+L 0 3.5 
+" id="me136245c3f" style="stroke:#000000;stroke-width:0.8;"/>
+      </defs>
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="69.4" xlink:href="#me136245c3f" y="251.638875"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-family:Noto Sans CJK JP;font-size:12px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 69.4, 268.190125)" x="69.4" y="268.190125">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path clip-path="url(#p026fe3db2d)" d="M 158.68 251.638875 
+L 158.68 72.070875 
+" style="fill:none;stroke:#dce3ec;stroke-linecap:square;stroke-width:0.7;"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="158.68" xlink:href="#me136245c3f" y="251.638875"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-family:Noto Sans CJK JP;font-size:12px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 158.68, 268.190125)" x="158.68" y="268.190125">250</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path clip-path="url(#p026fe3db2d)" d="M 247.96 251.638875 
+L 247.96 72.070875 
+" style="fill:none;stroke:#dce3ec;stroke-linecap:square;stroke-width:0.7;"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="247.96" xlink:href="#me136245c3f" y="251.638875"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-family:Noto Sans CJK JP;font-size:12px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 247.96, 268.190125)" x="247.96" y="268.190125">500</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path clip-path="url(#p026fe3db2d)" d="M 337.24 251.638875 
+L 337.24 72.070875 
+" style="fill:none;stroke:#dce3ec;stroke-linecap:square;stroke-width:0.7;"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="337.24" xlink:href="#me136245c3f" y="251.638875"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-family:Noto Sans CJK JP;font-size:12px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 337.24, 268.190125)" x="337.24" y="268.190125">750</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path clip-path="url(#p026fe3db2d)" d="M 426.52 251.638875 
+L 426.52 72.070875 
+" style="fill:none;stroke:#dce3ec;stroke-linecap:square;stroke-width:0.7;"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="426.52" xlink:href="#me136245c3f" y="251.638875"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-family:Noto Sans CJK JP;font-size:12px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 426.52, 268.190125)" x="426.52" y="268.190125">1000</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="font-family:Noto Sans CJK JP;font-size:12px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 283.672, 284.490125)" x="283.672" y="284.490125">完整中文PWM模型计算耗时（ms）</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_11">
+      <defs>
+       <path d="M 0 0 
+L -3.5 0 
+" id="m6f615619aa" style="stroke:#000000;stroke-width:0.8;"/>
+      </defs>
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="69.4" xlink:href="#m6f615619aa" y="109.195637"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-family:Noto Sans CJK JP;font-size:12px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 62.4, 113.971262)" x="62.4" y="113.971262">软件计算</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_12">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="69.4" xlink:href="#m6f615619aa" y="214.514113"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-family:Noto Sans CJK JP;font-size:12px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 62.4, 219.289738)" x="62.4" y="219.289738">专用加速</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path clip-path="url(#p026fe3db2d)" d="M 69.4 80.233057 
+L 426.223643 80.233057 
+L 426.223643 138.158218 
+L 69.4 138.158218 
+z
+" style="fill:#6ea8a5;"/>
+   </g>
+   <g id="patch_4">
+    <path clip-path="url(#p026fe3db2d)" d="M 69.4 185.551532 
+L 96.029407 185.551532 
+L 96.029407 243.476693 
+L 69.4 243.476693 
+z
+" style="fill:#143295;"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 69.4 251.638875 
+L 69.4 72.070875 
+" style="fill:none;stroke:#adb9c5;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 69.4 251.638875 
+L 497.944 251.638875 
+" style="fill:none;stroke:#adb9c5;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="text_9">
+    <text style="fill:#26384c;font-family:Noto Sans CJK JP;font-size:13px;font-style:normal;font-weight:bold;text-anchor:start;" transform="rotate(-0, 434.080283, 112.880325)" x="434.080283" y="112.880325">999.170</text>
+   </g>
+   <g id="text_10">
+    <text style="fill:#26384c;font-family:Noto Sans CJK JP;font-size:13px;font-style:normal;font-weight:bold;text-anchor:start;" transform="rotate(-0, 103.886047, 218.1988)" x="103.886047" y="218.1988">74.567</text>
+   </g>
+  </g>
+  <g id="text_11">
+   <text style="fill:#143295;font-family:Noto Sans CJK JP;font-size:18px;font-style:normal;font-weight:bold;text-anchor:start;" transform="rotate(-0, 47.08, 28.726875)" x="47.08" y="28.726875">计算加速与资源开销</text>
+  </g>
+  <g id="text_12">
+   <text style="fill:#65758a;font-family:Noto Sans CJK JP;font-size:12px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 47.08, 56.590875)" x="47.08" y="56.590875">同一镜像、相同输入与模型，软件路径和加速路径对照</text>
+  </g>
+  <g id="text_13">
+   <text style="fill:#143295;font-family:Noto Sans CJK JP;font-size:34px;font-style:normal;font-weight:bold;text-anchor:start;" transform="rotate(-0, 587.224, 112.318875)" x="587.224" y="112.318875">13.40×</text>
+  </g>
+  <g id="text_14">
+   <text style="fill:#26384c;font-family:Noto Sans CJK JP;font-size:13px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 587.224, 140.182875)" x="587.224" y="140.182875">完整模型加速比</text>
+  </g>
+  <g id="text_15">
+   <text style="fill:#c89b61;font-family:Noto Sans CJK JP;font-size:25px;font-style:normal;font-weight:bold;text-anchor:start;" transform="rotate(-0, 587.224, 189.718875)" x="587.224" y="189.718875">197,816 B</text>
+  </g>
+  <g id="text_16">
+   <text style="fill:#26384c;font-family:Noto Sans CJK JP;font-size:13px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 587.224, 217.582875)" x="587.224" y="217.582875">部署学习权重</text>
+  </g>
+  <g id="text_17">
+   <text style="fill:#65758a;font-family:Noto Sans CJK JP;font-size:12px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 47.08, 302.722875)" x="47.08" y="302.722875">40.5MHz  ·  CoreMark/MHz 2.031490  ·  LUT 19,456  ·  FF 19,116  ·  33 APM</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p026fe3db2d">
+   <rect height="179.568" width="428.544" x="69.4" y="72.070875"/>
+  </clipPath>
+ </defs>
+</svg>

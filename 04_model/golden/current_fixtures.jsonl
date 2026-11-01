@@ -1,0 +1,80 @@
+{"text": "could you read board temperature", "expected_intent": "read_temp", "intent": "read_temp", "index": 0, "logits": [515, -79, -350, -94, -266, 233], "margin": 282}
+{"text": "report temperature now", "expected_intent": "read_temp", "intent": "read_temp", "index": 0, "logits": [523, -50, -285, -134, -315, 246], "margin": 277}
+{"text": "能否读取温度", "expected_intent": "read_temp", "intent": "read_temp", "index": 0, "logits": [503, -45, -252, -119, -322, 242], "margin": 261}
+{"text": "请告诉我温度", "expected_intent": "read_temp", "intent": "read_temp", "index": 0, "logits": [492, -38, -280, -140, -305, 247], "margin": 245}
+{"text": "i need pwm set to 0", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-201, 329, -527, -195, 4, 262], "margin": 67}
+{"text": "i need pwm set to 1", "expected_intent": "set_pwm", "intent": "reject", "index": 5, "logits": [-204, 245, -528, -264, 74, 305], "margin": 60}
+{"text": "i need pwm set to 7", "expected_intent": "set_pwm", "intent": "reject", "index": 5, "logits": [-196, 269, -527, -248, 51, 295], "margin": 26}
+{"text": "i need pwm set to 32", "expected_intent": "set_pwm", "intent": "reject", "index": 5, "logits": [-262, 267, -550, -187, 72, 281], "margin": 14}
+{"text": "i need pwm set to 63", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-255, 299, -548, -168, 45, 266], "margin": 33}
+{"text": "i need pwm set to 80", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-234, 321, -545, -179, 24, 265], "margin": 56}
+{"text": "i need pwm set to 99", "expected_intent": "set_pwm", "intent": "reject", "index": 5, "logits": [-256, 240, -558, -226, 95, 305], "margin": 65}
+{"text": "i need pwm set to 100", "expected_intent": "set_pwm", "intent": "reject", "index": 5, "logits": [-285, 257, -548, -178, 85, 278], "margin": 21}
+{"text": "pwm should be 0 percent", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-291, 262, -377, 144, -85, 135], "margin": 118}
+{"text": "pwm should be 1 percent", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-298, 301, -413, 100, -71, 134], "margin": 167}
+{"text": "pwm should be 7 percent", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-296, 310, -416, 57, -71, 154], "margin": 156}
+{"text": "pwm should be 32 percent", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-318, 303, -422, 150, -33, 84], "margin": 153}
+{"text": "pwm should be 63 percent", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-321, 327, -426, 139, -47, 88], "margin": 188}
+{"text": "pwm should be 80 percent", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-309, 376, -458, 69, -66, 120], "margin": 256}
+{"text": "pwm should be 99 percent", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-321, 372, -465, 99, -42, 96], "margin": 273}
+{"text": "pwm should be 100 percent", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-337, 346, -437, 132, -34, 81], "margin": 214}
+{"text": "PWM请设到0", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-209, 370, -377, -137, -126, 226], "margin": 144}
+{"text": "PWM请设到1", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-210, 371, -387, -146, -113, 227], "margin": 144}
+{"text": "PWM请设到7", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-207, 374, -384, -141, -122, 226], "margin": 148}
+{"text": "PWM请设到32", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-259, 324, -368, -186, -65, 254], "margin": 70}
+{"text": "PWM请设到63", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-265, 316, -362, -187, -64, 257], "margin": 59}
+{"text": "PWM请设到80", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-242, 346, -376, -171, -87, 244], "margin": 102}
+{"text": "PWM请设到99", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-271, 329, -380, -193, -54, 256], "margin": 73}
+{"text": "PWM请设到100", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-303, 296, -368, -203, -25, 267], "margin": 29}
+{"text": "我想调整PWM为0", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-80, 306, -383, -145, -154, 247], "margin": 59}
+{"text": "我想调整PWM为1", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-97, 309, -398, -163, -129, 252], "margin": 57}
+{"text": "我想调整PWM为7", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-82, 301, -390, -160, -140, 253], "margin": 48}
+{"text": "我想调整PWM为32", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-171, 377, -408, -136, -114, 217], "margin": 160}
+{"text": "我想调整PWM为63", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-177, 379, -404, -132, -117, 214], "margin": 165}
+{"text": "我想调整PWM为80", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-162, 374, -411, -140, -120, 221], "margin": 153}
+{"text": "我想调整PWM为99", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-195, 374, -409, -154, -97, 226], "margin": 148}
+{"text": "我想调整PWM为100", "expected_intent": "set_pwm", "intent": "set_pwm", "index": 1, "logits": [-238, 345, -395, -161, -66, 234], "margin": 111}
+{"text": "coremark benchmark now please", "expected_intent": "run_coremark", "intent": "run_coremark", "index": 2, "logits": [-82, -291, 544, -189, 51, 131], "margin": 413}
+{"text": "can you run coremark test", "expected_intent": "run_coremark", "intent": "run_coremark", "index": 2, "logits": [-70, -291, 520, -191, 47, 142], "margin": 378}
+{"text": "帮我执行CoreMark", "expected_intent": "run_coremark", "intent": "run_coremark", "index": 2, "logits": [-64, -309, 558, -186, 60, 118], "margin": 440}
+{"text": "请启动CPU性能测试", "expected_intent": "run_coremark", "intent": "run_coremark", "index": 2, "logits": [28, -319, 432, -102, -31, 110], "margin": 322}
+{"text": "show processor cycles now", "expected_intent": "read_counter", "intent": "read_counter", "index": 3, "logits": [-77, 24, -196, 403, -217, 83], "margin": 320}
+{"text": "can you read cpu counter", "expected_intent": "read_counter", "intent": "run_coremark", "index": 2, "logits": [121, -262, 209, 130, -114, 29], "margin": 79}
+{"text": "请读取CPU周期计数", "expected_intent": "read_counter", "intent": "read_counter", "index": 3, "logits": [124, -308, 152, 167, -117, 110], "margin": 15}
+{"text": "我想查看计数器", "expected_intent": "read_counter", "intent": "read_counter", "index": 3, "logits": [95, -256, -165, 424, -118, 95], "margin": 329}
+{"text": "i need led set to 0", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-251, -217, -401, -175, 490, 204], "margin": 286}
+{"text": "i need led set to 1", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-220, -227, -426, -165, 449, 226], "margin": 223}
+{"text": "i need led set to 7", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-220, -225, -424, -165, 451, 223], "margin": 228}
+{"text": "i need led set to 32", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-279, -211, -392, -183, 520, 194], "margin": 326}
+{"text": "i need led set to 63", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-280, -209, -389, -183, 521, 191], "margin": 330}
+{"text": "i need led set to 80", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-272, -208, -398, -187, 510, 201], "margin": 309}
+{"text": "i need led set to 99", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-289, -200, -402, -199, 525, 201], "margin": 324}
+{"text": "i need led set to 100", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-308, -195, -380, -200, 548, 182], "margin": 366}
+{"text": "led should be 0", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-313, -220, -336, -165, 568, 149], "margin": 419}
+{"text": "led should be 1", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-282, -233, -363, -153, 533, 171], "margin": 362}
+{"text": "led should be 7", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-282, -233, -360, -152, 534, 168], "margin": 366}
+{"text": "led should be 32", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-335, -207, -334, -182, 586, 147], "margin": 439}
+{"text": "led should be 63", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-339, -206, -328, -179, 589, 142], "margin": 447}
+{"text": "led should be 80", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-336, -205, -332, -184, 585, 146], "margin": 439}
+{"text": "led should be 99", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-344, -199, -343, -196, 589, 154], "margin": 435}
+{"text": "led should be 100", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-358, -186, -323, -197, 596, 137], "margin": 459}
+{"text": "LED请设到0", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-348, -125, -332, -195, 509, 153], "margin": 356}
+{"text": "LED请设到1", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-356, -162, -303, -209, 578, 136], "margin": 442}
+{"text": "LED请设到7", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-352, -162, -302, -210, 581, 135], "margin": 446}
+{"text": "LED请设到32", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-354, -132, -330, -202, 527, 150], "margin": 377}
+{"text": "LED请设到63", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-353, -111, -343, -187, 488, 154], "margin": 334}
+{"text": "LED请设到80", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-347, -108, -359, -203, 484, 169], "margin": 315}
+{"text": "LED请设到99", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-353, -127, -350, -222, 526, 166], "margin": 360}
+{"text": "LED请设到100", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-354, -127, -339, -200, 520, 152], "margin": 368}
+{"text": "我想设置LED为0", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-337, -164, -275, -150, 538, 112], "margin": 426}
+{"text": "我想设置LED为1", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-334, -188, -276, -164, 578, 109], "margin": 469}
+{"text": "我想设置LED为7", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-334, -182, -272, -157, 567, 108], "margin": 459}
+{"text": "我想设置LED为32", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-345, -161, -286, -164, 553, 115], "margin": 438}
+{"text": "我想设置LED为63", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-342, -152, -292, -153, 530, 119], "margin": 411}
+{"text": "我想设置LED为80", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-344, -154, -291, -164, 540, 120], "margin": 420}
+{"text": "我想设置LED为99", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-353, -156, -300, -190, 561, 128], "margin": 433}
+{"text": "我想设置LED为100", "expected_intent": "set_led", "intent": "set_led", "index": 4, "logits": [-349, -149, -302, -172, 541, 125], "margin": 416}
+{"text": "calculate a restaurant bill", "expected_intent": "reject", "intent": "read_counter", "index": 3, "logits": [136, -246, 140, 225, -131, -14], "margin": 85}
+{"text": "show me a movie", "expected_intent": "reject", "intent": "reject", "index": 5, "logits": [54, -174, -404, -134, 65, 327], "margin": 262}
+{"text": "帮我订酒店", "expected_intent": "reject", "intent": "reject", "index": 5, "logits": [181, -363, -466, -54, 105, 315], "margin": 134}
+{"text": "请发送邮件", "expected_intent": "reject", "intent": "reject", "index": 5, "logits": [-1, -310, -460, -105, 249, 283], "margin": 34}

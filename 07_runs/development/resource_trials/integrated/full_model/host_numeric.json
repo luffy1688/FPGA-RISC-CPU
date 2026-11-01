@@ -1,0 +1,36 @@
+{
+  "scope": "Actualisolatedfull_model CPUencoder+position2048head+oldrepair+contexttoolcascade+frozen70featurefusion. IndependentNumPyint32goldenandfrozenencoderbase. All7setsobserved. No hardware/physicalclaim.",
+  "passed": true,
+  "sets": {
+    "original80": {
+      "cases": 80,
+      "exact_fields": 3840
+    },
+    "aug192": {
+      "cases": 192,
+      "exact_fields": 9216
+    },
+    "observed288": {
+      "cases": 288,
+      "exact_fields": 13824
+    },
+    "old_validation": {
+      "cases": 541,
+      "exact_fields": 25968
+    },
+    "validation": {
+      "cases": 2031,
+      "exact_fields": 97488
+    },
+    "observed1138": {
+      "cases": 1138,
+      "exact_fields": 54624
+    },
+    "observed900": {
+      "cases": 900,
+      "exact_fields": 43200
+    }
+  },
+  "total_cases": 5170,
+  "seconds": 11.984643389994744
+}

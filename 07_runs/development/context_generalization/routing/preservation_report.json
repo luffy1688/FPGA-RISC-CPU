@@ -1,0 +1,534 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "text": "只关闭LED0，其他LED不要改变。",
+      "contract_probe": [
+        1,
+        4,
+        0,
+        2,
+        0
+      ],
+      "integrated": {
+        "index": 4,
+        "margin": 88,
+        "selected": 4,
+        "status": 0,
+        "argument": 0,
+        "operation": 2,
+        "source": 0,
+        "fast_handled": 1,
+        "fast_selected": 4,
+        "fast_status": 0,
+        "fast_argument": 0,
+        "fast_operation": 2,
+        "fast_source": 2,
+        "logits": [
+          -120,
+          -246,
+          -464,
+          -136,
+          349,
+          261
+        ],
+        "encoder_logits": [
+          -120,
+          -246,
+          -464,
+          -136,
+          349,
+          261
+        ],
+        "context_logits": [
+          32,
+          -32
+        ],
+        "context_deny": 0,
+        "context_threshold": 64,
+        "context_used": 1
+      }
+    },
+    {
+      "text": "只点亮LED2，不要改其他位。",
+      "contract_probe": [
+        1,
+        4,
+        2,
+        1,
+        0
+      ],
+      "integrated": {
+        "index": 5,
+        "margin": 15,
+        "selected": 5,
+        "status": 8,
+        "argument": 0,
+        "operation": 0,
+        "source": 5,
+        "fast_handled": 1,
+        "fast_selected": 5,
+        "fast_status": 8,
+        "fast_argument": 0,
+        "fast_operation": 0,
+        "fast_source": 5,
+        "logits": [
+          -309,
+          -129,
+          -374,
+          -267,
+          497,
+          512
+        ],
+        "encoder_logits": [
+          -309,
+          -129,
+          -374,
+          -267,
+          497,
+          235
+        ],
+        "context_logits": [
+          -39,
+          39
+        ],
+        "context_deny": 1,
+        "context_threshold": 64,
+        "context_used": 1
+      }
+    },
+    {
+      "text": "只关闭LED1其他LED别改。",
+      "contract_probe": [
+        1,
+        4,
+        1,
+        2,
+        0
+      ],
+      "integrated": {
+        "index": 4,
+        "margin": 98,
+        "selected": 4,
+        "status": 0,
+        "argument": 1,
+        "operation": 2,
+        "source": 0,
+        "fast_handled": 1,
+        "fast_selected": 4,
+        "fast_status": 0,
+        "fast_argument": 1,
+        "fast_operation": 2,
+        "fast_source": 2,
+        "logits": [
+          -101,
+          -286,
+          -454,
+          -127,
+          357,
+          259
+        ],
+        "encoder_logits": [
+          -101,
+          -286,
+          -454,
+          -127,
+          357,
+          259
+        ],
+        "context_logits": [
+          37,
+          -37
+        ],
+        "context_deny": 0,
+        "context_threshold": 64,
+        "context_used": 1
+      }
+    },
+    {
+      "text": "不要点亮LED0，其他LED不要改变。",
+      "contract_probe": [
+        1,
+        5,
+        0,
+        0,
+        8
+      ],
+      "integrated": {
+        "index": 4,
+        "margin": 253,
+        "selected": 5,
+        "status": 8,
+        "argument": 0,
+        "operation": 0,
+        "source": 3,
+        "fast_handled": 1,
+        "fast_selected": 5,
+        "fast_status": 8,
+        "fast_argument": 0,
+        "fast_operation": 0,
+        "fast_source": 3,
+        "logits": [
+          -306,
+          -114,
+          -395,
+          -269,
+          489,
+          236
+        ],
+        "encoder_logits": [
+          -306,
+          -114,
+          -395,
+          -269,
+          489,
+          236
+        ],
+        "context_logits": [
+          -23,
+          23
+        ],
+        "context_deny": 0,
+        "context_threshold": 64,
+        "context_used": 1
+      }
+    },
+    {
+      "text": "解释只关闭LED0，其他LED不要改变。",
+      "contract_probe": [
+        1,
+        5,
+        0,
+        0,
+        8
+      ],
+      "integrated": {
+        "index": 4,
+        "margin": 11,
+        "selected": 5,
+        "status": 8,
+        "argument": 0,
+        "operation": 0,
+        "source": 3,
+        "fast_handled": 1,
+        "fast_selected": 5,
+        "fast_status": 8,
+        "fast_argument": 0,
+        "fast_operation": 0,
+        "fast_source": 3,
+        "logits": [
+          -52,
+          -280,
+          -456,
+          -107,
+          282,
+          271
+        ],
+        "encoder_logits": [
+          -52,
+          -280,
+          -456,
+          -107,
+          282,
+          271
+        ],
+        "context_logits": [
+          21,
+          -21
+        ],
+        "context_deny": 0,
+        "context_threshold": 64,
+        "context_used": 1
+      }
+    },
+    {
+      "text": "只关闭LED0，然后读取温度，其他LED不要改变。",
+      "contract_probe": [
+        0,
+        5,
+        0,
+        0,
+        1
+      ],
+      "integrated": {
+        "index": 5,
+        "margin": 447,
+        "selected": 5,
+        "status": 1,
+        "argument": 0,
+        "operation": 0,
+        "source": 3,
+        "fast_handled": 0,
+        "fast_selected": 5,
+        "fast_status": 1,
+        "fast_argument": 0,
+        "fast_operation": 0,
+        "fast_source": 3,
+        "logits": [
+          110,
+          -263,
+          -581,
+          -240,
+          13,
+          557
+        ],
+        "encoder_logits": [
+          110,
+          -263,
+          -581,
+          -240,
+          13,
+          557
+        ],
+        "context_logits": [
+          10,
+          -10
+        ],
+        "context_deny": 0,
+        "context_threshold": 64,
+        "context_used": 1
+      }
+    },
+    {
+      "text": "只关闭LED0，其他LED不要改变然后打开LED1。",
+      "contract_probe": [
+        1,
+        5,
+        0,
+        0,
+        8
+      ],
+      "integrated": {
+        "index": 5,
+        "margin": 34,
+        "selected": 5,
+        "status": 8,
+        "argument": 0,
+        "operation": 0,
+        "source": 3,
+        "fast_handled": 1,
+        "fast_selected": 5,
+        "fast_status": 8,
+        "fast_argument": 0,
+        "fast_operation": 0,
+        "fast_source": 3,
+        "logits": [
+          -149,
+          -240,
+          -533,
+          -172,
+          323,
+          357
+        ],
+        "encoder_logits": [
+          -149,
+          -240,
+          -533,
+          -172,
+          323,
+          357
+        ],
+        "context_logits": [
+          7,
+          -7
+        ],
+        "context_deny": 0,
+        "context_threshold": 64,
+        "context_used": 1
+      }
+    },
+    {
+      "text": "只关闭LED0，不要改其他位但运行CoreMark。",
+      "contract_probe": [
+        0,
+        5,
+        0,
+        0,
+        1
+      ],
+      "integrated": {
+        "index": 0,
+        "margin": 137,
+        "selected": 5,
+        "status": 8,
+        "argument": 0,
+        "operation": 0,
+        "source": 3,
+        "fast_handled": 0,
+        "fast_selected": 5,
+        "fast_status": 1,
+        "fast_argument": 0,
+        "fast_operation": 0,
+        "fast_source": 3,
+        "logits": [
+          300,
+          -130,
+          -158,
+          -132,
+          -60,
+          163
+        ],
+        "encoder_logits": [
+          300,
+          -130,
+          -158,
+          -132,
+          -60,
+          163
+        ],
+        "context_logits": [
+          7,
+          -7
+        ],
+        "context_deny": 0,
+        "context_threshold": 64,
+        "context_used": 1
+      }
+    },
+    {
+      "text": "只关闭LED0，别动LED1。",
+      "contract_probe": [
+        1,
+        5,
+        0,
+        0,
+        8
+      ],
+      "integrated": {
+        "index": 4,
+        "margin": 276,
+        "selected": 5,
+        "status": 8,
+        "argument": 0,
+        "operation": 0,
+        "source": 3,
+        "fast_handled": 1,
+        "fast_selected": 5,
+        "fast_status": 8,
+        "fast_argument": 0,
+        "fast_operation": 0,
+        "fast_source": 3,
+        "logits": [
+          -218,
+          -254,
+          -391,
+          -127,
+          470,
+          194
+        ],
+        "encoder_logits": [
+          -218,
+          -254,
+          -391,
+          -127,
+          470,
+          194
+        ],
+        "context_logits": [
+          20,
+          -20
+        ],
+        "context_deny": 0,
+        "context_threshold": 64,
+        "context_used": 1
+      }
+    },
+    {
+      "text": "只关闭LED0，其他LED不要点亮。",
+      "contract_probe": [
+        1,
+        5,
+        0,
+        0,
+        8
+      ],
+      "integrated": {
+        "index": 4,
+        "margin": 153,
+        "selected": 5,
+        "status": 8,
+        "argument": 0,
+        "operation": 0,
+        "source": 3,
+        "fast_handled": 1,
+        "fast_selected": 5,
+        "fast_status": 8,
+        "fast_argument": 0,
+        "fast_operation": 0,
+        "fast_source": 3,
+        "logits": [
+          -158,
+          -236,
+          -442,
+          -136,
+          390,
+          237
+        ],
+        "encoder_logits": [
+          -158,
+          -236,
+          -442,
+          -136,
+          390,
+          237
+        ],
+        "context_logits": [
+          35,
+          -35
+        ],
+        "context_deny": 0,
+        "context_threshold": 64,
+        "context_used": 1
+      }
+    },
+    {
+      "text": "只关闭LED0，其他LED不要改变，读取温度。",
+      "contract_probe": [
+        0,
+        5,
+        0,
+        0,
+        1
+      ],
+      "integrated": {
+        "index": 5,
+        "margin": 485,
+        "selected": 5,
+        "status": 1,
+        "argument": 0,
+        "operation": 0,
+        "source": 3,
+        "fast_handled": 0,
+        "fast_selected": 5,
+        "fast_status": 1,
+        "fast_argument": 0,
+        "fast_operation": 0,
+        "fast_source": 3,
+        "logits": [
+          95,
+          -291,
+          -590,
+          -233,
+          19,
+          580
+        ],
+        "encoder_logits": [
+          95,
+          -291,
+          -590,
+          -233,
+          19,
+          580
+        ],
+        "context_logits": [
+          81,
+          -81
+        ],
+        "context_deny": 0,
+        "context_threshold": 64,
+        "context_used": 1
+      }
+    }
+  ],
+  "scope": "Bounded preservation suffix probes. Contract-only allows are not a deployed learned-context success claim."
+}

@@ -1,0 +1,1152 @@
+{"text": "help me read temperature now", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "i want to read temperature now", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "please read temperature", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "please read temperature", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "read temperature please", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "now read temperature for me", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "read temperature for me", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "i want to read temperature now", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "can you read temperature for me", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "read temperature.", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "please read temperature on board", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "help me read temperature please", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "i want to read temperature now", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "help me read temperature", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "can you read temperature.", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "i want to read temperature now", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "can you read temperature.", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "help me read temperature on board", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "now read temperature for me", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "help me read temperature.", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "read temperature for me", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "please read temperature on board", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "now read temperature please", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "help me read temperature", "intent": "read_temp", "arg": null, "template_id": "read_temp:0"}
+{"text": "help me show temperature now", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "please show temperature on board", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "now show temperature please", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "show temperature on board", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "i want to show temperature on board", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "now show temperature please", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "i want to show temperature on board", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "i want to show temperature", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "please show temperature on board", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "help me show temperature on board", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "please show temperature.", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "i want to show temperature for me", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "please show temperature.", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "now show temperature", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "i want to show temperature", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "now show temperature please", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "i want to show temperature.", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "i want to show temperature for me", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "now show temperature for me", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "help me show temperature for me", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "help me show temperature on board", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "show temperature.", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "help me show temperature for me", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "show temperature", "intent": "read_temp", "arg": null, "template_id": "read_temp:1"}
+{"text": "what is the temperature for me", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "can you what is the temperature.", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "what is the temperature please", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "what is the temperature now", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "help me what is the temperature please", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "now what is the temperature for me", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "please what is the temperature", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "please what is the temperature on board", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "what is the temperature.", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "can you what is the temperature.", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "can you what is the temperature.", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "i want to what is the temperature now", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "please what is the temperature please", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "i want to what is the temperature on board", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "help me what is the temperature", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "can you what is the temperature on board", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "can you what is the temperature now", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "please what is the temperature on board", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "i want to what is the temperature on board", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "now what is the temperature on board", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "what is the temperature for me", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "now what is the temperature", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "help me what is the temperature please", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "now what is the temperature please", "intent": "read_temp", "arg": null, "template_id": "read_temp:2"}
+{"text": "help me read_temp please", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "i want to read_temp for me", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "can you read_temp for me", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "read_temp on board", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "i want to read_temp now", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "please read_temp.", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "please read_temp now", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "now read_temp now", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "now read_temp", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "i want to read_temp on board", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "i want to read_temp please", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "can you read_temp for me", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "now read_temp please", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "please read_temp for me", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "read_temp.", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "can you read_temp for me", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "help me read_temp on board", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "please read_temp for me", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "read_temp.", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "help me read_temp.", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "read_temp", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "please read_temp", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "i want to read_temp now", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "now read_temp", "intent": "read_temp", "arg": null, "template_id": "read_temp:3"}
+{"text": "请读取温度吧", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "帮我读取温度，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "请读取温度", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "请读取温度。", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "我想读取温度一下", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "读取温度，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "我想读取温度，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "我想读取温度，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "请读取温度。", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "现在读取温度。", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "请读取温度。", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "帮我读取温度。", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "我想读取温度", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "读取温度现在", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "现在读取温度", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "帮我读取温度吧", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "请读取温度", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "帮我读取温度。", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "我想读取温度。", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "我想读取温度，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "麻烦读取温度吧", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "我想读取温度一下", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "读取温度，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "现在读取温度", "intent": "read_temp", "arg": null, "template_id": "read_temp:4"}
+{"text": "我想查询温度一下", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "现在查询温度吧", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "我想查询温度", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "帮我查询温度，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "查询温度吧", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "请查询温度", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "现在查询温度一下", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "查询温度吧", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "我想查询温度，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "查询温度。", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "查询温度", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "现在查询温度一下", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "帮我查询温度一下", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "我想查询温度，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "麻烦查询温度", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "请查询温度，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "请查询温度", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "请查询温度现在", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "我想查询温度现在", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "查询温度", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "查询温度，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "请查询温度。", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "帮我查询温度", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "请查询温度一下", "intent": "read_temp", "arg": null, "template_id": "read_temp:5"}
+{"text": "帮我温度是多少。", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "我想温度是多少。", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "帮我温度是多少吧", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "请温度是多少，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "请温度是多少，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "帮我温度是多少，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "请温度是多少。", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "温度是多少吧", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "帮我温度是多少一下", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "帮我温度是多少吧", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "请温度是多少一下", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "我想温度是多少现在", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "现在温度是多少。", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "麻烦温度是多少", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "温度是多少吧", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "麻烦温度是多少，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "现在温度是多少", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "我想温度是多少", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "帮我温度是多少", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "麻烦温度是多少。", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "麻烦温度是多少，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "请温度是多少一下", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "温度是多少一下", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "麻烦温度是多少吧", "intent": "read_temp", "arg": null, "template_id": "read_temp:6"}
+{"text": "现在请读温度，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "请读温度，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "帮我请读温度现在", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "帮我请读温度", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "请读温度，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "我想请读温度吧", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "现在请读温度现在", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "请请读温度。", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "麻烦请读温度吧", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "请读温度一下", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "我想请读温度吧", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "我想请读温度现在", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "请请读温度，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "麻烦请读温度一下", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "我想请读温度", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "麻烦请读温度。", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "请读温度", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "请请读温度现在", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "麻烦请读温度吧", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "我想请读温度，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "我想请读温度现在", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "现在请读温度，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "我想请读温度吧", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "麻烦请读温度，谢谢", "intent": "read_temp", "arg": null, "template_id": "read_temp:7"}
+{"text": "can you set pwm 66 for me", "intent": "set_pwm", "arg": 66, "template_id": "set_pwm:0"}
+{"text": "now set pwm 32", "intent": "set_pwm", "arg": 32, "template_id": "set_pwm:0"}
+{"text": "now set pwm 8.", "intent": "set_pwm", "arg": 8, "template_id": "set_pwm:0"}
+{"text": "set pwm 22 for me", "intent": "set_pwm", "arg": 22, "template_id": "set_pwm:0"}
+{"text": "help me set pwm 31 please", "intent": "set_pwm", "arg": 31, "template_id": "set_pwm:0"}
+{"text": "i want to set pwm 32", "intent": "set_pwm", "arg": 32, "template_id": "set_pwm:0"}
+{"text": "now set pwm 80.", "intent": "set_pwm", "arg": 80, "template_id": "set_pwm:0"}
+{"text": "set pwm 6", "intent": "set_pwm", "arg": 6, "template_id": "set_pwm:0"}
+{"text": "help me set pwm 100", "intent": "set_pwm", "arg": 100, "template_id": "set_pwm:0"}
+{"text": "set pwm 9 on board", "intent": "set_pwm", "arg": 9, "template_id": "set_pwm:0"}
+{"text": "now set pwm 46.", "intent": "set_pwm", "arg": 46, "template_id": "set_pwm:0"}
+{"text": "now set pwm 20 now", "intent": "set_pwm", "arg": 20, "template_id": "set_pwm:0"}
+{"text": "now set pwm 35.", "intent": "set_pwm", "arg": 35, "template_id": "set_pwm:0"}
+{"text": "can you set pwm 20.", "intent": "set_pwm", "arg": 20, "template_id": "set_pwm:0"}
+{"text": "now set pwm 22 please", "intent": "set_pwm", "arg": 22, "template_id": "set_pwm:0"}
+{"text": "now set pwm 23 please", "intent": "set_pwm", "arg": 23, "template_id": "set_pwm:0"}
+{"text": "help me set pwm 68 now", "intent": "set_pwm", "arg": 68, "template_id": "set_pwm:0"}
+{"text": "now set pwm 41.", "intent": "set_pwm", "arg": 41, "template_id": "set_pwm:0"}
+{"text": "i want to set pwm 71 please", "intent": "set_pwm", "arg": 71, "template_id": "set_pwm:0"}
+{"text": "i want to set pwm 81 please", "intent": "set_pwm", "arg": 81, "template_id": "set_pwm:0"}
+{"text": "set pwm 99 on board", "intent": "set_pwm", "arg": 99, "template_id": "set_pwm:0"}
+{"text": "i want to set pwm 53 for me", "intent": "set_pwm", "arg": 53, "template_id": "set_pwm:0"}
+{"text": "now set pwm 54 please", "intent": "set_pwm", "arg": 54, "template_id": "set_pwm:0"}
+{"text": "please set pwm 63 for me", "intent": "set_pwm", "arg": 63, "template_id": "set_pwm:0"}
+{"text": "can you pwm 0 percent please", "intent": "set_pwm", "arg": 0, "template_id": "set_pwm:1"}
+{"text": "pwm 19 percent.", "intent": "set_pwm", "arg": 19, "template_id": "set_pwm:1"}
+{"text": "i want to pwm 93 percent", "intent": "set_pwm", "arg": 93, "template_id": "set_pwm:1"}
+{"text": "can you pwm 81 percent on board", "intent": "set_pwm", "arg": 81, "template_id": "set_pwm:1"}
+{"text": "i want to pwm 69 percent.", "intent": "set_pwm", "arg": 69, "template_id": "set_pwm:1"}
+{"text": "can you pwm 64 percent.", "intent": "set_pwm", "arg": 64, "template_id": "set_pwm:1"}
+{"text": "pwm 27 percent please", "intent": "set_pwm", "arg": 27, "template_id": "set_pwm:1"}
+{"text": "please pwm 87 percent for me", "intent": "set_pwm", "arg": 87, "template_id": "set_pwm:1"}
+{"text": "now pwm 12 percent please", "intent": "set_pwm", "arg": 12, "template_id": "set_pwm:1"}
+{"text": "pwm 24 percent for me", "intent": "set_pwm", "arg": 24, "template_id": "set_pwm:1"}
+{"text": "now pwm 2 percent please", "intent": "set_pwm", "arg": 2, "template_id": "set_pwm:1"}
+{"text": "can you pwm 61 percent.", "intent": "set_pwm", "arg": 61, "template_id": "set_pwm:1"}
+{"text": "can you pwm 44 percent", "intent": "set_pwm", "arg": 44, "template_id": "set_pwm:1"}
+{"text": "i want to pwm 79 percent on board", "intent": "set_pwm", "arg": 79, "template_id": "set_pwm:1"}
+{"text": "i want to pwm 50 percent now", "intent": "set_pwm", "arg": 50, "template_id": "set_pwm:1"}
+{"text": "can you pwm 28 percent.", "intent": "set_pwm", "arg": 28, "template_id": "set_pwm:1"}
+{"text": "pwm 69 percent.", "intent": "set_pwm", "arg": 69, "template_id": "set_pwm:1"}
+{"text": "pwm 92 percent.", "intent": "set_pwm", "arg": 92, "template_id": "set_pwm:1"}
+{"text": "please pwm 27 percent.", "intent": "set_pwm", "arg": 27, "template_id": "set_pwm:1"}
+{"text": "i want to pwm 46 percent please", "intent": "set_pwm", "arg": 46, "template_id": "set_pwm:1"}
+{"text": "can you pwm 63 percent for me", "intent": "set_pwm", "arg": 63, "template_id": "set_pwm:1"}
+{"text": "can you pwm 88 percent.", "intent": "set_pwm", "arg": 88, "template_id": "set_pwm:1"}
+{"text": "now pwm 14 percent", "intent": "set_pwm", "arg": 14, "template_id": "set_pwm:1"}
+{"text": "now pwm 48 percent on board", "intent": "set_pwm", "arg": 48, "template_id": "set_pwm:1"}
+{"text": "now change pwm to 33", "intent": "set_pwm", "arg": 33, "template_id": "set_pwm:2"}
+{"text": "help me change pwm to 86 please", "intent": "set_pwm", "arg": 86, "template_id": "set_pwm:2"}
+{"text": "can you change pwm to 20 for me", "intent": "set_pwm", "arg": 20, "template_id": "set_pwm:2"}
+{"text": "please change pwm to 98", "intent": "set_pwm", "arg": 98, "template_id": "set_pwm:2"}
+{"text": "i want to change pwm to 25 please", "intent": "set_pwm", "arg": 25, "template_id": "set_pwm:2"}
+{"text": "now change pwm to 97 on board", "intent": "set_pwm", "arg": 97, "template_id": "set_pwm:2"}
+{"text": "i want to change pwm to 22.", "intent": "set_pwm", "arg": 22, "template_id": "set_pwm:2"}
+{"text": "now change pwm to 22 on board", "intent": "set_pwm", "arg": 22, "template_id": "set_pwm:2"}
+{"text": "now change pwm to 86.", "intent": "set_pwm", "arg": 86, "template_id": "set_pwm:2"}
+{"text": "please change pwm to 1 on board", "intent": "set_pwm", "arg": 1, "template_id": "set_pwm:2"}
+{"text": "can you change pwm to 87 on board", "intent": "set_pwm", "arg": 87, "template_id": "set_pwm:2"}
+{"text": "can you change pwm to 8", "intent": "set_pwm", "arg": 8, "template_id": "set_pwm:2"}
+{"text": "i want to change pwm to 67 please", "intent": "set_pwm", "arg": 67, "template_id": "set_pwm:2"}
+{"text": "i want to change pwm to 24 on board", "intent": "set_pwm", "arg": 24, "template_id": "set_pwm:2"}
+{"text": "i want to change pwm to 70.", "intent": "set_pwm", "arg": 70, "template_id": "set_pwm:2"}
+{"text": "i want to change pwm to 40 for me", "intent": "set_pwm", "arg": 40, "template_id": "set_pwm:2"}
+{"text": "help me change pwm to 30 on board", "intent": "set_pwm", "arg": 30, "template_id": "set_pwm:2"}
+{"text": "now change pwm to 74", "intent": "set_pwm", "arg": 74, "template_id": "set_pwm:2"}
+{"text": "now change pwm to 13 please", "intent": "set_pwm", "arg": 13, "template_id": "set_pwm:2"}
+{"text": "can you change pwm to 13 for me", "intent": "set_pwm", "arg": 13, "template_id": "set_pwm:2"}
+{"text": "please change pwm to 24 for me", "intent": "set_pwm", "arg": 24, "template_id": "set_pwm:2"}
+{"text": "please change pwm to 27", "intent": "set_pwm", "arg": 27, "template_id": "set_pwm:2"}
+{"text": "please change pwm to 97 now", "intent": "set_pwm", "arg": 97, "template_id": "set_pwm:2"}
+{"text": "i want to change pwm to 11 for me", "intent": "set_pwm", "arg": 11, "template_id": "set_pwm:2"}
+{"text": "i want to set_pwm 82 now", "intent": "set_pwm", "arg": 82, "template_id": "set_pwm:3"}
+{"text": "can you set_pwm 16 on board", "intent": "set_pwm", "arg": 16, "template_id": "set_pwm:3"}
+{"text": "now set_pwm 39 please", "intent": "set_pwm", "arg": 39, "template_id": "set_pwm:3"}
+{"text": "set_pwm 5 on board", "intent": "set_pwm", "arg": 5, "template_id": "set_pwm:3"}
+{"text": "now set_pwm 62 now", "intent": "set_pwm", "arg": 62, "template_id": "set_pwm:3"}
+{"text": "please set_pwm 85 on board", "intent": "set_pwm", "arg": 85, "template_id": "set_pwm:3"}
+{"text": "set_pwm 24", "intent": "set_pwm", "arg": 24, "template_id": "set_pwm:3"}
+{"text": "set_pwm 0 now", "intent": "set_pwm", "arg": 0, "template_id": "set_pwm:3"}
+{"text": "can you set_pwm 57.", "intent": "set_pwm", "arg": 57, "template_id": "set_pwm:3"}
+{"text": "i want to set_pwm 82", "intent": "set_pwm", "arg": 82, "template_id": "set_pwm:3"}
+{"text": "i want to set_pwm 86 please", "intent": "set_pwm", "arg": 86, "template_id": "set_pwm:3"}
+{"text": "please set_pwm 23 for me", "intent": "set_pwm", "arg": 23, "template_id": "set_pwm:3"}
+{"text": "set_pwm 63", "intent": "set_pwm", "arg": 63, "template_id": "set_pwm:3"}
+{"text": "please set_pwm 95 for me", "intent": "set_pwm", "arg": 95, "template_id": "set_pwm:3"}
+{"text": "set_pwm 55", "intent": "set_pwm", "arg": 55, "template_id": "set_pwm:3"}
+{"text": "can you set_pwm 11 for me", "intent": "set_pwm", "arg": 11, "template_id": "set_pwm:3"}
+{"text": "please set_pwm 29 now", "intent": "set_pwm", "arg": 29, "template_id": "set_pwm:3"}
+{"text": "please set_pwm 59 please", "intent": "set_pwm", "arg": 59, "template_id": "set_pwm:3"}
+{"text": "now set_pwm 45", "intent": "set_pwm", "arg": 45, "template_id": "set_pwm:3"}
+{"text": "set_pwm 54 now", "intent": "set_pwm", "arg": 54, "template_id": "set_pwm:3"}
+{"text": "help me set_pwm 29", "intent": "set_pwm", "arg": 29, "template_id": "set_pwm:3"}
+{"text": "please set_pwm 20 on board", "intent": "set_pwm", "arg": 20, "template_id": "set_pwm:3"}
+{"text": "set_pwm 79 now", "intent": "set_pwm", "arg": 79, "template_id": "set_pwm:3"}
+{"text": "now set_pwm 28.", "intent": "set_pwm", "arg": 28, "template_id": "set_pwm:3"}
+{"text": "麻烦设置PWM为54吧", "intent": "set_pwm", "arg": 54, "template_id": "set_pwm:4"}
+{"text": "请设置PWM为54。", "intent": "set_pwm", "arg": 54, "template_id": "set_pwm:4"}
+{"text": "麻烦设置PWM为89，谢谢", "intent": "set_pwm", "arg": 89, "template_id": "set_pwm:4"}
+{"text": "麻烦设置PWM为71", "intent": "set_pwm", "arg": 71, "template_id": "set_pwm:4"}
+{"text": "现在设置PWM为99现在", "intent": "set_pwm", "arg": 99, "template_id": "set_pwm:4"}
+{"text": "请设置PWM为83吧", "intent": "set_pwm", "arg": 83, "template_id": "set_pwm:4"}
+{"text": "现在设置PWM为49吧", "intent": "set_pwm", "arg": 49, "template_id": "set_pwm:4"}
+{"text": "麻烦设置PWM为96。", "intent": "set_pwm", "arg": 96, "template_id": "set_pwm:4"}
+{"text": "现在设置PWM为23现在", "intent": "set_pwm", "arg": 23, "template_id": "set_pwm:4"}
+{"text": "帮我设置PWM为29现在", "intent": "set_pwm", "arg": 29, "template_id": "set_pwm:4"}
+{"text": "我想设置PWM为23，谢谢", "intent": "set_pwm", "arg": 23, "template_id": "set_pwm:4"}
+{"text": "请设置PWM为35现在", "intent": "set_pwm", "arg": 35, "template_id": "set_pwm:4"}
+{"text": "请设置PWM为20一下", "intent": "set_pwm", "arg": 20, "template_id": "set_pwm:4"}
+{"text": "我想设置PWM为39现在", "intent": "set_pwm", "arg": 39, "template_id": "set_pwm:4"}
+{"text": "帮我设置PWM为42", "intent": "set_pwm", "arg": 42, "template_id": "set_pwm:4"}
+{"text": "请设置PWM为46吧", "intent": "set_pwm", "arg": 46, "template_id": "set_pwm:4"}
+{"text": "现在设置PWM为11一下", "intent": "set_pwm", "arg": 11, "template_id": "set_pwm:4"}
+{"text": "现在设置PWM为93", "intent": "set_pwm", "arg": 93, "template_id": "set_pwm:4"}
+{"text": "我想设置PWM为86", "intent": "set_pwm", "arg": 86, "template_id": "set_pwm:4"}
+{"text": "现在设置PWM为76，谢谢", "intent": "set_pwm", "arg": 76, "template_id": "set_pwm:4"}
+{"text": "麻烦设置PWM为18一下", "intent": "set_pwm", "arg": 18, "template_id": "set_pwm:4"}
+{"text": "设置PWM为41，谢谢", "intent": "set_pwm", "arg": 41, "template_id": "set_pwm:4"}
+{"text": "我想设置PWM为67，谢谢", "intent": "set_pwm", "arg": 67, "template_id": "set_pwm:4"}
+{"text": "请设置PWM为18，谢谢", "intent": "set_pwm", "arg": 18, "template_id": "set_pwm:4"}
+{"text": "请PWM占空比44。", "intent": "set_pwm", "arg": 44, "template_id": "set_pwm:5"}
+{"text": "我想PWM占空比23现在", "intent": "set_pwm", "arg": 23, "template_id": "set_pwm:5"}
+{"text": "我想PWM占空比84", "intent": "set_pwm", "arg": 84, "template_id": "set_pwm:5"}
+{"text": "帮我PWM占空比16吧", "intent": "set_pwm", "arg": 16, "template_id": "set_pwm:5"}
+{"text": "PWM占空比34，谢谢", "intent": "set_pwm", "arg": 34, "template_id": "set_pwm:5"}
+{"text": "请PWM占空比65", "intent": "set_pwm", "arg": 65, "template_id": "set_pwm:5"}
+{"text": "帮我PWM占空比2。", "intent": "set_pwm", "arg": 2, "template_id": "set_pwm:5"}
+{"text": "现在PWM占空比41，谢谢", "intent": "set_pwm", "arg": 41, "template_id": "set_pwm:5"}
+{"text": "麻烦PWM占空比11", "intent": "set_pwm", "arg": 11, "template_id": "set_pwm:5"}
+{"text": "麻烦PWM占空比57吧", "intent": "set_pwm", "arg": 57, "template_id": "set_pwm:5"}
+{"text": "PWM占空比88，谢谢", "intent": "set_pwm", "arg": 88, "template_id": "set_pwm:5"}
+{"text": "麻烦PWM占空比26一下", "intent": "set_pwm", "arg": 26, "template_id": "set_pwm:5"}
+{"text": "麻烦PWM占空比48，谢谢", "intent": "set_pwm", "arg": 48, "template_id": "set_pwm:5"}
+{"text": "PWM占空比26现在", "intent": "set_pwm", "arg": 26, "template_id": "set_pwm:5"}
+{"text": "PWM占空比37", "intent": "set_pwm", "arg": 37, "template_id": "set_pwm:5"}
+{"text": "请PWM占空比8，谢谢", "intent": "set_pwm", "arg": 8, "template_id": "set_pwm:5"}
+{"text": "帮我PWM占空比36现在", "intent": "set_pwm", "arg": 36, "template_id": "set_pwm:5"}
+{"text": "麻烦PWM占空比5。", "intent": "set_pwm", "arg": 5, "template_id": "set_pwm:5"}
+{"text": "现在PWM占空比38", "intent": "set_pwm", "arg": 38, "template_id": "set_pwm:5"}
+{"text": "请PWM占空比36一下", "intent": "set_pwm", "arg": 36, "template_id": "set_pwm:5"}
+{"text": "PWM占空比98，谢谢", "intent": "set_pwm", "arg": 98, "template_id": "set_pwm:5"}
+{"text": "麻烦PWM占空比70一下", "intent": "set_pwm", "arg": 70, "template_id": "set_pwm:5"}
+{"text": "现在PWM占空比37。", "intent": "set_pwm", "arg": 37, "template_id": "set_pwm:5"}
+{"text": "PWM占空比47一下", "intent": "set_pwm", "arg": 47, "template_id": "set_pwm:5"}
+{"text": "调整PWM到59", "intent": "set_pwm", "arg": 59, "template_id": "set_pwm:6"}
+{"text": "我想调整PWM到57，谢谢", "intent": "set_pwm", "arg": 57, "template_id": "set_pwm:6"}
+{"text": "麻烦调整PWM到34吧", "intent": "set_pwm", "arg": 34, "template_id": "set_pwm:6"}
+{"text": "我想调整PWM到46", "intent": "set_pwm", "arg": 46, "template_id": "set_pwm:6"}
+{"text": "调整PWM到28，谢谢", "intent": "set_pwm", "arg": 28, "template_id": "set_pwm:6"}
+{"text": "现在调整PWM到98吧", "intent": "set_pwm", "arg": 98, "template_id": "set_pwm:6"}
+{"text": "调整PWM到27。", "intent": "set_pwm", "arg": 27, "template_id": "set_pwm:6"}
+{"text": "麻烦调整PWM到20现在", "intent": "set_pwm", "arg": 20, "template_id": "set_pwm:6"}
+{"text": "现在调整PWM到48", "intent": "set_pwm", "arg": 48, "template_id": "set_pwm:6"}
+{"text": "现在调整PWM到63，谢谢", "intent": "set_pwm", "arg": 63, "template_id": "set_pwm:6"}
+{"text": "我想调整PWM到43现在", "intent": "set_pwm", "arg": 43, "template_id": "set_pwm:6"}
+{"text": "请调整PWM到11现在", "intent": "set_pwm", "arg": 11, "template_id": "set_pwm:6"}
+{"text": "帮我调整PWM到44一下", "intent": "set_pwm", "arg": 44, "template_id": "set_pwm:6"}
+{"text": "请调整PWM到4现在", "intent": "set_pwm", "arg": 4, "template_id": "set_pwm:6"}
+{"text": "调整PWM到58一下", "intent": "set_pwm", "arg": 58, "template_id": "set_pwm:6"}
+{"text": "帮我调整PWM到81，谢谢", "intent": "set_pwm", "arg": 81, "template_id": "set_pwm:6"}
+{"text": "请调整PWM到24", "intent": "set_pwm", "arg": 24, "template_id": "set_pwm:6"}
+{"text": "我想调整PWM到43，谢谢", "intent": "set_pwm", "arg": 43, "template_id": "set_pwm:6"}
+{"text": "现在调整PWM到58现在", "intent": "set_pwm", "arg": 58, "template_id": "set_pwm:6"}
+{"text": "现在调整PWM到31，谢谢", "intent": "set_pwm", "arg": 31, "template_id": "set_pwm:6"}
+{"text": "请调整PWM到63吧", "intent": "set_pwm", "arg": 63, "template_id": "set_pwm:6"}
+{"text": "麻烦调整PWM到71", "intent": "set_pwm", "arg": 71, "template_id": "set_pwm:6"}
+{"text": "麻烦调整PWM到84一下", "intent": "set_pwm", "arg": 84, "template_id": "set_pwm:6"}
+{"text": "麻烦调整PWM到33", "intent": "set_pwm", "arg": 33, "template_id": "set_pwm:6"}
+{"text": "请将PWM设为56。", "intent": "set_pwm", "arg": 56, "template_id": "set_pwm:7"}
+{"text": "帮我请将PWM设为43，谢谢", "intent": "set_pwm", "arg": 43, "template_id": "set_pwm:7"}
+{"text": "我想请将PWM设为16", "intent": "set_pwm", "arg": 16, "template_id": "set_pwm:7"}
+{"text": "麻烦请将PWM设为38吧", "intent": "set_pwm", "arg": 38, "template_id": "set_pwm:7"}
+{"text": "麻烦请将PWM设为36", "intent": "set_pwm", "arg": 36, "template_id": "set_pwm:7"}
+{"text": "我想请将PWM设为80吧", "intent": "set_pwm", "arg": 80, "template_id": "set_pwm:7"}
+{"text": "请将PWM设为73一下", "intent": "set_pwm", "arg": 73, "template_id": "set_pwm:7"}
+{"text": "帮我请将PWM设为24。", "intent": "set_pwm", "arg": 24, "template_id": "set_pwm:7"}
+{"text": "现在请将PWM设为31", "intent": "set_pwm", "arg": 31, "template_id": "set_pwm:7"}
+{"text": "帮我请将PWM设为12一下", "intent": "set_pwm", "arg": 12, "template_id": "set_pwm:7"}
+{"text": "现在请将PWM设为83，谢谢", "intent": "set_pwm", "arg": 83, "template_id": "set_pwm:7"}
+{"text": "请将PWM设为7。", "intent": "set_pwm", "arg": 7, "template_id": "set_pwm:7"}
+{"text": "麻烦请将PWM设为91一下", "intent": "set_pwm", "arg": 91, "template_id": "set_pwm:7"}
+{"text": "请请将PWM设为61现在", "intent": "set_pwm", "arg": 61, "template_id": "set_pwm:7"}
+{"text": "现在请将PWM设为41，谢谢", "intent": "set_pwm", "arg": 41, "template_id": "set_pwm:7"}
+{"text": "帮我请将PWM设为68现在", "intent": "set_pwm", "arg": 68, "template_id": "set_pwm:7"}
+{"text": "请将PWM设为36", "intent": "set_pwm", "arg": 36, "template_id": "set_pwm:7"}
+{"text": "麻烦请将PWM设为42", "intent": "set_pwm", "arg": 42, "template_id": "set_pwm:7"}
+{"text": "帮我请将PWM设为100", "intent": "set_pwm", "arg": 100, "template_id": "set_pwm:7"}
+{"text": "请请将PWM设为80。", "intent": "set_pwm", "arg": 80, "template_id": "set_pwm:7"}
+{"text": "麻烦请将PWM设为15吧", "intent": "set_pwm", "arg": 15, "template_id": "set_pwm:7"}
+{"text": "麻烦请将PWM设为12现在", "intent": "set_pwm", "arg": 12, "template_id": "set_pwm:7"}
+{"text": "现在请将PWM设为18现在", "intent": "set_pwm", "arg": 18, "template_id": "set_pwm:7"}
+{"text": "我想请将PWM设为7", "intent": "set_pwm", "arg": 7, "template_id": "set_pwm:7"}
+{"text": "i want to run coremark on board", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "can you run coremark on board", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "please run coremark.", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "can you run coremark for me", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "please run coremark", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "i want to run coremark for me", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "i want to run coremark please", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "now run coremark.", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "can you run coremark on board", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "i want to run coremark now", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "can you run coremark now", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "help me run coremark on board", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "please run coremark.", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "can you run coremark please", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "now run coremark on board", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "please run coremark.", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "run coremark.", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "now run coremark.", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "help me run coremark please", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "help me run coremark now", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "help me run coremark please", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "can you run coremark please", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "please run coremark on board", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "now run coremark", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:0"}
+{"text": "i want to start coremark test", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "can you start coremark test", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "can you start coremark test for me", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "start coremark test for me", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "help me start coremark test.", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "i want to start coremark test on board", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "help me start coremark test now", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "start coremark test", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "can you start coremark test now", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "please start coremark test", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "now start coremark test on board", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "can you start coremark test.", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "help me start coremark test.", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "please start coremark test for me", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "i want to start coremark test.", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "start coremark test for me", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "start coremark test please", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "can you start coremark test now", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "start coremark test", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "start coremark test please", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "help me start coremark test", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "start coremark test on board", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "start coremark test now", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "now start coremark test", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:1"}
+{"text": "benchmark cpu for me", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "i want to benchmark cpu on board", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "now benchmark cpu", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "help me benchmark cpu on board", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "can you benchmark cpu now", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "now benchmark cpu for me", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "now benchmark cpu for me", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "help me benchmark cpu now", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "help me benchmark cpu.", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "now benchmark cpu please", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "can you benchmark cpu please", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "please benchmark cpu now", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "can you benchmark cpu", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "i want to benchmark cpu on board", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "please benchmark cpu please", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "please benchmark cpu for me", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "please benchmark cpu", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "can you benchmark cpu now", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "i want to benchmark cpu", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "help me benchmark cpu.", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "now benchmark cpu for me", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "can you benchmark cpu for me", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "now benchmark cpu.", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "can you benchmark cpu on board", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:2"}
+{"text": "please run_coremark.", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "i want to run_coremark now", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "help me run_coremark on board", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "please run_coremark now", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "can you run_coremark for me", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "now run_coremark please", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "help me run_coremark now", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "i want to run_coremark.", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "now run_coremark for me", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "please run_coremark please", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "run_coremark", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "can you run_coremark now", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "run_coremark please", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "can you run_coremark.", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "please run_coremark please", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "now run_coremark", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "run_coremark for me", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "run_coremark now", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "help me run_coremark for me", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "please run_coremark for me", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "i want to run_coremark on board", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "can you run_coremark on board", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "run_coremark please", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "help me run_coremark on board", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:3"}
+{"text": "帮我运行CoreMark现在", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "运行CoreMark，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "麻烦运行CoreMark现在", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "麻烦运行CoreMark", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "请运行CoreMark", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "麻烦运行CoreMark", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "麻烦运行CoreMark。", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "请运行CoreMark一下", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "麻烦运行CoreMark，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "运行CoreMark，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "麻烦运行CoreMark现在", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "麻烦运行CoreMark吧", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "我想运行CoreMark吧", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "帮我运行CoreMark现在", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "现在运行CoreMark现在", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "请运行CoreMark", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "麻烦运行CoreMark，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "麻烦运行CoreMark。", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "帮我运行CoreMark吧", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "我想运行CoreMark一下", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "现在运行CoreMark", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "请运行CoreMark，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "现在运行CoreMark", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "运行CoreMark", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:4"}
+{"text": "启动CPU基准测试，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "现在启动CPU基准测试。", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "麻烦启动CPU基准测试，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "请启动CPU基准测试一下", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "启动CPU基准测试，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "我想启动CPU基准测试，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "请启动CPU基准测试一下", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "我想启动CPU基准测试", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "请启动CPU基准测试现在", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "请启动CPU基准测试，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "请启动CPU基准测试吧", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "请启动CPU基准测试吧", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "帮我启动CPU基准测试。", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "麻烦启动CPU基准测试，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "帮我启动CPU基准测试一下", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "麻烦启动CPU基准测试。", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "请启动CPU基准测试，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "现在启动CPU基准测试。", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "现在启动CPU基准测试一下", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "启动CPU基准测试，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "我想启动CPU基准测试一下", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "请启动CPU基准测试一下", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "麻烦启动CPU基准测试。", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "请启动CPU基准测试，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:5"}
+{"text": "我想测试CPU性能。", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "帮我测试CPU性能，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "现在测试CPU性能，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "现在测试CPU性能。", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "测试CPU性能，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "帮我测试CPU性能吧", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "我想测试CPU性能，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "测试CPU性能吧", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "请测试CPU性能现在", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "帮我测试CPU性能现在", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "现在测试CPU性能", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "现在测试CPU性能现在", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "帮我测试CPU性能，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "请测试CPU性能，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "测试CPU性能现在", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "请测试CPU性能现在", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "帮我测试CPU性能现在", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "请测试CPU性能一下", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "帮我测试CPU性能一下", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "请测试CPU性能吧", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "请测试CPU性能吧", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "请测试CPU性能", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "现在测试CPU性能。", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "测试CPU性能，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:6"}
+{"text": "请请跑CoreMark，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "我想请跑CoreMark。", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "帮我请跑CoreMark", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "帮我请跑CoreMark。", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "现在请跑CoreMark一下", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "请跑CoreMark", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "请请跑CoreMark，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "我想请跑CoreMark现在", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "请请跑CoreMark。", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "请跑CoreMark。", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "帮我请跑CoreMark现在", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "请请跑CoreMark吧", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "现在请跑CoreMark一下", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "帮我请跑CoreMark，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "请跑CoreMark，谢谢", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "我想请跑CoreMark。", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "请请跑CoreMark现在", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "帮我请跑CoreMark一下", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "帮我请跑CoreMark吧", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "请请跑CoreMark现在", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "请请跑CoreMark吧", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "帮我请跑CoreMark吧", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "请请跑CoreMark吧", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "请请跑CoreMark", "intent": "run_coremark", "arg": null, "template_id": "run_coremark:7"}
+{"text": "help me read cycle counter please", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "now read cycle counter for me", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "can you read cycle counter for me", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "i want to read cycle counter", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "can you read cycle counter", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "please read cycle counter for me", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "can you read cycle counter", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "read cycle counter.", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "please read cycle counter.", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "can you read cycle counter please", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "help me read cycle counter on board", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "please read cycle counter on board", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "i want to read cycle counter now", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "read cycle counter", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "i want to read cycle counter for me", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "read cycle counter", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "i want to read cycle counter", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "read cycle counter.", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "i want to read cycle counter on board", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "help me read cycle counter on board", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "please read cycle counter", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "can you read cycle counter for me", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "i want to read cycle counter on board", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "help me read cycle counter", "intent": "read_counter", "arg": null, "template_id": "read_counter:0"}
+{"text": "show cpu cycles on board", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "help me show cpu cycles please", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "now show cpu cycles.", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "now show cpu cycles for me", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "please show cpu cycles now", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "now show cpu cycles please", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "now show cpu cycles", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "show cpu cycles for me", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "can you show cpu cycles", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "can you show cpu cycles for me", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "please show cpu cycles now", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "i want to show cpu cycles", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "can you show cpu cycles", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "i want to show cpu cycles now", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "now show cpu cycles", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "now show cpu cycles now", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "show cpu cycles.", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "can you show cpu cycles.", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "can you show cpu cycles.", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "can you show cpu cycles for me", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "help me show cpu cycles now", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "i want to show cpu cycles on board", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "can you show cpu cycles", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "help me show cpu cycles.", "intent": "read_counter", "arg": null, "template_id": "read_counter:1"}
+{"text": "please read_counter", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "i want to read_counter please", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "now read_counter.", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "can you read_counter", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "can you read_counter on board", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "please read_counter.", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "read_counter.", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "can you read_counter.", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "i want to read_counter now", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "i want to read_counter.", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "now read_counter.", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "can you read_counter.", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "read_counter on board", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "i want to read_counter", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "now read_counter now", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "can you read_counter.", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "can you read_counter now", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "help me read_counter for me", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "now read_counter.", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "i want to read_counter now", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "help me read_counter on board", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "help me read_counter for me", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "can you read_counter.", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "now read_counter.", "intent": "read_counter", "arg": null, "template_id": "read_counter:2"}
+{"text": "counter value please.", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "can you counter value please.", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "can you counter value please please", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "counter value please.", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "now counter value please now", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "can you counter value please for me", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "can you counter value please on board", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "i want to counter value please", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "i want to counter value please", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "i want to counter value please please", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "can you counter value please on board", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "counter value please for me", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "now counter value please for me", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "please counter value please now", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "i want to counter value please now", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "counter value please for me", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "can you counter value please please", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "counter value please", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "help me counter value please on board", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "i want to counter value please", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "counter value please now", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "please counter value please on board", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "now counter value please", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "counter value please now", "intent": "read_counter", "arg": null, "template_id": "read_counter:3"}
+{"text": "帮我读取计数器吧", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "读取计数器。", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "我想读取计数器一下", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "现在读取计数器一下", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "现在读取计数器，谢谢", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "请读取计数器。", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "请读取计数器现在", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "读取计数器。", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "现在读取计数器。", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "我想读取计数器。", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "读取计数器现在", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "现在读取计数器一下", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "现在读取计数器现在", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "现在读取计数器一下", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "现在读取计数器现在", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "麻烦读取计数器，谢谢", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "麻烦读取计数器一下", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "麻烦读取计数器一下", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "读取计数器现在", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "我想读取计数器现在", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "麻烦读取计数器一下", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "现在读取计数器吧", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "帮我读取计数器现在", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "读取计数器一下", "intent": "read_counter", "arg": null, "template_id": "read_counter:4"}
+{"text": "请查询周期计数吧", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "麻烦查询周期计数。", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "帮我查询周期计数一下", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "我想查询周期计数现在", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "现在查询周期计数。", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "我想查询周期计数。", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "现在查询周期计数吧", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "现在查询周期计数，谢谢", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "我想查询周期计数。", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "现在查询周期计数，谢谢", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "现在查询周期计数", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "帮我查询周期计数", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "现在查询周期计数吧", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "我想查询周期计数。", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "麻烦查询周期计数一下", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "请查询周期计数吧", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "现在查询周期计数吧", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "现在查询周期计数", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "现在查询周期计数现在", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "现在查询周期计数现在", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "查询周期计数一下", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "帮我查询周期计数", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "查询周期计数一下", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "我想查询周期计数，谢谢", "intent": "read_counter", "arg": null, "template_id": "read_counter:5"}
+{"text": "我想CPU周期数是多少。", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "麻烦CPU周期数是多少一下", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "帮我CPU周期数是多少，谢谢", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "我想CPU周期数是多少吧", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "麻烦CPU周期数是多少，谢谢", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "我想CPU周期数是多少吧", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "我想CPU周期数是多少", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "CPU周期数是多少。", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "请CPU周期数是多少，谢谢", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "我想CPU周期数是多少。", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "麻烦CPU周期数是多少吧", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "麻烦CPU周期数是多少", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "请CPU周期数是多少，谢谢", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "CPU周期数是多少现在", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "请CPU周期数是多少现在", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "帮我CPU周期数是多少，谢谢", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "我想CPU周期数是多少。", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "现在CPU周期数是多少，谢谢", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "CPU周期数是多少", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "现在CPU周期数是多少一下", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "CPU周期数是多少，谢谢", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "CPU周期数是多少。", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "现在CPU周期数是多少", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "现在CPU周期数是多少一下", "intent": "read_counter", "arg": null, "template_id": "read_counter:6"}
+{"text": "麻烦显示周期计数现在", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "显示周期计数", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "请显示周期计数一下", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "麻烦显示周期计数一下", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "帮我显示周期计数一下", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "麻烦显示周期计数吧", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "显示周期计数现在", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "现在显示周期计数", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "现在显示周期计数，谢谢", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "麻烦显示周期计数，谢谢", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "显示周期计数。", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "帮我显示周期计数一下", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "麻烦显示周期计数，谢谢", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "帮我显示周期计数。", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "请显示周期计数一下", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "我想显示周期计数", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "麻烦显示周期计数吧", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "请显示周期计数一下", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "请显示周期计数", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "显示周期计数。", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "现在显示周期计数", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "现在显示周期计数。", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "帮我显示周期计数，谢谢", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "麻烦显示周期计数", "intent": "read_counter", "arg": null, "template_id": "read_counter:7"}
+{"text": "help me set led 188 now", "intent": "set_led", "arg": 188, "template_id": "set_led:0"}
+{"text": "set led 43 please", "intent": "set_led", "arg": 43, "template_id": "set_led:0"}
+{"text": "please set led 237 now", "intent": "set_led", "arg": 237, "template_id": "set_led:0"}
+{"text": "set led 127 for me", "intent": "set_led", "arg": 127, "template_id": "set_led:0"}
+{"text": "now set led 52 please", "intent": "set_led", "arg": 52, "template_id": "set_led:0"}
+{"text": "help me set led 214", "intent": "set_led", "arg": 214, "template_id": "set_led:0"}
+{"text": "please set led 100 for me", "intent": "set_led", "arg": 100, "template_id": "set_led:0"}
+{"text": "now set led 184", "intent": "set_led", "arg": 184, "template_id": "set_led:0"}
+{"text": "now set led 228 on board", "intent": "set_led", "arg": 228, "template_id": "set_led:0"}
+{"text": "set led 226", "intent": "set_led", "arg": 226, "template_id": "set_led:0"}
+{"text": "i want to set led 97 please", "intent": "set_led", "arg": 97, "template_id": "set_led:0"}
+{"text": "please set led 151 please", "intent": "set_led", "arg": 151, "template_id": "set_led:0"}
+{"text": "i want to set led 159 please", "intent": "set_led", "arg": 159, "template_id": "set_led:0"}
+{"text": "set led 4 now", "intent": "set_led", "arg": 4, "template_id": "set_led:0"}
+{"text": "can you set led 205 on board", "intent": "set_led", "arg": 205, "template_id": "set_led:0"}
+{"text": "can you set led 187 for me", "intent": "set_led", "arg": 187, "template_id": "set_led:0"}
+{"text": "help me set led 208 now", "intent": "set_led", "arg": 208, "template_id": "set_led:0"}
+{"text": "can you set led 173", "intent": "set_led", "arg": 173, "template_id": "set_led:0"}
+{"text": "set led 239.", "intent": "set_led", "arg": 239, "template_id": "set_led:0"}
+{"text": "now set led 243 on board", "intent": "set_led", "arg": 243, "template_id": "set_led:0"}
+{"text": "can you set led 36.", "intent": "set_led", "arg": 36, "template_id": "set_led:0"}
+{"text": "i want to set led 252 please", "intent": "set_led", "arg": 252, "template_id": "set_led:0"}
+{"text": "can you set led 120 now", "intent": "set_led", "arg": 120, "template_id": "set_led:0"}
+{"text": "now set led 89 now", "intent": "set_led", "arg": 89, "template_id": "set_led:0"}
+{"text": "can you led value 214 please", "intent": "set_led", "arg": 214, "template_id": "set_led:1"}
+{"text": "led value 139 on board", "intent": "set_led", "arg": 139, "template_id": "set_led:1"}
+{"text": "help me led value 17", "intent": "set_led", "arg": 17, "template_id": "set_led:1"}
+{"text": "help me led value 13 now", "intent": "set_led", "arg": 13, "template_id": "set_led:1"}
+{"text": "led value 150 for me", "intent": "set_led", "arg": 150, "template_id": "set_led:1"}
+{"text": "help me led value 197 for me", "intent": "set_led", "arg": 197, "template_id": "set_led:1"}
+{"text": "can you led value 135", "intent": "set_led", "arg": 135, "template_id": "set_led:1"}
+{"text": "can you led value 27", "intent": "set_led", "arg": 27, "template_id": "set_led:1"}
+{"text": "please led value 196 please", "intent": "set_led", "arg": 196, "template_id": "set_led:1"}
+{"text": "i want to led value 186 on board", "intent": "set_led", "arg": 186, "template_id": "set_led:1"}
+{"text": "please led value 112 for me", "intent": "set_led", "arg": 112, "template_id": "set_led:1"}
+{"text": "i want to led value 107 please", "intent": "set_led", "arg": 107, "template_id": "set_led:1"}
+{"text": "led value 52", "intent": "set_led", "arg": 52, "template_id": "set_led:1"}
+{"text": "led value 181", "intent": "set_led", "arg": 181, "template_id": "set_led:1"}
+{"text": "please led value 23.", "intent": "set_led", "arg": 23, "template_id": "set_led:1"}
+{"text": "please led value 8 on board", "intent": "set_led", "arg": 8, "template_id": "set_led:1"}
+{"text": "can you led value 89 now", "intent": "set_led", "arg": 89, "template_id": "set_led:1"}
+{"text": "help me led value 11.", "intent": "set_led", "arg": 11, "template_id": "set_led:1"}
+{"text": "please led value 234.", "intent": "set_led", "arg": 234, "template_id": "set_led:1"}
+{"text": "help me led value 99 now", "intent": "set_led", "arg": 99, "template_id": "set_led:1"}
+{"text": "help me led value 5", "intent": "set_led", "arg": 5, "template_id": "set_led:1"}
+{"text": "led value 232 now", "intent": "set_led", "arg": 232, "template_id": "set_led:1"}
+{"text": "now led value 164 now", "intent": "set_led", "arg": 164, "template_id": "set_led:1"}
+{"text": "please led value 68 please", "intent": "set_led", "arg": 68, "template_id": "set_led:1"}
+{"text": "help me change leds to 98 please", "intent": "set_led", "arg": 98, "template_id": "set_led:2"}
+{"text": "please change leds to 172 for me", "intent": "set_led", "arg": 172, "template_id": "set_led:2"}
+{"text": "now change leds to 250 now", "intent": "set_led", "arg": 250, "template_id": "set_led:2"}
+{"text": "now change leds to 13 on board", "intent": "set_led", "arg": 13, "template_id": "set_led:2"}
+{"text": "change leds to 225 on board", "intent": "set_led", "arg": 225, "template_id": "set_led:2"}
+{"text": "please change leds to 208 now", "intent": "set_led", "arg": 208, "template_id": "set_led:2"}
+{"text": "change leds to 22 now", "intent": "set_led", "arg": 22, "template_id": "set_led:2"}
+{"text": "i want to change leds to 67 now", "intent": "set_led", "arg": 67, "template_id": "set_led:2"}
+{"text": "please change leds to 76 for me", "intent": "set_led", "arg": 76, "template_id": "set_led:2"}
+{"text": "please change leds to 171 for me", "intent": "set_led", "arg": 171, "template_id": "set_led:2"}
+{"text": "help me change leds to 64 now", "intent": "set_led", "arg": 64, "template_id": "set_led:2"}
+{"text": "change leds to 159 now", "intent": "set_led", "arg": 159, "template_id": "set_led:2"}
+{"text": "i want to change leds to 120 please", "intent": "set_led", "arg": 120, "template_id": "set_led:2"}
+{"text": "change leds to 173 on board", "intent": "set_led", "arg": 173, "template_id": "set_led:2"}
+{"text": "i want to change leds to 157 please", "intent": "set_led", "arg": 157, "template_id": "set_led:2"}
+{"text": "please change leds to 70", "intent": "set_led", "arg": 70, "template_id": "set_led:2"}
+{"text": "i want to change leds to 219 please", "intent": "set_led", "arg": 219, "template_id": "set_led:2"}
+{"text": "please change leds to 154 now", "intent": "set_led", "arg": 154, "template_id": "set_led:2"}
+{"text": "help me change leds to 122 now", "intent": "set_led", "arg": 122, "template_id": "set_led:2"}
+{"text": "now change leds to 197 please", "intent": "set_led", "arg": 197, "template_id": "set_led:2"}
+{"text": "i want to change leds to 160 please", "intent": "set_led", "arg": 160, "template_id": "set_led:2"}
+{"text": "can you change leds to 232 for me", "intent": "set_led", "arg": 232, "template_id": "set_led:2"}
+{"text": "now change leds to 201 on board", "intent": "set_led", "arg": 201, "template_id": "set_led:2"}
+{"text": "help me change leds to 26 for me", "intent": "set_led", "arg": 26, "template_id": "set_led:2"}
+{"text": "please set_led 170 now", "intent": "set_led", "arg": 170, "template_id": "set_led:3"}
+{"text": "can you set_led 230.", "intent": "set_led", "arg": 230, "template_id": "set_led:3"}
+{"text": "set_led 193 now", "intent": "set_led", "arg": 193, "template_id": "set_led:3"}
+{"text": "now set_led 249 now", "intent": "set_led", "arg": 249, "template_id": "set_led:3"}
+{"text": "now set_led 215 now", "intent": "set_led", "arg": 215, "template_id": "set_led:3"}
+{"text": "i want to set_led 187 now", "intent": "set_led", "arg": 187, "template_id": "set_led:3"}
+{"text": "can you set_led 171.", "intent": "set_led", "arg": 171, "template_id": "set_led:3"}
+{"text": "please set_led 198 now", "intent": "set_led", "arg": 198, "template_id": "set_led:3"}
+{"text": "now set_led 45 now", "intent": "set_led", "arg": 45, "template_id": "set_led:3"}
+{"text": "set_led 145 now", "intent": "set_led", "arg": 145, "template_id": "set_led:3"}
+{"text": "help me set_led 194 please", "intent": "set_led", "arg": 194, "template_id": "set_led:3"}
+{"text": "set_led 102 now", "intent": "set_led", "arg": 102, "template_id": "set_led:3"}
+{"text": "can you set_led 39.", "intent": "set_led", "arg": 39, "template_id": "set_led:3"}
+{"text": "set_led 105", "intent": "set_led", "arg": 105, "template_id": "set_led:3"}
+{"text": "please set_led 20 now", "intent": "set_led", "arg": 20, "template_id": "set_led:3"}
+{"text": "i want to set_led 111 please", "intent": "set_led", "arg": 111, "template_id": "set_led:3"}
+{"text": "help me set_led 255", "intent": "set_led", "arg": 255, "template_id": "set_led:3"}
+{"text": "help me set_led 63 now", "intent": "set_led", "arg": 63, "template_id": "set_led:3"}
+{"text": "set_led 210", "intent": "set_led", "arg": 210, "template_id": "set_led:3"}
+{"text": "now set_led 146 on board", "intent": "set_led", "arg": 146, "template_id": "set_led:3"}
+{"text": "please set_led 224 for me", "intent": "set_led", "arg": 224, "template_id": "set_led:3"}
+{"text": "please set_led 84", "intent": "set_led", "arg": 84, "template_id": "set_led:3"}
+{"text": "i want to set_led 175 on board", "intent": "set_led", "arg": 175, "template_id": "set_led:3"}
+{"text": "can you set_led 177", "intent": "set_led", "arg": 177, "template_id": "set_led:3"}
+{"text": "设置LED为239吧", "intent": "set_led", "arg": 239, "template_id": "set_led:4"}
+{"text": "帮我设置LED为226现在", "intent": "set_led", "arg": 226, "template_id": "set_led:4"}
+{"text": "请设置LED为127，谢谢", "intent": "set_led", "arg": 127, "template_id": "set_led:4"}
+{"text": "麻烦设置LED为167，谢谢", "intent": "set_led", "arg": 167, "template_id": "set_led:4"}
+{"text": "设置LED为174。", "intent": "set_led", "arg": 174, "template_id": "set_led:4"}
+{"text": "设置LED为176。", "intent": "set_led", "arg": 176, "template_id": "set_led:4"}
+{"text": "设置LED为156。", "intent": "set_led", "arg": 156, "template_id": "set_led:4"}
+{"text": "现在设置LED为243吧", "intent": "set_led", "arg": 243, "template_id": "set_led:4"}
+{"text": "设置LED为142，谢谢", "intent": "set_led", "arg": 142, "template_id": "set_led:4"}
+{"text": "请设置LED为96现在", "intent": "set_led", "arg": 96, "template_id": "set_led:4"}
+{"text": "请设置LED为38吧", "intent": "set_led", "arg": 38, "template_id": "set_led:4"}
+{"text": "设置LED为225，谢谢", "intent": "set_led", "arg": 225, "template_id": "set_led:4"}
+{"text": "帮我设置LED为180吧", "intent": "set_led", "arg": 180, "template_id": "set_led:4"}
+{"text": "现在设置LED为212吧", "intent": "set_led", "arg": 212, "template_id": "set_led:4"}
+{"text": "我想设置LED为99吧", "intent": "set_led", "arg": 99, "template_id": "set_led:4"}
+{"text": "设置LED为107吧", "intent": "set_led", "arg": 107, "template_id": "set_led:4"}
+{"text": "请设置LED为127。", "intent": "set_led", "arg": 127, "template_id": "set_led:4"}
+{"text": "现在设置LED为34。", "intent": "set_led", "arg": 34, "template_id": "set_led:4"}
+{"text": "麻烦设置LED为12，谢谢", "intent": "set_led", "arg": 12, "template_id": "set_led:4"}
+{"text": "我想设置LED为24一下", "intent": "set_led", "arg": 24, "template_id": "set_led:4"}
+{"text": "帮我设置LED为98，谢谢", "intent": "set_led", "arg": 98, "template_id": "set_led:4"}
+{"text": "帮我设置LED为143。", "intent": "set_led", "arg": 143, "template_id": "set_led:4"}
+{"text": "现在设置LED为219。", "intent": "set_led", "arg": 219, "template_id": "set_led:4"}
+{"text": "现在设置LED为167现在", "intent": "set_led", "arg": 167, "template_id": "set_led:4"}
+{"text": "麻烦LED输出210。", "intent": "set_led", "arg": 210, "template_id": "set_led:5"}
+{"text": "现在LED输出238，谢谢", "intent": "set_led", "arg": 238, "template_id": "set_led:5"}
+{"text": "现在LED输出174吧", "intent": "set_led", "arg": 174, "template_id": "set_led:5"}
+{"text": "麻烦LED输出150。", "intent": "set_led", "arg": 150, "template_id": "set_led:5"}
+{"text": "帮我LED输出62一下", "intent": "set_led", "arg": 62, "template_id": "set_led:5"}
+{"text": "请LED输出177。", "intent": "set_led", "arg": 177, "template_id": "set_led:5"}
+{"text": "我想LED输出110一下", "intent": "set_led", "arg": 110, "template_id": "set_led:5"}
+{"text": "现在LED输出214现在", "intent": "set_led", "arg": 214, "template_id": "set_led:5"}
+{"text": "LED输出125", "intent": "set_led", "arg": 125, "template_id": "set_led:5"}
+{"text": "请LED输出231现在", "intent": "set_led", "arg": 231, "template_id": "set_led:5"}
+{"text": "我想LED输出158吧", "intent": "set_led", "arg": 158, "template_id": "set_led:5"}
+{"text": "请LED输出42。", "intent": "set_led", "arg": 42, "template_id": "set_led:5"}
+{"text": "帮我LED输出241", "intent": "set_led", "arg": 241, "template_id": "set_led:5"}
+{"text": "现在LED输出152", "intent": "set_led", "arg": 152, "template_id": "set_led:5"}
+{"text": "请LED输出98吧", "intent": "set_led", "arg": 98, "template_id": "set_led:5"}
+{"text": "帮我LED输出109，谢谢", "intent": "set_led", "arg": 109, "template_id": "set_led:5"}
+{"text": "我想LED输出80", "intent": "set_led", "arg": 80, "template_id": "set_led:5"}
+{"text": "现在LED输出10吧", "intent": "set_led", "arg": 10, "template_id": "set_led:5"}
+{"text": "我想LED输出21现在", "intent": "set_led", "arg": 21, "template_id": "set_led:5"}
+{"text": "麻烦LED输出95", "intent": "set_led", "arg": 95, "template_id": "set_led:5"}
+{"text": "LED输出178现在", "intent": "set_led", "arg": 178, "template_id": "set_led:5"}
+{"text": "帮我LED输出164，谢谢", "intent": "set_led", "arg": 164, "template_id": "set_led:5"}
+{"text": "帮我LED输出104现在", "intent": "set_led", "arg": 104, "template_id": "set_led:5"}
+{"text": "我想LED输出216。", "intent": "set_led", "arg": 216, "template_id": "set_led:5"}
+{"text": "将灯设置为161，谢谢", "intent": "set_led", "arg": 161, "template_id": "set_led:6"}
+{"text": "帮我将灯设置为170。", "intent": "set_led", "arg": 170, "template_id": "set_led:6"}
+{"text": "将灯设置为147", "intent": "set_led", "arg": 147, "template_id": "set_led:6"}
+{"text": "将灯设置为252一下", "intent": "set_led", "arg": 252, "template_id": "set_led:6"}
+{"text": "麻烦将灯设置为171吧", "intent": "set_led", "arg": 171, "template_id": "set_led:6"}
+{"text": "帮我将灯设置为67。", "intent": "set_led", "arg": 67, "template_id": "set_led:6"}
+{"text": "帮我将灯设置为179。", "intent": "set_led", "arg": 179, "template_id": "set_led:6"}
+{"text": "帮我将灯设置为53现在", "intent": "set_led", "arg": 53, "template_id": "set_led:6"}
+{"text": "将灯设置为56，谢谢", "intent": "set_led", "arg": 56, "template_id": "set_led:6"}
+{"text": "将灯设置为204吧", "intent": "set_led", "arg": 204, "template_id": "set_led:6"}
+{"text": "将灯设置为219一下", "intent": "set_led", "arg": 219, "template_id": "set_led:6"}
+{"text": "帮我将灯设置为120现在", "intent": "set_led", "arg": 120, "template_id": "set_led:6"}
+{"text": "帮我将灯设置为107吧", "intent": "set_led", "arg": 107, "template_id": "set_led:6"}
+{"text": "请将灯设置为53吧", "intent": "set_led", "arg": 53, "template_id": "set_led:6"}
+{"text": "我想将灯设置为113。", "intent": "set_led", "arg": 113, "template_id": "set_led:6"}
+{"text": "帮我将灯设置为255。", "intent": "set_led", "arg": 255, "template_id": "set_led:6"}
+{"text": "现在将灯设置为248现在", "intent": "set_led", "arg": 248, "template_id": "set_led:6"}
+{"text": "麻烦将灯设置为1，谢谢", "intent": "set_led", "arg": 1, "template_id": "set_led:6"}
+{"text": "请将灯设置为182吧", "intent": "set_led", "arg": 182, "template_id": "set_led:6"}
+{"text": "麻烦将灯设置为129，谢谢", "intent": "set_led", "arg": 129, "template_id": "set_led:6"}
+{"text": "我想将灯设置为37吧", "intent": "set_led", "arg": 37, "template_id": "set_led:6"}
+{"text": "帮我将灯设置为8吧", "intent": "set_led", "arg": 8, "template_id": "set_led:6"}
+{"text": "帮我将灯设置为88吧", "intent": "set_led", "arg": 88, "template_id": "set_led:6"}
+{"text": "将灯设置为132一下", "intent": "set_led", "arg": 132, "template_id": "set_led:6"}
+{"text": "帮我请设LED值38吧", "intent": "set_led", "arg": 38, "template_id": "set_led:7"}
+{"text": "麻烦请设LED值110吧", "intent": "set_led", "arg": 110, "template_id": "set_led:7"}
+{"text": "我想请设LED值6现在", "intent": "set_led", "arg": 6, "template_id": "set_led:7"}
+{"text": "我想请设LED值204吧", "intent": "set_led", "arg": 204, "template_id": "set_led:7"}
+{"text": "我想请设LED值246。", "intent": "set_led", "arg": 246, "template_id": "set_led:7"}
+{"text": "帮我请设LED值78吧", "intent": "set_led", "arg": 78, "template_id": "set_led:7"}
+{"text": "请设LED值95，谢谢", "intent": "set_led", "arg": 95, "template_id": "set_led:7"}
+{"text": "我想请设LED值11现在", "intent": "set_led", "arg": 11, "template_id": "set_led:7"}
+{"text": "请设LED值248。", "intent": "set_led", "arg": 248, "template_id": "set_led:7"}
+{"text": "请请设LED值145，谢谢", "intent": "set_led", "arg": 145, "template_id": "set_led:7"}
+{"text": "帮我请设LED值40现在", "intent": "set_led", "arg": 40, "template_id": "set_led:7"}
+{"text": "帮我请设LED值41现在", "intent": "set_led", "arg": 41, "template_id": "set_led:7"}
+{"text": "请请设LED值160一下", "intent": "set_led", "arg": 160, "template_id": "set_led:7"}
+{"text": "请请设LED值43。", "intent": "set_led", "arg": 43, "template_id": "set_led:7"}
+{"text": "现在请设LED值232现在", "intent": "set_led", "arg": 232, "template_id": "set_led:7"}
+{"text": "我想请设LED值246。", "intent": "set_led", "arg": 246, "template_id": "set_led:7"}
+{"text": "现在请设LED值193", "intent": "set_led", "arg": 193, "template_id": "set_led:7"}
+{"text": "帮我请设LED值232。", "intent": "set_led", "arg": 232, "template_id": "set_led:7"}
+{"text": "现在请设LED值109现在", "intent": "set_led", "arg": 109, "template_id": "set_led:7"}
+{"text": "我想请设LED值232", "intent": "set_led", "arg": 232, "template_id": "set_led:7"}
+{"text": "我想请设LED值114，谢谢", "intent": "set_led", "arg": 114, "template_id": "set_led:7"}
+{"text": "请请设LED值108吧", "intent": "set_led", "arg": 108, "template_id": "set_led:7"}
+{"text": "请请设LED值136，谢谢", "intent": "set_led", "arg": 136, "template_id": "set_led:7"}
+{"text": "麻烦请设LED值74", "intent": "set_led", "arg": 74, "template_id": "set_led:7"}
+{"text": "hello friend please", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "hello friend now", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "can you hello friend on board", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "hello friend", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "hello friend please", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "help me hello friend.", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "help me hello friend.", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "help me hello friend.", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "help me hello friend.", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "hello friend now", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "can you hello friend for me", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "i want to hello friend.", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "help me hello friend please", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "i want to hello friend.", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "i want to hello friend.", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "help me hello friend on board", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "i want to hello friend on board", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "now hello friend on board", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "now hello friend", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "i want to hello friend.", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "help me hello friend please", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "hello friend please", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "can you hello friend for me", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "i want to hello friend now", "intent": "reject", "arg": null, "template_id": "reject:0"}
+{"text": "i want to tell me a story now", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "now tell me a story", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "can you tell me a story", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "please tell me a story for me", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "help me tell me a story", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "i want to tell me a story on board", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "now tell me a story.", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "help me tell me a story.", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "i want to tell me a story.", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "please tell me a story now", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "please tell me a story for me", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "i want to tell me a story.", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "help me tell me a story", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "i want to tell me a story now", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "help me tell me a story please", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "please tell me a story on board", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "can you tell me a story now", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "please tell me a story please", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "can you tell me a story", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "now tell me a story", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "help me tell me a story on board", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "help me tell me a story.", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "help me tell me a story", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "i want to tell me a story", "intent": "reject", "arg": null, "template_id": "reject:1"}
+{"text": "i want to what is the weather please", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "please what is the weather now", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "i want to what is the weather for me", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "please what is the weather", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "what is the weather", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "what is the weather please", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "help me what is the weather for me", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "i want to what is the weather now", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "please what is the weather please", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "what is the weather on board", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "please what is the weather on board", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "please what is the weather on board", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "i want to what is the weather for me", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "please what is the weather", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "now what is the weather for me", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "please what is the weather for me", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "what is the weather please", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "please what is the weather for me", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "please what is the weather on board", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "now what is the weather now", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "i want to what is the weather please", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "now what is the weather please", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "can you what is the weather.", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "now what is the weather for me", "intent": "reject", "arg": null, "template_id": "reject:2"}
+{"text": "please open camera.", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "can you open camera on board", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "can you open camera", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "help me open camera.", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "help me open camera on board", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "i want to open camera please", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "open camera now", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "please open camera", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "please open camera for me", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "open camera now", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "i want to open camera", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "please open camera", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "i want to open camera for me", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "open camera", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "open camera please", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "open camera.", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "help me open camera for me", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "please open camera please", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "please open camera for me", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "i want to open camera for me", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "can you open camera", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "help me open camera please", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "now open camera for me", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "i want to open camera now", "intent": "reject", "arg": null, "template_id": "reject:3"}
+{"text": "帮我你好，谢谢", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "你好现在", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "我想你好吧", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "帮我你好一下", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "麻烦你好，谢谢", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "现在你好", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "请你好一下", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "你好一下", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "帮我你好一下", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "帮我你好", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "现在你好，谢谢", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "帮我你好现在", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "我想你好现在", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "帮我你好吧", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "帮我你好吧", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "现在你好吧", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "麻烦你好", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "你好，谢谢", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "现在你好现在", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "现在你好。", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "我想你好，谢谢", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "麻烦你好吧", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "我想你好现在", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "我想你好", "intent": "reject", "arg": null, "template_id": "reject:4"}
+{"text": "帮我讲个笑话", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "我想讲个笑话，谢谢", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "请讲个笑话，谢谢", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "讲个笑话，谢谢", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "现在讲个笑话吧", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "讲个笑话", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "讲个笑话。", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "帮我讲个笑话。", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "帮我讲个笑话，谢谢", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "现在讲个笑话一下", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "麻烦讲个笑话一下", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "请讲个笑话，谢谢", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "麻烦讲个笑话吧", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "麻烦讲个笑话一下", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "讲个笑话一下", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "讲个笑话", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "现在讲个笑话", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "现在讲个笑话现在", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "我想讲个笑话现在", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "讲个笑话，谢谢", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "现在讲个笑话一下", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "帮我讲个笑话现在", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "麻烦讲个笑话", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "麻烦讲个笑话，谢谢", "intent": "reject", "arg": null, "template_id": "reject:5"}
+{"text": "现在播放音乐一下", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "帮我播放音乐。", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "播放音乐，谢谢", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "我想播放音乐一下", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "现在播放音乐现在", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "麻烦播放音乐，谢谢", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "现在播放音乐现在", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "请播放音乐。", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "我想播放音乐一下", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "请播放音乐一下", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "播放音乐吧", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "麻烦播放音乐。", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "帮我播放音乐一下", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "现在播放音乐", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "请播放音乐吧", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "麻烦播放音乐现在", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "我想播放音乐一下", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "帮我播放音乐。", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "我想播放音乐现在", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "播放音乐吧", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "请播放音乐", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "帮我播放音乐现在", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "麻烦播放音乐一下", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "帮我播放音乐现在", "intent": "reject", "arg": null, "template_id": "reject:6"}
+{"text": "帮我打开浏览器一下", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "现在打开浏览器，谢谢", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "现在打开浏览器", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "打开浏览器。", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "请打开浏览器现在", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "帮我打开浏览器。", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "我想打开浏览器现在", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "请打开浏览器一下", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "请打开浏览器现在", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "现在打开浏览器现在", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "麻烦打开浏览器，谢谢", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "麻烦打开浏览器。", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "我想打开浏览器。", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "麻烦打开浏览器吧", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "现在打开浏览器。", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "打开浏览器。", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "麻烦打开浏览器现在", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "麻烦打开浏览器现在", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "我想打开浏览器吧", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "帮我打开浏览器一下", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "现在打开浏览器。", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "我想打开浏览器。", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "请打开浏览器，谢谢", "intent": "reject", "arg": null, "template_id": "reject:7"}
+{"text": "请打开浏览器。", "intent": "reject", "arg": null, "template_id": "reject:7"}

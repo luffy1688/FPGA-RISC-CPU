@@ -1,0 +1,46 @@
+{
+  "scope": "Actual previous accepted protocol5 integrated executable on same1138 fresh,after finalcandidateweights frozen;observational comparison,not reselection",
+  "executable": "context_generalization/integrated",
+  "baseline": {
+    "full": {
+      "n": 1138,
+      "correct": 754,
+      "legal_total": 196,
+      "legal_correct": 35,
+      "false_accept": 223,
+      "false_reject": 161,
+      "wrong_legal_tool": 0
+    },
+    "fast": {
+      "n": 1138,
+      "correct": 756,
+      "legal_total": 196,
+      "legal_correct": 36,
+      "false_accept": 222,
+      "false_reject": 160,
+      "wrong_legal_tool": 0
+    }
+  },
+  "current": {
+    "full": {
+      "correct": 845,
+      "n": 1138,
+      "legal_correct": 42,
+      "legal_total": 196,
+      "false_accept": 139,
+      "false_reject": 154,
+      "wrong_legal_tool": 0,
+      "all_selected_parameter_bounds_valid": true
+    },
+    "fast": {
+      "correct": 845,
+      "n": 1138,
+      "legal_correct": 36,
+      "legal_total": 196,
+      "false_accept": 133,
+      "false_reject": 160,
+      "wrong_legal_tool": 0,
+      "all_selected_parameter_bounds_valid": true
+    }
+  }
+}

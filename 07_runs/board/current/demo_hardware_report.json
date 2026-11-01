@@ -1,0 +1,2480 @@
+{
+  "schema": "needlervx.production_console_demo.v1",
+  "source": "production_JS_state_machine_with_physical_native_UART",
+  "started_at": "2026-11-01T01:14:16.074Z",
+  "finished_at": "2026-11-01T01:14:31.346Z",
+  "passed": true,
+  "error": null,
+  "mock_dom": true,
+  "mock_serial_results": false,
+  "browser_verified": false,
+  "physical_display_verified": false,
+  "port": "COM10",
+  "baud": 921600,
+  "boot_context": "explicit_ready_handoff_with_prior_boot_source",
+  "writes": [
+    ":fast 0\n",
+    ":config 6\n",
+    ":format full\n",
+    "请将PWM占空比设置为20%。\n",
+    ":fast 1\n",
+    ":config 6\n",
+    ":format compact\n",
+    "led 37\n",
+    ":fast 1\n",
+    ":config 6\n",
+    ":format compact\n",
+    "运行CoreMark并显示CRC结果。\n"
+  ],
+  "native_events": [
+    {
+      "event": "opened",
+      "settings": {
+        "baud": 921600,
+        "byte_size": 8,
+        "parity": 0,
+        "stop_bits": 0,
+        "dcb_flags": 1,
+        "read_timeouts": [
+          4294967295,
+          4294967295,
+          250
+        ],
+        "dtr": false,
+        "rts": false,
+        "handshake": "none"
+      }
+    },
+    {
+      "event": "tx",
+      "id": 1,
+      "hex": "3a6661737420300a",
+      "t0write_ns": 90561453765000,
+      "twrite_ns": 90561453916400
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561454589800,
+      "hex": "4e"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561454643900,
+      "hex": "525f464153545f4d4f4445207b22656e61626c6564223a307d0a4e525f52454144590a"
+    },
+    {
+      "event": "tx",
+      "id": 2,
+      "hex": "3a636f6e66696720360a",
+      "t0write_ns": 90561457159100,
+      "twrite_ns": 90561457288700
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561458292800,
+      "hex": "4e"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561458336300,
+      "hex": "525f434f4e464947207b22636f6e666967223a362c226d6f6465223a332c226772617068223a312c22646f7434223a317d0a4e525f52454144590a"
+    },
+    {
+      "event": "tx",
+      "id": 3,
+      "hex": "3a666f726d61742066756c6c0a",
+      "t0write_ns": 90561459380000,
+      "twrite_ns": 90561459470700
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561460192400,
+      "hex": "4e"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561460260900,
+      "hex": "525f464f524d4154207b22636f6d70616374223a307d0a4e525f52454144590a"
+    },
+    {
+      "event": "tx",
+      "id": 4,
+      "hex": "e8afb7e5b08650574de58da0e7a9bae6af94e8aebee7bdaee4b8ba323025e380820a",
+      "t0write_ns": 90561461395800,
+      "twrite_ns": 90561461590100
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561545899200,
+      "hex": "4e"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561546053200,
+      "hex": "525f524553554c54207b2263617365223a3130332c22636f6e666967223a362c226772617068223a312c22646f7434223a312c226d6f6465223a332c226d6f64656c5f75736564223a312c22656e636f6465725f75736564223a312c22636f6e746578745f75736564223a312c22636f6e746578745f786e645f75736564223a312c22636f6e746578745f68617264776172655f6d616373223a33393432342c22636f6e746578745f6861726477617265223a7b226c6f616473223a302c226a6f6273223a312c22646d615f726561645f6279746573223a302c22646d615f77726974655f6279746573223a302c22656e67696e655f6379636c6573223a353334342c226661696c75726573223a307d2c22636f6e746578745f64656e79223a302c22636f6e746578745f6379636c6573223a33333930332c22656e636f6465725f6379636c6573223a323938363035382c22636f6e746578745f6c6f67697473223a5b3231322c2d3230385d2c22636f6e746578745f6d617267696e223a2d3432302c22636f6e746578745f7468726573686f6c64223a3131362c22636f6e746578745f63617465676f7279223a302c22636f6e746578745f6275636b6574223a312c22636f6e746578745f6275636b65745f736f75726365223a302c22636f6e746578745f63617465676f72795f6c6f67697473223a5b3334322c312c"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561551128700,
+      "hex": "2d"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561551300800,
+      "hex": "35382c2d35362c2d32342c2d33302c2d38372c2d3131372c33335d2c22696e74656e745f7265706169725f75736564223a302c22696e74656e745f64656c7461223a5b302c302c302c302c305d2c22636f6e746578745f746f6f6c5f6c6f67697473223a5b2d3232312c3136352c2d3138362c2d3233382c2d3133365d2c22696e74656e745f636173636164655f75736564223a302c22696e74656e745f636173636164655f64656c7461223a5b302c302c302c302c305d2c22667573696f6e5f75736564223a312c22667573696f6e5f676174655f6d617267696e223a3131372c22667573696f6e5f64656c7461223a5b382c2d372c382c2d34332c33385d2c22636f6e746578745f6665617475726573223a38372c22636f6e746578745f7363616c61725f6d616373223a302c22656e636f6465725f6c6f67697473223a5b2d3232312c3334392c2d3335342c2d3133342c2d3133312c3233325d2c226465636973696f6e5f6379636c6573223a333132363131372c22746f6f6c223a312c2273656c65637465645f746f6f6c223a312c226d617267696e223a3131302c22636f6e666964656e63655f7468726573686f6c64223a31362c226465636f6465223a302c22617267756d656e74223a32302c226f7065726174696f6e223a302c2273656c656374696f6e5f736f75726365223a302c226379636c6573223a"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561556891600,
+      "hex": "33"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561556974300,
+      "hex": "3031393936312c226c6f616473223a3236362c226a6f6273223a3339392c22726575736573223a3133332c2261637469766174696f6e5f6279746573223a32313234382c227765696768745f6279746573223a313038353633322c22626961735f6279746573223a3131383738342c22726573696475616c5f6279746573223a33333739322c226f75747075745f6279746573223a32393732302c22656e67696e655f6379636c6573223a3837323633322c226661696c75726573223a302c2265786563757465223a302c2276616c7565223a32302c226c6f67697473223a5b2d3231332c3334322c2d3334362c2d3137372c2d39332c3233325d2c22746f6f6c5f6379636c6573223a3336302c22726571756573745f6379636c6573223a333132363533312c22706d75223a7b226379636c6573223a323938363131362c22696e7374726574223a313639393637382c226272616e63686573223a3334323134382c2272656469726563745f6d6973736573223a31383639302c226d656d5f6c6f61645f7374616c6c5f6379636c6573223a3831393032342c2269635f6d6973736573223a313831372c2264635f6d6973736573223a333237327d2c2272656365697074223a7b226b696e64223a322c22726571756573746564223a32302c22726561646261636b223a32302c226d61746368223a312c22706572696f64"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561557021600,
+      "hex": "22"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561557037000,
+      "hex": "3a34303530302c2268696768223a383130302c22656e61626c6564223a312c226164635f737461747573223a302c226164635f726177223a307d7d0a4e525f52454144590a"
+    },
+    {
+      "event": "tx",
+      "id": 5,
+      "hex": "3a6661737420310a",
+      "t0write_ns": 90561564516900,
+      "twrite_ns": 90561564752100
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561565311400,
+      "hex": "4e"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561565413400,
+      "hex": "525f464153545f4d4f4445207b22656e61626c6564223a317d0a4e525f52454144590a"
+    },
+    {
+      "event": "tx",
+      "id": 6,
+      "hex": "3a636f6e66696720360a",
+      "t0write_ns": 90561566578500,
+      "twrite_ns": 90561567198600
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561567691700,
+      "hex": "4e"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561567757800,
+      "hex": "525f434f4e464947207b22636f6e666967223a362c226d6f6465223a332c226772617068223a312c22646f7434223a317d0a4e525f52454144590a"
+    },
+    {
+      "event": "tx",
+      "id": 7,
+      "hex": "3a666f726d617420636f6d706163740a",
+      "t0write_ns": 90561568618900,
+      "twrite_ns": 90561568729800
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561569497000,
+      "hex": "4e"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561569546500,
+      "hex": "525f464f524d4154207b22636f6d70616374223a317d0a4e525f52454144590a"
+    },
+    {
+      "event": "tx",
+      "id": 8,
+      "hex": "6c65642033370a",
+      "t0write_ns": 90561571349500,
+      "twrite_ns": 90561571454300
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561572725800,
+      "hex": "4e"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561572775400,
+      "hex": "525f46415354205b312c3130342c362c342c302c33372c302c322c302c33372c353337302c3234322c353636362c312c33372c33372c312c302c302c305d0a4e525f52454144590a"
+    },
+    {
+      "event": "tx",
+      "id": 9,
+      "hex": "3a6661737420310a",
+      "t0write_ns": 90561587727900,
+      "twrite_ns": 90561587895500
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561588603800,
+      "hex": "4e"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561588688600,
+      "hex": "525f464153545f4d4f4445207b22656e61626c6564223a317d0a4e525f52454144590a"
+    },
+    {
+      "event": "tx",
+      "id": 10,
+      "hex": "3a636f6e66696720360a",
+      "t0write_ns": 90561589805700,
+      "twrite_ns": 90561589912100
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561590922200,
+      "hex": "4e"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561590988800,
+      "hex": "525f434f4e464947207b22636f6e666967223a362c226d6f6465223a332c226772617068223a312c22646f7434223a317d0a4e525f52454144590a"
+    },
+    {
+      "event": "tx",
+      "id": 11,
+      "hex": "3a666f726d617420636f6d706163740a",
+      "t0write_ns": 90561591751100,
+      "twrite_ns": 90561591835900
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561592593600,
+      "hex": "4e"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561592624600,
+      "hex": "525f464f524d4154207b22636f6d70616374223a317d0a4e525f52454144590a"
+    },
+    {
+      "event": "tx",
+      "id": 12,
+      "hex": "e8bf90e8a18c436f72654d61726be5b9b6e698bee7a4ba435243e7bb93e69e9ce380820a",
+      "t0write_ns": 90561593440800,
+      "twrite_ns": 90561593562200
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561602789300,
+      "hex": "4e"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90561602944800,
+      "hex": "525f414354494f4e207b227068617365223a22746f6f6c5f7374617274222c2263617365223a3130352c22636f6e666967223a362c226d6f64656c5f75736564223a332c22656e636f6465725f75736564223a302c22636f6e746578745f75736564223a312c22636f6e746578745f786e645f75736564223a312c22636f6e746578745f64656e79223a302c22636f6e746578745f6379636c6573223a34303437372c22656e636f6465725f6379636c6573223a302c22636f6e746578745f6c6f67697473223a5b3233332c2d3233345d2c22636f6e746578745f7468726573686f6c64223a35352c22746f6f6c223a6e756c6c2c2273656c65637465645f746f6f6c223a322c226379636c6573223a34303437372c226465636973696f6e5f6379636c6573223a3138353930362c226465636f6465223a302c2273656c656374696f6e5f736f75726365223a317d0a"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90576194335200,
+      "hex": "32"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90576194487400,
+      "hex": "4b20706572666f726d616e63652072756e20706172616d657465727320666f7220636f72656d61726b2e0a436f72654d61726b2053697a65202020203a203636360a546f74616c207469636b732020202020203a203539303639393530330a546f74616c2074696d65202873656373293a2031340a497465726174696f6e732f5365632020203a2038350a497465726174696f6e73202020202020203a20313230300a436f6d70696c65722076657273696f6e203a2047434331342e322e300a436f6d70696c657220666c6167732020203a2052563332494d204f32206c696272617279203132303020697465726174696f6e730a4d656d6f7279206c6f636174696f6e20203a204f6e2d636869702052414d3b204350553a52414d3a436163686520636c6f636b20726174696f20313a313a310a73656564637263202020202020202020203a203078653966350a5b305d6372636c697374202020202020203a203078653731340a5b305d6372636d617472697820202020203a203078316664370a5b305d63726373746174652020202020203a203078386533610a5b305d63726366696e616c2020202020203a203078393838630a436f7272656374206f7065726174696f6e2076616c6964617465642e2053656520524541444d452e6d6420666f722072756e20616e64207265706f7274696e672072756c65732e0a4e525f4359434c45533d353930363939353033204e525f485a3d3430353030303030204e525f495445524154494f4e533d313230300a"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90576200563300,
+      "hex": "4e"
+    },
+    {
+      "event": "rx",
+      "received_ns": 90576200719800,
+      "hex": "525f434f52454d41524b5f50524543495345207365636f6e64733d31342e35383531373220636f72656d61726b5f7065725f6d687a3d322e303331343839206c65676163795f7365636f6e64735f7472756e63617465643d310a424f4f545f494e53545245543d34323637333235303433204252414e434845533d33353432373638373632204d495350524544494354533d313737363036333131205354414c4c533d3934353538393330302049435f4d49535345533d323536323032342044435f4d49535345533d3131383130380a4e525f504d55207b2273636f7065223a22636f72656d61726b5f627261636b6574222c226379636c6573223a3539303639393538302c22696e7374726574223a3336343439333031302c226272616e63686573223a37353235363239312c2272656469726563745f6d6973736573223a31313036383836362c226d656d5f6c6f61645f7374616c6c5f6379636c6573223a3135323834373134392c2269635f6d6973736573223a3135363036362c2264635f6d6973736573223a3135377d0a4e525f434f52454d41524b5f52455455524e0a4e525f46415354205b332c3130352c362c322c302c302c302c312c302c3539303639393530332c3138353930362c3539313136383430342c3539313335343430362c302c302c302c302c302c302c302c312c302c3233332c2d3233342c35352c312c302c312c302c302c363638385d0a4e525f52454144590a"
+    },
+    {
+      "event": "driver_status",
+      "data": {
+        "error_flags": 0,
+        "input_queue": 0,
+        "output_queue": 0
+      }
+    },
+    {
+      "event": "closed"
+    }
+  ],
+  "page_evidence": {
+    "schema": "needlervx.uart.evidence.v1",
+    "source": "production_JS_VM_with_native_UART",
+    "started_at": "2026-11-01T01:14:16.290Z",
+    "closed_at": "2026-11-01T01:14:31.345Z",
+    "serial": {
+      "baud_rate": 921600,
+      "data_bits": 8,
+      "stop_bits": 1,
+      "parity": "none",
+      "flow_control": "none"
+    },
+    "usb": {
+      "usbVendorId": 4292,
+      "usbProductId": 60000
+    },
+    "reported_clock_hz": 40500000,
+    "received_lines": 45,
+    "truncated": false,
+    "entries": [
+      {
+        "time": "2026-11-01T01:14:16.294Z",
+        "direction": "TX",
+        "request": 1,
+        "boot_epoch": 0,
+        "line": ":fast 0",
+        "utf8_line_bytes": 7,
+        "wire_bytes": 8
+      },
+      {
+        "time": "2026-11-01T01:14:16.295Z",
+        "direction": "RX",
+        "request": 1,
+        "boot_epoch": 0,
+        "line": "NR_FAST_MODE {\"enabled\":0}",
+        "utf8_line_bytes": 26,
+        "wire_bytes": 27,
+        "parsed": {
+          "kind": "NR_FAST_MODE",
+          "data": {
+            "enabled": 0
+          }
+        }
+      },
+      {
+        "time": "2026-11-01T01:14:16.295Z",
+        "direction": "RX",
+        "request": 1,
+        "boot_epoch": 0,
+        "line": "NR_READY",
+        "utf8_line_bytes": 8,
+        "wire_bytes": 9
+      },
+      {
+        "time": "2026-11-01T01:14:16.296Z",
+        "direction": "TX",
+        "request": 2,
+        "boot_epoch": 0,
+        "line": ":config 6",
+        "utf8_line_bytes": 9,
+        "wire_bytes": 10
+      },
+      {
+        "time": "2026-11-01T01:14:16.298Z",
+        "direction": "RX",
+        "request": 2,
+        "boot_epoch": 0,
+        "line": "NR_CONFIG {\"config\":6,\"mode\":3,\"graph\":1,\"dot4\":1}",
+        "utf8_line_bytes": 50,
+        "wire_bytes": 51,
+        "parsed": {
+          "kind": "NR_CONFIG",
+          "data": {
+            "config": 6,
+            "mode": 3,
+            "graph": 1,
+            "dot4": 1
+          }
+        }
+      },
+      {
+        "time": "2026-11-01T01:14:16.298Z",
+        "direction": "RX",
+        "request": 2,
+        "boot_epoch": 0,
+        "line": "NR_READY",
+        "utf8_line_bytes": 8,
+        "wire_bytes": 9
+      },
+      {
+        "time": "2026-11-01T01:14:16.298Z",
+        "direction": "TX",
+        "request": 3,
+        "boot_epoch": 0,
+        "line": ":format full",
+        "utf8_line_bytes": 12,
+        "wire_bytes": 13
+      },
+      {
+        "time": "2026-11-01T01:14:16.299Z",
+        "direction": "RX",
+        "request": 3,
+        "boot_epoch": 0,
+        "line": "NR_FORMAT {\"compact\":0}",
+        "utf8_line_bytes": 23,
+        "wire_bytes": 24,
+        "parsed": {
+          "kind": "NR_FORMAT",
+          "data": {
+            "compact": 0
+          }
+        }
+      },
+      {
+        "time": "2026-11-01T01:14:16.300Z",
+        "direction": "RX",
+        "request": 3,
+        "boot_epoch": 0,
+        "line": "NR_READY",
+        "utf8_line_bytes": 8,
+        "wire_bytes": 9
+      },
+      {
+        "time": "2026-11-01T01:14:16.300Z",
+        "direction": "TX",
+        "request": 4,
+        "boot_epoch": 0,
+        "line": "请将PWM占空比设置为20%。",
+        "utf8_line_bytes": 33,
+        "wire_bytes": 34
+      },
+      {
+        "time": "2026-11-01T01:14:16.396Z",
+        "direction": "RX",
+        "request": 4,
+        "boot_epoch": 0,
+        "line": "NR_RESULT {\"case\":103,\"config\":6,\"graph\":1,\"dot4\":1,\"mode\":3,\"model_used\":1,\"encoder_used\":1,\"context_used\":1,\"context_xnd_used\":1,\"context_hardware_macs\":39424,\"context_hardware\":{\"loads\":0,\"jobs\":1,\"dma_read_bytes\":0,\"dma_write_bytes\":0,\"engine_cycles\":5344,\"failures\":0},\"context_deny\":0,\"context_cycles\":33903,\"encoder_cycles\":2986058,\"context_logits\":[212,-208],\"context_margin\":-420,\"context_threshold\":116,\"context_category\":0,\"context_bucket\":1,\"context_bucket_source\":0,\"context_category_logits\":[342,1,-58,-56,-24,-30,-87,-117,33],\"intent_repair_used\":0,\"intent_delta\":[0,0,0,0,0],\"context_tool_logits\":[-221,165,-186,-238,-136],\"intent_cascade_used\":0,\"intent_cascade_delta\":[0,0,0,0,0],\"fusion_used\":1,\"fusion_gate_margin\":117,\"fusion_delta\":[8,-7,8,-43,38],\"context_features\":87,\"context_scalar_macs\":0,\"encoder_logits\":[-221,349,-354,-134,-131,232],\"decision_cycles\":3126117,\"tool\":1,\"selected_tool\":1,\"margin\":110,\"confidence_threshold\":16,\"decode\":0,\"argument\":20,\"operation\":0,\"selection_source\":0,\"cycles\":3019961,\"loads\":266,\"jobs\":399,\"reuses\":133,\"activation_bytes\":21248,\"weight_bytes\":1085632,\"bias_bytes\":118784,\"residual_bytes\":33792,\"output_bytes\":29720,\"engine_cycles\":872632,\"failures\":0,\"execute\":0,\"value\":20,\"logits\":[-213,342,-346,-177,-93,232],\"tool_cycles\":360,\"request_cycles\":3126531,\"pmu\":{\"cycles\":2986116,\"instret\":1699678,\"branches\":342148,\"redirect_misses\":18690,\"mem_load_stall_cycles\":819024,\"ic_misses\":1817,\"dc_misses\":3272},\"receipt\":{\"kind\":2,\"requested\":20,\"readback\":20,\"match\":1,\"period\":40500,\"high\":8100,\"enabled\":1,\"adc_status\":0,\"adc_raw\":0}}",
+        "utf8_line_bytes": 1596,
+        "wire_bytes": 1597,
+        "parsed": {
+          "kind": "NR_RESULT",
+          "data": {
+            "case": 103,
+            "config": 6,
+            "graph": 1,
+            "dot4": 1,
+            "mode": 3,
+            "model_used": 1,
+            "encoder_used": 1,
+            "context_used": 1,
+            "context_xnd_used": 1,
+            "context_hardware_macs": 39424,
+            "context_hardware": {
+              "loads": 0,
+              "jobs": 1,
+              "dma_read_bytes": 0,
+              "dma_write_bytes": 0,
+              "engine_cycles": 5344,
+              "failures": 0
+            },
+            "context_deny": 0,
+            "context_cycles": 33903,
+            "encoder_cycles": 2986058,
+            "context_logits": [
+              212,
+              -208
+            ],
+            "context_margin": -420,
+            "context_threshold": 116,
+            "context_category": 0,
+            "context_bucket": 1,
+            "context_bucket_source": 0,
+            "context_category_logits": [
+              342,
+              1,
+              -58,
+              -56,
+              -24,
+              -30,
+              -87,
+              -117,
+              33
+            ],
+            "intent_repair_used": 0,
+            "intent_delta": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "context_tool_logits": [
+              -221,
+              165,
+              -186,
+              -238,
+              -136
+            ],
+            "intent_cascade_used": 0,
+            "intent_cascade_delta": [
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "fusion_used": 1,
+            "fusion_gate_margin": 117,
+            "fusion_delta": [
+              8,
+              -7,
+              8,
+              -43,
+              38
+            ],
+            "context_features": 87,
+            "context_scalar_macs": 0,
+            "encoder_logits": [
+              -221,
+              349,
+              -354,
+              -134,
+              -131,
+              232
+            ],
+            "decision_cycles": 3126117,
+            "tool": 1,
+            "selected_tool": 1,
+            "margin": 110,
+            "confidence_threshold": 16,
+            "decode": 0,
+            "argument": 20,
+            "operation": 0,
+            "selection_source": 0,
+            "cycles": 3019961,
+            "loads": 266,
+            "jobs": 399,
+            "reuses": 133,
+            "activation_bytes": 21248,
+            "weight_bytes": 1085632,
+            "bias_bytes": 118784,
+            "residual_bytes": 33792,
+            "output_bytes": 29720,
+            "engine_cycles": 872632,
+            "failures": 0,
+            "execute": 0,
+            "value": 20,
+            "logits": [
+              -213,
+              342,
+              -346,
+              -177,
+              -93,
+              232
+            ],
+            "tool_cycles": 360,
+            "request_cycles": 3126531,
+            "pmu": {
+              "cycles": 2986116,
+              "instret": 1699678,
+              "branches": 342148,
+              "redirect_misses": 18690,
+              "mem_load_stall_cycles": 819024,
+              "ic_misses": 1817,
+              "dc_misses": 3272
+            },
+            "receipt": {
+              "kind": 2,
+              "requested": 20,
+              "readback": 20,
+              "match": 1,
+              "period": 40500,
+              "high": 8100,
+              "enabled": 1,
+              "adc_status": 0,
+              "adc_raw": 0
+            }
+          }
+        }
+      },
+      {
+        "time": "2026-11-01T01:14:16.402Z",
+        "direction": "RX",
+        "request": 4,
+        "boot_epoch": 0,
+        "line": "NR_READY",
+        "utf8_line_bytes": 8,
+        "wire_bytes": 9
+      },
+      {
+        "time": "2026-11-01T01:14:16.404Z",
+        "direction": "TX",
+        "request": 5,
+        "boot_epoch": 0,
+        "line": ":fast 1",
+        "utf8_line_bytes": 7,
+        "wire_bytes": 8
+      },
+      {
+        "time": "2026-11-01T01:14:16.404Z",
+        "direction": "RX",
+        "request": 5,
+        "boot_epoch": 0,
+        "line": "NR_FAST_MODE {\"enabled\":1}",
+        "utf8_line_bytes": 26,
+        "wire_bytes": 27,
+        "parsed": {
+          "kind": "NR_FAST_MODE",
+          "data": {
+            "enabled": 1
+          }
+        }
+      },
+      {
+        "time": "2026-11-01T01:14:16.405Z",
+        "direction": "RX",
+        "request": 5,
+        "boot_epoch": 0,
+        "line": "NR_READY",
+        "utf8_line_bytes": 8,
+        "wire_bytes": 9
+      },
+      {
+        "time": "2026-11-01T01:14:16.406Z",
+        "direction": "TX",
+        "request": 6,
+        "boot_epoch": 0,
+        "line": ":config 6",
+        "utf8_line_bytes": 9,
+        "wire_bytes": 10
+      },
+      {
+        "time": "2026-11-01T01:14:16.407Z",
+        "direction": "RX",
+        "request": 6,
+        "boot_epoch": 0,
+        "line": "NR_CONFIG {\"config\":6,\"mode\":3,\"graph\":1,\"dot4\":1}",
+        "utf8_line_bytes": 50,
+        "wire_bytes": 51,
+        "parsed": {
+          "kind": "NR_CONFIG",
+          "data": {
+            "config": 6,
+            "mode": 3,
+            "graph": 1,
+            "dot4": 1
+          }
+        }
+      },
+      {
+        "time": "2026-11-01T01:14:16.407Z",
+        "direction": "RX",
+        "request": 6,
+        "boot_epoch": 0,
+        "line": "NR_READY",
+        "utf8_line_bytes": 8,
+        "wire_bytes": 9
+      },
+      {
+        "time": "2026-11-01T01:14:16.408Z",
+        "direction": "TX",
+        "request": 7,
+        "boot_epoch": 0,
+        "line": ":format compact",
+        "utf8_line_bytes": 15,
+        "wire_bytes": 16
+      },
+      {
+        "time": "2026-11-01T01:14:16.409Z",
+        "direction": "RX",
+        "request": 7,
+        "boot_epoch": 0,
+        "line": "NR_FORMAT {\"compact\":1}",
+        "utf8_line_bytes": 23,
+        "wire_bytes": 24,
+        "parsed": {
+          "kind": "NR_FORMAT",
+          "data": {
+            "compact": 1
+          }
+        }
+      },
+      {
+        "time": "2026-11-01T01:14:16.409Z",
+        "direction": "RX",
+        "request": 7,
+        "boot_epoch": 0,
+        "line": "NR_READY",
+        "utf8_line_bytes": 8,
+        "wire_bytes": 9
+      },
+      {
+        "time": "2026-11-01T01:14:16.410Z",
+        "direction": "TX",
+        "request": 8,
+        "boot_epoch": 0,
+        "line": "led 37",
+        "utf8_line_bytes": 6,
+        "wire_bytes": 7
+      },
+      {
+        "time": "2026-11-01T01:14:16.412Z",
+        "direction": "RX",
+        "request": 8,
+        "boot_epoch": 0,
+        "line": "NR_FAST [1,104,6,4,0,37,0,2,0,37,5370,242,5666,1,37,37,1,0,0,0]",
+        "utf8_line_bytes": 63,
+        "wire_bytes": 64,
+        "parsed": {
+          "kind": "NR_FAST",
+          "data": [
+            1,
+            104,
+            6,
+            4,
+            0,
+            37,
+            0,
+            2,
+            0,
+            37,
+            5370,
+            242,
+            5666,
+            1,
+            37,
+            37,
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      {
+        "time": "2026-11-01T01:14:16.412Z",
+        "direction": "RX",
+        "request": 8,
+        "boot_epoch": 0,
+        "line": "NR_READY",
+        "utf8_line_bytes": 8,
+        "wire_bytes": 9
+      },
+      {
+        "time": "2026-11-01T01:14:16.427Z",
+        "direction": "TX",
+        "request": 9,
+        "boot_epoch": 0,
+        "line": ":fast 1",
+        "utf8_line_bytes": 7,
+        "wire_bytes": 8
+      },
+      {
+        "time": "2026-11-01T01:14:16.428Z",
+        "direction": "RX",
+        "request": 9,
+        "boot_epoch": 0,
+        "line": "NR_FAST_MODE {\"enabled\":1}",
+        "utf8_line_bytes": 26,
+        "wire_bytes": 27,
+        "parsed": {
+          "kind": "NR_FAST_MODE",
+          "data": {
+            "enabled": 1
+          }
+        }
+      },
+      {
+        "time": "2026-11-01T01:14:16.428Z",
+        "direction": "RX",
+        "request": 9,
+        "boot_epoch": 0,
+        "line": "NR_READY",
+        "utf8_line_bytes": 8,
+        "wire_bytes": 9
+      },
+      {
+        "time": "2026-11-01T01:14:16.429Z",
+        "direction": "TX",
+        "request": 10,
+        "boot_epoch": 0,
+        "line": ":config 6",
+        "utf8_line_bytes": 9,
+        "wire_bytes": 10
+      },
+      {
+        "time": "2026-11-01T01:14:16.430Z",
+        "direction": "RX",
+        "request": 10,
+        "boot_epoch": 0,
+        "line": "NR_CONFIG {\"config\":6,\"mode\":3,\"graph\":1,\"dot4\":1}",
+        "utf8_line_bytes": 50,
+        "wire_bytes": 51,
+        "parsed": {
+          "kind": "NR_CONFIG",
+          "data": {
+            "config": 6,
+            "mode": 3,
+            "graph": 1,
+            "dot4": 1
+          }
+        }
+      },
+      {
+        "time": "2026-11-01T01:14:16.430Z",
+        "direction": "RX",
+        "request": 10,
+        "boot_epoch": 0,
+        "line": "NR_READY",
+        "utf8_line_bytes": 8,
+        "wire_bytes": 9
+      },
+      {
+        "time": "2026-11-01T01:14:16.431Z",
+        "direction": "TX",
+        "request": 11,
+        "boot_epoch": 0,
+        "line": ":format compact",
+        "utf8_line_bytes": 15,
+        "wire_bytes": 16
+      },
+      {
+        "time": "2026-11-01T01:14:16.432Z",
+        "direction": "RX",
+        "request": 11,
+        "boot_epoch": 0,
+        "line": "NR_FORMAT {\"compact\":1}",
+        "utf8_line_bytes": 23,
+        "wire_bytes": 24,
+        "parsed": {
+          "kind": "NR_FORMAT",
+          "data": {
+            "compact": 1
+          }
+        }
+      },
+      {
+        "time": "2026-11-01T01:14:16.432Z",
+        "direction": "RX",
+        "request": 11,
+        "boot_epoch": 0,
+        "line": "NR_READY",
+        "utf8_line_bytes": 8,
+        "wire_bytes": 9
+      },
+      {
+        "time": "2026-11-01T01:14:16.432Z",
+        "direction": "TX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "运行CoreMark并显示CRC结果。",
+        "utf8_line_bytes": 35,
+        "wire_bytes": 36
+      },
+      {
+        "time": "2026-11-01T01:14:16.442Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "NR_ACTION {\"phase\":\"tool_start\",\"case\":105,\"config\":6,\"model_used\":3,\"encoder_used\":0,\"context_used\":1,\"context_xnd_used\":1,\"context_deny\":0,\"context_cycles\":40477,\"encoder_cycles\":0,\"context_logits\":[233,-234],\"context_threshold\":55,\"tool\":null,\"selected_tool\":2,\"cycles\":40477,\"decision_cycles\":185906,\"decode\":0,\"selection_source\":1}",
+        "utf8_line_bytes": 336,
+        "wire_bytes": 337,
+        "parsed": {
+          "kind": "NR_ACTION",
+          "data": {
+            "phase": "tool_start",
+            "case": 105,
+            "config": 6,
+            "model_used": 3,
+            "encoder_used": 0,
+            "context_used": 1,
+            "context_xnd_used": 1,
+            "context_deny": 0,
+            "context_cycles": 40477,
+            "encoder_cycles": 0,
+            "context_logits": [
+              233,
+              -234
+            ],
+            "context_threshold": 55,
+            "tool": null,
+            "selected_tool": 2,
+            "cycles": 40477,
+            "decision_cycles": 185906,
+            "decode": 0,
+            "selection_source": 1
+          }
+        }
+      },
+      {
+        "time": "2026-11-01T01:14:31.034Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "2K performance run parameters for coremark.",
+        "utf8_line_bytes": 43,
+        "wire_bytes": 44
+      },
+      {
+        "time": "2026-11-01T01:14:31.034Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "CoreMark Size    : 666",
+        "utf8_line_bytes": 22,
+        "wire_bytes": 23
+      },
+      {
+        "time": "2026-11-01T01:14:31.035Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "Total ticks      : 590699503",
+        "utf8_line_bytes": 28,
+        "wire_bytes": 29
+      },
+      {
+        "time": "2026-11-01T01:14:31.035Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "Total time (secs): 14",
+        "utf8_line_bytes": 21,
+        "wire_bytes": 22
+      },
+      {
+        "time": "2026-11-01T01:14:31.035Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "Iterations/Sec   : 85",
+        "utf8_line_bytes": 21,
+        "wire_bytes": 22
+      },
+      {
+        "time": "2026-11-01T01:14:31.035Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "Iterations       : 1200",
+        "utf8_line_bytes": 23,
+        "wire_bytes": 24
+      },
+      {
+        "time": "2026-11-01T01:14:31.035Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "Compiler version : GCC14.2.0",
+        "utf8_line_bytes": 28,
+        "wire_bytes": 29
+      },
+      {
+        "time": "2026-11-01T01:14:31.035Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "Compiler flags   : RV32IM O2 library 1200 iterations",
+        "utf8_line_bytes": 52,
+        "wire_bytes": 53
+      },
+      {
+        "time": "2026-11-01T01:14:31.035Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "Memory location  : On-chip RAM; CPU:RAM:Cache clock ratio 1:1:1",
+        "utf8_line_bytes": 63,
+        "wire_bytes": 64
+      },
+      {
+        "time": "2026-11-01T01:14:31.035Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "seedcrc          : 0xe9f5",
+        "utf8_line_bytes": 25,
+        "wire_bytes": 26
+      },
+      {
+        "time": "2026-11-01T01:14:31.035Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "[0]crclist       : 0xe714",
+        "utf8_line_bytes": 25,
+        "wire_bytes": 26
+      },
+      {
+        "time": "2026-11-01T01:14:31.035Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "[0]crcmatrix     : 0x1fd7",
+        "utf8_line_bytes": 25,
+        "wire_bytes": 26
+      },
+      {
+        "time": "2026-11-01T01:14:31.036Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "[0]crcstate      : 0x8e3a",
+        "utf8_line_bytes": 25,
+        "wire_bytes": 26
+      },
+      {
+        "time": "2026-11-01T01:14:31.036Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "[0]crcfinal      : 0x988c",
+        "utf8_line_bytes": 25,
+        "wire_bytes": 26
+      },
+      {
+        "time": "2026-11-01T01:14:31.036Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "Correct operation validated. See README.md for run and reporting rules.",
+        "utf8_line_bytes": 71,
+        "wire_bytes": 72
+      },
+      {
+        "time": "2026-11-01T01:14:31.036Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "NR_CYCLES=590699503 NR_HZ=40500000 NR_ITERATIONS=1200",
+        "utf8_line_bytes": 53,
+        "wire_bytes": 54
+      },
+      {
+        "time": "2026-11-01T01:14:31.040Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "NR_COREMARK_PRECISE seconds=14.585172 coremark_per_mhz=2.031489 legacy_seconds_truncated=1",
+        "utf8_line_bytes": 90,
+        "wire_bytes": 91
+      },
+      {
+        "time": "2026-11-01T01:14:31.040Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "BOOT_INSTRET=4267325043 BRANCHES=3542768762 MISPREDICTS=177606311 STALLS=945589300 IC_MISSES=2562024 DC_MISSES=118108",
+        "utf8_line_bytes": 117,
+        "wire_bytes": 118
+      },
+      {
+        "time": "2026-11-01T01:14:31.040Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "NR_PMU {\"scope\":\"coremark_bracket\",\"cycles\":590699580,\"instret\":364493010,\"branches\":75256291,\"redirect_misses\":11068866,\"mem_load_stall_cycles\":152847149,\"ic_misses\":156066,\"dc_misses\":157}",
+        "utf8_line_bytes": 190,
+        "wire_bytes": 191,
+        "parsed": {
+          "kind": "NR_PMU",
+          "data": {
+            "scope": "coremark_bracket",
+            "cycles": 590699580,
+            "instret": 364493010,
+            "branches": 75256291,
+            "redirect_misses": 11068866,
+            "mem_load_stall_cycles": 152847149,
+            "ic_misses": 156066,
+            "dc_misses": 157
+          }
+        }
+      },
+      {
+        "time": "2026-11-01T01:14:31.040Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "NR_COREMARK_RETURN",
+        "utf8_line_bytes": 18,
+        "wire_bytes": 19
+      },
+      {
+        "time": "2026-11-01T01:14:31.040Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "NR_FAST [3,105,6,2,0,0,0,1,0,590699503,185906,591168404,591354406,0,0,0,0,0,0,0,1,0,233,-234,55,1,0,1,0,0,6688]",
+        "utf8_line_bytes": 111,
+        "wire_bytes": 112,
+        "parsed": {
+          "kind": "NR_FAST",
+          "data": [
+            3,
+            105,
+            6,
+            2,
+            0,
+            0,
+            0,
+            1,
+            0,
+            590699503,
+            185906,
+            591168404,
+            591354406,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            233,
+            -234,
+            55,
+            1,
+            0,
+            1,
+            0,
+            0,
+            6688
+          ]
+        }
+      },
+      {
+        "time": "2026-11-01T01:14:31.041Z",
+        "direction": "RX",
+        "request": 12,
+        "boot_epoch": 0,
+        "line": "NR_READY",
+        "utf8_line_bytes": 8,
+        "wire_bytes": 9
+      }
+    ],
+    "comparisons": [],
+    "firmware_build": {
+      "protocol": 6,
+      "firmware": "experimental_position_fusion_oct30",
+      "model_stage": "unicode_ngram_memory_oct29",
+      "kernel_stage": "xnd_post_fetch_oct29",
+      "formal_fast": 1,
+      "neural_timing": "context_plus_encoder",
+      "context_head": 1,
+      "context_weights_bytes": 137580,
+      "context_hidden": 64,
+      "context_outputs": 16,
+      "intent_cascade": 1,
+      "semantic_calibration_revision": 3,
+      "position_features": 2048,
+      "semantic_weight_cache": 1,
+      "sram_bytes": 524288,
+      "fusion_weights_bytes": 370,
+      "context_classes": 9,
+      "intent_repair": 1,
+      "context_xnd": 1,
+      "context_xnd_min_features": 24,
+      "semantic_memory": 1,
+      "model_weights_bytes": 197816,
+      "memory_weights_bytes": 12800,
+      "clock_hz": 40500000,
+      "uart_baud": 921600,
+      "coremark_iterations": 1200,
+      "max_utf8_bytes": 64,
+      "confidence_threshold": 16,
+      "tool_schema": 2,
+      "q_reuse": 1,
+      "av4": 1,
+      "post_fuse": 1,
+      "xnd_postprocess": 1,
+      "profile": 0,
+      "capabilities": {
+        "fast": 1,
+        "compact": 1,
+        "io_snapshot": 1,
+        "receipt": 1,
+        "framed_rpc": 1,
+        "tool_manifest": 1
+      }
+    },
+    "handoff_context": {
+      "source_file": "D:\\FPGA_PDS\\07_runs\\board\\current\\connection_bootstrap_921600.json",
+      "assume_ready_explicit": true,
+      "not_new_RX": true
+    },
+    "demonstrations": [
+      {
+        "active": false,
+        "state": "completed",
+        "kind": "ai",
+        "index": 4,
+        "steps": [
+          {
+            "command": ":fast 0",
+            "kind": "fast",
+            "request": {
+              "number": 1,
+              "kind": "fast",
+              "command": ":fast 0",
+              "tx_wire_bytes": 8,
+              "rx_line_utf8_bytes": 34,
+              "rx_wire_bytes": 36,
+              "tx_started_at": "2026-11-01T01:14:16.292Z",
+              "tx_started_ms": 1793495656292,
+              "tx_started_monotonic_ms": 350.3747,
+              "boot_epoch": 0,
+              "confirmed_mode": {
+                "fast": null,
+                "config": null,
+                "compact": null
+              },
+              "confirmed_config": null,
+              "audit_state": "控制回执已收到",
+              "tx_completed_at": "2026-11-01T01:14:16.294Z",
+              "result_received_at": "2026-11-01T01:14:16.295Z",
+              "ready_received_at": "2026-11-01T01:14:16.295Z",
+              "result_ms": 3.412499999999966,
+              "ready_ms": 3.779899999999998,
+              "control_confirmation": {
+                "kind": "fast",
+                "requested": "0",
+                "reported": 0,
+                "matched": true
+              },
+              "response_associated": true,
+              "response_kind": "NR_FAST_MODE",
+              "response_wire_bytes": 27
+            },
+            "completed": true
+          },
+          {
+            "command": ":config 6",
+            "kind": "configuration",
+            "request": {
+              "number": 2,
+              "kind": "configuration",
+              "command": ":config 6",
+              "tx_wire_bytes": 10,
+              "rx_line_utf8_bytes": 58,
+              "rx_wire_bytes": 60,
+              "tx_started_at": "2026-11-01T01:14:16.296Z",
+              "tx_started_ms": 1793495656296,
+              "tx_started_monotonic_ms": 354.291,
+              "boot_epoch": 0,
+              "confirmed_mode": {
+                "fast": 0,
+                "config": null,
+                "compact": null
+              },
+              "confirmed_config": null,
+              "audit_state": "控制回执已收到",
+              "tx_completed_at": "2026-11-01T01:14:16.296Z",
+              "result_received_at": "2026-11-01T01:14:16.298Z",
+              "ready_received_at": "2026-11-01T01:14:16.298Z",
+              "result_ms": 2.0504999999999995,
+              "ready_ms": 2.262299999999982,
+              "control_confirmation": {
+                "kind": "configuration",
+                "requested": "6",
+                "reported": 6,
+                "matched": true
+              },
+              "response_associated": true,
+              "response_kind": "NR_CONFIG",
+              "response_wire_bytes": 51
+            },
+            "completed": true
+          },
+          {
+            "command": ":format full",
+            "kind": "format",
+            "request": {
+              "number": 3,
+              "kind": "format",
+              "command": ":format full",
+              "tx_wire_bytes": 13,
+              "rx_line_utf8_bytes": 31,
+              "rx_wire_bytes": 33,
+              "tx_started_at": "2026-11-01T01:14:16.298Z",
+              "tx_started_ms": 1793495656298,
+              "tx_started_monotonic_ms": 356.6243,
+              "boot_epoch": 0,
+              "confirmed_mode": {
+                "fast": 0,
+                "config": 6,
+                "compact": null
+              },
+              "confirmed_config": 6,
+              "audit_state": "控制回执已收到",
+              "tx_completed_at": "2026-11-01T01:14:16.298Z",
+              "result_received_at": "2026-11-01T01:14:16.299Z",
+              "ready_received_at": "2026-11-01T01:14:16.300Z",
+              "result_ms": 1.5369999999999777,
+              "ready_ms": 1.7533999999999992,
+              "control_confirmation": {
+                "kind": "format",
+                "requested": "full",
+                "reported": "full",
+                "matched": true
+              },
+              "response_associated": true,
+              "response_kind": "NR_FORMAT",
+              "response_wire_bytes": 24
+            },
+            "completed": true
+          },
+          {
+            "command": "请将PWM占空比设置为20%。",
+            "kind": "tool",
+            "expected_tool": 1,
+            "expected_argument": 20,
+            "require_encoder": true,
+            "request": {
+              "number": 4,
+              "kind": "tool",
+              "command": "请将PWM占空比设置为20%。",
+              "tx_wire_bytes": 34,
+              "rx_line_utf8_bytes": 1604,
+              "rx_wire_bytes": 1606,
+              "tx_started_at": "2026-11-01T01:14:16.300Z",
+              "tx_started_ms": 1793495656300,
+              "tx_started_monotonic_ms": 358.6186,
+              "boot_epoch": 0,
+              "confirmed_mode": {
+                "fast": 0,
+                "config": 6,
+                "compact": 0
+              },
+              "confirmed_config": 6,
+              "audit_state": "执行成功",
+              "tx_completed_at": "2026-11-01T01:14:16.300Z",
+              "result_received_at": "2026-11-01T01:14:16.397Z",
+              "ready_received_at": "2026-11-01T01:14:16.402Z",
+              "result_ms": 97.21589999999998,
+              "ready_ms": 102.2321,
+              "result": {
+                "case": 103,
+                "config": 6,
+                "graph": 1,
+                "dot4": 1,
+                "mode": 3,
+                "model_used": 1,
+                "encoder_used": 1,
+                "context_used": 1,
+                "context_xnd_used": 1,
+                "context_hardware_macs": 39424,
+                "context_hardware": {
+                  "loads": 0,
+                  "jobs": 1,
+                  "dma_read_bytes": 0,
+                  "dma_write_bytes": 0,
+                  "engine_cycles": 5344,
+                  "failures": 0
+                },
+                "context_deny": 0,
+                "context_cycles": 33903,
+                "encoder_cycles": 2986058,
+                "context_logits": [
+                  212,
+                  -208
+                ],
+                "context_margin": -420,
+                "context_threshold": 116,
+                "context_category": 0,
+                "context_bucket": 1,
+                "context_bucket_source": 0,
+                "context_category_logits": [
+                  342,
+                  1,
+                  -58,
+                  -56,
+                  -24,
+                  -30,
+                  -87,
+                  -117,
+                  33
+                ],
+                "intent_repair_used": 0,
+                "intent_delta": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "context_tool_logits": [
+                  -221,
+                  165,
+                  -186,
+                  -238,
+                  -136
+                ],
+                "intent_cascade_used": 0,
+                "intent_cascade_delta": [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                "fusion_used": 1,
+                "fusion_gate_margin": 117,
+                "fusion_delta": [
+                  8,
+                  -7,
+                  8,
+                  -43,
+                  38
+                ],
+                "context_features": 87,
+                "context_scalar_macs": 0,
+                "encoder_logits": [
+                  -221,
+                  349,
+                  -354,
+                  -134,
+                  -131,
+                  232
+                ],
+                "decision_cycles": 3126117,
+                "tool": 1,
+                "selected_tool": 1,
+                "margin": 110,
+                "confidence_threshold": 16,
+                "decode": 0,
+                "argument": 20,
+                "operation": 0,
+                "selection_source": 0,
+                "cycles": 3019961,
+                "loads": 266,
+                "jobs": 399,
+                "reuses": 133,
+                "activation_bytes": 21248,
+                "weight_bytes": 1085632,
+                "bias_bytes": 118784,
+                "residual_bytes": 33792,
+                "output_bytes": 29720,
+                "engine_cycles": 872632,
+                "failures": 0,
+                "execute": 0,
+                "value": 20,
+                "logits": [
+                  -213,
+                  342,
+                  -346,
+                  -177,
+                  -93,
+                  232
+                ],
+                "tool_cycles": 360,
+                "request_cycles": 3126531,
+                "pmu": {
+                  "cycles": 2986116,
+                  "instret": 1699678,
+                  "branches": 342148,
+                  "redirect_misses": 18690,
+                  "mem_load_stall_cycles": 819024,
+                  "ic_misses": 1817,
+                  "dc_misses": 3272
+                },
+                "receipt": {
+                  "kind": 2,
+                  "requested": 20,
+                  "readback": 20,
+                  "match": 1,
+                  "period": 40500,
+                  "high": 8100,
+                  "enabled": 1,
+                  "adc_status": 0,
+                  "adc_raw": 0
+                }
+              },
+              "receipt_verification": {
+                "required": true,
+                "passed": true,
+                "reason": "matched_internal_registers"
+              },
+              "correlation": "single_inflight_ascii_order_not_device_sequence",
+              "response_associated": true,
+              "response_kind": "NR_RESULT",
+              "response_wire_bytes": 1597
+            },
+            "completed": true
+          }
+        ],
+        "boot_epoch": 0,
+        "started_at": "2026-11-01T01:14:16.291Z",
+        "timer": {
+          "_idleTimeout": -1,
+          "_idlePrev": null,
+          "_idleNext": null,
+          "_idleStart": 353,
+          "_repeat": null,
+          "_destroyed": true
+        },
+        "completed_at": "2026-11-01T01:14:16.402Z"
+      },
+      {
+        "active": false,
+        "state": "completed",
+        "kind": "quick",
+        "index": 3,
+        "steps": [
+          {
+            "command": ":fast 1",
+            "kind": "fast",
+            "request": {
+              "number": 5,
+              "kind": "fast",
+              "command": ":fast 1",
+              "tx_wire_bytes": 8,
+              "rx_line_utf8_bytes": 34,
+              "rx_wire_bytes": 36,
+              "tx_started_at": "2026-11-01T01:14:16.403Z",
+              "tx_started_ms": 1793495656403,
+              "tx_started_monotonic_ms": 461.6796,
+              "boot_epoch": 0,
+              "confirmed_mode": {
+                "fast": 0,
+                "config": 6,
+                "compact": 0
+              },
+              "confirmed_config": 6,
+              "audit_state": "控制回执已收到",
+              "tx_completed_at": "2026-11-01T01:14:16.404Z",
+              "result_received_at": "2026-11-01T01:14:16.404Z",
+              "ready_received_at": "2026-11-01T01:14:16.405Z",
+              "result_ms": 1.4698999999999955,
+              "ready_ms": 1.7239000000000146,
+              "control_confirmation": {
+                "kind": "fast",
+                "requested": "1",
+                "reported": 1,
+                "matched": true
+              },
+              "response_associated": true,
+              "response_kind": "NR_FAST_MODE",
+              "response_wire_bytes": 27
+            },
+            "completed": true
+          },
+          {
+            "command": ":config 6",
+            "kind": "configuration",
+            "request": {
+              "number": 6,
+              "kind": "configuration",
+              "command": ":config 6",
+              "tx_wire_bytes": 10,
+              "rx_line_utf8_bytes": 58,
+              "rx_wire_bytes": 60,
+              "tx_started_at": "2026-11-01T01:14:16.405Z",
+              "tx_started_ms": 1793495656405,
+              "tx_started_monotonic_ms": 463.7723,
+              "boot_epoch": 0,
+              "confirmed_mode": {
+                "fast": 1,
+                "config": 6,
+                "compact": 0
+              },
+              "confirmed_config": 6,
+              "audit_state": "控制回执已收到",
+              "tx_completed_at": "2026-11-01T01:14:16.406Z",
+              "result_received_at": "2026-11-01T01:14:16.407Z",
+              "ready_received_at": "2026-11-01T01:14:16.407Z",
+              "result_ms": 1.8096000000000458,
+              "ready_ms": 1.949100000000044,
+              "control_confirmation": {
+                "kind": "configuration",
+                "requested": "6",
+                "reported": 6,
+                "matched": true
+              },
+              "response_associated": true,
+              "response_kind": "NR_CONFIG",
+              "response_wire_bytes": 51
+            },
+            "completed": true
+          },
+          {
+            "command": ":format compact",
+            "kind": "format",
+            "request": {
+              "number": 7,
+              "kind": "format",
+              "command": ":format compact",
+              "tx_wire_bytes": 16,
+              "rx_line_utf8_bytes": 31,
+              "rx_wire_bytes": 33,
+              "tx_started_at": "2026-11-01T01:14:16.407Z",
+              "tx_started_ms": 1793495656407,
+              "tx_started_monotonic_ms": 465.8097,
+              "boot_epoch": 0,
+              "confirmed_mode": {
+                "fast": 1,
+                "config": 6,
+                "compact": 0
+              },
+              "confirmed_config": 6,
+              "audit_state": "控制回执已收到",
+              "tx_completed_at": "2026-11-01T01:14:16.407Z",
+              "result_received_at": "2026-11-01T01:14:16.409Z",
+              "ready_received_at": "2026-11-01T01:14:16.409Z",
+              "result_ms": 1.5347999999999615,
+              "ready_ms": 1.8996999999999957,
+              "control_confirmation": {
+                "kind": "format",
+                "requested": "compact",
+                "reported": "compact",
+                "matched": true
+              },
+              "response_associated": true,
+              "response_kind": "NR_FORMAT",
+              "response_wire_bytes": 24
+            },
+            "completed": true
+          }
+        ],
+        "boot_epoch": 0,
+        "started_at": "2026-11-01T01:14:16.403Z",
+        "timer": {
+          "_idleTimeout": -1,
+          "_idlePrev": null,
+          "_idleNext": null,
+          "_idleStart": 460,
+          "_repeat": null,
+          "_destroyed": true
+        },
+        "completed_at": "2026-11-01T01:14:16.409Z"
+      },
+      {
+        "active": false,
+        "state": "completed",
+        "kind": "cpu",
+        "index": 4,
+        "steps": [
+          {
+            "command": ":fast 1",
+            "kind": "fast",
+            "request": {
+              "number": 9,
+              "kind": "fast",
+              "command": ":fast 1",
+              "tx_wire_bytes": 8,
+              "rx_line_utf8_bytes": 34,
+              "rx_wire_bytes": 36,
+              "tx_started_at": "2026-11-01T01:14:16.426Z",
+              "tx_started_ms": 1793495656426,
+              "tx_started_monotonic_ms": 484.8215,
+              "boot_epoch": 0,
+              "confirmed_mode": {
+                "fast": 1,
+                "config": 6,
+                "compact": 1
+              },
+              "confirmed_config": 6,
+              "audit_state": "控制回执已收到",
+              "tx_completed_at": "2026-11-01T01:14:16.427Z",
+              "result_received_at": "2026-11-01T01:14:16.428Z",
+              "ready_received_at": "2026-11-01T01:14:16.428Z",
+              "result_ms": 1.7490999999999985,
+              "ready_ms": 2.0640999999999963,
+              "control_confirmation": {
+                "kind": "fast",
+                "requested": "1",
+                "reported": 1,
+                "matched": true
+              },
+              "response_associated": true,
+              "response_kind": "NR_FAST_MODE",
+              "response_wire_bytes": 27
+            },
+            "completed": true
+          },
+          {
+            "command": ":config 6",
+            "kind": "configuration",
+            "request": {
+              "number": 10,
+              "kind": "configuration",
+              "command": ":config 6",
+              "tx_wire_bytes": 10,
+              "rx_line_utf8_bytes": 58,
+              "rx_wire_bytes": 60,
+              "tx_started_at": "2026-11-01T01:14:16.428Z",
+              "tx_started_ms": 1793495656428,
+              "tx_started_monotonic_ms": 487.0267,
+              "boot_epoch": 0,
+              "confirmed_mode": {
+                "fast": 1,
+                "config": 6,
+                "compact": 1
+              },
+              "confirmed_config": 6,
+              "audit_state": "控制回执已收到",
+              "tx_completed_at": "2026-11-01T01:14:16.429Z",
+              "result_received_at": "2026-11-01T01:14:16.430Z",
+              "ready_received_at": "2026-11-01T01:14:16.430Z",
+              "result_ms": 1.6696000000000026,
+              "ready_ms": 1.8661000000000172,
+              "control_confirmation": {
+                "kind": "configuration",
+                "requested": "6",
+                "reported": 6,
+                "matched": true
+              },
+              "response_associated": true,
+              "response_kind": "NR_CONFIG",
+              "response_wire_bytes": 51
+            },
+            "completed": true
+          },
+          {
+            "command": ":format compact",
+            "kind": "format",
+            "request": {
+              "number": 11,
+              "kind": "format",
+              "command": ":format compact",
+              "tx_wire_bytes": 16,
+              "rx_line_utf8_bytes": 31,
+              "rx_wire_bytes": 33,
+              "tx_started_at": "2026-11-01T01:14:16.430Z",
+              "tx_started_ms": 1793495656430,
+              "tx_started_monotonic_ms": 489.0002,
+              "boot_epoch": 0,
+              "confirmed_mode": {
+                "fast": 1,
+                "config": 6,
+                "compact": 1
+              },
+              "confirmed_config": 6,
+              "audit_state": "控制回执已收到",
+              "tx_completed_at": "2026-11-01T01:14:16.431Z",
+              "result_received_at": "2026-11-01T01:14:16.432Z",
+              "ready_received_at": "2026-11-01T01:14:16.432Z",
+              "result_ms": 1.3421999999999912,
+              "ready_ms": 1.4961999999999875,
+              "control_confirmation": {
+                "kind": "format",
+                "requested": "compact",
+                "reported": "compact",
+                "matched": true
+              },
+              "response_associated": true,
+              "response_kind": "NR_FORMAT",
+              "response_wire_bytes": 24
+            },
+            "completed": true
+          },
+          {
+            "command": "运行CoreMark并显示CRC结果。",
+            "kind": "tool",
+            "expected_tool": 2,
+            "request": {
+              "number": 12,
+              "kind": "tool",
+              "command": "运行CoreMark并显示CRC结果。",
+              "tx_wire_bytes": 36,
+              "rx_line_utf8_bytes": 1420,
+              "rx_wire_bytes": 1443,
+              "tx_started_at": "2026-11-01T01:14:16.432Z",
+              "tx_started_ms": 1793495656432,
+              "tx_started_monotonic_ms": 490.6871,
+              "boot_epoch": 0,
+              "confirmed_mode": {
+                "fast": 1,
+                "config": 6,
+                "compact": 1
+              },
+              "confirmed_config": 6,
+              "audit_state": "执行成功",
+              "tx_completed_at": "2026-11-01T01:14:16.432Z",
+              "result_received_at": "2026-11-01T01:14:31.041Z",
+              "ready_received_at": "2026-11-01T01:14:31.041Z",
+              "result_ms": 14608.784000000001,
+              "ready_ms": 14609.1314,
+              "result": {
+                "protocol_frame": "NR_FAST",
+                "compact_version": 3,
+                "case": 105,
+                "config": 6,
+                "model_used": 3,
+                "path": "fast",
+                "tool": null,
+                "selected_tool": 2,
+                "decode": 0,
+                "argument": 0,
+                "operation": 0,
+                "selection_source": 1,
+                "execute": 0,
+                "value": 590699503,
+                "cycles": null,
+                "decision_cycles": 185906,
+                "tool_cycles": 591168404,
+                "request_cycles": 591354406,
+                "context_xnd_used": 1,
+                "encoder_used": 0,
+                "context_used": 1,
+                "context_deny": 0,
+                "context_logits": [
+                  233,
+                  -234
+                ],
+                "context_margin": -467,
+                "context_threshold": 55,
+                "logits": null,
+                "encoder_logits": null,
+                "context_hardware": {
+                  "loads": 0,
+                  "jobs": 1,
+                  "dma_read_bytes": 0,
+                  "dma_write_bytes": 0,
+                  "engine_cycles": 6688
+                }
+              },
+              "receipt_verification": {
+                "required": false,
+                "passed": true,
+                "reason": "not_required"
+              },
+              "correlation": "single_inflight_ascii_order_not_device_sequence",
+              "response_associated": true,
+              "response_kind": "NR_FAST",
+              "response_wire_bytes": 112
+            },
+            "completed": true
+          }
+        ],
+        "boot_epoch": 0,
+        "started_at": "2026-11-01T01:14:16.426Z",
+        "timer": {
+          "_idleTimeout": -1,
+          "_idlePrev": null,
+          "_idleNext": null,
+          "_idleStart": 485,
+          "_repeat": null,
+          "_destroyed": true
+        },
+        "completed_at": "2026-11-01T01:14:31.041Z"
+      }
+    ],
+    "requests": [
+      {
+        "number": 1,
+        "kind": "fast",
+        "command": ":fast 0",
+        "tx_wire_bytes": 8,
+        "rx_line_utf8_bytes": 34,
+        "rx_wire_bytes": 36,
+        "tx_started_at": "2026-11-01T01:14:16.292Z",
+        "tx_started_ms": 1793495656292,
+        "tx_started_monotonic_ms": 350.3747,
+        "boot_epoch": 0,
+        "confirmed_mode": {
+          "fast": null,
+          "config": null,
+          "compact": null
+        },
+        "confirmed_config": null,
+        "audit_state": "控制回执已收到",
+        "tx_completed_at": "2026-11-01T01:14:16.294Z",
+        "result_received_at": "2026-11-01T01:14:16.295Z",
+        "ready_received_at": "2026-11-01T01:14:16.295Z",
+        "result_ms": 3.412499999999966,
+        "ready_ms": 3.779899999999998,
+        "control_confirmation": {
+          "kind": "fast",
+          "requested": "0",
+          "reported": 0,
+          "matched": true
+        },
+        "response_associated": true,
+        "response_kind": "NR_FAST_MODE",
+        "response_wire_bytes": 27
+      },
+      {
+        "number": 2,
+        "kind": "configuration",
+        "command": ":config 6",
+        "tx_wire_bytes": 10,
+        "rx_line_utf8_bytes": 58,
+        "rx_wire_bytes": 60,
+        "tx_started_at": "2026-11-01T01:14:16.296Z",
+        "tx_started_ms": 1793495656296,
+        "tx_started_monotonic_ms": 354.291,
+        "boot_epoch": 0,
+        "confirmed_mode": {
+          "fast": 0,
+          "config": null,
+          "compact": null
+        },
+        "confirmed_config": null,
+        "audit_state": "控制回执已收到",
+        "tx_completed_at": "2026-11-01T01:14:16.296Z",
+        "result_received_at": "2026-11-01T01:14:16.298Z",
+        "ready_received_at": "2026-11-01T01:14:16.298Z",
+        "result_ms": 2.0504999999999995,
+        "ready_ms": 2.262299999999982,
+        "control_confirmation": {
+          "kind": "configuration",
+          "requested": "6",
+          "reported": 6,
+          "matched": true
+        },
+        "response_associated": true,
+        "response_kind": "NR_CONFIG",
+        "response_wire_bytes": 51
+      },
+      {
+        "number": 3,
+        "kind": "format",
+        "command": ":format full",
+        "tx_wire_bytes": 13,
+        "rx_line_utf8_bytes": 31,
+        "rx_wire_bytes": 33,
+        "tx_started_at": "2026-11-01T01:14:16.298Z",
+        "tx_started_ms": 1793495656298,
+        "tx_started_monotonic_ms": 356.6243,
+        "boot_epoch": 0,
+        "confirmed_mode": {
+          "fast": 0,
+          "config": 6,
+          "compact": null
+        },
+        "confirmed_config": 6,
+        "audit_state": "控制回执已收到",
+        "tx_completed_at": "2026-11-01T01:14:16.298Z",
+        "result_received_at": "2026-11-01T01:14:16.299Z",
+        "ready_received_at": "2026-11-01T01:14:16.300Z",
+        "result_ms": 1.5369999999999777,
+        "ready_ms": 1.7533999999999992,
+        "control_confirmation": {
+          "kind": "format",
+          "requested": "full",
+          "reported": "full",
+          "matched": true
+        },
+        "response_associated": true,
+        "response_kind": "NR_FORMAT",
+        "response_wire_bytes": 24
+      },
+      {
+        "number": 4,
+        "kind": "tool",
+        "command": "请将PWM占空比设置为20%。",
+        "tx_wire_bytes": 34,
+        "rx_line_utf8_bytes": 1604,
+        "rx_wire_bytes": 1606,
+        "tx_started_at": "2026-11-01T01:14:16.300Z",
+        "tx_started_ms": 1793495656300,
+        "tx_started_monotonic_ms": 358.6186,
+        "boot_epoch": 0,
+        "confirmed_mode": {
+          "fast": 0,
+          "config": 6,
+          "compact": 0
+        },
+        "confirmed_config": 6,
+        "audit_state": "执行成功",
+        "tx_completed_at": "2026-11-01T01:14:16.300Z",
+        "result_received_at": "2026-11-01T01:14:16.397Z",
+        "ready_received_at": "2026-11-01T01:14:16.402Z",
+        "result_ms": 97.21589999999998,
+        "ready_ms": 102.2321,
+        "result": {
+          "case": 103,
+          "config": 6,
+          "graph": 1,
+          "dot4": 1,
+          "mode": 3,
+          "model_used": 1,
+          "encoder_used": 1,
+          "context_used": 1,
+          "context_xnd_used": 1,
+          "context_hardware_macs": 39424,
+          "context_hardware": {
+            "loads": 0,
+            "jobs": 1,
+            "dma_read_bytes": 0,
+            "dma_write_bytes": 0,
+            "engine_cycles": 5344,
+            "failures": 0
+          },
+          "context_deny": 0,
+          "context_cycles": 33903,
+          "encoder_cycles": 2986058,
+          "context_logits": [
+            212,
+            -208
+          ],
+          "context_margin": -420,
+          "context_threshold": 116,
+          "context_category": 0,
+          "context_bucket": 1,
+          "context_bucket_source": 0,
+          "context_category_logits": [
+            342,
+            1,
+            -58,
+            -56,
+            -24,
+            -30,
+            -87,
+            -117,
+            33
+          ],
+          "intent_repair_used": 0,
+          "intent_delta": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "context_tool_logits": [
+            -221,
+            165,
+            -186,
+            -238,
+            -136
+          ],
+          "intent_cascade_used": 0,
+          "intent_cascade_delta": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "fusion_used": 1,
+          "fusion_gate_margin": 117,
+          "fusion_delta": [
+            8,
+            -7,
+            8,
+            -43,
+            38
+          ],
+          "context_features": 87,
+          "context_scalar_macs": 0,
+          "encoder_logits": [
+            -221,
+            349,
+            -354,
+            -134,
+            -131,
+            232
+          ],
+          "decision_cycles": 3126117,
+          "tool": 1,
+          "selected_tool": 1,
+          "margin": 110,
+          "confidence_threshold": 16,
+          "decode": 0,
+          "argument": 20,
+          "operation": 0,
+          "selection_source": 0,
+          "cycles": 3019961,
+          "loads": 266,
+          "jobs": 399,
+          "reuses": 133,
+          "activation_bytes": 21248,
+          "weight_bytes": 1085632,
+          "bias_bytes": 118784,
+          "residual_bytes": 33792,
+          "output_bytes": 29720,
+          "engine_cycles": 872632,
+          "failures": 0,
+          "execute": 0,
+          "value": 20,
+          "logits": [
+            -213,
+            342,
+            -346,
+            -177,
+            -93,
+            232
+          ],
+          "tool_cycles": 360,
+          "request_cycles": 3126531,
+          "pmu": {
+            "cycles": 2986116,
+            "instret": 1699678,
+            "branches": 342148,
+            "redirect_misses": 18690,
+            "mem_load_stall_cycles": 819024,
+            "ic_misses": 1817,
+            "dc_misses": 3272
+          },
+          "receipt": {
+            "kind": 2,
+            "requested": 20,
+            "readback": 20,
+            "match": 1,
+            "period": 40500,
+            "high": 8100,
+            "enabled": 1,
+            "adc_status": 0,
+            "adc_raw": 0
+          }
+        },
+        "receipt_verification": {
+          "required": true,
+          "passed": true,
+          "reason": "matched_internal_registers"
+        },
+        "correlation": "single_inflight_ascii_order_not_device_sequence",
+        "response_associated": true,
+        "response_kind": "NR_RESULT",
+        "response_wire_bytes": 1597
+      },
+      {
+        "number": 5,
+        "kind": "fast",
+        "command": ":fast 1",
+        "tx_wire_bytes": 8,
+        "rx_line_utf8_bytes": 34,
+        "rx_wire_bytes": 36,
+        "tx_started_at": "2026-11-01T01:14:16.403Z",
+        "tx_started_ms": 1793495656403,
+        "tx_started_monotonic_ms": 461.6796,
+        "boot_epoch": 0,
+        "confirmed_mode": {
+          "fast": 0,
+          "config": 6,
+          "compact": 0
+        },
+        "confirmed_config": 6,
+        "audit_state": "控制回执已收到",
+        "tx_completed_at": "2026-11-01T01:14:16.404Z",
+        "result_received_at": "2026-11-01T01:14:16.404Z",
+        "ready_received_at": "2026-11-01T01:14:16.405Z",
+        "result_ms": 1.4698999999999955,
+        "ready_ms": 1.7239000000000146,
+        "control_confirmation": {
+          "kind": "fast",
+          "requested": "1",
+          "reported": 1,
+          "matched": true
+        },
+        "response_associated": true,
+        "response_kind": "NR_FAST_MODE",
+        "response_wire_bytes": 27
+      },
+      {
+        "number": 6,
+        "kind": "configuration",
+        "command": ":config 6",
+        "tx_wire_bytes": 10,
+        "rx_line_utf8_bytes": 58,
+        "rx_wire_bytes": 60,
+        "tx_started_at": "2026-11-01T01:14:16.405Z",
+        "tx_started_ms": 1793495656405,
+        "tx_started_monotonic_ms": 463.7723,
+        "boot_epoch": 0,
+        "confirmed_mode": {
+          "fast": 1,
+          "config": 6,
+          "compact": 0
+        },
+        "confirmed_config": 6,
+        "audit_state": "控制回执已收到",
+        "tx_completed_at": "2026-11-01T01:14:16.406Z",
+        "result_received_at": "2026-11-01T01:14:16.407Z",
+        "ready_received_at": "2026-11-01T01:14:16.407Z",
+        "result_ms": 1.8096000000000458,
+        "ready_ms": 1.949100000000044,
+        "control_confirmation": {
+          "kind": "configuration",
+          "requested": "6",
+          "reported": 6,
+          "matched": true
+        },
+        "response_associated": true,
+        "response_kind": "NR_CONFIG",
+        "response_wire_bytes": 51
+      },
+      {
+        "number": 7,
+        "kind": "format",
+        "command": ":format compact",
+        "tx_wire_bytes": 16,
+        "rx_line_utf8_bytes": 31,
+        "rx_wire_bytes": 33,
+        "tx_started_at": "2026-11-01T01:14:16.407Z",
+        "tx_started_ms": 1793495656407,
+        "tx_started_monotonic_ms": 465.8097,
+        "boot_epoch": 0,
+        "confirmed_mode": {
+          "fast": 1,
+          "config": 6,
+          "compact": 0
+        },
+        "confirmed_config": 6,
+        "audit_state": "控制回执已收到",
+        "tx_completed_at": "2026-11-01T01:14:16.407Z",
+        "result_received_at": "2026-11-01T01:14:16.409Z",
+        "ready_received_at": "2026-11-01T01:14:16.409Z",
+        "result_ms": 1.5347999999999615,
+        "ready_ms": 1.8996999999999957,
+        "control_confirmation": {
+          "kind": "format",
+          "requested": "compact",
+          "reported": "compact",
+          "matched": true
+        },
+        "response_associated": true,
+        "response_kind": "NR_FORMAT",
+        "response_wire_bytes": 24
+      },
+      {
+        "number": 8,
+        "kind": "tool",
+        "command": "led 37",
+        "tx_wire_bytes": 7,
+        "rx_line_utf8_bytes": 71,
+        "rx_wire_bytes": 73,
+        "tx_started_at": "2026-11-01T01:14:16.410Z",
+        "tx_started_ms": 1793495656410,
+        "tx_started_monotonic_ms": 468.4652,
+        "boot_epoch": 0,
+        "confirmed_mode": {
+          "fast": 1,
+          "config": 6,
+          "compact": 1
+        },
+        "confirmed_config": 6,
+        "audit_state": "执行成功",
+        "tx_completed_at": "2026-11-01T01:14:16.410Z",
+        "result_received_at": "2026-11-01T01:14:16.412Z",
+        "ready_received_at": "2026-11-01T01:14:16.412Z",
+        "result_ms": 2.3874000000000137,
+        "ready_ms": 2.7690000000000055,
+        "result": {
+          "protocol_frame": "NR_FAST",
+          "compact_version": 1,
+          "case": 104,
+          "config": 6,
+          "model_used": 0,
+          "path": "fast",
+          "tool": null,
+          "selected_tool": 4,
+          "decode": 0,
+          "argument": 37,
+          "operation": 0,
+          "selection_source": 2,
+          "execute": 0,
+          "value": 37,
+          "cycles": 0,
+          "decision_cycles": 5370,
+          "tool_cycles": 242,
+          "request_cycles": 5666,
+          "receipt": {
+            "kind": 1,
+            "requested": 37,
+            "readback": 37,
+            "match": 1,
+            "period": 0,
+            "high": 0,
+            "enabled": 0
+          }
+        },
+        "receipt_verification": {
+          "required": true,
+          "passed": true,
+          "reason": "matched_internal_registers"
+        },
+        "correlation": "single_inflight_ascii_order_not_device_sequence",
+        "response_associated": true,
+        "response_kind": "NR_FAST",
+        "response_wire_bytes": 64
+      },
+      {
+        "number": 9,
+        "kind": "fast",
+        "command": ":fast 1",
+        "tx_wire_bytes": 8,
+        "rx_line_utf8_bytes": 34,
+        "rx_wire_bytes": 36,
+        "tx_started_at": "2026-11-01T01:14:16.426Z",
+        "tx_started_ms": 1793495656426,
+        "tx_started_monotonic_ms": 484.8215,
+        "boot_epoch": 0,
+        "confirmed_mode": {
+          "fast": 1,
+          "config": 6,
+          "compact": 1
+        },
+        "confirmed_config": 6,
+        "audit_state": "控制回执已收到",
+        "tx_completed_at": "2026-11-01T01:14:16.427Z",
+        "result_received_at": "2026-11-01T01:14:16.428Z",
+        "ready_received_at": "2026-11-01T01:14:16.428Z",
+        "result_ms": 1.7490999999999985,
+        "ready_ms": 2.0640999999999963,
+        "control_confirmation": {
+          "kind": "fast",
+          "requested": "1",
+          "reported": 1,
+          "matched": true
+        },
+        "response_associated": true,
+        "response_kind": "NR_FAST_MODE",
+        "response_wire_bytes": 27
+      },
+      {
+        "number": 10,
+        "kind": "configuration",
+        "command": ":config 6",
+        "tx_wire_bytes": 10,
+        "rx_line_utf8_bytes": 58,
+        "rx_wire_bytes": 60,
+        "tx_started_at": "2026-11-01T01:14:16.428Z",
+        "tx_started_ms": 1793495656428,
+        "tx_started_monotonic_ms": 487.0267,
+        "boot_epoch": 0,
+        "confirmed_mode": {
+          "fast": 1,
+          "config": 6,
+          "compact": 1
+        },
+        "confirmed_config": 6,
+        "audit_state": "控制回执已收到",
+        "tx_completed_at": "2026-11-01T01:14:16.429Z",
+        "result_received_at": "2026-11-01T01:14:16.430Z",
+        "ready_received_at": "2026-11-01T01:14:16.430Z",
+        "result_ms": 1.6696000000000026,
+        "ready_ms": 1.8661000000000172,
+        "control_confirmation": {
+          "kind": "configuration",
+          "requested": "6",
+          "reported": 6,
+          "matched": true
+        },
+        "response_associated": true,
+        "response_kind": "NR_CONFIG",
+        "response_wire_bytes": 51
+      },
+      {
+        "number": 11,
+        "kind": "format",
+        "command": ":format compact",
+        "tx_wire_bytes": 16,
+        "rx_line_utf8_bytes": 31,
+        "rx_wire_bytes": 33,
+        "tx_started_at": "2026-11-01T01:14:16.430Z",
+        "tx_started_ms": 1793495656430,
+        "tx_started_monotonic_ms": 489.0002,
+        "boot_epoch": 0,
+        "confirmed_mode": {
+          "fast": 1,
+          "config": 6,
+          "compact": 1
+        },
+        "confirmed_config": 6,
+        "audit_state": "控制回执已收到",
+        "tx_completed_at": "2026-11-01T01:14:16.431Z",
+        "result_received_at": "2026-11-01T01:14:16.432Z",
+        "ready_received_at": "2026-11-01T01:14:16.432Z",
+        "result_ms": 1.3421999999999912,
+        "ready_ms": 1.4961999999999875,
+        "control_confirmation": {
+          "kind": "format",
+          "requested": "compact",
+          "reported": "compact",
+          "matched": true
+        },
+        "response_associated": true,
+        "response_kind": "NR_FORMAT",
+        "response_wire_bytes": 24
+      },
+      {
+        "number": 12,
+        "kind": "tool",
+        "command": "运行CoreMark并显示CRC结果。",
+        "tx_wire_bytes": 36,
+        "rx_line_utf8_bytes": 1420,
+        "rx_wire_bytes": 1443,
+        "tx_started_at": "2026-11-01T01:14:16.432Z",
+        "tx_started_ms": 1793495656432,
+        "tx_started_monotonic_ms": 490.6871,
+        "boot_epoch": 0,
+        "confirmed_mode": {
+          "fast": 1,
+          "config": 6,
+          "compact": 1
+        },
+        "confirmed_config": 6,
+        "audit_state": "执行成功",
+        "tx_completed_at": "2026-11-01T01:14:16.432Z",
+        "result_received_at": "2026-11-01T01:14:31.041Z",
+        "ready_received_at": "2026-11-01T01:14:31.041Z",
+        "result_ms": 14608.784000000001,
+        "ready_ms": 14609.1314,
+        "result": {
+          "protocol_frame": "NR_FAST",
+          "compact_version": 3,
+          "case": 105,
+          "config": 6,
+          "model_used": 3,
+          "path": "fast",
+          "tool": null,
+          "selected_tool": 2,
+          "decode": 0,
+          "argument": 0,
+          "operation": 0,
+          "selection_source": 1,
+          "execute": 0,
+          "value": 590699503,
+          "cycles": null,
+          "decision_cycles": 185906,
+          "tool_cycles": 591168404,
+          "request_cycles": 591354406,
+          "context_xnd_used": 1,
+          "encoder_used": 0,
+          "context_used": 1,
+          "context_deny": 0,
+          "context_logits": [
+            233,
+            -234
+          ],
+          "context_margin": -467,
+          "context_threshold": 55,
+          "logits": null,
+          "encoder_logits": null,
+          "context_hardware": {
+            "loads": 0,
+            "jobs": 1,
+            "dma_read_bytes": 0,
+            "dma_write_bytes": 0,
+            "engine_cycles": 6688
+          }
+        },
+        "receipt_verification": {
+          "required": false,
+          "passed": true,
+          "reason": "not_required"
+        },
+        "correlation": "single_inflight_ascii_order_not_device_sequence",
+        "response_associated": true,
+        "response_kind": "NR_FAST",
+        "response_wire_bytes": 112
+      }
+    ],
+    "current_fast_mode": {
+      "enabled": 1
+    },
+    "current_configuration": {
+      "config": 6,
+      "mode": 3,
+      "graph": 1,
+      "dot4": 1
+    },
+    "current_format": {
+      "compact": 1
+    }
+  },
+  "display_summary": {
+    "action": "CoreMark 14.585 秒",
+    "readback": "CRC通过",
+    "ai": "已使用语境头 · 编码器未运行",
+    "core_score": "2.031490"
+  }
+}

@@ -1,0 +1,5 @@
+#include <stdio.h>
+#include <string.h>
+#include "byte_tool_model.h"
+int main(void){char b[512];while(fgets(b,sizeof b,stdin)){size_t n=strlen(b);while(n&&(b[n-1]==10||b[n-1]==13))b[--n]=0;nr_prediction_t p;nr_tool_request_t q,f;int fast=nr_tool_decode_fast((const uint8_t*)b,n,&f);if(nr_model_predict((const uint8_t*)b,n,&p))return 2;nr_tool_decode_prediction((const uint8_t*)b,n,&p,&q);
+printf("{\"index\":%d,\"margin\":%d,\"selected\":%d,\"status\":%d,\"argument\":%d,\"operation\":%d,\"source\":%d,\"fast_handled\":%d,\"fast_selected\":%d,\"fast_status\":%d,\"fast_argument\":%d,\"fast_operation\":%d,\"fast_source\":%d,\"logits\":[",p.tool,p.margin,q.tool,q.status,q.argument,q.operation,q.selection_source,fast,f.tool,f.status,f.argument,f.operation,f.selection_source);for(int i=0;i<6;i++){printf(i?",%d":"%d",p.logits[i]);}printf("],\"encoder_logits\":[");for(int i=0;i<6;i++){printf(i?",%d":"%d",p.encoder_logits[i]);}printf("],\"context_logits\":[%d,%d],\"context_deny\":%u,\"context_threshold\":%d,\"context_used\":%u}\n",p.context_logits[0],p.context_logits[1],p.context_deny,p.context_threshold,p.context_used);}return 0;}

@@ -1,0 +1,17 @@
+{
+  "original_train": 18576,
+  "added": 2855,
+  "total": 21431,
+  "addedclasscounts": {
+    "read_temp": 626,
+    "reject": 644,
+    "read_counter": 652,
+    "run_coremark": 274,
+    "set_pwm": 327,
+    "set_led": 332
+  },
+  "observed_error_informed": true,
+  "normalized_exact_overlap_with_observed_or_validation": 0,
+  "fresh_opened": false,
+  "scope": "Observed-development-informed compositional legal grammar enhancement; not independent language generation or human-blind. No fresh/642 opened; exact observed/dev sentences excluded."
+}

@@ -1,0 +1,11 @@
+{
+  "checkpoint": "/work/LUO/NeedleRV-X/07_runs/development/context_generalization/context_v2/profile_grammar_shared16.npz",
+  "bins": 1024,
+  "hidden": 16,
+  "outputs": 11,
+  "residual": false,
+  "weights_bytes": 16668,
+  "layout": "w1[hidden][bin] rowmajor for XND and CPU sparse fallback",
+  "math": "hidden=clip(round_away(dot(featureint,w1)/64)+b1,0,127);out=round_away(dot(hidden,w2)/64)+b2",
+  "scope": "candidate only, no production file changed"
+}

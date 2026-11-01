@@ -1,0 +1,122 @@
+[
+  {
+    "text": "帮个忙完成一次CoreMark跑分好吗",
+    "expected": "run_coremark",
+    "encoder_bucket": 2,
+    "encoder_logits": [
+      -45,
+      -335,
+      295,
+      -144,
+      29,
+      259
+    ],
+    "encoder_margin": 36,
+    "context_logits": [
+      -50,
+      53
+    ],
+    "context_margin": 103,
+    "threshold": 53,
+    "joint_logits": [
+      -45,
+      -335,
+      295,
+      -144,
+      29,
+      346
+    ],
+    "full_status": 8,
+    "fast_status": 8
+  },
+  {
+    "text": "劳烦您返回硬件计数寄存器读数一下",
+    "expected": "read_counter",
+    "encoder_bucket": 3,
+    "encoder_logits": [
+      144,
+      -266,
+      -238,
+      362,
+      -110,
+      146
+    ],
+    "encoder_margin": 216,
+    "context_logits": [
+      -161,
+      155
+    ],
+    "context_margin": 316,
+    "threshold": 134,
+    "joint_logits": [
+      144,
+      -266,
+      -238,
+      362,
+      -110,
+      545
+    ],
+    "full_status": 8,
+    "fast_status": 8
+  },
+  {
+    "text": "劳烦您返回硬件计数寄存器读数可以吗",
+    "expected": "read_counter",
+    "encoder_bucket": 3,
+    "encoder_logits": [
+      205,
+      -325,
+      -282,
+      264,
+      -79,
+      216
+    ],
+    "encoder_margin": 48,
+    "context_logits": [
+      -113,
+      111
+    ],
+    "context_margin": 224,
+    "threshold": 134,
+    "joint_logits": [
+      205,
+      -325,
+      -282,
+      264,
+      -79,
+      355
+    ],
+    "full_status": 8,
+    "fast_status": 8
+  },
+  {
+    "text": "劳烦您返回硬件计数寄存器读数一下吧",
+    "expected": "read_counter",
+    "encoder_bucket": 3,
+    "encoder_logits": [
+      148,
+      -246,
+      -237,
+      368,
+      -133,
+      142
+    ],
+    "encoder_margin": 220,
+    "context_logits": [
+      -119,
+      113
+    ],
+    "context_margin": 232,
+    "threshold": 134,
+    "joint_logits": [
+      148,
+      -246,
+      -237,
+      368,
+      -133,
+      467
+    ],
+    "full_status": 8,
+    "fast_status": 8
+  }
+]

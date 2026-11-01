@@ -1,0 +1,44 @@
+{
+  "scope": "Candidate context16x11+repair5 and Unicode features only,allweights.ai_const shared SRAM; encoder not included; fake originalencoderreject used to exercise maximum repair branch,not classification accuracy",
+  "clock_hz": 40500000,
+  "calls_per_case": 16,
+  "constant_bytes": 21832,
+  "cases": [
+    {
+      "case": 0,
+      "cycles16": 377344,
+      "bytes": 28,
+      "bucket": 5,
+      "text": "请读取FPGA当前温度。",
+      "cycles_per_call": 23584.0,
+      "ms": 0.5823209876543209
+    },
+    {
+      "case": 1,
+      "cycles16": 423248,
+      "bytes": 33,
+      "bucket": 5,
+      "text": "请将PWM占空比设置为20%。",
+      "cycles_per_call": 26453.0,
+      "ms": 0.6531604938271605
+    },
+    {
+      "case": 2,
+      "cycles16": 485808,
+      "bytes": 37,
+      "bucket": 5,
+      "text": "只关闭LED0，其他LED不要改变",
+      "cycles_per_call": 30363.0,
+      "ms": 0.7497037037037036
+    },
+    {
+      "case": 3,
+      "cycles16": 464436,
+      "bytes": 37,
+      "bucket": 5,
+      "text": "假设把LED0点亮会发生什么？",
+      "cycles_per_call": 29027.25,
+      "ms": 0.7167222222222223
+    }
+  ]
+}

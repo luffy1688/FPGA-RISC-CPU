@@ -1,0 +1,881 @@
+
+Discarded input sections
+
+ .text          0x00000000        0x0 /tmp/ccOQvrdg.o
+ .data          0x00000000        0x0 /tmp/ccOQvrdg.o
+ .bss           0x00000000        0x0 /tmp/ccOQvrdg.o
+ .text          0x00000000        0x0 /tmp/ccdSX3z3.o
+ .data          0x00000000        0x0 /tmp/ccdSX3z3.o
+ .bss           0x00000000        0x0 /tmp/ccdSX3z3.o
+ .comment       0x00000000       0x3a /tmp/ccdSX3z3.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccdSX3z3.o
+ .text          0x00000000        0x0 /tmp/ccoKMu2Q.o
+ .data          0x00000000        0x0 /tmp/ccoKMu2Q.o
+ .bss           0x00000000        0x0 /tmp/ccoKMu2Q.o
+ .comment       0x00000000       0x3a /tmp/ccoKMu2Q.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccoKMu2Q.o
+ .text          0x00000000        0x0 /tmp/cc14goDE.o
+ .data          0x00000000        0x0 /tmp/cc14goDE.o
+ .bss           0x00000000        0x0 /tmp/cc14goDE.o
+ .comment       0x00000000       0x3a /tmp/cc14goDE.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/cc14goDE.o
+ .text          0x00000000        0x0 /tmp/ccgrMoTv.o
+ .data          0x00000000        0x0 /tmp/ccgrMoTv.o
+ .bss           0x00000000        0x0 /tmp/ccgrMoTv.o
+ .text.nr_model_cached_workspace_bytes
+                0x00000000        0xe /tmp/ccgrMoTv.o
+ .text.nr_model_dimension
+                0x00000000        0xa /tmp/ccgrMoTv.o
+ .rodata.nr_tool_name.str1.4
+                0x00000000        0x7 /tmp/ccgrMoTv.o
+ .text.nr_tool_name
+                0x00000000       0x30 /tmp/ccgrMoTv.o
+ .text.nr_model_predict
+                0x00000000      0x19a /tmp/ccgrMoTv.o
+ .text.nr_tool_decode_fast
+                0x00000000      0x100 /tmp/ccgrMoTv.o
+ .text.nr_tool_decode
+                0x00000000      0x126 /tmp/ccgrMoTv.o
+ .rodata.names.46
+                0x00000000       0x18 /tmp/ccgrMoTv.o
+ .comment       0x00000000       0x3a /tmp/ccgrMoTv.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccgrMoTv.o
+ .text          0x00000000        0x0 /tmp/ccnrWYun.o
+ .data          0x00000000        0x0 /tmp/ccnrWYun.o
+ .bss           0x00000000        0x0 /tmp/ccnrWYun.o
+ .text.nr_model_enable_xnd
+                0x00000000       0x76 /tmp/ccnrWYun.o
+ .comment       0x00000000       0x3a /tmp/ccnrWYun.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccnrWYun.o
+ .text          0x00000000        0x0 /tmp/ccgmbWkf.o
+ .data          0x00000000        0x0 /tmp/ccgmbWkf.o
+ .bss           0x00000000        0x0 /tmp/ccgmbWkf.o
+ .text.gemv     0x00000000      0x1f0 /tmp/ccgmbWkf.o
+ .text.nr_semantic_xnd_workspace_bytes
+                0x00000000        0xe /tmp/ccgmbWkf.o
+ .text.nr_semantic_xnd_gemv
+                0x00000000      0x50e /tmp/ccgmbWkf.o
+ .sbss.semantic_previous_count
+                0x00000000        0x4 /tmp/ccgmbWkf.o
+ .sbss.semantic_initialized
+                0x00000000        0x4 /tmp/ccgmbWkf.o
+ .ai_scratch    0x00000000     0x1480 /tmp/ccgmbWkf.o
+ .comment       0x00000000       0x3a /tmp/ccgmbWkf.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccgmbWkf.o
+ .riscv.attributes
+                0x00000000       0x3f /tmp/ccgmbWkf.o
+ .text          0x00000000        0x0 /tmp/ccnS9do7.o
+ .data          0x00000000        0x0 /tmp/ccnS9do7.o
+ .bss           0x00000000        0x0 /tmp/ccnS9do7.o
+ .comment       0x00000000       0x3a /tmp/ccnS9do7.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccnS9do7.o
+ .text          0x00000000        0x0 /tmp/cc8wuEzZ.o
+ .data          0x00000000        0x0 /tmp/cc8wuEzZ.o
+ .bss           0x00000000        0x0 /tmp/cc8wuEzZ.o
+ .text.nr_tool_execute
+                0x00000000        0xe /tmp/cc8wuEzZ.o
+ .comment       0x00000000       0x3a /tmp/cc8wuEzZ.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/cc8wuEzZ.o
+ .text          0x00000000        0x0 /tmp/ccP9eV3R.o
+ .data          0x00000000        0x0 /tmp/ccP9eV3R.o
+ .bss           0x00000000        0x0 /tmp/ccP9eV3R.o
+ .comment       0x00000000       0x3a /tmp/ccP9eV3R.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccP9eV3R.o
+ .text          0x00000000        0x0 /tmp/ccUIp4HK.o
+ .data          0x00000000        0x0 /tmp/ccUIp4HK.o
+ .bss           0x00000000        0x0 /tmp/ccUIp4HK.o
+ .text.nr_length
+                0x00000000       0x36 /tmp/ccUIp4HK.o
+ .text.nr_read_line
+                0x00000000       0xc8 /tmp/ccUIp4HK.o
+ .text.memcpy   0x00000000       0x2a /tmp/ccUIp4HK.o
+ .sbss.skip_lf.0
+                0x00000000        0x4 /tmp/ccUIp4HK.o
+ .comment       0x00000000       0x3a /tmp/ccUIp4HK.o
+ .note.GNU-stack
+                0x00000000        0x0 /tmp/ccUIp4HK.o
+ .text          0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_main.o
+ .data          0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_main.o
+ .bss           0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_main.o
+ .rodata.str1.4
+                0x00000000       0x16 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_main.o
+ .data.mem_name
+                0x00000000        0xc /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_main.o
+ .comment       0x00000000       0x3a /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_main.o
+ .note.GNU-stack
+                0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_main.o
+ .text          0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_list_join.o
+ .data          0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_list_join.o
+ .bss           0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_list_join.o
+ .text.copy_info
+                0x00000000       0x16 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_list_join.o
+ .text.core_list_insert_new
+                0x00000000       0x64 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_list_join.o
+ .text.core_list_remove
+                0x00000000       0x2a /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_list_join.o
+ .text.core_list_undo_remove
+                0x00000000       0x22 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_list_join.o
+ .text.core_list_find
+                0x00000000       0x64 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_list_join.o
+ .text.core_list_reverse
+                0x00000000       0x2c /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_list_join.o
+ .comment       0x00000000       0x3a /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_list_join.o
+ .note.GNU-stack
+                0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_list_join.o
+ .text          0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_matrix.o
+ .data          0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_matrix.o
+ .bss           0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_matrix.o
+ .text.matrix_sum
+                0x00000000       0xa4 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_matrix.o
+ .text.matrix_mul_const
+                0x00000000       0x60 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_matrix.o
+ .text.matrix_add_const
+                0x00000000       0x54 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_matrix.o
+ .comment       0x00000000       0x3a /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_matrix.o
+ .note.GNU-stack
+                0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_matrix.o
+ .text          0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_state.o
+ .data          0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_state.o
+ .bss           0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_state.o
+ .comment       0x00000000       0x3a /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_state.o
+ .note.GNU-stack
+                0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_state.o
+ .text          0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_util.o
+ .data          0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_util.o
+ .bss           0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_util.o
+ .text.crcu8    0x00000000       0x46 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_util.o
+ .comment       0x00000000       0x3a /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_util.o
+ .note.GNU-stack
+                0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_util.o
+ .text          0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+ .data          0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+ .bss           0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+ .comment       0x00000000       0x3a /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+ .note.GNU-stack
+                0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+ .text          0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme_print.o
+ .data          0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme_print.o
+ .bss           0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme_print.o
+ .comment       0x00000000       0x3a /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme_print.o
+ .note.GNU-stack
+                0x00000000        0x0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme_print.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+CPU_RAM          0x00000000         0x00020000         xrw
+AI_RAM           0x00020000         0x00060000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /tmp/ccOQvrdg.o
+LOAD /tmp/ccdSX3z3.o
+LOAD /tmp/ccoKMu2Q.o
+LOAD /tmp/cc14goDE.o
+LOAD /tmp/ccgrMoTv.o
+LOAD /tmp/ccnrWYun.o
+LOAD /tmp/ccgmbWkf.o
+LOAD /tmp/ccnS9do7.o
+LOAD /tmp/cc8wuEzZ.o
+LOAD /tmp/ccP9eV3R.o
+LOAD /tmp/ccUIp4HK.o
+LOAD /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_main.o
+LOAD /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_list_join.o
+LOAD /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_matrix.o
+LOAD /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_state.o
+LOAD /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_util.o
+LOAD /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+LOAD /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme_print.o
+LOAD /opt/Andestech/toolchains/nds32le-elf-mculib-v5/bin/../lib/gcc/riscv32-elf/14.2.0/libgcc.a
+
+.text           0x00000000     0xda0c
+ *(.text.startup)
+ .text.startup  0x00000000       0x5c /tmp/ccOQvrdg.o
+                0x00000000                _start
+ *(.text .text.*)
+ .text.select_config
+                0x0000005c       0xc8 /tmp/ccdSX3z3.o
+ *fill*         0x00000124        0x0 
+ .text.startup.main
+                0x00000124     0x1ab4 /tmp/ccdSX3z3.o
+                0x00000124                main
+ *fill*         0x00001bd8        0x0 
+ .text.nr_coremark_execute
+                0x00001bd8       0x50 /tmp/ccoKMu2Q.o
+                0x00001bd8                nr_coremark_execute
+ .text.nr_tensor_reset
+                0x00001c28       0x18 /tmp/cc14goDE.o
+                0x00001c28                nr_tensor_reset
+ *fill*         0x00001c40        0x0 
+ .text.nr_tensor_choose
+                0x00001c40      0x1c4 /tmp/cc14goDE.o
+                0x00001c40                nr_tensor_choose
+ *fill*         0x00001e04        0x0 
+ .text.nr_tensor_commit
+                0x00001e04       0x20 /tmp/cc14goDE.o
+                0x00001e04                nr_tensor_commit
+ *fill*         0x00001e24        0x0 
+ .text.nr_tensor_release
+                0x00001e24        0xc /tmp/cc14goDE.o
+                0x00001e24                nr_tensor_release
+ *fill*         0x00001e30        0x0 
+ .text.nr_ctx_add
+                0x00001e30       0x98 /tmp/ccgrMoTv.o
+ .text.has_term
+                0x00001ec8      0x124 /tmp/ccgrMoTv.o
+ .text.scan_has_term
+                0x00001fec      0x1a8 /tmp/ccgrMoTv.o
+ .text.contract_hint
+                0x00002194      0x12c /tmp/ccgrMoTv.o
+ .text.trim_request_end
+                0x000022c0       0xb4 /tmp/ccgrMoTv.o
+ *fill*         0x00002374        0x0 
+ .text.cn_digit
+                0x00002374      0x148 /tmp/ccgrMoTv.o
+ *fill*         0x000024bc        0x0 
+ .text.chinese_ordinal
+                0x000024bc       0xec /tmp/ccgrMoTv.o
+ *fill*         0x000025a8        0x0 
+ .text.explicit_uint
+                0x000025a8      0x118 /tmp/ccgrMoTv.o
+ .text.cn_number.constprop.0
+                0x000026c0      0x108 /tmp/ccgrMoTv.o
+ .text.nr_context_apply.isra.0
+                0x000027c8      0x7a8 /tmp/ccgrMoTv.o
+ .text.decimal_argument.constprop.0
+                0x00002f70      0x2bc /tmp/ccgrMoTv.o
+ *fill*         0x0000322c        0x0 
+ .text.duty_argument.constprop.0
+                0x0000322c      0x460 /tmp/ccgrMoTv.o
+ .text.linear_one
+                0x0000368c      0x3fc /tmp/ccgrMoTv.o
+ .text.score_quantity_at
+                0x00003a88      0x10c /tmp/ccgrMoTv.o
+ .text.contract_request_end
+                0x00003b94      0x608 /tmp/ccgrMoTv.o
+ *fill*         0x0000419c        0x0 
+ .text.contract_request_start
+                0x0000419c      0x30c /tmp/ccgrMoTv.o
+ *fill*         0x000044a8        0x0 
+ .text.led_arguments
+                0x000044a8      0x36c /tmp/ccgrMoTv.o
+ *fill*         0x00004814        0x0 
+ .text.canonical_numeric_command
+                0x00004814      0x388 /tmp/ccgrMoTv.o
+ *fill*         0x00004b9c        0x0 
+ .text.capability_allowed
+                0x00004b9c      0xfc8 /tmp/ccgrMoTv.o
+ .text.nr_model_set_qkv_interleaved
+                0x00005b64       0x10 /tmp/ccgrMoTv.o
+                0x00005b64                nr_model_set_qkv_interleaved
+ *fill*         0x00005b74        0x0 
+ .text.nr_model_set_attention_dot4
+                0x00005b74       0x10 /tmp/ccgrMoTv.o
+                0x00005b74                nr_model_set_attention_dot4
+ *fill*         0x00005b84        0x0 
+ .text.nr_model_dot_i8
+                0x00005b84      0x10c /tmp/ccgrMoTv.o
+                0x00005b84                nr_model_dot_i8
+ .text.nr_model_set_gemv_backend
+                0x00005c90        0xc /tmp/ccgrMoTv.o
+                0x00005c90                nr_model_set_gemv_backend
+ *fill*         0x00005c9c        0x0 
+ .text.nr_model_set_semantic_backend
+                0x00005c9c        0xc /tmp/ccgrMoTv.o
+                0x00005c9c                nr_model_set_semantic_backend
+ *fill*         0x00005ca8        0x0 
+ .text.nr_model_workspace_bytes
+                0x00005ca8       0x24 /tmp/ccgrMoTv.o
+                0x00005ca8                nr_model_workspace_bytes
+ *fill*         0x00005ccc        0x0 
+ .text.nr_prediction_set_context
+                0x00005ccc      0x100 /tmp/ccgrMoTv.o
+                0x00005ccc                nr_prediction_set_context
+ *fill*         0x00005dcc        0x0 
+ .text.nr_model_predict_with_context.part.0.constprop.0
+                0x00005dcc     0x1300 /tmp/ccgrMoTv.o
+ .text.nr_model_context
+                0x000070cc       0x20 /tmp/ccgrMoTv.o
+                0x000070cc                nr_model_context
+ .text.nr_model_predict_with_context
+                0x000070ec       0x80 /tmp/ccgrMoTv.o
+                0x000070ec                nr_model_predict_with_context
+ .text.nr_tool_decode_machine
+                0x0000716c     0x1b10 /tmp/ccgrMoTv.o
+                0x0000716c                nr_tool_decode_machine
+ *fill*         0x00008c7c        0x0 
+ .text.nr_tool_decode_fast_with_context
+                0x00008c7c      0x51c /tmp/ccgrMoTv.o
+                0x00008c7c                nr_tool_decode_fast_with_context
+ *fill*         0x00009198        0x0 
+ .text.nr_tool_decode_prediction
+                0x00009198      0x604 /tmp/ccgrMoTv.o
+                0x00009198                nr_tool_decode_prediction
+ *fill*         0x0000979c        0x0 
+ .text.nr_model_xnd_gemv
+                0x0000979c      0x6dc /tmp/ccnrWYun.o
+                0x0000979c                nr_model_xnd_gemv
+ *fill*         0x00009e78        0x0 
+ .text.nr_model_xnd_set_mode
+                0x00009e78       0x6c /tmp/ccnrWYun.o
+                0x00009e78                nr_model_xnd_set_mode
+ .text.nr_model_xnd_reset_stats
+                0x00009ee4       0x3c /tmp/ccnrWYun.o
+                0x00009ee4                nr_model_xnd_reset_stats
+ *fill*         0x00009f20        0x0 
+ .text.nr_model_xnd_stats
+                0x00009f20       0x5c /tmp/ccnrWYun.o
+                0x00009f20                nr_model_xnd_stats
+ *fill*         0x00009f7c        0x0 
+ .text.nr_model_xnd_gemv_post
+                0x00009f7c       0x6c /tmp/ccnrWYun.o
+                0x00009f7c                nr_model_xnd_gemv_post
+ .text.wait     0x00009fe8       0x40 /tmp/ccnS9do7.o
+ *fill*         0x0000a028        0x0 
+ .text.nr_semantic_cached_workspace_bytes
+                0x0000a028        0xc /tmp/ccnS9do7.o
+                0x0000a028                nr_semantic_cached_workspace_bytes
+ *fill*         0x0000a034        0x0 
+ .text.nr_semantic_cached_last_macs
+                0x0000a034        0xc /tmp/ccnS9do7.o
+                0x0000a034                nr_semantic_cached_last_macs
+ *fill*         0x0000a040        0x0 
+ .text.nr_semantic_cached_gemv
+                0x0000a040      0x578 /tmp/ccnS9do7.o
+                0x0000a040                nr_semantic_cached_gemv
+ *fill*         0x0000a5b8        0x0 
+ .text.nr_tool_execute_receipt
+                0x0000a5b8      0x324 /tmp/cc8wuEzZ.o
+                0x0000a5b8                nr_tool_execute_receipt
+ .text.nr_link_utf8_valid
+                0x0000a8dc      0x144 /tmp/ccP9eV3R.o
+                0x0000a8dc                nr_link_utf8_valid
+ *fill*         0x0000aa20        0x0 
+ .text.nr_link_seen
+                0x0000aa20        0xc /tmp/ccP9eV3R.o
+                0x0000aa20                nr_link_seen
+ *fill*         0x0000aa2c        0x0 
+ .text.nr_link_sequence
+                0x0000aa2c        0xc /tmp/ccP9eV3R.o
+                0x0000aa2c                nr_link_sequence
+ *fill*         0x0000aa38        0x0 
+ .text.nr_link_read
+                0x0000aa38      0x4b0 /tmp/ccP9eV3R.o
+                0x0000aa38                nr_link_read
+ .text.nr_link_result
+                0x0000aee8      0x264 /tmp/ccP9eV3R.o
+                0x0000aee8                nr_link_result
+ *fill*         0x0000b14c        0x0 
+ .text.nr_cycle
+                0x0000b14c        0x8 /tmp/ccUIp4HK.o
+                0x0000b14c                nr_cycle
+ *fill*         0x0000b154        0x0 
+ .text.nr_putc  0x0000b154        0xc /tmp/ccUIp4HK.o
+                0x0000b154                nr_putc
+ *fill*         0x0000b160        0x0 
+ .text.nr_puts  0x0000b160       0x20 /tmp/ccUIp4HK.o
+                0x0000b160                nr_puts
+ *fill*         0x0000b180        0x0 
+ .text.nr_put_u32
+                0x0000b180       0x64 /tmp/ccUIp4HK.o
+                0x0000b180                nr_put_u32
+ *fill*         0x0000b1e4        0x0 
+ .text.nr_put_i32
+                0x0000b1e4       0x78 /tmp/ccUIp4HK.o
+                0x0000b1e4                nr_put_i32
+ .text.memset   0x0000b25c       0x20 /tmp/ccUIp4HK.o
+                0x0000b25c                memset
+ *fill*         0x0000b27c        0x0 
+ .text.iterate  0x0000b27c       0x8c /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_main.o
+                0x0000b27c                iterate
+ .text.nr_coremark_entry
+                0x0000b308      0x708 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_main.o
+                0x0000b308                nr_coremark_entry
+ *fill*         0x0000ba10        0x0 
+ .text.cmp_idx  0x0000ba10       0x5c /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_list_join.o
+                0x0000ba10                cmp_idx
+ .text.calc_func
+                0x0000ba6c      0x120 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_list_join.o
+                0x0000ba6c                calc_func
+ *fill*         0x0000bb8c        0x0 
+ .text.cmp_complex
+                0x0000bb8c       0x50 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_list_join.o
+                0x0000bb8c                cmp_complex
+ *fill*         0x0000bbdc        0x0 
+ .text.core_list_mergesort
+                0x0000bbdc      0x1c0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_list_join.o
+                0x0000bbdc                core_list_mergesort
+ *fill*         0x0000bd9c        0x0 
+ .text.core_bench_list
+                0x0000bd9c      0x374 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_list_join.o
+                0x0000bd9c                core_bench_list
+ .text.core_list_init
+                0x0000c110      0x180 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_list_join.o
+                0x0000c110                core_list_init
+ *fill*         0x0000c290        0x0 
+ .text.core_init_matrix
+                0x0000c290      0x134 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_matrix.o
+                0x0000c290                core_init_matrix
+ *fill*         0x0000c3c4        0x0 
+ .text.matrix_mul_vect
+                0x0000c3c4       0x58 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_matrix.o
+                0x0000c3c4                matrix_mul_vect
+ .text.matrix_mul_matrix
+                0x0000c41c       0xa4 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_matrix.o
+                0x0000c41c                matrix_mul_matrix
+ *fill*         0x0000c4c0        0x0 
+ .text.matrix_mul_matrix_bitextract
+                0x0000c4c0       0xb8 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_matrix.o
+                0x0000c4c0                matrix_mul_matrix_bitextract
+ *fill*         0x0000c578        0x0 
+ .text.matrix_test
+                0x0000c578      0x43c /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_matrix.o
+                0x0000c578                matrix_test
+ *fill*         0x0000c9b4        0x0 
+ .text.core_bench_matrix
+                0x0000c9b4       0x3c /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_matrix.o
+                0x0000c9b4                core_bench_matrix
+ *fill*         0x0000c9f0        0x0 
+ .text.core_init_state
+                0x0000c9f0      0x17c /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_state.o
+                0x0000c9f0                core_init_state
+ *fill*         0x0000cb6c        0x0 
+ .text.core_state_transition
+                0x0000cb6c      0x2e8 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_state.o
+                0x0000cb6c                core_state_transition
+ .text.core_bench_state
+                0x0000ce54      0x1a4 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_state.o
+                0x0000ce54                core_bench_state
+ *fill*         0x0000cff8        0x0 
+ .text.get_seed_32
+                0x0000cff8       0x64 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_util.o
+                0x0000cff8                get_seed_32
+ *fill*         0x0000d05c        0x0 
+ .text.crcu16   0x0000d05c       0x80 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_util.o
+                0x0000d05c                crcu16
+ *fill*         0x0000d0dc        0x0 
+ .text.crcu32   0x0000d0dc      0x104 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_util.o
+                0x0000d0dc                crcu32
+ *fill*         0x0000d1e0        0x0 
+ .text.crc16    0x0000d1e0       0x88 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_util.o
+                0x0000d1e0                crc16
+ *fill*         0x0000d268        0x0 
+ .text.check_data_types
+                0x0000d268        0x8 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_util.o
+                0x0000d268                check_data_types
+ *fill*         0x0000d270        0x0 
+ .text.start_time
+                0x0000d270       0x50 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+                0x0000d270                start_time
+ *fill*         0x0000d2c0        0x0 
+ .text.stop_time
+                0x0000d2c0       0x50 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+                0x0000d2c0                stop_time
+ *fill*         0x0000d310        0x0 
+ .text.get_time
+                0x0000d310       0x18 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+                0x0000d310                get_time
+ *fill*         0x0000d328        0x0 
+ .text.time_in_secs
+                0x0000d328       0x14 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+                0x0000d328                time_in_secs
+ *fill*         0x0000d33c        0x0 
+ .text.portable_init
+                0x0000d33c        0xc /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+                0x0000d33c                portable_init
+ *fill*         0x0000d348        0x0 
+ .text.portable_fini
+                0x0000d348      0x30c /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+                0x0000d348                portable_fini
+ *fill*         0x0000d654        0x0 
+ .text.number_nr
+                0x0000d654      0x110 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme_print.o
+ .text.ee_printf
+                0x0000d764      0x2a8 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme_print.o
+                0x0000d764                ee_printf
+
+.rodata         0x0000da0c     0xe000
+ *(.rodata .rodata.*)
+ .rodata.select_config.str1.4
+                0x0000da0c     0x2831 /tmp/ccdSX3z3.o
+                                 0x3f (size before relaxing)
+ .rodata.main.str1.4
+                0x0001023d      0xcf4 /tmp/ccdSX3z3.o
+ .rodata.str1.4
+                0x0001023d       0x45 /tmp/ccdSX3z3.o
+ *fill*         0x0001023d        0x3 
+ .rodata.CSWTCH.83
+                0x00010240       0x18 /tmp/ccdSX3z3.o
+ .rodata.prefix.0
+                0x00010258        0x9 /tmp/ccdSX3z3.o
+ *fill*         0x00010261        0x3 
+ .rodata.configs
+                0x00010264       0x54 /tmp/ccdSX3z3.o
+ .rodata.decimal_argument.constprop.0.str1.4
+                0x000102b8        0x4 /tmp/ccgrMoTv.o
+ .rodata.duty_argument.constprop.0.str1.4
+                0x000102b8       0x24 /tmp/ccgrMoTv.o
+ .rodata.contract_request_end.str1.4
+                0x000102b8       0x23 /tmp/ccgrMoTv.o
+ .rodata.contract_request_start.str1.4
+                0x000102b8        0x8 /tmp/ccgrMoTv.o
+ .rodata.led_arguments.str1.4
+                0x000102b8        0xc /tmp/ccgrMoTv.o
+ .rodata.canonical_numeric_command.str1.4
+                0x000102b8       0x21 /tmp/ccgrMoTv.o
+ .rodata.capability_allowed.str1.4
+                0x000102b8       0x96 /tmp/ccgrMoTv.o
+ .rodata.nr_tool_decode_machine.str1.4
+                0x000102b8       0x91 /tmp/ccgrMoTv.o
+ .rodata.str1.4
+                0x000102b8     0x1290 /tmp/ccgrMoTv.o
+ .rodata.tail.0
+                0x000102b8       0x18 /tmp/ccgrMoTv.o
+ .rodata.prefix.1
+                0x000102d0       0x10 /tmp/ccgrMoTv.o
+ .rodata.units.2
+                0x000102e0       0x20 /tmp/ccgrMoTv.o
+ .rodata.verbs.3
+                0x00010300       0x4c /tmp/ccgrMoTv.o
+ .rodata.terms.4
+                0x0001034c       0x1c /tmp/ccgrMoTv.o
+ .rodata.names.5
+                0x00010368       0x60 /tmp/ccgrMoTv.o
+ .rodata.off.6  0x000103c8       0x18 /tmp/ccgrMoTv.o
+ .rodata.on.7   0x000103e0       0x14 /tmp/ccgrMoTv.o
+ .rodata.quantity.8
+                0x000103f4       0xac /tmp/ccgrMoTv.o
+ .rodata.particle.9
+                0x000104a0       0x3c /tmp/ccgrMoTv.o
+ .rodata.arithmetic.10
+                0x000104dc       0x48 /tmp/ccgrMoTv.o
+ .rodata.verbs.11
+                0x00010524      0x118 /tmp/ccgrMoTv.o
+ .rodata.join.12
+                0x0001063c       0x30 /tmp/ccgrMoTv.o
+ .rodata.state_query.13
+                0x0001066c       0x64 /tmp/ccgrMoTv.o
+ .rodata.action.14
+                0x000106d0       0x78 /tmp/ccgrMoTv.o
+ .rodata.core_observe.15
+                0x00010748       0x24 /tmp/ccgrMoTv.o
+ .rodata.completion.17
+                0x0001076c       0x1c /tmp/ccgrMoTv.o
+ .rodata.past.18
+                0x00010788       0x18 /tmp/ccgrMoTv.o
+ .rodata.text_object.19
+                0x000107a0       0x14 /tmp/ccgrMoTv.o
+ .rodata.text_verb.20
+                0x000107b4       0x10 /tmp/ccgrMoTv.o
+ .rodata.mention.21
+                0x000107c4      0x11c /tmp/ccgrMoTv.o
+ .rodata.pwm_unsupported.22
+                0x000108e0       0x10 /tmp/ccgrMoTv.o
+ .rodata.negated.23
+                0x000108f0       0x18 /tmp/ccgrMoTv.o
+ .rodata.query.24
+                0x00010908       0x2c /tmp/ccgrMoTv.o
+ .rodata.score_control.25
+                0x00010934       0x98 /tmp/ccgrMoTv.o
+ .rodata.score_target.26
+                0x000109cc       0x2c /tmp/ccgrMoTv.o
+ .rodata.score_write.27
+                0x000109f8       0x44 /tmp/ccgrMoTv.o
+ .rodata.external.28
+                0x00010a3c       0x44 /tmp/ccgrMoTv.o
+ .rodata.temp_write.29
+                0x00010a80       0x94 /tmp/ccgrMoTv.o
+ .rodata.analog_led.30
+                0x00010b14       0x34 /tmp/ccgrMoTv.o
+ .rodata.counter_write.31
+                0x00010b48       0x3c /tmp/ccgrMoTv.o
+ .rodata.firmware.32
+                0x00010b84       0x14 /tmp/ccgrMoTv.o
+ .rodata.denied.33
+                0x00010b98       0xb0 /tmp/ccgrMoTv.o
+ .rodata.terms.34
+                0x00010c48       0xc8 /tmp/ccgrMoTv.o
+ .rodata.object.35
+                0x00010d10       0x30 /tmp/ccgrMoTv.o
+ .rodata.other.36
+                0x00010d40        0xc /tmp/ccgrMoTv.o
+ .rodata.keep.37
+                0x00010d4c       0x18 /tmp/ccgrMoTv.o
+ .rodata.neg.38
+                0x00010d64        0xc /tmp/ccgrMoTv.o
+ .rodata.message.39
+                0x00010d70       0x10 /tmp/ccgrMoTv.o
+ .rodata.wait.40
+                0x00010d80       0x10 /tmp/ccgrMoTv.o
+ .rodata.explanation.41
+                0x00010d90       0x18 /tmp/ccgrMoTv.o
+ .rodata.modifier.42
+                0x00010da8       0x10 /tmp/ccgrMoTv.o
+ .rodata.neg.43
+                0x00010db8       0x1c /tmp/ccgrMoTv.o
+ .rodata.run_words.44
+                0x00010dd4       0x24 /tmp/ccgrMoTv.o
+ .rodata.read_words.45
+                0x00010df8       0x38 /tmp/ccgrMoTv.o
+ .rodata.eg_value
+                0x00010e30       0x14 /tmp/ccgrMoTv.o
+ .rodata.eg_key
+                0x00010e44       0x14 /tmp/ccgrMoTv.o
+ .rodata.nr_memory_value_bias
+                0x00010e58      0x100 /tmp/ccgrMoTv.o
+ .rodata.nr_memory_key_bias
+                0x00010f58      0x100 /tmp/ccgrMoTv.o
+ .rodata.head   0x00011058       0x14 /tmp/ccgrMoTv.o
+ .rodata.layers
+                0x0001106c       0xf0 /tmp/ccgrMoTv.o
+ .rodata.nr_exp_lut
+                0x0001115c      0x102 /tmp/ccgrMoTv.o
+ *fill*         0x0001125e        0x2 
+ .rodata.nr_head_bias
+                0x00011260       0x18 /tmp/ccgrMoTv.o
+ .rodata.nr_head_weight
+                0x00011278       0xc0 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_1_ff2_bias
+                0x00011338      0x100 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_1_ff1_bias
+                0x00011438      0x200 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_1_ff1_weight
+                0x00011638     0x1000 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_1_o_bias
+                0x00012638      0x100 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_1_o_weight
+                0x00012738      0x800 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_1_v_bias
+                0x00012f38      0x100 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_1_v_weight
+                0x00013038      0x800 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_1_k_bias
+                0x00013838      0x100 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_1_k_weight
+                0x00013938      0x800 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_1_q_bias
+                0x00014138      0x100 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_1_q_weight
+                0x00014238      0x800 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_0_ff2_bias
+                0x00014a38      0x100 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_0_ff2_weight
+                0x00014b38     0x1000 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_0_ff1_bias
+                0x00015b38      0x200 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_0_ff1_weight
+                0x00015d38     0x1000 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_0_o_bias
+                0x00016d38      0x100 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_0_o_weight
+                0x00016e38      0x800 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_0_v_bias
+                0x00017638      0x100 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_0_v_weight
+                0x00017738      0x800 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_0_k_bias
+                0x00017f38      0x100 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_0_k_weight
+                0x00018038      0x800 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_0_q_bias
+                0x00018838      0x100 /tmp/ccgrMoTv.o
+ .rodata.nr_blocks_0_q_weight
+                0x00018938      0x800 /tmp/ccgrMoTv.o
+ .rodata.nr_position_weight
+                0x00019138      0x800 /tmp/ccgrMoTv.o
+ .rodata.nr_embedding_weight
+                0x00019938     0x2000 /tmp/ccgrMoTv.o
+ .rodata.nr_coremark_entry.str1.4
+                0x0001b938      0x42d /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_main.o
+ .rodata.state_known_crc
+                0x0001b938        0xa /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_main.o
+ *fill*         0x0001b942        0x2 
+ .rodata.matrix_known_crc
+                0x0001b944        0xa /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_main.o
+ *fill*         0x0001b94e        0x2 
+ .rodata.list_known_crc
+                0x0001b950        0xa /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_main.o
+ .rodata.str1.4
+                0x0001b95a       0xad /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_state.o
+ *fill*         0x0001b95a        0x2 
+ .rodata.errpat
+                0x0001b95c       0x10 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_state.o
+ .rodata.scipat
+                0x0001b96c       0x10 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_state.o
+ .rodata.floatpat
+                0x0001b97c       0x10 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_state.o
+ .rodata.intpat
+                0x0001b98c       0x10 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_state.o
+ .rodata.get_seed_32
+                0x0001b99c       0x18 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_util.o
+ .rodata.portable_fini.str1.4
+                0x0001b9b4      0x184 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+ .rodata.number_nr.str1.4
+                0x0001b9b4       0x11 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme_print.o
+ .rodata.ee_printf.str1.4
+                0x0001b9b4       0x1d /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme_print.o
+ .rodata.ee_printf
+                0x0001b9b4       0x58 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme_print.o
+
+.data           0x0001ba0c       0x14
+ *(.data .data.*)
+ *(.sdata .sdata.*)
+ .sdata.compact_enabled
+                0x0001ba0c        0x4 /tmp/ccdSX3z3.o
+ .sdata.fast_enabled
+                0x0001ba10        0x4 /tmp/ccdSX3z3.o
+ .sdata.default_num_contexts
+                0x0001ba14        0x4 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+                0x0001ba14                default_num_contexts
+ .sdata.seed4_volatile
+                0x0001ba18        0x4 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+                0x0001ba18                seed4_volatile
+ .sdata.seed3_volatile
+                0x0001ba1c        0x4 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+                0x0001ba1c                seed3_volatile
+                0x0001c20c                        __global_pointer$ = (ADDR (.data) + 0x800)
+
+.bss            0x0001ba20     0x1aa4
+                0x0001ba20                        . = ALIGN (0x4)
+                0x0001ba20                        __bss_start = .
+ *(.bss .bss.*)
+ .bss.v_cache   0x0001ba20     0x1000 /tmp/ccgrMoTv.o
+ .bss.attention_cache
+                0x0001ca20      0x200 /tmp/ccgrMoTv.o
+ .bss.residence
+                0x0001cc20       0x14 /tmp/ccnrWYun.o
+ .bss.stats     0x0001cc34       0x28 /tmp/ccnrWYun.o
+ .bss.static_memblk
+                0x0001cc5c      0x7d0 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_main.o
+                0x0001cc5c                static_memblk
+ .bss.pmu_end   0x0001d42c       0x1c /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+ .bss.pmu_begin
+                0x0001d448       0x1c /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+ *(.sbss .sbss.*)
+ .sbss.nr_coremark_validated
+                0x0001d464        0x4 /tmp/ccoKMu2Q.o
+                0x0001d464                nr_coremark_validated
+ .sbss.attention_dot4
+                0x0001d468        0x4 /tmp/ccgrMoTv.o
+ .sbss.qkv_interleaved
+                0x0001d46c        0x4 /tmp/ccgrMoTv.o
+ .sbss.selected_semantic_backend
+                0x0001d470        0x4 /tmp/ccgrMoTv.o
+ .sbss.selected_backend
+                0x0001d474        0x4 /tmp/ccgrMoTv.o
+ .sbss.pp_mode  0x0001d478        0x4 /tmp/ccnrWYun.o
+ .sbss.pp_shift
+                0x0001d47c        0x4 /tmp/ccnrWYun.o
+ .sbss.pp_bias  0x0001d480        0x4 /tmp/ccnrWYun.o
+ .sbss.mode     0x0001d484        0x4 /tmp/ccnrWYun.o
+ .sbss.resident_b2
+                0x0001d488        0x4 /tmp/ccnS9do7.o
+ .sbss.resident_b1
+                0x0001d48c        0x4 /tmp/ccnS9do7.o
+ .sbss.resident_w2
+                0x0001d490        0x4 /tmp/ccnS9do7.o
+ .sbss.resident_w1
+                0x0001d494        0x4 /tmp/ccnS9do7.o
+ .sbss.last_macs
+                0x0001d498        0x4 /tmp/ccnS9do7.o
+ .sbss.previous_n
+                0x0001d49c        0x4 /tmp/ccnS9do7.o
+ .sbss.initialized
+                0x0001d4a0        0x4 /tmp/ccnS9do7.o
+ .sbss.skip_lf  0x0001d4a4        0x4 /tmp/ccP9eV3R.o
+ .sbss.last_sequence
+                0x0001d4a8        0x4 /tmp/ccP9eV3R.o
+ .sbss.seen     0x0001d4ac        0x4 /tmp/ccP9eV3R.o
+ .sbss.t1       0x0001d4b0        0x4 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+ .sbss.t0       0x0001d4b4        0x4 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+ .sbss.seed5_volatile
+                0x0001d4b8        0x4 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+                0x0001d4b8                seed5_volatile
+ .sbss.seed2_volatile
+                0x0001d4bc        0x4 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+                0x0001d4bc                seed2_volatile
+ .sbss.seed1_volatile
+                0x0001d4c0        0x4 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+                0x0001d4c0                seed1_volatile
+ *(COMMON)
+                0x0001d4c4                        . = ALIGN (0x4)
+                0x0001d4c4                        __bss_end = .
+                0x00020000                        __stack_top = (ORIGIN (CPU_RAM) + LENGTH (CPU_RAM))
+                0x0001e000                        __stack_bottom = (__stack_top - 0x2000)
+                0x00000001                        ASSERT ((__bss_end <= __stack_bottom), CPU firmware exceeds RAM below stack)
+
+.ai_const       0x00020000    0x25ef0
+                0x00020000                        . = ALIGN (0x10)
+                0x00020000                        __ai_const_start = .
+ *(.ai_const .ai_const.*)
+ .ai_const      0x00020000    0x25ef0 /tmp/ccgrMoTv.o
+                0x00045ef0                        . = ALIGN (0x10)
+                0x00045ef0                        __ai_const_end = .
+
+.rela.dyn       0x00045ef0        0x0
+ .rela.text.startup
+                0x00045ef0        0x0 /tmp/ccOQvrdg.o
+
+.ai_scratch     0x00045ef0     0x7a80
+                0x00045ef0                        . = ALIGN (0x10)
+                0x00045ef0                        __ai_scratch_start = .
+ *(.ai_scratch .ai_scratch.*)
+ .ai_scratch    0x00045ef0     0x6980 /tmp/ccgrMoTv.o
+ .ai_scratch    0x0004c870      0x500 /tmp/ccnrWYun.o
+ .ai_scratch    0x0004cd70      0xc00 /tmp/ccnS9do7.o
+                0x0004d970                        __ai_scratch_used_end = .
+                0x00080000                        __ai_scratch_end = (ORIGIN (AI_RAM) + LENGTH (AI_RAM))
+                0x00000001                        ASSERT ((__ai_scratch_used_end <= (ORIGIN (AI_RAM) + LENGTH (AI_RAM))), AI constants and workspace exceed SRAM)
+
+/DISCARD/
+ *(.comment)
+ *(.note*)
+ *(.eh_frame*)
+OUTPUT(/work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/interactive.elf elf32-littleriscv)
+
+.riscv.attributes
+                0x00000000       0x43
+ .riscv.attributes
+                0x00000000       0x41 /tmp/ccOQvrdg.o
+ .riscv.attributes
+                0x00000041       0x43 /tmp/ccdSX3z3.o
+ .riscv.attributes
+                0x00000084       0x3f /tmp/ccoKMu2Q.o
+ .riscv.attributes
+                0x000000c3       0x3f /tmp/cc14goDE.o
+ .riscv.attributes
+                0x00000102       0x3f /tmp/ccgrMoTv.o
+ .riscv.attributes
+                0x00000141       0x3f /tmp/ccnrWYun.o
+ .riscv.attributes
+                0x00000180       0x3f /tmp/ccnS9do7.o
+ .riscv.attributes
+                0x000001bf       0x3f /tmp/cc8wuEzZ.o
+ .riscv.attributes
+                0x000001fe       0x3f /tmp/ccP9eV3R.o
+ .riscv.attributes
+                0x0000023d       0x43 /tmp/ccUIp4HK.o
+ .riscv.attributes
+                0x00000280       0x3f /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_main.o
+ .riscv.attributes
+                0x000002bf       0x3f /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_list_join.o
+ .riscv.attributes
+                0x000002fe       0x3f /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_matrix.o
+ .riscv.attributes
+                0x0000033d       0x3f /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_state.o
+ .riscv.attributes
+                0x0000037c       0x3f /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_util.o
+ .riscv.attributes
+                0x000003bb       0x43 /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme.o
+ .riscv.attributes
+                0x000003fe       0x3f /work/LUO/NeedleRV-X/07_runs/development/resource_trials/integrated/full_model/firmware/coremark/core_portme_print.o

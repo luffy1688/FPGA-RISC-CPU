@@ -1,0 +1,16 @@
+{
+  "seed": 103,
+  "epochs": 24,
+  "batch_size": 64,
+  "lr": 0.0003,
+  "end_lr": 6e-05,
+  "threads": 4,
+  "device": "cpu",
+  "init_archive": "07_runs/eval/tool_contract_20261027/baseline_sources.tar.gz",
+  "architecture": "unchanged d64, 2 layers, 4 heads, INT4/INT8 export",
+  "training_examples": 2352,
+  "new_synthetic_examples": 1200,
+  "dataset_sha256": "afd162ca96ef49b4ff72bebe8a10d8ea251e6184af3dccb81fd22c9234ce9014",
+  "acceptance_exact_overlap": 0,
+  "checkpoint_selection": "fixed final epoch; no second-user-set predictions during training or selection"
+}

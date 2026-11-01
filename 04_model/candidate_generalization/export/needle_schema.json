@@ -1,0 +1,60 @@
+{
+  "source": "09_refs/needle/needle/agent/tools.py",
+  "source_commit": "6bd836d521a2991510bf303cd0d87e025e8ce9dc",
+  "tools": [
+    {
+      "name": "set_led",
+      "description": "Set the board LED display code.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "value"
+        ]
+      }
+    },
+    {
+      "name": "set_pwm",
+      "description": "Set the board PWM duty cycle in percent.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "percent": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "percent"
+        ]
+      }
+    },
+    {
+      "name": "read_counter",
+      "description": "Read the CPU cycle/event counter.",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "read_temp",
+      "description": "Read the FPGA die temperature sample.",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "run_coremark",
+      "description": "Run the CoreMark performance test and report its score.",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      }
+    }
+  ]
+}

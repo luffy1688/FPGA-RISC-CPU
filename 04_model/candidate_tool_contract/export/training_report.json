@@ -1,0 +1,220 @@
+{
+  "protocol": {
+    "seed": 103,
+    "epochs": 24,
+    "batch_size": 64,
+    "lr": 0.0003,
+    "end_lr": 6e-05,
+    "threads": 4,
+    "device": "cpu",
+    "init_archive": "07_runs/eval/tool_contract_20261027/baseline_sources.tar.gz",
+    "architecture": "unchanged d64, 2 layers, 4 heads, INT4/INT8 export",
+    "training_examples": 2352,
+    "new_synthetic_examples": 1200,
+    "dataset_sha256": "afd162ca96ef49b4ff72bebe8a10d8ea251e6184af3dccb81fd22c9234ce9014",
+    "acceptance_exact_overlap": 0,
+    "checkpoint_selection": "fixed final epoch; no second-user-set predictions during training or selection"
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss_sum": 48.34133008122444,
+      "elapsed_seconds": 3.048596255015582
+    },
+    {
+      "epoch": 5,
+      "train_loss_sum": 6.735278565436602,
+      "elapsed_seconds": 14.736175116035156
+    },
+    {
+      "epoch": 9,
+      "train_loss_sum": 2.5416130255907774,
+      "elapsed_seconds": 26.443064536026213
+    },
+    {
+      "epoch": 13,
+      "train_loss_sum": 1.51474217325449,
+      "elapsed_seconds": 38.02214333502343
+    },
+    {
+      "epoch": 17,
+      "train_loss_sum": 1.0325978072360158,
+      "elapsed_seconds": 49.63682045403402
+    },
+    {
+      "epoch": 21,
+      "train_loss_sum": 0.8172756107524037,
+      "elapsed_seconds": 61.028996201988775
+    },
+    {
+      "epoch": 24,
+      "train_loss_sum": 0.6887272596359253,
+      "elapsed_seconds": 69.59339057700709
+    }
+  ],
+  "torch": "1.13.1",
+  "elapsed_seconds": 69.6434594609891,
+  "candidate_only": true,
+  "production_weights_changed": false,
+  "second_acceptance_inferences": 0,
+  "deployment": {
+    "format": "nr-byte-tool-int4-v1",
+    "candidate_only": true,
+    "d_model": 64,
+    "seq_len": 64,
+    "heads": 4,
+    "layers": 2,
+    "activation_scale": 32,
+    "tools": [
+      "read_temp",
+      "set_pwm",
+      "run_coremark",
+      "read_counter",
+      "set_led",
+      "reject"
+    ],
+    "tensors": [
+      {
+        "name": "embedding.weight",
+        "shape": [
+          256,
+          64
+        ],
+        "shift": 2,
+        "packed_bytes": 8192
+      },
+      {
+        "name": "position.weight",
+        "shape": [
+          64,
+          64
+        ],
+        "shift": 3,
+        "packed_bytes": 2048
+      },
+      {
+        "name": "blocks.0.q.weight",
+        "shape": [
+          64,
+          64
+        ],
+        "shift": 3,
+        "packed_bytes": 2048
+      },
+      {
+        "name": "blocks.0.k.weight",
+        "shape": [
+          64,
+          64
+        ],
+        "shift": 3,
+        "packed_bytes": 2048
+      },
+      {
+        "name": "blocks.0.v.weight",
+        "shape": [
+          64,
+          64
+        ],
+        "shift": 4,
+        "packed_bytes": 2048
+      },
+      {
+        "name": "blocks.0.o.weight",
+        "shape": [
+          64,
+          64
+        ],
+        "shift": 4,
+        "packed_bytes": 2048
+      },
+      {
+        "name": "blocks.0.ff1.weight",
+        "shape": [
+          128,
+          64
+        ],
+        "shift": 3,
+        "packed_bytes": 4096
+      },
+      {
+        "name": "blocks.0.ff2.weight",
+        "shape": [
+          64,
+          128
+        ],
+        "shift": 4,
+        "packed_bytes": 4096
+      },
+      {
+        "name": "blocks.1.q.weight",
+        "shape": [
+          64,
+          64
+        ],
+        "shift": 4,
+        "packed_bytes": 2048
+      },
+      {
+        "name": "blocks.1.k.weight",
+        "shape": [
+          64,
+          64
+        ],
+        "shift": 4,
+        "packed_bytes": 2048
+      },
+      {
+        "name": "blocks.1.v.weight",
+        "shape": [
+          64,
+          64
+        ],
+        "shift": 3,
+        "packed_bytes": 2048
+      },
+      {
+        "name": "blocks.1.o.weight",
+        "shape": [
+          64,
+          64
+        ],
+        "shift": 3,
+        "packed_bytes": 2048
+      },
+      {
+        "name": "blocks.1.ff1.weight",
+        "shape": [
+          128,
+          64
+        ],
+        "shift": 4,
+        "packed_bytes": 4096
+      },
+      {
+        "name": "blocks.1.ff2.weight",
+        "shape": [
+          64,
+          128
+        ],
+        "shift": 3,
+        "packed_bytes": 4096
+      },
+      {
+        "name": "head.weight",
+        "shape": [
+          6,
+          64
+        ],
+        "shift": 3,
+        "packed_bytes": 192
+      }
+    ],
+    "packed_weight_bytes": 43200,
+    "bias_bytes": 3608,
+    "total_model_bytes": 47066,
+    "runtime_workspace_bytes": 21696,
+    "xnd_staging_bytes": 1280
+  },
+  "checkpoint_sha256": "0dbaa817f70eb96dc51dda90b7a8219ea497c41a4113f786a7457dfc00045ab7"
+}

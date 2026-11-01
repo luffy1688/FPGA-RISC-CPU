@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "scope": "ActualSVsmallmasterarbiterandfull2048x64frozenpositionMLPMMIOguards.NoPDSorboardclaim.",
+  "dual_dma": {
+    "fair_roundrobin": true,
+    "payload_owner_locked_under_backpressure": true,
+    "both_clients_cancelled_response_drained": true,
+    "cancelled_client_reasserts_new_job_before_old_response": true,
+    "error_response_not_misrouted": true,
+    "immediate_response": true,
+    "common_reset": true
+  },
+  "hidden64": {
+    "model": "capacity/h64_f2048_position.npz",
+    "input": "请读取FPGA当前温度。",
+    "quantized_hidden64_python_exact": true,
+    "scores16_python_exact": true,
+    "reset_load_start_config_invalidate_result_read_rejected": true,
+    "result_valid_status_bit": 9,
+    "cache_valid_status_bit": 8,
+    "packed_hidden_word_window": "0x200..0x23c",
+    "dma_last_word_error_and_timeout_recovery": true,
+    "abort_command_config_rejected": true
+  },
+  "soc_lint_returncode": 0,
+  "soc_combinational_loop_warning": false,
+  "production_modified": false
+}

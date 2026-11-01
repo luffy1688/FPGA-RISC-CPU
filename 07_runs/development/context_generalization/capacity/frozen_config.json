@@ -1,0 +1,269 @@
+{
+  "scope": "Frozen v3 capacity candidate,not deployed;1138 is observed regression used for error-family augmentation and selection,not blind;old16 first861/1138 immutable",
+  "architecture": "Unicode1024 sparse -> shared64ReLU -> binary2+context9+legaltool5; oldEngram encoder immutable;oldrepair first if originalencoderreject;newtool5 only if stillreject;classconditionalveto last",
+  "hidden": 64,
+  "outputs": 16,
+  "thresholds": [
+    188,
+    93,
+    53,
+    63,
+    0,
+    192
+  ],
+  "constant_bytes": 72044,
+  "selection": {
+    "profile": "latest_shared64_tool5",
+    "mode": "cascade",
+    "selected": {
+      "thresholds": [
+        188,
+        93,
+        53,
+        63,
+        0,
+        192
+      ],
+      "score": 0.9126851818677171,
+      "metrics": {
+        "original80": {
+          "n": 80,
+          "correct": 76,
+          "by_class": {
+            "read_temp": [
+              4,
+              4
+            ],
+            "set_pwm": [
+              29,
+              32
+            ],
+            "run_coremark": [
+              4,
+              4
+            ],
+            "read_counter": [
+              4,
+              4
+            ],
+            "set_led": [
+              32,
+              32
+            ],
+            "reject": [
+              3,
+              4
+            ]
+          },
+          "false_accept": 1,
+          "false_reject": 3,
+          "macro_recall": 0.9427083333333334,
+          "legal_correct": 73
+        },
+        "aug192": {
+          "n": 192,
+          "correct": 167,
+          "by_class": {
+            "read_temp": [
+              31,
+              32
+            ],
+            "set_pwm": [
+              30,
+              32
+            ],
+            "run_coremark": [
+              31,
+              32
+            ],
+            "read_counter": [
+              28,
+              32
+            ],
+            "set_led": [
+              26,
+              32
+            ],
+            "reject": [
+              21,
+              32
+            ]
+          },
+          "false_accept": 11,
+          "false_reject": 8,
+          "macro_recall": 0.8697916666666666,
+          "legal_correct": 146
+        },
+        "observed288": {
+          "n": 288,
+          "correct": 263,
+          "by_class": {
+            "read_temp": [
+              32,
+              32
+            ],
+            "set_pwm": [
+              31,
+              32
+            ],
+            "run_coremark": [
+              32,
+              32
+            ],
+            "read_counter": [
+              32,
+              32
+            ],
+            "set_led": [
+              32,
+              32
+            ],
+            "reject": [
+              104,
+              128
+            ]
+          },
+          "false_accept": 24,
+          "false_reject": 1,
+          "macro_recall": 0.9635416666666666,
+          "legal_correct": 159
+        },
+        "old_validation": {
+          "n": 541,
+          "correct": 454,
+          "by_class": {
+            "read_temp": [
+              11,
+              12
+            ],
+            "set_pwm": [
+              23,
+              23
+            ],
+            "run_coremark": [
+              12,
+              12
+            ],
+            "read_counter": [
+              12,
+              12
+            ],
+            "set_led": [
+              23,
+              24
+            ],
+            "reject": [
+              373,
+              458
+            ]
+          },
+          "false_accept": 85,
+          "false_reject": 0,
+          "macro_recall": 0.9482350800582241,
+          "legal_correct": 81
+        },
+        "validation": {
+          "n": 2031,
+          "correct": 1682,
+          "by_class": {
+            "read_temp": [
+              47,
+              49
+            ],
+            "set_pwm": [
+              94,
+              104
+            ],
+            "run_coremark": [
+              43,
+              49
+            ],
+            "read_counter": [
+              40,
+              43
+            ],
+            "set_led": [
+              101,
+              107
+            ],
+            "reject": [
+              1357,
+              1679
+            ]
+          },
+          "false_accept": 322,
+          "false_reject": 14,
+          "macro_recall": 0.9038263029317152,
+          "legal_correct": 325
+        },
+        "observed1138": {
+          "n": 1138,
+          "correct": 1066,
+          "by_class": {
+            "read_temp": [
+              25,
+              25
+            ],
+            "set_pwm": [
+              64,
+              64
+            ],
+            "run_coremark": [
+              19,
+              25
+            ],
+            "read_counter": [
+              18,
+              21
+            ],
+            "set_led": [
+              59,
+              61
+            ],
+            "reject": [
+              881,
+              942
+            ]
+          },
+          "false_accept": 61,
+          "false_reject": 2,
+          "macro_recall": 0.9199333555426277,
+          "legal_correct": 185
+        }
+      },
+      "gate": true
+    }
+  },
+  "lineage": {
+    "train_rows": 25014,
+    "original_train": 21431,
+    "added": 3583,
+    "classcounts": {
+      "read_temp": 1457,
+      "set_pwm": 2488,
+      "run_coremark": 1104,
+      "read_counter": 1460,
+      "set_led": 2646,
+      "reject": 15859
+    },
+    "contextcounts": {
+      "0": 9155,
+      "8": 5362,
+      "1": 1997,
+      "2": 1381,
+      "3": 1032,
+      "4": 929,
+      "5": 1034,
+      "6": 1932,
+      "7": 2192
+    },
+    "old1138_status": "Observed development regression target; NOT heldout or blind; error families informed augmentation and checkpoint/threshold selection",
+    "old1138_exact_train_overlap": 0,
+    "old80_192_288_541_2031_exact_train_overlap": 0,
+    "old_first_evaluations_immutable": true,
+    "new_wrappers_independent": false,
+    "scope": "New action cores and parameter draws combined with observed error-family wrappers. No exact old1138 sentences added, but template knowledge leaks intentionally; not independent generalization."
+  },
+  "frozen_before_new_internal_audit": true,
+  "constant_storage_note": "Actual compiled arrays72044B,linker16-byte section alignment72048B;previous72068 counted NumPy int64 threshold storage although C emittedINT32 thresholds. Values,weights,all scores unchanged."
+}

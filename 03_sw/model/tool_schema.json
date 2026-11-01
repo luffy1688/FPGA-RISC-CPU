@@ -1,0 +1,121 @@
+{
+  "schema_version": 2,
+  "input": {
+    "encoding": "UTF-8",
+    "max_bytes": 64,
+    "on_overflow": "reject complete line, drain, return READY; never truncate"
+  },
+  "tools": [
+    {
+      "id": 0,
+      "name": "read_temp",
+      "effect": "read",
+      "returns": "signed centidegrees C",
+      "requires": "ADC available and valid, no fault",
+      "unsupported": [
+        "temperature setpoint",
+        "cooling",
+        "heating"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "set_pwm",
+      "effect": "write",
+      "argument": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 100,
+        "unit": "percent",
+        "accepted_notation": [
+          "ASCII decimal",
+          "Chinese 百分之 integer",
+          "integer 成 (x10)"
+        ]
+      },
+      "unsupported": [
+        "frequency change",
+        "period change"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "run_coremark",
+      "effect": "benchmark",
+      "requires": "run actual 300 iterations and preserve CRC/timing",
+      "unsupported": [
+        "invent score",
+        "edit score"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "read_counter",
+      "effect": "read",
+      "unsupported": [
+        "reset",
+        "zero",
+        "stop",
+        "write"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "set_led",
+      "effect": "write",
+      "operations": {
+        "0": {
+          "name": "mask",
+          "argument_range": [
+            0,
+            255
+          ],
+          "notation": [
+            "decimal",
+            "0x hexadecimal"
+          ],
+          "meaning": "replace complete 8-bit shadow mask"
+        },
+        "1": {
+          "name": "bit_on",
+          "argument_range": [
+            0,
+            7
+          ],
+          "meaning": "set one bit, preserve others"
+        },
+        "2": {
+          "name": "bit_off",
+          "argument_range": [
+            0,
+            7
+          ],
+          "meaning": "clear one bit, preserve others"
+        }
+      },
+      "ownership": "bit7 unavailable as single LED while PWM enabled"
+    },
+    {
+      "id": 5,
+      "name": "reject",
+      "effect": "none"
+    }
+  ],
+  "selection_source": {
+    "0": "neural class accepted after contract checks",
+    "1": "unique read-only schema rescue; no raw accuracy credit",
+    "2": "explicit bounded LED schema rescue; no raw accuracy credit",
+    "3": "denied",
+    "4": "explicit PWM set verb + duty unit + legal evidenced numeric value; software rescue, not neural accuracy"
+  },
+  "rules": [
+    "one tool/action per request",
+    "negated actions rejected",
+    "unsupported requested effect never substituted by read",
+    "model backend failure forbids dispatch",
+    "malformed operation tag rejected at dispatcher",
+    "raw class/logits always kept separately",
+    "PWM read/query and unsupported frequency actions rejected",
+    "PWM schema rescue never redirects raw LED actuator class"
+  ]
+}

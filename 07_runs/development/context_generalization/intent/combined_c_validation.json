@@ -1,0 +1,11 @@
+{
+  "scope": "Candidate full encoder fusion,not production/system acceptance; no642/fresh accessed",
+  "constant_bytes": 21832,
+  "c_python_all_scores_exact_cases": 3132,
+  "encoder_bucket": "Immutable raw six-way encoder argmax; ties earlier class",
+  "order": "shared Unicode1024 counts -> context11 score + only-if-encoderreject repair5 -> classconditional threshold -> jointreject dominance",
+  "original_encoder_retained": true,
+  "neural_context_logits_uncalibrated": true,
+  "fast_path_validated": false,
+  "fast_path_warning": "Using schemahint bucket instead of encoder bucket would be hybrid and needs separate system validation"
+}

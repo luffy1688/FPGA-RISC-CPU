@@ -1,0 +1,129 @@
+{
+  "scope": "Logical structure and request walkthrough using saved board results.",
+  "firmware": "experimental_position_fusion_oct30",
+  "date": "2026-11-01",
+  "pace_factor": 3,
+  "source_teaching_duration_seconds": 60,
+  "seconds": 20,
+  "dimensions": [
+    1600,
+    900
+  ],
+  "video_fps": 12,
+  "gif_dimensions": [
+    960,
+    540
+  ],
+  "gif_fps": 8,
+  "gif_frames": 160,
+  "burned_in_captions": true,
+  "audio": false,
+  "sidecar_subtitle": "展示字幕.srt",
+  "narration_script": "展示解说稿.md",
+  "video": "三维流程演示_3倍速.mp4",
+  "gif": "三维流程演示_3倍速.gif",
+  "webpage": "成果展示.html",
+  "native_model": "LumaRV_逻辑结构.glb",
+  "record_case_ids": {
+    "fast": 3,
+    "model": 228,
+    "reject": 84,
+    "coremark": 218
+  },
+  "timing_scope": "Animation stage duration does not measure FPGA execution; measured native/model/CoreMark times are displayed separately.",
+  "real_webgl_rendered": true,
+  "serial_opened": false,
+  "powerpoint_native_rotation_scope": "Editing mode in compatible PowerPoint; slideshow free-orbit via offline HTML link.",
+  "labeled_model_animation": {
+    "updated": "2026-11-01",
+    "video": "三维模型_旋转分层.mp4",
+    "gif": "三维模型_旋转分层.gif",
+    "duration_seconds": 20,
+    "dimensions": [
+      1280,
+      720
+    ],
+    "fps": 8,
+    "modules": 9,
+    "sequence": [
+      "module_labels_and_exploded_view",
+      "assembly",
+      "full_model_PWM_request_to_actual_receipt"
+    ],
+    "evidence": "07_runs/board/current/demo_hardware_report.json",
+    "record_case": 103,
+    "model_used": 1,
+    "receipt": {
+      "requested": 20,
+      "readback": 20,
+      "period": 40500,
+      "high": 8100,
+      "enabled": 1,
+      "match": 1
+    },
+    "animation_is_explanatory_not_execution_time": true,
+    "audio": false,
+    "pace_factor": 3,
+    "gif_frames": 160
+  },
+  "display_name": "澄灯 LumaRV",
+  "scenario": "工业检修照明与状态指示",
+  "media_outputs": [
+    {
+      "video": "三维流程演示_3倍速.mp4",
+      "gif": "三维流程演示_3倍速.gif",
+      "seconds": 20.0,
+      "dimensions": [
+        1600,
+        900
+      ],
+      "gif_dimensions": [
+        960,
+        540
+      ],
+      "gif_frames": 160,
+      "gif_duration_ms": 20010,
+      "mp4_bytes": 5324403,
+      "gif_bytes": 14713787
+    },
+    {
+      "video": "三维模型_旋转分层.mp4",
+      "gif": "三维模型_旋转分层.gif",
+      "seconds": 20.0,
+      "dimensions": [
+        1280,
+        720
+      ],
+      "gif_dimensions": [
+        1280,
+        720
+      ],
+      "gif_frames": 160,
+      "gif_duration_ms": 20010,
+      "mp4_bytes": 1648245,
+      "gif_bytes": 8742003
+    }
+  ],
+  "short_animations": [
+    {
+      "gif": "双路径流程_讲解动画.gif",
+      "seconds": 8.0,
+      "dimensions": [
+        960,
+        540
+      ],
+      "frames": 8,
+      "bytes": 244444
+    },
+    {
+      "gif": "模型与资源_证据动画.gif",
+      "seconds": 8.0,
+      "dimensions": [
+        960,
+        540
+      ],
+      "frames": 4,
+      "bytes": 127966
+    }
+  ]
+}

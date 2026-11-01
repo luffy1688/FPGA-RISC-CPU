@@ -1,0 +1,222 @@
+{
+  "candidate_only": true,
+  "production_changed": false,
+  "config": {
+    "bins": 1024,
+    "threshold": 64
+  },
+  "constant_bytes": 2056,
+  "scratch_bytes": 2048,
+  "strict_utf8_cases": 3210,
+  "c_python_exact_cases": 1101,
+  "head_disabled_exact_cases": 1101,
+  "metrics": {
+    "original80": {
+      "n": 80,
+      "correct": 73,
+      "by_class": {
+        "read_temp": [
+          4,
+          4
+        ],
+        "set_pwm": [
+          29,
+          32
+        ],
+        "run_coremark": [
+          4,
+          4
+        ],
+        "read_counter": [
+          3,
+          4
+        ],
+        "set_led": [
+          30,
+          32
+        ],
+        "reject": [
+          3,
+          4
+        ]
+      },
+      "false_accept": 1,
+      "false_reject": 6,
+      "macro_recall": 0.890625
+    },
+    "aug192": {
+      "n": 192,
+      "correct": 134,
+      "by_class": {
+        "read_temp": [
+          30,
+          32
+        ],
+        "set_pwm": [
+          18,
+          32
+        ],
+        "run_coremark": [
+          19,
+          32
+        ],
+        "read_counter": [
+          25,
+          32
+        ],
+        "set_led": [
+          24,
+          32
+        ],
+        "reject": [
+          18,
+          32
+        ]
+      },
+      "false_accept": 14,
+      "false_reject": 38,
+      "macro_recall": 0.6979166666666666
+    },
+    "observed288": {
+      "n": 288,
+      "correct": 237,
+      "by_class": {
+        "read_temp": [
+          32,
+          32
+        ],
+        "set_pwm": [
+          24,
+          32
+        ],
+        "run_coremark": [
+          32,
+          32
+        ],
+        "read_counter": [
+          32,
+          32
+        ],
+        "set_led": [
+          31,
+          32
+        ],
+        "reject": [
+          86,
+          128
+        ]
+      },
+      "false_accept": 42,
+      "false_reject": 9,
+      "macro_recall": 0.8984375
+    },
+    "validation": {
+      "n": 541,
+      "correct": 414,
+      "by_class": {
+        "read_temp": [
+          10,
+          12
+        ],
+        "set_pwm": [
+          20,
+          23
+        ],
+        "run_coremark": [
+          11,
+          12
+        ],
+        "read_counter": [
+          12,
+          12
+        ],
+        "set_led": [
+          23,
+          24
+        ],
+        "reject": [
+          338,
+          458
+        ]
+      },
+      "false_accept": 120,
+      "false_reject": 5,
+      "macro_recall": 0.8859816361833639
+    }
+  },
+  "heldout_opened": false,
+  "feature_contract": "Unicode scalars; ASCII lowercase; consecutive ASCII decimal digits collapsed; signed1..4gram counts clipped after accumulation to[-3,3] then times8; int8weights/64; biasINT32/32; half-away output rounding",
+  "fusion": "finalreject=max(encoderreject,maxencoder_nonreject+contextdiff-threshold+1) only if diff>=threshold",
+  "runtime": "CPU sparse signed integer dot; scalar_macs=2*nonzero_features; no fictitious XND jobs",
+  "rtl_cost": {
+    "scope": "context feature/head only, exact current production RV32/cache hardware; 16 repeats per case; excludes encoder/USB/UART printing",
+    "clock_hz": 40500000,
+    "inputs": [
+      {
+        "case": 0,
+        "length": 6,
+        "cycles16": 296018,
+        "nonzero": 13,
+        "scalar_macs": 26,
+        "margin": -100,
+        "cycles_per_call": 18501.125,
+        "ms_per_call": 0.4568179012345679
+      },
+      {
+        "case": 1,
+        "length": 33,
+        "cycles16": 335353,
+        "nonzero": 48,
+        "scalar_macs": 96,
+        "margin": -84,
+        "cycles_per_call": 20959.5625,
+        "ms_per_call": 0.517520061728395
+      },
+      {
+        "case": 2,
+        "length": 45,
+        "cycles16": 353629,
+        "nonzero": 61,
+        "scalar_macs": 122,
+        "margin": 122,
+        "cycles_per_call": 22101.8125,
+        "ms_per_call": 0.5457237654320988
+      },
+      {
+        "case": 3,
+        "length": 37,
+        "cycles16": 339727,
+        "nonzero": 54,
+        "scalar_macs": 108,
+        "margin": 65,
+        "cycles_per_call": 21232.9375,
+        "ms_per_call": 0.5242700617283951
+      },
+      {
+        "case": 4,
+        "length": 64,
+        "cycles16": 296650,
+        "nonzero": 1,
+        "scalar_macs": 2,
+        "margin": 28,
+        "cycles_per_call": 18540.625,
+        "ms_per_call": 0.4577932098765432
+      },
+      {
+        "case": 5,
+        "length": 28,
+        "cycles16": 326292,
+        "nonzero": 42,
+        "scalar_macs": 84,
+        "margin": -19,
+        "cycles_per_call": 20393.25,
+        "ms_per_call": 0.503537037037037
+      }
+    ],
+    "xnd_jobs_added": 0,
+    "fast_path_overhead": "Enabled context head now runs before every business request including fast schema; standalone microbenchmark0.457..0.546ms @40.5MHz. Current physical measurement pending.",
+    "simulator": "07_runs/development/ai_pipeline/obj_soc/Vneedle_soc",
+    "rom": "context_benchmark.mem"
+  },
+  "production_integrated": true
+}

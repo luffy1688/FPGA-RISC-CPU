@@ -1,0 +1,13 @@
+{
+  "scope": "Candidate implementation only,not production or system acceptance; frozen repair checkpoint256bins; no fresh/642 accessed",
+  "constant_bytes": 1300,
+  "scratch_bytes": 512,
+  "c_python_delta_and_repair_exact_cases": 2591,
+  "unchanged_base_legal_predictions": 1711,
+  "base_reject_repair_candidates": 880,
+  "utf8_boundary_cases": 2409,
+  "valid_boundary_exact": 1218,
+  "shared_feature_extraction": true,
+  "signed_collision_accumulation_before_clip": true,
+  "context_deny_priority": "Integration must apply context veto AFTER these deltas; not performed by this helper"
+}

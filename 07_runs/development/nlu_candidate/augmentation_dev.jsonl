@@ -1,0 +1,192 @@
+{"text": "帮个忙能否返回芯片此时的结温一下吧", "intent": "read_temp", "family": "dev:read_temp:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "能否返回芯片此时的结温。", "intent": "read_temp", "family": "dev:read_temp:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我读出FPGA温度寄存器的数据，谢谢", "intent": "read_temp", "family": "dev:read_temp:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我能否返回芯片此时的结温一下吧", "intent": "read_temp", "family": "dev:read_temp:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "读出FPGA温度寄存器的数据好吗", "intent": "read_temp", "family": "dev:read_temp:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您读出FPGA温度寄存器的数据", "intent": "read_temp", "family": "dev:read_temp:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我读出FPGA温度寄存器的数据好吗", "intent": "read_temp", "family": "dev:read_temp:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙读出FPGA温度寄存器的数据一下吧", "intent": "read_temp", "family": "dev:read_temp:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙读出FPGA温度寄存器的数据。", "intent": "read_temp", "family": "dev:read_temp:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你读出FPGA温度寄存器的数据一下吧", "intent": "read_temp", "family": "dev:read_temp:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "能否返回芯片此时的结温一下吧", "intent": "read_temp", "family": "dev:read_temp:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您能否返回芯片此时的结温一下吧", "intent": "read_temp", "family": "dev:read_temp:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我能否返回芯片此时的结温可以吗", "intent": "read_temp", "family": "dev:read_temp:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我能否返回芯片此时的结温一下", "intent": "read_temp", "family": "dev:read_temp:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "读出FPGA温度寄存器的数据一下", "intent": "read_temp", "family": "dev:read_temp:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我能否返回芯片此时的结温，谢谢", "intent": "read_temp", "family": "dev:read_temp:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你能否返回芯片此时的结温。", "intent": "read_temp", "family": "dev:read_temp:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙能否返回芯片此时的结温可以吗", "intent": "read_temp", "family": "dev:read_temp:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙读出FPGA温度寄存器的数据", "intent": "read_temp", "family": "dev:read_temp:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "读出FPGA温度寄存器的数据。", "intent": "read_temp", "family": "dev:read_temp:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙能否返回芯片此时的结温，谢谢", "intent": "read_temp", "family": "dev:read_temp:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你能否返回芯片此时的结温一下吧", "intent": "read_temp", "family": "dev:read_temp:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我能否返回芯片此时的结温好吗", "intent": "read_temp", "family": "dev:read_temp:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您能否返回芯片此时的结温。", "intent": "read_temp", "family": "dev:read_temp:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你读出FPGA温度寄存器的数据", "intent": "read_temp", "family": "dev:read_temp:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你读出FPGA温度寄存器的数据一下", "intent": "read_temp", "family": "dev:read_temp:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我读出FPGA温度寄存器的数据。", "intent": "read_temp", "family": "dev:read_temp:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙读出FPGA温度寄存器的数据一下", "intent": "read_temp", "family": "dev:read_temp:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我能否返回芯片此时的结温。", "intent": "read_temp", "family": "dev:read_temp:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "能否返回芯片此时的结温一下", "intent": "read_temp", "family": "dev:read_temp:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你能否返回芯片此时的结温可以吗", "intent": "read_temp", "family": "dev:read_temp:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您读出FPGA温度寄存器的数据一下", "intent": "read_temp", "family": "dev:read_temp:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您让PWM的高电平占比等于49%可以吗", "intent": "set_pwm", "family": "dev:set_pwm:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙将PWM占空比更新成37%", "intent": "set_pwm", "family": "dev:set_pwm:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你将PWM占空比更新成1%。", "intent": "set_pwm", "family": "dev:set_pwm:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "让PWM的高电平占比等于29%一下吧", "intent": "set_pwm", "family": "dev:set_pwm:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您将PWM占空比更新成86%好吗", "intent": "set_pwm", "family": "dev:set_pwm:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我将PWM占空比更新成81%。", "intent": "set_pwm", "family": "dev:set_pwm:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "让PWM的高电平占比等于78%，谢谢", "intent": "set_pwm", "family": "dev:set_pwm:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你将PWM占空比更新成30%，谢谢", "intent": "set_pwm", "family": "dev:set_pwm:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙让PWM的高电平占比等于69%", "intent": "set_pwm", "family": "dev:set_pwm:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你将PWM占空比更新成24%好吗", "intent": "set_pwm", "family": "dev:set_pwm:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "让PWM的高电平占比等于22%可以吗", "intent": "set_pwm", "family": "dev:set_pwm:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我将PWM占空比更新成68%，谢谢", "intent": "set_pwm", "family": "dev:set_pwm:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "让PWM的高电平占比等于3%一下", "intent": "set_pwm", "family": "dev:set_pwm:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你让PWM的高电平占比等于3%。", "intent": "set_pwm", "family": "dev:set_pwm:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "让PWM的高电平占比等于64%。", "intent": "set_pwm", "family": "dev:set_pwm:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "将PWM占空比更新成63%好吗", "intent": "set_pwm", "family": "dev:set_pwm:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你将PWM占空比更新成64%一下", "intent": "set_pwm", "family": "dev:set_pwm:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您让PWM的高电平占比等于62%一下吧", "intent": "set_pwm", "family": "dev:set_pwm:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您让PWM的高电平占比等于65%可以吗", "intent": "set_pwm", "family": "dev:set_pwm:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您将PWM占空比更新成98%", "intent": "set_pwm", "family": "dev:set_pwm:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙让PWM的高电平占比等于74%一下", "intent": "set_pwm", "family": "dev:set_pwm:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我将PWM占空比更新成18%，谢谢", "intent": "set_pwm", "family": "dev:set_pwm:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙让PWM的高电平占比等于65%。", "intent": "set_pwm", "family": "dev:set_pwm:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙让PWM的高电平占比等于56%一下", "intent": "set_pwm", "family": "dev:set_pwm:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你将PWM占空比更新成99%一下吧", "intent": "set_pwm", "family": "dev:set_pwm:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您让PWM的高电平占比等于80%好吗", "intent": "set_pwm", "family": "dev:set_pwm:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙让PWM的高电平占比等于23%，谢谢", "intent": "set_pwm", "family": "dev:set_pwm:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我将PWM占空比更新成91%一下吧", "intent": "set_pwm", "family": "dev:set_pwm:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我将PWM占空比更新成57%，谢谢", "intent": "set_pwm", "family": "dev:set_pwm:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我将PWM占空比更新成65%一下", "intent": "set_pwm", "family": "dev:set_pwm:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "让PWM的高电平占比等于41%一下", "intent": "set_pwm", "family": "dev:set_pwm:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你让PWM的高电平占比等于96%一下", "intent": "set_pwm", "family": "dev:set_pwm:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙给我测一次CoreMark基准结果一下吧", "intent": "run_coremark", "family": "dev:run_coremark:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我完成一次CoreMark跑分一下", "intent": "run_coremark", "family": "dev:run_coremark:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "完成一次CoreMark跑分一下", "intent": "run_coremark", "family": "dev:run_coremark:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "给我测一次CoreMark基准结果一下", "intent": "run_coremark", "family": "dev:run_coremark:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你完成一次CoreMark跑分可以吗", "intent": "run_coremark", "family": "dev:run_coremark:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙给我测一次CoreMark基准结果一下吧", "intent": "run_coremark", "family": "dev:run_coremark:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你完成一次CoreMark跑分，谢谢", "intent": "run_coremark", "family": "dev:run_coremark:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您给我测一次CoreMark基准结果好吗", "intent": "run_coremark", "family": "dev:run_coremark:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙给我测一次CoreMark基准结果", "intent": "run_coremark", "family": "dev:run_coremark:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您给我测一次CoreMark基准结果", "intent": "run_coremark", "family": "dev:run_coremark:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你完成一次CoreMark跑分好吗", "intent": "run_coremark", "family": "dev:run_coremark:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我完成一次CoreMark跑分，谢谢", "intent": "run_coremark", "family": "dev:run_coremark:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你给我测一次CoreMark基准结果，谢谢", "intent": "run_coremark", "family": "dev:run_coremark:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你完成一次CoreMark跑分一下", "intent": "run_coremark", "family": "dev:run_coremark:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我给我测一次CoreMark基准结果好吗", "intent": "run_coremark", "family": "dev:run_coremark:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "给我测一次CoreMark基准结果一下吧", "intent": "run_coremark", "family": "dev:run_coremark:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "给我测一次CoreMark基准结果。", "intent": "run_coremark", "family": "dev:run_coremark:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙完成一次CoreMark跑分。", "intent": "run_coremark", "family": "dev:run_coremark:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我给我测一次CoreMark基准结果可以吗", "intent": "run_coremark", "family": "dev:run_coremark:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙给我测一次CoreMark基准结果好吗", "intent": "run_coremark", "family": "dev:run_coremark:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "完成一次CoreMark跑分好吗", "intent": "run_coremark", "family": "dev:run_coremark:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙给我测一次CoreMark基准结果好吗", "intent": "run_coremark", "family": "dev:run_coremark:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你完成一次CoreMark跑分一下吧", "intent": "run_coremark", "family": "dev:run_coremark:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙完成一次CoreMark跑分好吗", "intent": "run_coremark", "family": "dev:run_coremark:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙完成一次CoreMark跑分一下", "intent": "run_coremark", "family": "dev:run_coremark:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您给我测一次CoreMark基准结果，谢谢", "intent": "run_coremark", "family": "dev:run_coremark:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙完成一次CoreMark跑分", "intent": "run_coremark", "family": "dev:run_coremark:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙给我测一次CoreMark基准结果可以吗", "intent": "run_coremark", "family": "dev:run_coremark:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你给我测一次CoreMark基准结果一下", "intent": "run_coremark", "family": "dev:run_coremark:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我给我测一次CoreMark基准结果。", "intent": "run_coremark", "family": "dev:run_coremark:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙完成一次CoreMark跑分一下", "intent": "run_coremark", "family": "dev:run_coremark:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我给我测一次CoreMark基准结果一下吧", "intent": "run_coremark", "family": "dev:run_coremark:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您返回硬件计数寄存器读数一下", "intent": "read_counter", "family": "dev:read_counter:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙返回硬件计数寄存器读数好吗", "intent": "read_counter", "family": "dev:read_counter:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙返回硬件计数寄存器读数", "intent": "read_counter", "family": "dev:read_counter:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙将CPU计数器的现值报告出来一下", "intent": "read_counter", "family": "dev:read_counter:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我将CPU计数器的现值报告出来。", "intent": "read_counter", "family": "dev:read_counter:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你返回硬件计数寄存器读数。", "intent": "read_counter", "family": "dev:read_counter:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙将CPU计数器的现值报告出来好吗", "intent": "read_counter", "family": "dev:read_counter:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我返回硬件计数寄存器读数可以吗", "intent": "read_counter", "family": "dev:read_counter:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙返回硬件计数寄存器读数可以吗", "intent": "read_counter", "family": "dev:read_counter:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您将CPU计数器的现值报告出来，谢谢", "intent": "read_counter", "family": "dev:read_counter:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您返回硬件计数寄存器读数可以吗", "intent": "read_counter", "family": "dev:read_counter:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我将CPU计数器的现值报告出来可以吗", "intent": "read_counter", "family": "dev:read_counter:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "返回硬件计数寄存器读数，谢谢", "intent": "read_counter", "family": "dev:read_counter:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我将CPU计数器的现值报告出来一下吧", "intent": "read_counter", "family": "dev:read_counter:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您将CPU计数器的现值报告出来好吗", "intent": "read_counter", "family": "dev:read_counter:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你将CPU计数器的现值报告出来一下", "intent": "read_counter", "family": "dev:read_counter:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你将CPU计数器的现值报告出来。", "intent": "read_counter", "family": "dev:read_counter:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您返回硬件计数寄存器读数一下吧", "intent": "read_counter", "family": "dev:read_counter:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我将CPU计数器的现值报告出来好吗", "intent": "read_counter", "family": "dev:read_counter:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙将CPU计数器的现值报告出来一下吧", "intent": "read_counter", "family": "dev:read_counter:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙返回硬件计数寄存器读数一下", "intent": "read_counter", "family": "dev:read_counter:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您将CPU计数器的现值报告出来。", "intent": "read_counter", "family": "dev:read_counter:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你将CPU计数器的现值报告出来，谢谢", "intent": "read_counter", "family": "dev:read_counter:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙将CPU计数器的现值报告出来，谢谢", "intent": "read_counter", "family": "dev:read_counter:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您将CPU计数器的现值报告出来可以吗", "intent": "read_counter", "family": "dev:read_counter:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙将CPU计数器的现值报告出来。", "intent": "read_counter", "family": "dev:read_counter:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "返回硬件计数寄存器读数可以吗", "intent": "read_counter", "family": "dev:read_counter:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙将CPU计数器的现值报告出来", "intent": "read_counter", "family": "dev:read_counter:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您返回硬件计数寄存器读数。", "intent": "read_counter", "family": "dev:read_counter:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙将CPU计数器的现值报告出来可以吗", "intent": "read_counter", "family": "dev:read_counter:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你返回硬件计数寄存器读数好吗", "intent": "read_counter", "family": "dev:read_counter:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "将CPU计数器的现值报告出来。", "intent": "read_counter", "family": "dev:read_counter:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我帮我把LED4点亮，谢谢", "intent": "set_led", "family": "dev:set_led:0", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "单独熄灭LED7好吗", "intent": "set_led", "family": "dev:set_led:1", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "帮个忙单独熄灭LED1好吗", "intent": "set_led", "family": "dev:set_led:1", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "劳烦您帮我把LED0点亮一下", "intent": "set_led", "family": "dev:set_led:0", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "帮我把LED4点亮", "intent": "set_led", "family": "dev:set_led:0", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "麻烦给我把LED3关闭好吗一下吧", "intent": "set_led", "family": "dev:set_led:3", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "麻烦给我帮我把LED7点亮可以吗", "intent": "set_led", "family": "dev:set_led:0", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "把LED4关闭好吗", "intent": "set_led", "family": "dev:set_led:3", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "请你帮我把LED0点亮。", "intent": "set_led", "family": "dev:set_led:0", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "请帮忙单独熄灭LED7好吗", "intent": "set_led", "family": "dev:set_led:1", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "请帮忙帮我把LED2点亮。", "intent": "set_led", "family": "dev:set_led:0", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "帮个忙把LED7关闭好吗可以吗", "intent": "set_led", "family": "dev:set_led:3", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "麻烦给我单独熄灭LED6一下吧", "intent": "set_led", "family": "dev:set_led:1", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "请你帮我把LED5点亮一下吧", "intent": "set_led", "family": "dev:set_led:0", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "劳烦您帮我把LED4点亮。", "intent": "set_led", "family": "dev:set_led:0", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "帮个忙将LED6打开一下", "intent": "set_led", "family": "dev:set_led:2", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "请你单独熄灭LED2", "intent": "set_led", "family": "dev:set_led:1", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "麻烦给我单独熄灭LED6。", "intent": "set_led", "family": "dev:set_led:1", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "劳烦您将LED4打开一下好吗", "intent": "set_led", "family": "dev:set_led:2", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "请帮忙帮我把LED5点亮可以吗", "intent": "set_led", "family": "dev:set_led:0", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "将LED3打开一下可以吗", "intent": "set_led", "family": "dev:set_led:2", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "麻烦给我帮我把LED6点亮。", "intent": "set_led", "family": "dev:set_led:0", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "麻烦给我单独熄灭LED4。", "intent": "set_led", "family": "dev:set_led:1", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "将LED0打开一下。", "intent": "set_led", "family": "dev:set_led:2", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "麻烦给我单独熄灭LED5一下吧", "intent": "set_led", "family": "dev:set_led:1", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "请帮忙把LED4关闭好吗一下吧", "intent": "set_led", "family": "dev:set_led:3", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "单独熄灭LED5", "intent": "set_led", "family": "dev:set_led:1", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "麻烦给我帮我把LED4点亮一下", "intent": "set_led", "family": "dev:set_led:0", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "麻烦给我将LED3打开一下，谢谢", "intent": "set_led", "family": "dev:set_led:2", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "劳烦您单独熄灭LED4可以吗", "intent": "set_led", "family": "dev:set_led:1", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "麻烦给我帮我把LED5点亮。", "intent": "set_led", "family": "dev:set_led:0", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "劳烦您将LED4打开一下。", "intent": "set_led", "family": "dev:set_led:2", "source": "HA CC-BY-4.0 grammar adapted to project LED"}
+{"text": "麻烦给我给CoreMark成绩加246分。", "intent": "reject", "family": "dev:reject:7", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我目前LED7已经关闭了吗好吗", "intent": "reject", "family": "dev:reject:2", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙给CoreMark成绩加169分。", "intent": "reject", "family": "dev:reject:7", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你说明设置PWM为54%是什么意思可以吗", "intent": "reject", "family": "dev:reject:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我读取计数器后把它归零好吗", "intent": "reject", "family": "dev:reject:5", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙启动客厅扫地机器人", "intent": "reject", "family": "dev:reject:11", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您给CoreMark成绩加206分", "intent": "reject", "family": "dev:reject:7", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你若是LED7亮了将会发生什么。", "intent": "reject", "family": "dev:reject:1", "source": "assistant-authored project-domain augmentation"}
+{"text": "调高空调温度好吗", "intent": "reject", "family": "dev:reject:8", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我报告今天的天气", "intent": "reject", "family": "dev:reject:9", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙读取计数器后把它归零一下吧", "intent": "reject", "family": "dev:reject:5", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您启动客厅扫地机器人好吗", "intent": "reject", "family": "dev:reject:11", "source": "assistant-authored project-domain augmentation"}
+{"text": "调高空调温度一下", "intent": "reject", "family": "dev:reject:8", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙调高空调温度一下吧", "intent": "reject", "family": "dev:reject:8", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您把车库门锁上一下吧", "intent": "reject", "family": "dev:reject:10", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你把车库门锁上，谢谢", "intent": "reject", "family": "dev:reject:10", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙读取计数器后把它归零可以吗", "intent": "reject", "family": "dev:reject:5", "source": "assistant-authored project-domain augmentation"}
+{"text": "把固件更新一下一下吧", "intent": "reject", "family": "dev:reject:6", "source": "assistant-authored project-domain augmentation"}
+{"text": "报告今天的天气。", "intent": "reject", "family": "dev:reject:9", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙读取计数器后把它归零，谢谢", "intent": "reject", "family": "dev:reject:5", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙调高空调温度可以吗", "intent": "reject", "family": "dev:reject:8", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙调高空调温度好吗", "intent": "reject", "family": "dev:reject:8", "source": "assistant-authored project-domain augmentation"}
+{"text": "给CoreMark成绩加49分。", "intent": "reject", "family": "dev:reject:7", "source": "assistant-authored project-domain augmentation"}
+{"text": "目前LED3已经关闭了吗", "intent": "reject", "family": "dev:reject:2", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我给CoreMark成绩加141分好吗", "intent": "reject", "family": "dev:reject:7", "source": "assistant-authored project-domain augmentation"}
+{"text": "麻烦给我查询PWM是不是66%占空比，谢谢", "intent": "reject", "family": "dev:reject:3", "source": "assistant-authored project-domain augmentation"}
+{"text": "劳烦您目前LED2已经关闭了吗可以吗", "intent": "reject", "family": "dev:reject:2", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙说明设置PWM为91%是什么意思好吗", "intent": "reject", "family": "dev:reject:0", "source": "assistant-authored project-domain augmentation"}
+{"text": "请你启动客厅扫地机器人一下", "intent": "reject", "family": "dev:reject:11", "source": "assistant-authored project-domain augmentation"}
+{"text": "帮个忙把固件更新一下可以吗", "intent": "reject", "family": "dev:reject:6", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙启动客厅扫地机器人一下吧", "intent": "reject", "family": "dev:reject:11", "source": "assistant-authored project-domain augmentation"}
+{"text": "请帮忙先开LED7再读取结温可以吗", "intent": "reject", "family": "dev:reject:4", "source": "assistant-authored project-domain augmentation"}

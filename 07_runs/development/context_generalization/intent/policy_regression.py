@@ -1,0 +1,19 @@
+from train_intent import *
+import subprocess,collections
+keys='index context_bucket context_bucket_source context_threshold context_deny context_used repair_used full full_status full_arg full_op fast fast_status fast_arg fast_op fast_handled'.split()
+def run(rows):
+ p=subprocess.run([str(D/'integrated_new')],input='\n'.join(x['text']for x in rows)+'\n',stdout=subprocess.PIPE,text=True,check=True);out=[dict(zip(keys,list(map(int,l.split()))[:16]))for l in p.stdout.splitlines()];assert len(out)==len(rows);return out
+sets={'original80':read(R/'04_model/datasets/template_development.jsonl'),'aug192':read(R/'07_runs/development/nlu_candidate/augmentation_dev.jsonl'),'observed288':read(R/'07_runs/development/semantic_train/semantic_diagnostic.jsonl'),'old_validation':read(P/'data/validation.jsonl'),'validation':read(P/'context_v2/data/validation.jsonl'),'fresh_observed':read(P/'context_v2/data/fresh.jsonl')}
+p=D/'integrated_validation.json';report=json.loads(p.read_text());result=dict(scope='Final necessary host contract regression after generic policy/parser fixes only; model weights/thresholds unchanged; previous1138 first evaluation remains immutable; replay is observed regression.',weights_changed=False,thresholds_changed=False,nn_exact_repeated=False,results={})
+for name,rows in sets.items():
+ out=run(rows);rr={};truth=np.array([TOOLS.index(x['intent'])for x in rows]);legal=truth!=5
+ for mode in ['full','fast']:
+  candidate=np.array([x[mode]for x in out]);status=np.array([x[mode+'_status']for x in out]);pred=np.where(status==0,candidate,5);correct=pred==truth;bounds=all((x[mode+'_status']!=0)or(x[mode]!=1 or 0<=x[mode+'_arg']<=100)and(x[mode]!=4 or(0<=x[mode+'_arg']<=255 if x[mode+'_op']==0 else 0<=x[mode+'_arg']<=7))for x in out)
+  rr[mode]=dict(correct=int(correct.sum()),n=len(rows),legal_correct=int(correct[legal].sum()),legal_total=int(legal.sum()),false_execution_admission=int(((pred!=5)&~legal).sum()),legal_over_refusal=int(((pred==5)&legal).sum()),wrong_legal_tool=int(((pred!=5)&(pred!=truth)&legal).sum()),all_selected_parameter_bounds_valid=bounds,nonreject_tool_with_error_status=int(((candidate!=5)&(status!=0)).sum()),errors=[dict(text=row['text'],expected=row['intent'],context=row.get('context'),effective_tool=int(v),candidate_tool=int(x[mode]),status=x[mode+'_status'],argument=x[mode+'_arg'],operation=x[mode+'_op'])for row,x,v,error in zip(rows,out,pred,~correct)if error])
+  previous=report['execution_admission_results'][name][mode];rr[mode]['vs_previous_policy_correct_delta']=rr[mode]['correct']-previous['correct'];rr[mode]['vs_previous_policy_false_execution_admission_delta']=rr[mode]['false_execution_admission']-previous['false_execution_admission'];rr[mode]['vs_previous_policy_legal_correct_delta']=rr[mode]['legal_correct']-previous['legal_correct']
+ result['results'][name]=rr;print('POLICY_FINAL',name,{m:{k:v for k,v in d.items()if k!='errors'}for m,d in rr.items()},flush=True)
+spec=json.loads((R/'07_runs/board/baseline/acceptance_cases.json').read_text());fourth=[c for c in spec['cases']if c.get('group')=='fourth'];out=run(fourth);cases=[]
+for row,x in zip(fourth,out):
+ h=row['expected'];wantreject=h['status']!=0;passed=x['fast_status']!=0 if wantreject else x['fast_status']==0 and x['fast']==h['final_index']and x['fast_arg']==h['argument']and x['fast_op']==h['operation'];cases.append(dict(id=row['id'],passed=bool(passed),status=x['fast_status'],tool=x['fast'],argument=x['fast_arg'],operation=x['fast_op']))
+result['fourth25_tool_argument_operation_contract']=cases;assert all(c['passed']for c in cases)
+result['all_selected_parameter_bounds_valid']=all(v[m]['all_selected_parameter_bounds_valid']for v in result['results'].values()for m in ['full','fast']);report['current_policy']=result;p.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n');print('FOURTH',len(cases),'bounds',result['all_selected_parameter_bounds_valid'])

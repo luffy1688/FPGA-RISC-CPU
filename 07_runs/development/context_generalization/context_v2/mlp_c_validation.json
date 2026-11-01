@@ -1,0 +1,14 @@
+{
+  "candidate": "profile_grammar_shared16.npz",
+  "feature_bins": 1024,
+  "hidden": 16,
+  "outputs": 11,
+  "c_python_exact_cases": 4591,
+  "malformed_recovery_cases": 7,
+  "max_scalar_macs": 2112,
+  "all11_logits_exact": true,
+  "rounding": "round dot away from zero before adding bias; do not round(dot+bias)",
+  "production_modified": false,
+  "fresh_opened": false,
+  "heldout642_opened": false
+}

@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <string.h>
+#include "byte_tool_model.h"
+#include <stdlib.h>
+#define nr_combined_thresholds nr_private_original_thresholds
+#include "byte_semantic_data.h"
+#undef nr_combined_thresholds
+static int32_t nr_combined_thresholds[6];
+#include "/work/LUO/NeedleRV-X/03_sw/model/byte_tool_model.c"
+static void array(const int32_t*v,int n){for(int i=0;i<n;i++)printf("%d ",v[i]);}
+int main(int argc,char**argv){for(int i=0;i<6;i++)nr_combined_thresholds[i]=nr_private_original_thresholds[i];if(argc>1)nr_combined_thresholds[3]=atoi(argv[1]);char b[512];while(fgets(b,sizeof b,stdin)){size_t n=strlen(b);while(n&&(b[n-1]==10||b[n-1]==13))b[--n]=0;nr_prediction_t p;nr_tool_request_t full,fast;nr_context_t ctx;int handled=nr_tool_decode_machine((uint8_t*)b,n,&fast);if(!handled){if(nr_model_context((uint8_t*)b,n,&ctx))return 3;handled=nr_tool_decode_fast_with_context((uint8_t*)b,n,&fast,&ctx);if(handled&&fast.selection_source==NR_SELECT_CONTEXT_DENIED){int32_t maximum=nr_combined_thresholds[0];for(int j=1;j<6;j++)if(nr_combined_thresholds[j]>maximum)maximum=nr_combined_thresholds[j];if(ctx.margin<maximum)handled=0;}}if(nr_model_predict((uint8_t*)b,n,&p))return 2;nr_tool_decode_prediction((uint8_t*)b,n,&p,&full);if(!handled)fast=full;
+printf("%d %u %u %d %u %u %u %d %d %d %d %d %d %d %d %d ",p.tool,p.context_bucket,p.context_bucket_source,p.context_threshold,p.context_deny,p.context_used,p.intent_repair_used,full.tool,full.status,full.argument,full.operation,fast.tool,fast.status,fast.argument,fast.operation,handled);array(p.logits,6);array(p.encoder_logits,6);array(p.context_logits,2);array(p.context_category_logits,9);array(p.intent_delta,5);array(p.context_tool_logits,5);array(p.intent_cascade_delta,5);printf("%u ",p.intent_cascade_used);putchar(10);}return 0;}

@@ -1,0 +1,11 @@
+from train_intent import *
+import subprocess
+rows={'validation':read(P/'context_v2/data/validation.jsonl'),'old_validation':read(P/'data/validation.jsonl'),'original80':read(R/'04_model/datasets/template_development.jsonl'),'aug192':read(R/'07_runs/development/nlu_candidate/augmentation_dev.jsonl'),'observed288':read(R/'07_runs/development/semantic_train/semantic_diagnostic.jsonl'),'fresh':read(P/'context_v2/data/fresh.jsonl')}
+report=dict(scope='Frozen combined neural candidate with existing production toolcontract; full bucket=immutableencoderargmax; fast bucket=unique schemahint therefore hybrid. Tool/admission and slot bounds only; syntheticlabels not all parameter-truth reliable so not claimed exact allparameters accuracy.',production_policy_source='03_sw/model/byte_tool_model.c as compiled snapshot; no source modifications by this experiment',constant_bytes=21832,results={})
+for n,rs in rows.items():
+ p=subprocess.run([str(D/'system_combined')],input='\n'.join(x['text']for x in rs)+'\n',stdout=subprocess.PIPE,text=True,check=True);out=[json.loads(l)for l in p.stdout.splitlines()];assert len(out)==len(rs);res={}
+ for mode in ['full','fast']:
+  pred=np.array([x[mode]for x in out]);truth=np.array([TOOLS.index(x['intent'])for x in rs]);legal=truth!=5;correct=pred==truth;fa=(~legal)&(pred!=5);fr=legal&(pred==5);wrong=legal&(pred!=truth)&(pred!=5);bounds=all((x[mode]!=1 or 0<=x[mode+'_arg']<=100)and(x[mode]!=4 or(0<=x[mode+'_arg']<=255 if x[mode+'_op']==0 else 0<=x[mode+'_arg']<=7))for x in out)
+  res[mode]=dict(correct=int(correct.sum()),n=len(rs),legal_correct=int(correct[legal].sum()),legal_total=int(legal.sum()),false_accept=int(fa.sum()),false_reject=int(fr.sum()),wrong_legal_tool=int(wrong.sum()),all_selected_parameter_bounds_valid=bounds,errors=[dict(text=row['text'],expected=row['intent'],actual=int(x[mode]),status=x[mode+'_status'],argument=x[mode+'_arg'],operation=x[mode+'_op'],hint=x['hint'],rawbucket=x['rawbucket'],fastbucket=x['fastbucket'],contextmargin=x['contextmargin'])for row,x,error in zip(rs,out,~correct)if error])
+ report['results'][n]=res;print('SYSTEM',n,{m:{k:v for k,v in d.items()if k!='errors'}for m,d in res.items()},flush=True)
+(D/'system_combined_report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
