@@ -22,7 +22,7 @@
 
 ## 目录与部署
 
-`datasets`、`train`、`export`和`golden`保留编码器基础数据、训练导出与整数参考；后续位置语义及候选比较位于`needle_candidate_pipeline`。部分早期候选目录用于复现实验，不作为当前固件入口。
+`datasets`、`train`、`export`和`golden`保留编码器基础数据、训练导出与整数参考；后续位置语义及候选比较位于`07_runs/development/resource_trials`和`07_runs/development/context_generalization`。部分早期候选目录用于复现实验，不作为当前固件入口。
 
 板卡实际使用的整数参数在`03_sw/model/byte_model_data.h`、`byte_engram_data.h`、`byte_context_data.h`和`byte_semantic_data.h`，推理实现位于同目录的C文件和包含文件。构建双核应用使用工程根目录的`05_tools/build_dual_firmware.py 3000 54000000`。仅运行早期编码器训练脚本不会生成完整部署模型。
 
