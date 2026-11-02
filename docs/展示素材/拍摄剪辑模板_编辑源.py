@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""165-second filming/editing scaffold, not a finished hardware demonstration.
+"""130-second filming/editing scaffold, not a finished hardware demonstration.
 
 Requirements: Python3/Pillow, ffmpeg, ffprobe; already present on the project server.
 Default output: 拍摄剪辑模板.mp4 beside this script. No audio is read or copied.
@@ -23,7 +23,7 @@ from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont
 import argparse,json,math,subprocess,tempfile
 
-TIMELINE=[{'key': 1, 'duration': 25, 'title': '任务与开发板原型', 'window': '板卡与控制台同框', 'cue': '固定测试后追加单项复测，保留其他状态。', 'placeholder': '待替换实拍'}, {'key': 2, 'duration': 30, 'title': '后台计算与中文PWM', 'window': '副核忙碌 → 完整模型返回', 'cue': '保留一段连续镜头，显示忙碌期间主核完成模型。', 'placeholder': '待替换实拍'}, {'key': 3, 'duration': 20, 'title': 'PWM寄存器读回', 'window': '请求20%与当次返回', 'cue': '周期54000、高电平10800；区分既有模型统计和当次读数。', 'placeholder': '待替换实拍'}, {'key': 4, 'duration': 25, 'title': '位保持与越界拒绝', 'window': '默认混合路径', 'cue': '拍37→36与拒绝前后的PWM设置。', 'placeholder': '待替换实拍'}, {'key': 5, 'duration': 25, 'title': 'CPU计算检查', 'window': '两核CRC与共同计时', 'cue': '各3000次，主核统计与双实例累计单列。', 'placeholder': '待替换实拍'}, {'key': 6, 'duration': 20, 'title': '三维逻辑结构', 'window': '分层、合拢、PWM流程', 'cue': '插入现有20秒成片，不再重复加速。', 'placeholder': '待替换逻辑结构与方法图'}, {'key': 7, 'duration': 10, 'title': '模型方法', 'window': '位置语义、工具残差与低比特计算', 'cue': '保留参考Needle和训练来源，不逐位朗读长数字。', 'placeholder': '待替换逻辑结构与方法图'}, {'key': 8, 'duration': 10, 'title': '日志与结束', 'window': '导出当次日志', 'cue': '回到作品题名；正式视频须替换占位镜头。', 'placeholder': '待替换实拍'}]
+TIMELINE=[{'key': 1, 'duration': 12, 'title': '返修后的追加检查', 'window': '追加检查一处输出', 'cue': '先说明任务与保持约束。', 'placeholder': '待替换实拍'}, {'key': 2, 'duration': 12, 'title': '先读取板卡状态', 'window': '温度与周期计数返回', 'cue': '返回值以本次实板为准。', 'placeholder': '待替换实拍'}, {'key': 3, 'duration': 25, 'title': '后台计算期间完成中文调参', 'window': '副核忙碌 → 完整AI → PWM读回', 'cue': '保留后台忙碌到模型返回的连续过程。', 'placeholder': '待替换实拍'}, {'key': 4, 'duration': 28, 'title': '只改一位并守住能力边界', 'window': '37 → 36 → 37；2kHz请求拒绝', 'cue': '同时看实体LED与掩码；拒绝后配置保持。', 'placeholder': '待替换实拍'}, {'key': 5, 'duration': 22, 'title': '完成双核计算检查', 'window': '双核CRC与共同计时', 'cue': '每核3000次；统计与当次返回分开。', 'placeholder': '待替换实拍'}, {'key': 6, 'duration': 14, 'title': '用三维图解释刚才的请求', 'window': '分层、合拢、一次请求路线', 'cue': '逻辑结构示意，14秒内讲清请求路线。', 'placeholder': '待替换逻辑结构与方法图'}, {'key': 7, 'duration': 10, 'title': '点出方法与测量', 'window': '位置语义、残差、低比特计算', 'cue': '指定样本54.640ms，不含通信与工具执行。', 'placeholder': '待替换逻辑结构与方法图'}, {'key': 8, 'duration': 7, 'title': '一次复测结束', 'window': '本次日志与任务结束', 'cue': '从临时请求到可检查的板卡操作。', 'placeholder': '待替换实拍'}]
 WIDTH,HEIGHT,FPS=1280,720,24
 BOX=(64,110,1152,540)
 BLUE='#143295';GOLD='#C89B61';INK='#28384A';MUT='#65758A';GRID='#DCE3EC';PALE='#F4F6F9'
@@ -65,7 +65,7 @@ def main():
  args=parser.parse_args();font=fontfile(args.font);clips={}
  for item in args.clip:
   key,value=item.split('=',1);key=int(key);assert 1<=key<=8;clips[key]=Path(value).expanduser().resolve();assert clips[key].is_file()
- assert sum(x['duration']for x in TIMELINE)==165,'Default official-format scaffold is2m45s; change the bound only deliberately.'
+ assert sum(x['duration']for x in TIMELINE)==130,'Current scene-first scaffold is2m10s; change the bound only deliberately.'
  args.output.parent.mkdir(parents=True,exist_ok=True)
  with tempfile.TemporaryDirectory(prefix='needlervx_shooting_')as temp:
   temp=Path(temp);segments=[];start=0
@@ -92,7 +92,7 @@ def main():
   listing=temp/'chapters.txt';listing.write_text('\n'.join("file '"+str(x).replace("'","'\\''")+"'"for x in segments)+'\n')
   run(['ffmpeg','-hide_banner','-loglevel','error','-y','-f','concat','-safe','0','-i',listing,'-map','0:v:0','-c','copy','-an','-movflags','+faststart',args.output])
  info=probe(args.output);video=next(x for x in info['streams']if x['codec_type']=='video');duration=float(info['format']['duration'])
- assert abs(duration-165)<.15 and video['codec_name']=='h264'and video['width']==1280 and video['height']==720 and not any(x['codec_type']=='audio'for x in info['streams'])
+ assert abs(duration-130)<.15 and video['codec_name']=='h264'and video['width']==1280 and video['height']==720 and not any(x['codec_type']=='audio'for x in info['streams'])
  assert args.output.stat().st_size<300_000_000
  print(json.dumps({'output':str(args.output),'duration_seconds':duration,'video_codec':video['codec_name'],'resolution':[1280,720],'frame_rate':video['r_frame_rate'],'audio_streams':0,'bytes':args.output.stat().st_size,'placeholder_template':not bool(clips),'real_hardware_footage':False if not clips else'provided_by_user'},ensure_ascii=False,indent=2))
 if __name__=='__main__':main()
