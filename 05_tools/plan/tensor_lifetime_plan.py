@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""冻结实际d64模型QKV依赖图，输出同图三种真实activation槽计划。
+"""构建d64模型QKV依赖图，输出同图三种真实activation槽计划。
 此报告是静态LOAD/字节预算；实际周期必须由RTL或实板测量，不含DDR或DMA重叠。
 """
 import argparse

@@ -42,7 +42,7 @@ make -C 03_sw/riscv_tests selected TESTS='rv32ui-add rv32um-div'
 ## 第三方来源
 
 - 来源：https://github.com/riscv-software-src/riscv-tests
-- 冻结提交：见 `07_runs/riscv_tests/current_report.json` 的 `upstream.commit`。
+- 上游提交：见 `07_runs/riscv_tests/current_report.json` 的 `upstream.commit`。
 - 本地源码：`09_refs/riscv-tests/isa/rv32ui`、`rv32um`、它们引用的 `rv64ui`/`rv64um` 和 `isa/macros/scalar/test_macros.h`。
 - 许可证：保留 `09_refs/riscv-tests/LICENSE` 中的 UC Regents BSD 风格声明。测试主体、标量断言宏没有修改；本目录裸机头/TB/脚本是本项目代码。
 - 下载不足或首次恢复时，在工程根目录执行 `git clone --depth 1 https://github.com/riscv-software-src/riscv-tests.git 09_refs/riscv-tests`。本适配没有使用上游 `env` 子模块。

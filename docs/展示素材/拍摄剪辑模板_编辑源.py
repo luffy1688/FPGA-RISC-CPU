@@ -24,14 +24,14 @@ from PIL import Image,ImageDraw,ImageFont
 import argparse,json,math,subprocess,tempfile
 
 TIMELINE=[
- {'key':1,'duration':10,'title':'作品介绍','window':'作品题名与应用概念','cue':'澄灯 LumaRV：控制板试产与返修中的交互式调试。','placeholder':'题名页示意 · 待确认或替换'},
+ {'key':1,'duration':10,'title':'临时复测任务','window':'作品题名与应用概念','cue':'控制板固定测试后，临时调整一个输出并保留其他状态。','placeholder':'题名页示意 · 待确认或替换'},
  {'key':2,'duration':15,'title':'硬件与连接','window':'板卡全貌与接线','cue':'固定机位，板卡、电源、UART与JTAG连接均进入画面。','placeholder':'待替换实拍'},
- {'key':3,'duration':30,'title':'中文PWM请求','window':'输入中文并等待真实结果','cue':'只录一条PWM指令，保留处理路径、执行许可与返回结果。','placeholder':'待替换实拍'},
- {'key':4,'duration':25,'title':'PWM实际回读','window':'PWM请求值与寄存器回读特写','cue':'拍清周期、高电平计数、实际占空比和一致性结果。','placeholder':'待替换实拍'},
- {'key':5,'duration':25,'title':'LED快速控制','window':'led 37 与实板灯变化','cue':'LED变化与回读同拍；末尾可追加一次PWM频率越界拒绝。','placeholder':'待替换实拍'},
+ {'key':3,'duration':30,'title':'后台计算与中文PWM','window':'输入中文并等待真实结果','cue':'副核忙碌后点一键AI识别PWM20%，拍到后台状态和主核模型返回。','placeholder':'待替换实拍'},
+ {'key':4,'duration':25,'title':'PWM实际回读','window':'PWM请求值与寄存器回读特写','cue':'拍清PWM20%、周期54000/高电平10800，以及完整模型54.640ms。','placeholder':'待替换实拍'},
+ {'key':5,'duration':25,'title':'LED快速控制','window':'led 37 与实板灯变化','cue':'拍清掩码37→36的位保持，再拍PWM频率越界拒绝与设置保持。','placeholder':'待替换实拍'},
  {'key':6,'duration':25,'title':'CPU自检','window':'开始 → 完整运行 → CRC与计时','cue':'按一次CoreMark按钮；保留约14.28秒双核运行及各核CRC、共同计时、READY。','placeholder':'待替换实拍'},
  {'key':7,'duration':20,'title':'三维逻辑结构','window':'旋转与分层展示','cue':'可替换已有纯3D动画；须标明逻辑结构示意，不能当作实物。','placeholder':'待替换结构动画 · 非实拍'},
- {'key':8,'duration':15,'title':'证据导出与结束','window':'原始证据导出与作品结束画面','cue':'展示本次记录的导出操作，再回到作品名称结束。','placeholder':'待替换实拍'},
+ {'key':8,'duration':15,'title':'模型方法与结束','window':'原始证据导出与作品结束画面','cue':'位置语义、受约束残差、低比特计算；导出本次记录并结束。','placeholder':'待替换实拍'},
 ]
 WIDTH,HEIGHT,FPS=1280,720,24
 BOX=(64,110,1152,540)

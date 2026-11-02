@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""检查真实整模型 timer IRQ 恢复；不重复冻结的性能/准确率测试。"""
+"""检查真实整模型 timer IRQ 恢复；只检查中断恢复。"""
 import json
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
@@ -26,7 +26,7 @@ def main():
     assert interrupted["begin"] < interrupted["irq_cycle"] < interrupted["end"]
     assert 0 < interrupted["mepc"] < 0x20000 and interrupted["mepc"] % 4 == 0
     assert interrupted["logits"] == baseline["logits"]
-    # 用冻结整网参考数值作独立基准，仅读取既有报告，不重新运行模型。
+    # 使用既有整网参考数值，仅读取既有报告，不重新运行模型。
     frozen = json.loads((OUT / "current_report.json").read_text(encoding="utf-8"))
     reference = next(c["results"][6] for c in frozen["comparisons"]
                      if c["text"] == "读取计数器")
