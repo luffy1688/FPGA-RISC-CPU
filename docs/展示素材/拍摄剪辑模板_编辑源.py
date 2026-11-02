@@ -15,7 +15,7 @@ Real operation clips are not looped, accelerated, or extended automatically.
 If a real clip is too short for a chapter, supply a longer clip or deliberately
 edit that chapter's duration; retain the complete CoreMark start/CRC/end.
 Still images are accepted only for the title, board overview, 3D and ending.
-GIFs may loop only in chapter7, explicitly a logical-structure animation.
+GIFs may loop only in chapter6, explicitly a logical-structure animation.
 No original example-video picture or audio is incorporated by this script.
 Narration and formal subtitle files are separate; these cards show shot cues only.
 """
@@ -23,16 +23,7 @@ from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont
 import argparse,json,math,subprocess,tempfile
 
-TIMELINE=[
- {'key':1,'duration':10,'title':'临时复测任务','window':'作品题名与应用概念','cue':'控制板固定测试后，临时调整一个输出并保留其他状态。','placeholder':'题名页示意 · 待确认或替换'},
- {'key':2,'duration':15,'title':'硬件与连接','window':'板卡全貌与接线','cue':'固定机位，板卡、电源、UART与JTAG连接均进入画面。','placeholder':'待替换实拍'},
- {'key':3,'duration':30,'title':'后台计算与中文PWM','window':'输入中文并等待真实结果','cue':'副核忙碌后点一键AI识别PWM20%，拍到后台状态和主核模型返回。','placeholder':'待替换实拍'},
- {'key':4,'duration':25,'title':'PWM实际回读','window':'PWM请求值与寄存器回读特写','cue':'拍清PWM20%、周期54000/高电平10800，以及完整模型54.640ms。','placeholder':'待替换实拍'},
- {'key':5,'duration':25,'title':'LED快速控制','window':'led 37 与实板灯变化','cue':'拍清掩码37→36的位保持，再拍PWM频率越界拒绝与设置保持。','placeholder':'待替换实拍'},
- {'key':6,'duration':25,'title':'CPU自检','window':'开始 → 完整运行 → CRC与计时','cue':'按一次CoreMark按钮；保留约14.28秒双核运行及各核CRC、共同计时、READY。','placeholder':'待替换实拍'},
- {'key':7,'duration':20,'title':'三维逻辑结构','window':'旋转与分层展示','cue':'可替换已有纯3D动画；须标明逻辑结构示意，不能当作实物。','placeholder':'待替换结构动画 · 非实拍'},
- {'key':8,'duration':15,'title':'模型方法与结束','window':'原始证据导出与作品结束画面','cue':'位置语义、受约束残差、低比特计算；导出本次记录并结束。','placeholder':'待替换实拍'},
-]
+TIMELINE=[{'key': 1, 'duration': 25, 'title': '任务与开发板原型', 'window': '板卡与控制台同框', 'cue': '固定测试后追加单项复测，保留其他状态。', 'placeholder': '待替换实拍'}, {'key': 2, 'duration': 30, 'title': '后台计算与中文PWM', 'window': '副核忙碌 → 完整模型返回', 'cue': '保留一段连续镜头，显示忙碌期间主核完成模型。', 'placeholder': '待替换实拍'}, {'key': 3, 'duration': 20, 'title': 'PWM寄存器读回', 'window': '请求20%与当次返回', 'cue': '周期54000、高电平10800；区分既有模型统计和当次读数。', 'placeholder': '待替换实拍'}, {'key': 4, 'duration': 25, 'title': '位保持与越界拒绝', 'window': '默认混合路径', 'cue': '拍37→36与拒绝前后的PWM设置。', 'placeholder': '待替换实拍'}, {'key': 5, 'duration': 25, 'title': 'CPU计算检查', 'window': '两核CRC与共同计时', 'cue': '各3000次，主核统计与双实例累计单列。', 'placeholder': '待替换实拍'}, {'key': 6, 'duration': 20, 'title': '三维逻辑结构', 'window': '分层、合拢、PWM流程', 'cue': '插入现有20秒成片，不再重复加速。', 'placeholder': '待替换逻辑结构与方法图'}, {'key': 7, 'duration': 10, 'title': '模型方法', 'window': '位置语义、工具残差与低比特计算', 'cue': '保留参考Needle和训练来源，不逐位朗读长数字。', 'placeholder': '待替换逻辑结构与方法图'}, {'key': 8, 'duration': 10, 'title': '日志与结束', 'window': '导出当次日志', 'cue': '回到作品题名；正式视频须替换占位镜头。', 'placeholder': '待替换实拍'}]
 WIDTH,HEIGHT,FPS=1280,720,24
 BOX=(64,110,1152,540)
 BLUE='#143295';GOLD='#C89B61';INK='#28384A';MUT='#65758A';GRID='#DCE3EC';PALE='#F4F6F9'
@@ -87,8 +78,8 @@ def main():
     run(base+['-loop','1','-framerate',str(FPS),'-i',bg,'-t',str(dur)]+codec)
    else:
     suffix=clip.suffix.lower();still=suffix in ['.png','.jpg','.jpeg','.webp'];gif=suffix=='.gif'
-    if still and n not in [1,2,7,8]:raise RuntimeError('Action chapter%d requires a continuous video, not a still image.'%n)
-    if gif and n!=7:raise RuntimeError('Do not loop action footage; animated loops are allowed only in the logical3D chapter.')
+    if still and n not in [1,6,7,8]:raise RuntimeError('Action chapter%d requires a continuous video, not a still image.'%n)
+    if gif and n!=6:raise RuntimeError('Do not loop action footage; animated loops are allowed only in the logical3D chapter.')
     info=probe(clip);stream=next(x for x in info['streams']if x['codec_type']=='video')
     if not still and not gif:
      actual=float(info['format'].get('duration',stream.get('duration',0)))

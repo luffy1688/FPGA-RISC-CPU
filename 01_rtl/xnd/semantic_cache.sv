@@ -1,6 +1,6 @@
-// Independent resource/latency experiment. Not production RTL or mapped silicon.
-// All banks have synchronous registered read ports. Cached W1 is64KiB,loaded
-// through the same32bit request/response bus used by the streaming reference.
+// Banked INT8 semantic head with synchronous registered read ports.
+// W1 size is INPUTS*HIDDEN bytes; the deployed 2048x64, LANES=8 instance
+// uses128KiB. Initial loading uses the32bit request/response bus.
 module semantic_cache #(
  parameter integer LANES=4,CACHED=1,SKIP_ZERO=0,
  parameter integer INPUTS=1024,HIDDEN=64,OUTPUTS=16,RAM_BYTES=262144

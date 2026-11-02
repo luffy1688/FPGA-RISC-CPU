@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (https://matplotlib.org/) -->
+<svg height="315.675625pt" version="1.1" viewBox="0 0 708.82 315.675625" width="708.82pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 315.675625 
+L 708.82 315.675625 
+L 708.82 0 
+L 0 0 
+z
+" style="fill:#ffffff;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 32.02 139.487625 
+L 146.41 139.487625 
+L 146.41 84.047625 
+L 32.02 84.047625 
+z
+" style="fill:#f1f5f8;stroke:#244b79;stroke-linejoin:miter;stroke-width:1.2;"/>
+   </g>
+   <g id="patch_3">
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 150.086997 111.767625 
+Q 156.177806 111.767625 160.926975 111.767625 
+" style="fill:none;stroke:#244b79;stroke-linecap:round;stroke-width:1.2;"/>
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 156.126975 109.367625 
+L 160.926975 111.767625 
+L 156.126975 114.167625 
+L 156.126975 109.367625 
+z
+" style="fill:#244b79;stroke:#244b79;stroke-linecap:round;stroke-width:1.2;"/>
+   </g>
+   <g id="patch_4">
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 165.94 139.487625 
+L 280.33 139.487625 
+L 280.33 84.047625 
+L 165.94 84.047625 
+z
+" style="fill:#f1f5f8;stroke:#244b79;stroke-linejoin:miter;stroke-width:1.2;"/>
+   </g>
+   <g id="patch_5">
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 284.006997 111.767625 
+Q 290.097806 111.767625 294.846975 111.767625 
+" style="fill:none;stroke:#244b79;stroke-linecap:round;stroke-width:1.2;"/>
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 290.046975 109.367625 
+L 294.846975 111.767625 
+L 290.046975 114.167625 
+L 290.046975 109.367625 
+z
+" style="fill:#244b79;stroke:#244b79;stroke-linecap:round;stroke-width:1.2;"/>
+   </g>
+   <g id="patch_6">
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 299.86 139.487625 
+L 414.25 139.487625 
+L 414.25 84.047625 
+L 299.86 84.047625 
+z
+" style="fill:#f1f5f8;stroke:#244b79;stroke-linejoin:miter;stroke-width:1.2;"/>
+   </g>
+   <g id="patch_7">
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 417.926997 111.767625 
+Q 424.017806 111.767625 428.766975 111.767625 
+" style="fill:none;stroke:#244b79;stroke-linecap:round;stroke-width:1.2;"/>
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 423.966975 109.367625 
+L 428.766975 111.767625 
+L 423.966975 114.167625 
+L 423.966975 109.367625 
+z
+" style="fill:#244b79;stroke:#244b79;stroke-linecap:round;stroke-width:1.2;"/>
+   </g>
+   <g id="patch_8">
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 433.78 139.487625 
+L 548.17 139.487625 
+L 548.17 84.047625 
+L 433.78 84.047625 
+z
+" style="fill:#f1f5f8;stroke:#244b79;stroke-linejoin:miter;stroke-width:1.2;"/>
+   </g>
+   <g id="patch_9">
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 551.846997 111.767625 
+Q 557.937806 111.767625 562.686975 111.767625 
+" style="fill:none;stroke:#244b79;stroke-linecap:round;stroke-width:1.2;"/>
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 557.886975 109.367625 
+L 562.686975 111.767625 
+L 557.886975 114.167625 
+L 557.886975 109.367625 
+z
+" style="fill:#244b79;stroke:#244b79;stroke-linecap:round;stroke-width:1.2;"/>
+   </g>
+   <g id="patch_10">
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 567.7 139.487625 
+L 682.09 139.487625 
+L 682.09 84.047625 
+L 567.7 84.047625 
+z
+" style="fill:#f1f5f8;stroke:#244b79;stroke-linejoin:miter;stroke-width:1.2;"/>
+   </g>
+   <g id="patch_11">
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 32.02 225.419625 
+L 146.41 225.419625 
+L 146.41 172.751625 
+L 32.02 172.751625 
+z
+" style="fill:#f1f5f8;stroke:#6d9e99;stroke-linejoin:miter;stroke-width:1.2;"/>
+   </g>
+   <g id="patch_12">
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 89.215 169.086034 
+Q 89.215 156.673253 89.215 145.602112 
+" style="fill:none;stroke:#6d9e99;stroke-linecap:round;stroke-width:1.2;"/>
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 86.815 150.402112 
+L 89.215 145.602112 
+L 91.615 150.402112 
+L 86.815 150.402112 
+z
+" style="fill:#6d9e99;stroke:#6d9e99;stroke-linecap:round;stroke-width:1.2;"/>
+   </g>
+   <g id="patch_13">
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 165.94 225.419625 
+L 280.33 225.419625 
+L 280.33 172.751625 
+L 165.94 172.751625 
+z
+" style="fill:#f1f5f8;stroke:#be9360;stroke-linejoin:miter;stroke-width:1.2;"/>
+   </g>
+   <g id="patch_14">
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 164.049291 195.8559 
+Q 152.827248 169.148615 142.124928 143.678217 
+" style="fill:none;stroke:#be9360;stroke-linecap:round;stroke-width:1.2;"/>
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 141.771736 149.033145 
+L 142.124928 143.678217 
+L 146.196955 147.173727 
+L 141.771736 149.033145 
+z
+" style="fill:#be9360;stroke:#be9360;stroke-linecap:round;stroke-width:1.2;"/>
+   </g>
+   <g id="patch_15">
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 299.86 225.419625 
+L 414.25 225.419625 
+L 414.25 172.751625 
+L 299.86 172.751625 
+z
+" style="fill:#f1f5f8;stroke:#be9360;stroke-linejoin:miter;stroke-width:1.2;"/>
+   </g>
+   <g id="patch_16">
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 357.055 169.086034 
+Q 357.055 156.673253 357.055 145.602112 
+" style="fill:none;stroke:#be9360;stroke-linecap:round;stroke-width:1.2;"/>
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 354.655 150.402112 
+L 357.055 145.602112 
+L 359.455 150.402112 
+L 354.655 150.402112 
+z
+" style="fill:#be9360;stroke:#be9360;stroke-linecap:round;stroke-width:1.2;"/>
+   </g>
+   <g id="patch_17">
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 433.78 225.419625 
+L 548.17 225.419625 
+L 548.17 172.751625 
+L 433.78 172.751625 
+z
+" style="fill:#f1f5f8;stroke:#6d9e99;stroke-linejoin:miter;stroke-width:1.2;"/>
+   </g>
+   <g id="patch_18">
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 490.975 144.262016 
+Q 490.975 156.674797 490.975 167.745938 
+" style="fill:none;stroke:#6d9e99;stroke-linecap:round;stroke-width:1.2;"/>
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 493.375 162.945938 
+L 490.975 167.745938 
+L 488.575 162.945938 
+L 493.375 162.945938 
+z
+" style="fill:#6d9e99;stroke:#6d9e99;stroke-linecap:round;stroke-width:1.2;"/>
+   </g>
+   <g id="patch_19">
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 567.7 225.419625 
+L 682.09 225.419625 
+L 682.09 172.751625 
+L 567.7 172.751625 
+z
+" style="fill:#f1f5f8;stroke:#6d9e99;stroke-linejoin:miter;stroke-width:1.2;"/>
+   </g>
+   <g id="patch_20">
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 551.846588 199.362825 
+Q 557.657969 199.362825 562.12771 199.362825 
+" style="fill:none;stroke:#6d9e99;stroke-linecap:round;stroke-width:1.2;"/>
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 557.32771 196.962825 
+L 562.12771 199.362825 
+L 557.32771 201.762825 
+L 557.32771 196.962825 
+z
+" style="fill:#6d9e99;stroke:#6d9e99;stroke-linecap:round;stroke-width:1.2;"/>
+   </g>
+   <g id="patch_21">
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 89.215 74.962287 
+Q 89.215 77.951541 89.215 79.599155 
+" style="fill:none;stroke:#be9360;stroke-linecap:round;stroke-width:1.2;"/>
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 91.615 74.799155 
+L 89.215 79.599155 
+L 86.815 74.799155 
+L 91.615 74.799155 
+z
+" style="fill:#be9360;stroke:#be9360;stroke-linecap:round;stroke-width:1.2;"/>
+   </g>
+   <g id="line2d_1">
+    <path clip-path="url(#pf6bf5ec8cd)" d="M 355.66 81.275625 
+L 355.66 62.980425 
+L 89.215 62.980425 
+L 89.215 81.275625 
+" style="fill:none;stroke:#be9360;stroke-linecap:square;stroke-width:1.2;"/>
+   </g>
+   <g id="text_1">
+    <text style="fill:#244b79;font-family:Noto Sans CJK JP;font-size:18px;font-style:normal;font-weight:bold;text-anchor:start;" transform="rotate(-0, 29.23, 33.042825)" x="29.23" y="33.042825">五级主核与片上存储通路</text>
+   </g>
+   <g id="text_2">
+    <text style="fill:#244b79;font-family:Noto Sans CJK JP;font-size:11.5px;font-style:normal;font-weight:bold;text-anchor:middle;" transform="rotate(-0, 89.215, 99.503956)" x="89.215" y="99.503956">IF 取指</text>
+   </g>
+   <g id="text_3">
+    <text style="fill:#25374b;font-family:Noto Sans CJK JP;font-size:9.5px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 89.215, 129.983481)" x="89.215" y="129.983481">队列 / 重定向</text>
+   </g>
+   <g id="text_4">
+    <text style="fill:#244b79;font-family:Noto Sans CJK JP;font-size:11.5px;font-style:normal;font-weight:bold;text-anchor:middle;" transform="rotate(-0, 223.135, 99.503956)" x="223.135" y="99.503956">ID 译码</text>
+   </g>
+   <g id="text_5">
+    <text style="fill:#25374b;font-family:Noto Sans CJK JP;font-size:9.5px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 223.135, 129.983481)" x="223.135" y="129.983481">寄存器读取</text>
+   </g>
+   <g id="text_6">
+    <text style="fill:#244b79;font-family:Noto Sans CJK JP;font-size:11.5px;font-style:normal;font-weight:bold;text-anchor:middle;" transform="rotate(-0, 357.055, 99.503956)" x="357.055" y="99.503956">EX 执行</text>
+   </g>
+   <g id="text_7">
+    <text style="fill:#25374b;font-family:Noto Sans CJK JP;font-size:9.5px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 357.055, 129.983481)" x="357.055" y="129.983481">ALU / 旁路 / 乘除</text>
+   </g>
+   <g id="text_8">
+    <text style="fill:#244b79;font-family:Noto Sans CJK JP;font-size:11.5px;font-style:normal;font-weight:bold;text-anchor:middle;" transform="rotate(-0, 490.975, 99.503956)" x="490.975" y="99.503956">MEM 访存</text>
+   </g>
+   <g id="text_9">
+    <text style="fill:#25374b;font-family:Noto Sans CJK JP;font-size:9.5px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 490.975, 129.983481)" x="490.975" y="129.983481">load / store / MMIO</text>
+   </g>
+   <g id="text_10">
+    <text style="fill:#244b79;font-family:Noto Sans CJK JP;font-size:11.5px;font-style:normal;font-weight:bold;text-anchor:middle;" transform="rotate(-0, 624.895, 99.503956)" x="624.895" y="99.503956">WB 写回</text>
+   </g>
+   <g id="text_11">
+    <text style="fill:#25374b;font-family:Noto Sans CJK JP;font-size:9.5px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 624.895, 129.983481)" x="624.895" y="129.983481">寄存器 / 提交</text>
+   </g>
+   <g id="text_12">
+    <text style="fill:#6d9e99;font-family:Noto Sans CJK JP;font-size:11.5px;font-style:normal;font-weight:bold;text-anchor:middle;" transform="rotate(-0, 89.215, 188.207956)" x="89.215" y="188.207956">I-cache</text>
+   </g>
+   <g id="text_13">
+    <text style="fill:#25374b;font-family:Noto Sans CJK JP;font-size:9.5px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 89.215, 215.915481)" x="89.215" y="215.915481">两路组相联 / 突发</text>
+   </g>
+   <g id="text_14">
+    <text style="fill:#be9360;font-family:Noto Sans CJK JP;font-size:11.5px;font-style:normal;font-weight:bold;text-anchor:middle;" transform="rotate(-0, 223.135, 188.207956)" x="223.135" y="188.207956">动态预测</text>
+   </g>
+   <g id="text_15">
+    <text style="fill:#25374b;font-family:Noto Sans CJK JP;font-size:9.5px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 223.135, 215.915481)" x="223.135" y="215.915481">BTB / 模式表 / RAS</text>
+   </g>
+   <g id="text_16">
+    <text style="fill:#be9360;font-family:Noto Sans CJK JP;font-size:11.5px;font-style:normal;font-weight:bold;text-anchor:middle;" transform="rotate(-0, 357.055, 188.207956)" x="357.055" y="188.207956">CSR与异常/中断</text>
+   </g>
+   <g id="text_17">
+    <text style="fill:#25374b;font-family:Noto Sans CJK JP;font-size:9.5px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 357.055, 215.915481)" x="357.055" y="215.915481">trap / MRET / PMU</text>
+   </g>
+   <g id="text_18">
+    <text style="fill:#6d9e99;font-family:Noto Sans CJK JP;font-size:11.5px;font-style:normal;font-weight:bold;text-anchor:middle;" transform="rotate(-0, 490.975, 188.207956)" x="490.975" y="188.207956">D-cache</text>
+   </g>
+   <g id="text_19">
+    <text style="fill:#25374b;font-family:Noto Sans CJK JP;font-size:9.5px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 490.975, 215.915481)" x="490.975" y="215.915481">两路组相联 / 写直达</text>
+   </g>
+   <g id="text_20">
+    <text style="fill:#6d9e99;font-family:Noto Sans CJK JP;font-size:11.5px;font-style:normal;font-weight:bold;text-anchor:middle;" transform="rotate(-0, 624.895, 188.207956)" x="624.895" y="188.207956">主RAM与外设接口</text>
+   </g>
+   <g id="text_21">
+    <text style="fill:#25374b;font-family:Noto Sans CJK JP;font-size:9.5px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 624.895, 215.915481)" x="624.895" y="215.915481">512 KiB / UART / IO</text>
+   </g>
+   <g id="text_22">
+    <text style="fill:#697b8e;font-family:Noto Sans CJK JP;font-size:9.6px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 221.74, 58.545225)" x="221.74" y="58.545225">分支与异常重定向；相关停顿和旁路控制各级推进</text>
+   </g>
+   <g id="text_23">
+    <text style="fill:#244b79;font-family:Noto Sans CJK JP;font-size:10.6px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 30.904, 257.574825)" x="30.904" y="257.574825">54 MHz STA最差路径：主RAM返回 → D-cache/旁路 → CPU结果寄存器</text>
+   </g>
+   <g id="text_24">
+    <text style="fill:#697b8e;font-family:Noto Sans CJK JP;font-size:9.5px;font-style:normal;font-weight:normal;text-anchor:start;" transform="rotate(-0, 30.904, 278.642025)" x="30.904" y="278.642025">16级逻辑；逻辑6.478 ns，布线10.581 ns；慢角setup裕量+0.569 ns。结构示意，不是ILA波形。</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pf6bf5ec8cd">
+   <rect height="277.2" width="680.76" x="20.86" y="11.975625"/>
+  </clipPath>
+ </defs>
+</svg>

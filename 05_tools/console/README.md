@@ -10,7 +10,7 @@
 python -m http.server 8765 --bind 127.0.0.1 --directory 05_tools/console
 ```
 
-Edge或Chrome打开 http://127.0.0.1:8765/?present=1&baud=921600&arch=1 ，选择CP210x UART和921600波特率。连接成功后短按KEY0，等待启动信息、54MHz与“就绪”。当前电脑UART为COM10，FTDI COM13/14用于JTAG。端口被占用时，先关闭其他串口程序。
+Edge或Chrome打开 http://127.0.0.1:8765/?present=1&baud=921600&arch=1 ，选择CP210x UART和921600波特率。连接成功后短按KEY0，等待启动信息、54MHz与“就绪”。UART端口以本机CP210x枚举为准，FTDI双通道用于JTAG。端口被占用时，先关闭其他串口程序。
 
 ## 常用入口
 
