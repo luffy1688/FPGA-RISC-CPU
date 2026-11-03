@@ -8,3 +8,4 @@ __pycache__/
 known_hosts
 node_modules/
 .arch-build/
+/docs/
